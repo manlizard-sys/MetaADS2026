@@ -1,0 +1,6 @@
+.env
+.env.*
+build/*.log
+creatives/*.mp4
+creatives/*.mov
+__pycache__/
