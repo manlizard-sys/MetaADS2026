@@ -8,7 +8,7 @@ GRAPH = f"https://graph.facebook.com/{API_VERSION}"
 
 
 def _load_token():
-    for line in (ROOT / ".env").read_text().splitlines():
+    for line in (ROOT / ".env").read_text(encoding="utf-8-sig").splitlines():
         if line.startswith("META_ACCESS_TOKEN="):
             return line.split("=", 1)[1].strip()
     sys.exit("META_ACCESS_TOKEN missing in .env")
