@@ -50,8 +50,12 @@ def _request(method, url, **kw):
         raise MetaError(scrub(f"{type(e).__name__}: {e}")) from None
 
 
+def _url(path):
+    return path if path.startswith("https://") else f"{GRAPH}/{path.lstrip('/')}"
+
+
 def get(path, **params):
-    return _request("GET", f"{GRAPH}/{path.lstrip('/')}", params=params, timeout=60)
+    return _request("GET", _url(path), params=params, timeout=60)
 
 
 def get_all(path, **params):
@@ -66,7 +70,7 @@ def get_all(path, **params):
 
 def post(path, files=None, **params):
     params = {k: (json.dumps(v) if isinstance(v, (dict, list)) else v) for k, v in params.items()}
-    return _request("POST", f"{GRAPH}/{path.lstrip('/')}", data=params, files=files, timeout=600)
+    return _request("POST", _url(path), data=params, files=files, timeout=600)
 
 
 def save_ids(**kv):

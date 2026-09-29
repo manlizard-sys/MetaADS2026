@@ -27,7 +27,8 @@ safe("businesses", lambda: get_all("me/businesses", fields="id,name", limit=100)
 
 # --- Account-level checks: run with ORCHID_AD_ACCOUNT=act_XXX once the user confirms IDs ---
 import os, sys, time
-ACT = os.environ.get("ORCHID_AD_ACCOUNT", "act_1806647434085082")  # OrchidPros
+import config
+ACT = os.environ.get("ORCHID_AD_ACCOUNT", config.AD_ACCOUNT)
 PIXEL = os.environ.get("ORCHID_PIXEL", "2271987886986577")
 if ACT:
     acc = get(ACT, fields="name,currency,timezone_name,account_status,disable_reason")
