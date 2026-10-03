@@ -8,10 +8,15 @@ GRAPH = f"https://graph.facebook.com/{API_VERSION}"
 
 
 def _load_token():
-    for line in (ROOT / ".env").read_text(encoding="utf-8-sig").splitlines():
-        if line.startswith("META_ACCESS_TOKEN="):
-            return line.split("=", 1)[1].strip()
-    sys.exit("META_ACCESS_TOKEN missing in .env")
+    env_file = ROOT / ".env"
+    if env_file.exists():
+        for line in env_file.read_text(encoding="utf-8-sig").splitlines():
+            if line.startswith("META_ACCESS_TOKEN="):
+                return line.split("=", 1)[1].strip()
+    # Scheduled cloud sessions have no .env; the environment secret provides it instead.
+    if os.environ.get("META_ACCESS_TOKEN"):
+        return os.environ["META_ACCESS_TOKEN"].strip()
+    sys.exit("META_ACCESS_TOKEN missing (.env or environment variable)")
 
 
 TOKEN = _load_token()
