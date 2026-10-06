@@ -1,0 +1,14 @@
+segment,spend,impressions,link_clicks,landing_page_views,leads,cpl,cpm,cpc,ctr,lpv_rate,lead_rate,hook,hold,frequency
+instagram / feed,77.57,907,6,5,1,77.57,85.52,12.93,0.66,83.33,20.0,32.64,3.09,1.37
+instagram / instagram_reels,62.25,847,64,59,1,62.25,73.49,0.97,7.56,92.19,1.69,30.93,1.53,1.22
+facebook / facebook_reels,53.23,721,49,34,0,,73.83,1.09,6.8,69.39,0.0,29.68,3.61,1.22
+facebook / feed,38.57,395,17,15,1,38.57,97.65,2.27,4.3,88.24,6.67,21.77,3.29,1.32
+instagram / instagram_stories,21.65,224,7,4,0,,96.65,3.09,3.12,57.14,0.0,7.59,0.45,1.28
+facebook / facebook_stories,2.59,14,1,0,0,,185.0,2.59,7.14,0.0,0.0,35.71,7.14,1.17
+audience_network / an_classic,1.12,84,23,11,0,,13.33,0.05,27.38,47.83,0.0,20.24,3.57,1.71
+audience_network / rewarded_video,0.84,50,29,27,0,,16.8,0.03,58.0,93.1,0.0,98.0,50.0,1.56
+facebook / marketplace,0.13,7,1,0,0,,18.57,0.13,14.29,0.0,0.0,28.57,0.0,1.4
+instagram / instagram_explore_grid_home,0.11,7,0,0,0,,15.71,,0.0,,,14.29,14.29,1.17
+threads / threads_feed,0.1,8,0,0,0,,12.5,,0.0,,,0.0,0.0,1.14
+facebook / right_hand_column,0.04,9,0,0,0,,4.44,,0.0,,,0.0,0.0,1.12
+unknown / unknown,0.02,5,0,0,0,,4.0,,0.0,,,0.0,0.0,1.25
