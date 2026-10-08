@@ -14,7 +14,7 @@ START_TIME = "2026-10-01T00:00:00-0400"  # 00:00 America/New_York (EDT, UTC-4)
 LINK = "https://go.orchidpros.com/hire"
 URL_TAGS = ("utm_source={{site_source_name}}&utm_medium=paid_social&utm_campaign={{campaign.name}}"
             "&utm_term={{adset.name}}&utm_content={{ad.name}}&utm_id={{campaign.id}}&placement={{placement}}")
-CTA = "LEARN_MORE"                    # BOOK_NOW proposed; only switch after user approval
+CTA = "BOOK_NOW"                      # approved by user 2026-10-08 (matches "Book a free call" on the landing)
 
 # Detailed targeting signals; filled with real IDs from step2_audience.py after approval
 INTEREST_QUERIES = {
