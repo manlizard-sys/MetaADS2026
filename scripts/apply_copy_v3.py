@@ -62,6 +62,9 @@ def new_spec(old, texts):
     c = copy.deepcopy(old)
     for k in ("id", "call_to_action_type"):
         c.pop(k, None)
+    feats = (c.get("degrees_of_freedom_spec") or {}).get("creative_features_spec", {})
+    for k in ("standard_enhancements", "advantage_plus_creative"):  # deprecated umbrella flags
+        feats.pop(k, None)
     vd = (c.get("object_story_spec") or {}).get("video_data")
     if vd and vd.get("image_hash"):
         vd.pop("image_url", None)  # send the hash only
