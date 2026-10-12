@@ -1,0 +1,5 @@
+segment,spend,impressions,link_clicks,landing_page_views,leads,cpl,cpm,cpc,ctr,lpv_rate,lead_rate,hook,hold,frequency
+mobile_app,480.61,5123,235,182,4,120.15,93.81,2.05,4.59,77.45,2.2,20.53,2.4,1.58
+mobile_web,3.97,50,1,1,0,,79.41,3.97,2.0,100.0,0.0,30.0,0.0,1.39
+desktop,2.29,44,0,0,0,,52.05,,0.0,,,4.55,0.0,1.29
+unknown,0.05,6,0,0,0,,8.33,,0.0,,,0.0,0.0,1.2
