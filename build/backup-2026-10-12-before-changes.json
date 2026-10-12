@@ -1,0 +1,204 @@
+{
+  "adset": {
+    "name": "US | 30-65 | Owners - Legal - Health | 2026 Oct",
+    "targeting": {
+      "age_max": 65,
+      "age_min": 25,
+      "age_range": [
+        30,
+        65
+      ],
+      "excluded_custom_audiences": [
+        {
+          "id": "120257005715340196",
+          "name": "WEB - Leads 180D"
+        }
+      ],
+      "flexible_spec": [
+        {
+          "interests": [
+            {
+              "id": "6002884511422",
+              "name": "Small business"
+            },
+            {
+              "id": "6003057724244",
+              "name": "Law firm"
+            },
+            {
+              "id": "6003371567474",
+              "name": "Entrepreneurship"
+            },
+            {
+              "id": "6003392101554",
+              "name": "Lawyer"
+            },
+            {
+              "id": "6003446239080",
+              "name": "Real estate investing"
+            },
+            {
+              "id": "6003578086487",
+              "name": "Real estate"
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "6002714898572",
+              "name": "Small business owners"
+            },
+            {
+              "id": "6020530281783",
+              "name": "Business page admins"
+            }
+          ],
+          "education_majors": [
+            {
+              "id": "108158462546495",
+              "name": "Dentistry"
+            },
+            {
+              "id": "109372712414306",
+              "name": "Chiropractic"
+            }
+          ],
+          "work_positions": [
+            {
+              "id": "107883882572816",
+              "name": "Paralegal"
+            },
+            {
+              "id": "148866958458716",
+              "name": "Physical Therapist"
+            },
+            {
+              "id": "1569299249954237",
+              "name": "Medical Practice Manager"
+            },
+            {
+              "id": "997711030247472",
+              "name": "Realtor"
+            }
+          ]
+        }
+      ],
+      "geo_locations": {
+        "countries": [
+          "US"
+        ],
+        "location_types": [
+          "frequently_in",
+          "home",
+          "recent"
+        ]
+      },
+      "locales": [
+        6,
+        24
+      ],
+      "targeting_automation": {
+        "advantage_audience": 1,
+        "individual_setting": {
+          "age": 1,
+          "gender": 1
+        }
+      },
+      "publisher_platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "facebook_positions": [
+        "feed",
+        "story",
+        "facebook_reels",
+        "profile_feed"
+      ],
+      "instagram_positions": [
+        "stream",
+        "story",
+        "reels",
+        "explore_home",
+        "profile_feed"
+      ],
+      "device_platforms": [
+        "mobile",
+        "desktop"
+      ]
+    },
+    "status": "ACTIVE",
+    "daily_budget": "3889",
+    "id": "120257040908680196"
+  },
+  "ads": [
+    {
+      "id": "120257041676810196",
+      "name": "V2 Small Law Firm - 2026 Oct",
+      "status": "PAUSED"
+    },
+    {
+      "id": "120257041676790196",
+      "name": "V3 Vetting Process - 2026 Oct",
+      "status": "PAUSED"
+    },
+    {
+      "id": "120257041676800196",
+      "name": "V4 Founder Story - 2026 Oct",
+      "status": "PAUSED"
+    },
+    {
+      "id": "120257040908670196",
+      "name": "V1 POV Email - 2026 Oct",
+      "status": "PAUSED"
+    },
+    {
+      "id": "120257041791350196",
+      "name": "C1 Guilty - Carousel  - 2026 Oct",
+      "status": "PAUSED"
+    },
+    {
+      "id": "120257041755520196",
+      "name": "C2 Hey You Offer - Carousel  - 2026 Oct",
+      "status": "PAUSED"
+    },
+    {
+      "id": "120257086583170196",
+      "name": "S4 Time - Static - 2026 Oct",
+      "status": "PAUSED"
+    },
+    {
+      "id": "120257086581180196",
+      "name": "S1 Cost - Static - 2026 Oct",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "120257086586630196",
+      "name": "S8 Comparison - Static - 2026 Oct",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "120257086581940196",
+      "name": "S2 Speed - Static - 2026 Oct",
+      "status": "PAUSED"
+    },
+    {
+      "id": "120257086584340196",
+      "name": "S6 What VA Does - Static - 2026 Oct",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "120257086584080196",
+      "name": "S5 Pain - Static - 2026 Oct",
+      "status": "PAUSED"
+    },
+    {
+      "id": "120257086585910196",
+      "name": "S7 Law & Real Estate - Static - 2026 Oct",
+      "status": "PAUSED"
+    },
+    {
+      "id": "120257086582480196",
+      "name": "S3 Vetting - Static - 2026 Oct",
+      "status": "PAUSED"
+    }
+  ]
+}

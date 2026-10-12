@@ -2,7 +2,7 @@
 
 Ad set 120257040908680196:
   - Advantage+ Audience off, age 30-65 as a hard limit, location "home" only
-  - exclude interests: Job hunting, Virtual assistant, Freelancer, Indeed.com, Employment website
+  (interest exclusions were planned but Meta no longer allows detailed targeting exclusions)
 Ads: V2 and V1 -> ACTIVE; S1 and S6 -> PAUSED (S8 stays as the only static).
 
 Saves the current state to build/backup-<today>-before-changes.json before writing.
@@ -13,13 +13,6 @@ from meta import get, get_all, post, BUILD, MetaError
 
 ACT = "act_1806647434085082"
 ADSET = "120257040908680196"
-EXCLUDE = [
-    {"id": "6004037215009", "name": "Job hunting"},
-    {"id": "6003372995195", "name": "Virtual assistant"},
-    {"id": "6003374632277", "name": "Freelancer"},
-    {"id": "6003074500597", "name": "Indeed.com"},
-    {"id": "6003291328579", "name": "Employment website"},
-]
 AD_STATUS = {
     "V2 Small Law Firm - 2026 Oct": "ACTIVE",
     "V1 POV Email - 2026 Oct": "ACTIVE",
@@ -33,16 +26,15 @@ aset = get(ADSET, fields="name,targeting,status,daily_budget")
 
 t = copy.deepcopy(aset["targeting"])
 t["targeting_automation"] = {"advantage_audience": 0}
+t.pop("age_range", None)  # Advantage+ suggestion field; invalid once it is off
 t["age_min"], t["age_max"] = 30, 65
 t["geo_locations"]["location_types"] = ["home"]
-t["exclusions"] = {"interests": EXCLUDE}
 
 old = aset["targeting"]
 print(f"Ad set: {aset['name']}")
 print(f"  Advantage+ audience: {old.get('targeting_automation')} -> {t['targeting_automation']}")
 print(f"  Edad: {old.get('age_min')}-{old.get('age_max')} -> 30-65")
 print(f"  Ubicación: {old['geo_locations'].get('location_types')} -> ['home']")
-print(f"  Exclusiones: {old.get('exclusions')} -> {[e['name'] for e in EXCLUDE]}")
 byname = {a["name"]: a for a in ads}
 for name, st in AD_STATUS.items():
     print(f"  {name}: {byname[name]['status']} -> {st}")
