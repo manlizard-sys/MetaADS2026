@@ -1,8 +1,8 @@
 """Read-only lead quality check against GoHighLevel (LeadConnector API v2).
 
-Pulls contacts created in the last N days, reads the form answers ("How can we help you?",
-"What type of business do you run?"), flags job seekers, and groups by the ad that brought
-each lead (utm_content = ad name). Never writes to GHL.
+Pulls contacts created in the last N days, reads the form answers ("Hiring or job seeking",
+"Vertical", role) and the job-seeker / agendo tags, and groups by the ad that brought each
+lead (utm_content = ad name). Never writes to GHL.
 
 Needs GHL_TOKEN (Private Integration token, read scopes: contacts, locations custom fields)
 and GHL_LOCATION_ID, as environment variables or in .env. Names, emails and phones are
@@ -74,25 +74,28 @@ def main():
     for c in contacts_since(start):
         cf = c.get("customFields") or []
         attr = c.get("attributionSource") or {}
-        help_ = answer(cf, names, r"help")
-        biz = answer(cf, names, r"business")
+        help_ = answer(cf, names, r"hiring or job")
+        biz = answer(cf, names, r"^vertical$")
+        role = answer(cf, names, r"your role")
         tags = c.get("tags") or []
-        job = bool(JOB_WORDS.search(f"{help_} {biz} {' '.join(tags)}"))
+        job = "job-seeker" in tags or bool(JOB_WORDS.search(help_))
         rows.append({"id": c.get("id"), "date": (c.get("dateAdded") or "")[:10],
                      "ad": attr.get("utmContent") or "(sin utm)", "source": attr.get("sessionSource") or c.get("source") or "",
-                     "help": help_, "business": biz, "tags": tags, "job_seeker": job})
+                     "hiring_or_job": help_, "vertical": biz, "role": role, "tags": tags,
+                     "booked": "agendo" in tags, "job_seeker": job})
 
-    by_ad = collections.defaultdict(lambda: {"leads": 0, "job_seekers": 0})
+    by_ad = collections.defaultdict(lambda: {"leads": 0, "job_seekers": 0, "booked": 0})
     for r in rows:
         by_ad[r["ad"]]["leads"] += 1
         by_ad[r["ad"]]["job_seekers"] += r["job_seeker"]
+        by_ad[r["ad"]]["booked"] += r["booked"]
     total, jobs = len(rows), sum(r["job_seeker"] for r in rows)
     print(f"GHL, últimos {days} días: {total} contactos · {jobs} buscan trabajo ({100 * jobs / total:.0f}%)" if total
           else f"GHL, últimos {days} días: 0 contactos")
     for ad, v in sorted(by_ad.items(), key=lambda x: -x[1]["leads"]):
-        print(f"  {ad}: {v['leads']} leads · {v['job_seekers']} buscan trabajo")
-    print("\nRespuestas a 'What type of business do you run?':")
-    for k, n in collections.Counter(r["business"] or "(vacío)" for r in rows).most_common(15):
+        print(f"  {ad}: {v['leads']} leads · {v['job_seekers']} buscan trabajo · {v['booked']} agendaron")
+    print("\nVertical (empresas que quieren contratar):")
+    for k, n in collections.Counter(r["vertical"] or "(vacío)" for r in rows if not r["job_seeker"]).most_common(15):
         print(f"  {n:>3}  {k}")
 
     out = BUILD / "reports"
