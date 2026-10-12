@@ -285,6 +285,82 @@ others.forEach(([file, name, nums], i) => {
 });
 s.addNotes("Sin leads. S6 pausado: el hook 'What does a Virtual Assistant do?' también atrae candidatos.");
 
+// ---------- 11. Conclusions ----------
+pres.addSection({ title: "Conclusiones" });
+s = slide("CONTENT", "Conclusiones");
+s.addText("Conclusiones: qué funciona y qué no", { placeholder: "title" });
+const good = [
+  ["Video vertical por segmento", "CTR 6.2% (video) vs. 1.9% (estático). V2 (legal) genera el único lead calificado."],
+  ["Filtro de calificación", "\"Hiring or job seeking\" identificó los 3 leads no calificados."],
+  ["Medición con GHL", "KPI de calidad por anuncio; reemplaza al evento Lead de Meta."],
+  ["Segmentación estricta", "30–65, residentes en EE. UU., sin expansión de Advantage+."],
+];
+const bad2 = [
+  ["Estáticos genéricos de \"VA\"", "S3: 45% del gasto total, 0 leads calificados."],
+  ["Optimización por evento Lead", "Meta optimiza hacia quien completa el formulario, calificado o no."],
+  ["Volumen creativo insuficiente", "3 creativos activos y 2 segmentos: sin margen para Andromeda."],
+  ["Conversión de landing", "2.2% de landing page views a lead. Cambios manuales sin registro (11 oct)."],
+];
+[[good, "Funciona", C.accent4, 0.5], [bad2, "No funciona", C.accent5, 5.1]].forEach(([items, head, col, x], k) => {
+  T(s, head, { x, y: 1.15, w: 4.4, h: 0.4, fontSize: 18, bold: true, color: col, fontFace: THEME.headFontFace, objectName: `Conclusion head ${k + 1}` });
+  items.forEach(([h, b], i) => {
+    const y = 1.65 + i * 0.85;
+    card(s, x, y, 4.4, 0.75, `Conclusion card ${k + 1}.${i + 1}`);
+    s.addShape(pres.shapes.OVAL, { x: x + 0.15, y: y + 0.27, w: 0.2, h: 0.2, fill: { color: col }, line: { color: col }, objectName: `Conclusion dot ${k + 1}.${i + 1}` });
+    T(s, h, { x: x + 0.5, y: y + 0.06, w: 3.8, h: 0.3, fontSize: 13, bold: true, color: C.text2, objectName: `Conclusion title ${k + 1}.${i + 1}` });
+    T(s, b, { x: x + 0.5, y: y + 0.36, w: 3.8, h: 0.36, fontSize: 11, color: C.text1, valign: "top", objectName: `Conclusion body ${k + 1}.${i + 1}` });
+  });
+});
+s.addNotes("Prioridad: aumentar volumen y diversidad creativa por segmento, y optimizar por lead calificado en lugar del evento Lead genérico.");
+
+// ---------- 12. Andromeda ----------
+pres.addSection({ title: "Estrategia creativa" });
+s = slide("CONTENT", "Estrategia creativa");
+s.addText("Andromeda: el creativo define la audiencia", { placeholder: "title" });
+const andr = [
+  ["Selección por creativo", "Andromeda, el sistema de recuperación de anuncios de Meta, decide a quién mostrar cada anuncio según su contenido: texto, imagen y audio."],
+  ["Agrupación de similares", "Creativos parecidos se agrupan y compiten como uno solo. Variaciones menores no amplían el alcance."],
+  ["Diversidad = exploración", "Cada concepto distinto abre un segmento nuevo. Con pocos conceptos, el sistema concentra el gasto en uno (caso S3)."],
+];
+andr.forEach(([h, b], i) => {
+  const y = 1.2 + i * 1.12;
+  dot(s, 0.5, y + 0.02, String(i + 1), `Andromeda dot ${i + 1}`);
+  T(s, h, { x: 1.1, y, w: 4.9, h: 0.4, fontSize: 16, bold: true, color: C.text2, valign: "middle", objectName: `Andromeda head ${i + 1}` });
+  T(s, b, { x: 1.1, y: y + 0.4, w: 4.9, h: 0.65, fontSize: 12, color: C.text1, valign: "top", objectName: `Andromeda body ${i + 1}` });
+});
+card(s, 6.4, 1.2, 3.1, 3.35, "Creative gap card", C.text2);
+T(s, "Situación actual", { x: 6.65, y: 1.4, w: 2.6, h: 0.3, fontSize: 12, color: C.accent1, bold: true, objectName: "Gap label 1" });
+T(s, "3", { x: 6.65, y: 1.7, w: 2.6, h: 0.75, fontSize: 48, bold: true, color: C.background1, fontFace: THEME.headFontFace, objectName: "Gap now" });
+T(s, "creativos activos · 2 segmentos", { x: 6.65, y: 2.45, w: 2.6, h: 0.3, fontSize: 12, color: C.background1, objectName: "Gap now label" });
+T(s, "Requerido", { x: 6.65, y: 2.95, w: 2.6, h: 0.3, fontSize: 12, color: C.accent1, bold: true, objectName: "Gap label 2" });
+T(s, "8–10", { x: 6.65, y: 3.25, w: 2.6, h: 0.75, fontSize: 48, bold: true, color: C.background1, fontFace: THEME.headFontFace, objectName: "Gap target" });
+T(s, "conceptos distintos, en 9:16 y 4:5", { x: 6.65, y: 4.0, w: 2.6, h: 0.3, fontSize: 12, color: C.background1, objectName: "Gap target label" });
+s.addNotes("El volumen recomendado (8–10 conceptos) es un rango operativo, no una cifra oficial de Meta. La clave es que cada concepto sea realmente distinto: segmento, ángulo o formato.");
+
+// ---------- 13. Creative structure ----------
+s = slide("CONTENT", "Estrategia creativa");
+s.addText("Estructura creativa requerida", { placeholder: "title" });
+const conc = [
+  ["", "Segmento", "Ángulo", "Formato", "Hook (0–3 s / imagen)"],
+  ["1", "Firmas legales", "Carga operativa: intake, agenda, seguimiento", "Video 9:16 + 4:5", "\"For Law Firm Owners\""],
+  ["2", "Inmigración", "Case flow: armado de expedientes", "Video demo", "\"Immigration attorneys:\""],
+  ["3", "Realtors / team leads", "ISA que llama leads a diario", "Video 9:16", "\"For Realtors\""],
+  ["4", "Dueños de negocio", "Costo vs. contratación local (−60%)", "Estático 4:5", "\"Local hire vs. Orchid\""],
+  ["5", "Dueños de negocio", "Precio: $1,450 setup + desde $1,000/mes", "Estático 1:1", "\"VA pricing, no surprises\""],
+  ["6", "Todos", "Testimonio de cliente (KW)", "Video testimonial", "Cliente en cámara, 1er segundo"],
+  ["7", "Todos", "Proceso de selección y garantía", "Video founder", "\"How we vet your assistant\""],
+  ["8", "Healthcare / back office", "Recepción y administración", "Carrusel", "\"For Medical Offices\""],
+];
+s.addTable(conc.map((r, i) => r.map((c, j) => ({
+  text: c, options: { bold: i === 0 || j === 0, color: i === 0 ? HEX.lt1 : (j === 0 ? HEX.dk2 : HEX.dk1),
+    fill: { color: i === 0 ? HEX.dk2 : (i % 2 ? HEX.lt1 : HEX.lt2) }, valign: "middle", align: j === 0 ? "center" : "left" },
+}))), { x: 0.5, y: 1.1, w: 9, colW: [0.35, 1.7, 3.05, 1.5, 2.4], rowH: 0.36, fontSize: 10.5, fontFace: THEME.bodyFontFace, border: { type: "none" }, margin: [0, 0.06, 0, 0.06], objectName: "Creative matrix" });
+T(s, [
+  { text: "Requisitos por pieza: ", options: { bold: true } },
+  { text: "hook que nombre al comprador en los primeros 3 s, texto en pantalla, subtítulos, CTA \"Book a free call\", sin términos de empleo y una versión por placement (9:16 y 4:5)." },
+], { x: 0.5, y: 4.45, w: 9, h: 0.6, fontSize: 11, color: C.text1, valign: "top", objectName: "Creative specs" });
+s.addNotes("Prioridad de producción: conceptos 1, 3 y 6. Los conceptos 4 y 5 pueden reutilizar S8 y S1 con el hook corregido.");
+
 // ---------- 11. Plan ----------
 pres.addSection({ title: "Próximos pasos" });
 s = slide("CONTENT", "Próximos pasos");
@@ -292,7 +368,7 @@ s.addText("Plan · 12 – 18 oct", { placeholder: "title" });
 const plan = [
   ["Fase de aprendizaje", "Sin cambios durante 5 días. Criterio de pausa: ~$120 de gasto sin lead calificado."],
   ["Medición en GHL", "Reporte diario de leads calificados vs. no calificados por anuncio."],
-  ["Nuevos creativos", "Texto en imagen dirigido al comprador (\"For Law Firm Owners\"). V2: reemplazar \"19 jobs\" por \"19 roles\"."],
+  ["Producción creativa", "Conceptos 1, 3 y 6 de la matriz como prioridad. V2: reemplazar \"19 jobs\" por \"19 roles\"."],
 ];
 plan.forEach(([head, body], i) => {
   const x = 0.5 + i * 3.07;
