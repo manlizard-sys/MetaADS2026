@@ -5,3 +5,4 @@ creatives/*.mp4
 creatives/*.mov
 __pycache__/
 build/reports/ghl-*.json
+build/reports/previews/
