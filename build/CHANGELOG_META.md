@@ -1,0 +1,19 @@
+# Bitácora de cambios · Meta Ads OrchidPros
+
+Registro de todo lo que se cambió en la cuenta `act_1806647434085082`, en orden cronológico, con el motivo de cada cambio.
+Los informes de los lunes leen este archivo para explicar qué se hizo cada semana.
+**Regla:** cada vez que se cambia algo en Meta, en el formulario o en el seguimiento, se agrega una línea aquí el mismo día.
+Las horas están en hora de Nueva York (zona horaria de la cuenta).
+
+| Fecha | Quién | Qué cambió | Por qué |
+|---|---|---|---|
+| 2026-09-29 | Equipo Orchid (Ads Manager) | Se crea la campaña "ORCHID - Leads - Hire VA - 2026 OCT - ABO" (objetivo Leads, optimiza por el evento Lead del píxel). Conjunto "US \| 30-65 \| Owners - Legal - Health". Anuncios en video V1–V4 y carruseles C1–C2. | Lanzamiento. |
+| 2026-10-01 | Equipo Orchid (Ads Manager) | Se agregan 8 anuncios estáticos (S1–S8). | Más variedad de creativos. |
+| 2026-10-06 | Claude | Primer análisis de 30 días, verificación de cuenta y píxel, dashboard publicado. Se crean dos rutinas automáticas: alerta diaria (martes a viernes) e informe semanal (lunes). Solo lectura. | Seguimiento. |
+| 2026-10-11 ~23:56 | Equipo Orchid (Ads Manager) | Se pausan todos los videos (incluido V2), los carruseles y S3. Quedan activos solo S1, S6 y S8 (estáticos). | Decisión manual; no quedó registrado el motivo. |
+| 2026-10-12 | Claude | Se conecta GHL en modo solo lectura. Hallazgo: de 4 leads que llegaron desde Meta en 30 días, 3 buscaban trabajo; el único que quería contratar vino de V2 y agendó. | Medir la calidad real de los leads. |
+| 2026-10-12 | Equipo Orchid (GHL) | Se simplifica el formulario de la landing (go.orchidpros.com/hire). | Facilitar el envío y filtrar a quien busca trabajo. |
+| 2026-10-12 | Claude (aprobado por el dueño) | Conjunto de anuncios: Advantage+ Audience **apagado**, edad **30–65** como límite estricto, ubicación solo **"vive en EE. UU."**. Anuncios: **V2 y V1 activados**, **S1 y S6 pausados**; S8 sigue activo. Respaldo: `build/backup-2026-10-12-before-changes.json`. | Meta estaba ampliando la audiencia por su cuenta (gasto en 18–34 años) y llegaban buscadores de empleo. V2 es el único anuncio que trajo un comprador real. |
+| 2026-10-12 | — | Se intentó excluir intereses de empleo (Job hunting, Indeed, Virtual assistant…). **Meta ya no lo permite** en los conjuntos de anuncios. | — |
+| 2026-10-12 | Equipo Orchid | La app de Meta "Orchid Automation" pasa a modo **Live** (política de privacidad y borrado de datos: orchidpros.com/privacy-policy-2/). | Meta exige modo Live para crear anuncios por API. |
+| 2026-10-12 | Claude (aprobado por el dueño) | **Copy v3** publicado en V1, V2 y S8: la primera línea le habla al que contrata ("Law firm owners:", "Business owners:", "Ready to hire your first virtual assistant?"), con precio desde $1,000/mes y sin palabras de empleo. Texto completo: `build/copy_v3.md`. Respaldo: `build/backup-2026-10-12-copy-v2-creatives.json`. | Que Meta (Andromeda) le muestre los anuncios a dueños de negocio y no a quien busca trabajo. |
