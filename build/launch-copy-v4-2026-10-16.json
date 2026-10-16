@@ -1,0 +1,27 @@
+[
+  {
+    "ad": "S9 Attorneys In-Person Cost - Static - 2026 Oct",
+    "ad_id": "120257317009730196",
+    "creative_id": "2247374029159730",
+    "image_hashes": [
+      "3c13a3f2d7cffa2c2102006cdc44a125",
+      "1a90c7e1d93e86b1fcc277cc7cb9f4d3",
+      "abba763ff887235950bfff1cbf1b51f6"
+    ],
+    "hyperlocal_ad_id": "120257317011800196"
+  },
+  {
+    "ad": "S10 Interns Turnover - Static - 2026 Oct",
+    "ad_id": "120257317011350196",
+    "creative_id": "2850514071999000",
+    "image_hashes": [
+      "322d9a47bcfb6ba0d34136dbdd9b02dc",
+      "61df2a78a86daa8b58ccb496f3cd7077",
+      "756418bc922152fadfc961f13e1f9c10"
+    ],
+    "hyperlocal_ad_id": "120257317011860196"
+  },
+  {
+    "hyperlocal_adset_id": "120257317011450196"
+  }
+]
