@@ -6,8 +6,9 @@ Ads are created PAUSED; activate them after review. Default is a dry run.
 
 --hyperlocal also creates the immigration-court pilot ad set (PAUSED) with the same two ads:
 1-mile pins at 26 Federal Plaza (USCIS NYC + Federal Plaza/Broadway/Varick courts) and 970 Broad St
-Newark (USCIS + Newark court), people living in or recently there, 25-65, interests Law firm /
-Lawyer / AILA, $10/day for 20 days ($200). The national ad set drops to $28.89/day so the account
+Newark (USCIS + Newark court), 30 N 41st St (USCIS Philadelphia) and 900 Market St (Philadelphia
+court), people living in or recently there, 25-65, interests Law firm / Lawyer / Bar association
+(Meta retired the AILA interest), $10/day for 20 days ($200). The national ad set drops to $28.89/day so the account
 stays at the $38.89/day cap.
 Usage: python3 launch_copy_v4.py [--adset <ad set id>] [--hyperlocal] [--apply]
 """
@@ -62,13 +63,15 @@ apply = "--apply" in sys.argv
 hyper = "--hyperlocal" in sys.argv
 CAP, HYPER_BUDGET = 3889, 1000  # cents/day: account cap and pilot budget
 PINS = [("26 Federal Plaza, New York, NY 10278", 40.7154682, -74.0042025),
-        ("970 Broad St, Newark, NJ 07102", 40.7300970, -74.1741915)]
+        ("970 Broad St, Newark, NJ 07102", 40.7300970, -74.1741915),
+        ("30 N 41st St, Philadelphia, PA 19104 (USCIS)", 39.9585393, -75.2054757),
+        ("900 Market St, Philadelphia, PA 19107 (immigration court)", 39.9516, -75.1554)]
 HYPER_TARGETING = {
     "geo_locations": {"custom_locations": [{"latitude": la, "longitude": lo, "radius": 1, "distance_unit": "mile"}
                                            for _, la, lo in PINS], "location_types": ["home", "recent"]},
     "age_min": 25, "age_max": 65,
     "flexible_spec": [{"interests": [{"id": "6003057724244", "name": "Law firm"}, {"id": "6003392101554", "name": "Lawyer"},
-                                     {"id": "6003395178071", "name": "American Immigration Lawyers Association"}]}],
+                                     {"id": "6003029225585", "name": "Bar association"}]}],
     "publisher_platforms": ["facebook", "instagram"],
     "targeting_automation": {"advantage_audience": 0},
 }
@@ -125,7 +128,7 @@ if hyper and len(created) == len(ADS):
         t["excluded_custom_audiences"] = src["targeting"]["excluded_custom_audiences"]
     end = (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=20)).strftime("%Y-%m-%dT%H:%M:%S+0000")
     try:
-        hs = post(f"{ACT}/adsets", name="HYPERLOCAL | Immigration courts NYC-Newark | 25-65 | 2026 Oct",
+        hs = post(f"{ACT}/adsets", name="HYPERLOCAL | Immigration courts NYC-Newark-PHL | 25-65 | 2026 Oct",
                   campaign_id=src["campaign_id"], daily_budget=HYPER_BUDGET, end_time=end, status="PAUSED",
                   optimization_goal=src["optimization_goal"], billing_event=src["billing_event"],
                   bid_strategy=src.get("bid_strategy", "LOWEST_COST_WITHOUT_CAP"), promoted_object=src["promoted_object"],
