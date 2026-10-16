@@ -3,7 +3,13 @@
 Each ad = one creative with its 3 images as variations (Flexible format), one primary text,
 3 headlines, 1 description, CTA Book Now, same landing and UTMs as the live ads.
 Ads are created PAUSED; activate them after review. Default is a dry run.
-Usage: python3 launch_copy_v4.py [--adset <ad set id>] [--apply]
+
+--hyperlocal also creates the immigration-court pilot ad set (PAUSED) with the same two ads:
+1-mile pins at 26 Federal Plaza (USCIS NYC + Federal Plaza/Broadway/Varick courts) and 970 Broad St
+Newark (USCIS + Newark court), people living in or recently there, 25-65, interests Law firm /
+Lawyer / AILA, $10/day for 20 days ($200). The national ad set drops to $28.89/day so the account
+stays at the $38.89/day cap.
+Usage: python3 launch_copy_v4.py [--adset <ad set id>] [--hyperlocal] [--apply]
 """
 import base64, datetime, json, re, sys
 from meta import get, post, ROOT, BUILD, MetaError
@@ -53,6 +59,19 @@ OPT_OUT = ["text_optimizations", "image_touchups", "image_templates", "image_unc
            "enhance_cta", "description_automation", "add_text_overlay", "adapt_to_placement"]
 
 apply = "--apply" in sys.argv
+hyper = "--hyperlocal" in sys.argv
+CAP, HYPER_BUDGET = 3889, 1000  # cents/day: account cap and pilot budget
+PINS = [("26 Federal Plaza, New York, NY 10278", 40.7154682, -74.0042025),
+        ("970 Broad St, Newark, NJ 07102", 40.7300970, -74.1741915)]
+HYPER_TARGETING = {
+    "geo_locations": {"custom_locations": [{"latitude": la, "longitude": lo, "radius": 1, "distance_unit": "mile"}
+                                           for _, la, lo in PINS], "location_types": ["home", "recent"]},
+    "age_min": 25, "age_max": 65,
+    "flexible_spec": [{"interests": [{"id": "6003057724244", "name": "Law firm"}, {"id": "6003392101554", "name": "Lawyer"},
+                                     {"id": "6003395178071", "name": "American Immigration Lawyers Association"}]}],
+    "publisher_platforms": ["facebook", "instagram"],
+    "targeting_automation": {"advantage_audience": 0},
+}
 aset = get(ADSET, fields="name,effective_status")
 print(f"Conjunto de anuncios: {aset['name']} ({aset['effective_status']})")
 for name, a in ADS.items():
@@ -62,6 +81,10 @@ for name, a in ADS.items():
     print(f"\n{name}  ·  {len(a['images'])} imágenes  ·  estado PAUSED")
     print("  ", a["body"].splitlines()[0])
     print("   Titulares:", " | ".join(a["titles"]))
+if hyper:
+    print(f"\nPiloto hiperlocal (PAUSADO): $" + f"{HYPER_BUDGET/100:.2f}/día x 20 días; conjunto nacional pasa a ${(CAP-HYPER_BUDGET)/100:.2f}/día")
+    for n, la, lo in PINS:
+        print(f"   1 mi alrededor de {n} ({la}, {lo})")
 if not apply:
     print("\nVista previa. Nada cambió. Ejecuta con --apply para crear los anuncios (quedan pausados).")
     sys.exit(0)
@@ -95,4 +118,25 @@ for name, a in ADS.items():
     except MetaError as e:
         print(f"ERROR en {name}:\n{e}")
         break
+if hyper and len(created) == len(ADS):
+    src = get(ADSET, fields="campaign_id,optimization_goal,billing_event,bid_strategy,promoted_object,attribution_spec,targeting")
+    t = dict(HYPER_TARGETING)
+    if src["targeting"].get("excluded_custom_audiences"):
+        t["excluded_custom_audiences"] = src["targeting"]["excluded_custom_audiences"]
+    end = (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=20)).strftime("%Y-%m-%dT%H:%M:%S+0000")
+    try:
+        hs = post(f"{ACT}/adsets", name="HYPERLOCAL | Immigration courts NYC-Newark | 25-65 | 2026 Oct",
+                  campaign_id=src["campaign_id"], daily_budget=HYPER_BUDGET, end_time=end, status="PAUSED",
+                  optimization_goal=src["optimization_goal"], billing_event=src["billing_event"],
+                  bid_strategy=src.get("bid_strategy", "LOWEST_COST_WITHOUT_CAP"), promoted_object=src["promoted_object"],
+                  attribution_spec=src.get("attribution_spec"), targeting=t)
+        for c in created:
+            ad = post(f"{ACT}/ads", name=c["ad"].replace("- Static", "- Hyperlocal"), adset_id=hs["id"],
+                      creative={"creative_id": c["creative_id"]}, status="PAUSED")
+            c["hyperlocal_ad_id"] = ad["id"]
+        post(ADSET, daily_budget=CAP - HYPER_BUDGET)
+        print(f"Piloto hiperlocal creado (pausado): ad set {hs['id']}; nacional ahora ${(CAP-HYPER_BUDGET)/100:.2f}/día")
+        created.append({"hyperlocal_adset_id": hs["id"]})
+    except MetaError as e:
+        print(f"ERROR en el piloto hiperlocal (el presupuesto nacional no se tocó):\n{e}")
 (BUILD / f"launch-copy-v4-{datetime.date.today().isoformat()}.json").write_text(json.dumps(created, indent=2), encoding="utf-8")
