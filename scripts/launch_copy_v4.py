@@ -100,15 +100,16 @@ for name, a in ADS.items():
         hashes.append(next(iter(r["images"].values()))["hash"])
     spec = {
         "name": f"copy v4 · {datetime.date.today().isoformat()} · {name}",
-        "object_story_spec": {"page_id": PAGE, "instagram_user_id": IG},
+        # Same structure as the live V2 creative: link_data carries the link/CTA, asset_feed_spec the variations.
+        "object_story_spec": {"page_id": PAGE, "instagram_user_id": IG, "link_data": {
+            "link": LINK, "image_hash": hashes[0], "message": a["body"], "name": a["titles"][0], "description": DESC,
+            "caption": "orchidpros.com", "call_to_action": {"type": "BOOK_NOW", "value": {"link": LINK}}}},
         "asset_feed_spec": {
             "images": [{"hash": h} for h in hashes],
             "bodies": [{"text": a["body"]}],
             "titles": [{"text": t} for t in a["titles"]],
             "descriptions": [{"text": DESC}],
-            "link_urls": [{"website_url": LINK, "display_url": "orchidpros.com"}],
-            "call_to_action_types": ["BOOK_NOW"],
-            "ad_formats": ["SINGLE_IMAGE"],
+            "optimization_type": "DEGREES_OF_FREEDOM",  # Flexible format; without it Meta treats it as Dynamic Creative
         },
         "degrees_of_freedom_spec": {"creative_features_spec": {k: {"enroll_status": "OPT_OUT"} for k in OPT_OUT}},
         "url_tags": URL_TAGS,
