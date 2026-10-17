@@ -1,5 +1,5 @@
 """🔵 S11 Immigration Intake Calls: third ad for the hyperlocal ad set (copy in build/copy_s11.md).
-Reuses the S5 image already in the account. Default is a dry run; --apply creates it ACTIVE.
+Uses the approved images still_depending_on_interns_1 and _2 (Debi, 2026-10-15) already in the account. Default is a dry run; --apply creates it ACTIVE.
 """
 import sys
 from meta import get, post
@@ -8,7 +8,7 @@ ACT = "act_1806647434085082"
 PAGE, IG = "1132642053254708", "17841473464921031"
 ADSET = "120257317011450196"
 LINK = "https://go.orchidpros.com/hire"
-IMAGE_HASH = "59543131f48ec2b42b2be7627536d501"  # S5 "Still answering every call yourself?"
+IMAGE_HASHES = ["322d9a47bcfb6ba0d34136dbdd9b02dc", "61df2a78a86daa8b58ccb496f3cd7077"]  # approved: still_depending_on_interns_1, _2
 NAME = "🔵 S11 Immigration Intake Calls - Hyperlocal - 2026 Oct"
 URL_TAGS = ("utm_source={{site_source_name}}&utm_medium=paid_social&utm_campaign={{campaign.name}}"
             "&utm_term={{adset.name}}&utm_content={{ad.name}}&utm_id={{campaign.id}}&placement={{placement}}")
@@ -32,9 +32,9 @@ if "--apply" not in sys.argv:
     sys.exit("\nVista previa. Nada cambió. Ejecuta con --apply.")
 cr = post(f"{ACT}/adcreatives", name=f"copy s11 · {NAME}", url_tags=URL_TAGS,
           object_story_spec={"page_id": PAGE, "instagram_user_id": IG, "link_data": {
-              "link": LINK, "image_hash": IMAGE_HASH, "message": BODY, "name": TITLES[0], "description": DESC,
+              "link": LINK, "image_hash": IMAGE_HASHES[0], "message": BODY, "name": TITLES[0], "description": DESC,
               "caption": "orchidpros.com", "call_to_action": {"type": "BOOK_TRAVEL", "value": {"link": LINK, "link_caption": "orchidpros.com"}}}},
-          asset_feed_spec={"bodies": [{"text": BODY}], "titles": [{"text": t} for t in TITLES],
+          asset_feed_spec={"images": [{"hash": h} for h in IMAGE_HASHES], "bodies": [{"text": BODY}], "titles": [{"text": t} for t in TITLES],
                            "descriptions": [{"text": DESC}], "optimization_type": "DEGREES_OF_FREEDOM"},
           degrees_of_freedom_spec={"creative_features_spec": {k: {"enroll_status": "OPT_OUT"} for k in OPT_OUT}})
 ad = post(f"{ACT}/ads", name=NAME, adset_id=ADSET, creative={"creative_id": cr["id"]}, status="ACTIVE")

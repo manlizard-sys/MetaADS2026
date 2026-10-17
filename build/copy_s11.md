@@ -1,6 +1,6 @@
 # 🔵 S11 · Immigration Intake Calls (hiperlocal) · copy de Claude, distinto al entregado por el equipo
 
-Imagen: la de S5 "Still answering every call yourself?" (abogada al teléfono en su escritorio). Muestra al comprador, no a la asistente.
+Imagen: still_depending_on_interns_1 y _2 (creativos aprobados de Debi; persona al teléfono). Antes usaba la imagen de S5, que no estaba aprobada; se cambió el 17 oct.
 Conjunto: HYPERLOCAL | Immigration courts NYC-Newark-PHL. Marcado con 🔵 en el nombre.
 
 Primary text:
