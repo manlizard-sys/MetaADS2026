@@ -103,7 +103,7 @@ for name, a in ADS.items():
         # Same structure as the live V2 creative: link_data carries the link/CTA, asset_feed_spec the variations.
         "object_story_spec": {"page_id": PAGE, "instagram_user_id": IG, "link_data": {
             "link": LINK, "image_hash": hashes[0], "message": a["body"], "name": a["titles"][0], "description": DESC,
-            "caption": "orchidpros.com", "call_to_action": {"type": "BOOK_NOW", "value": {"link": LINK}}}},
+            "caption": "orchidpros.com", "call_to_action": {"type": "BOOK_TRAVEL", "value": {"link": LINK, "link_caption": "orchidpros.com"}}}},
         "asset_feed_spec": {
             "images": [{"hash": h} for h in hashes],
             "bodies": [{"text": a["body"]}],

@@ -33,7 +33,7 @@ if "--apply" not in sys.argv:
 cr = post(f"{ACT}/adcreatives", name=f"copy s11 · {NAME}", url_tags=URL_TAGS,
           object_story_spec={"page_id": PAGE, "instagram_user_id": IG, "link_data": {
               "link": LINK, "image_hash": IMAGE_HASH, "message": BODY, "name": TITLES[0], "description": DESC,
-              "caption": "orchidpros.com", "call_to_action": {"type": "BOOK_NOW", "value": {"link": LINK}}}},
+              "caption": "orchidpros.com", "call_to_action": {"type": "BOOK_TRAVEL", "value": {"link": LINK, "link_caption": "orchidpros.com"}}}},
           asset_feed_spec={"bodies": [{"text": BODY}], "titles": [{"text": t} for t in TITLES],
                            "descriptions": [{"text": DESC}], "optimization_type": "DEGREES_OF_FREEDOM"},
           degrees_of_freedom_spec={"creative_features_spec": {k: {"enroll_status": "OPT_OUT"} for k in OPT_OUT}})
