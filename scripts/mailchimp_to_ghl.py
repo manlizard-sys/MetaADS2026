@@ -103,6 +103,11 @@ def main():
             body["firstName"] = mf["FNAME"]
         if mf.get("LNAME"):
             body["lastName"] = mf["LNAME"]
+        company = next((v for k, v in mf.items() if "COMPANY" in k.upper() and isinstance(v, str) and v), "")
+        if company:
+            body["companyName"] = company
+        if isinstance(mf.get("PHONE"), str) and mf["PHONE"].strip():
+            body["phone"] = mf["PHONE"].strip()
         if m["status"] in NOT_MARKETABLE:
             body["dndSettings"] = {"Email": {"status": "active", "message": f"Mailchimp: {m['status']}"}}
         contact = call(ghl, "POST", GHL_API + "/contacts/upsert", json=body).get("contact") or {}
