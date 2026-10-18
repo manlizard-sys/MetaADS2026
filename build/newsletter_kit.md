@@ -1,4 +1,6 @@
-# Newsletter Orchid: kit listo para usar
+# Newsletter Orchid: kit listo para usar (todo en GHL)
+
+Decisión: los newsletters se envían desde GHL. Las audiencias de Mailchimp se migran a GHL con `scripts/mailchimp_to_ghl.py`, y después se cancela Mailchimp.
 
 Este kit tiene seis partes:
 1. La casilla del newsletter en el formulario.
@@ -6,7 +8,7 @@ Este kit tiene seis partes:
 3. El workflow "Clic en newsletter sin cita".
 4. El link del botón.
 5. El newsletter #1.
-6. La sincronización diaria.
+6. La migración desde Mailchimp.
 
 Los textos que ve el cliente están en inglés; las instrucciones, en español.
 
@@ -39,7 +41,7 @@ Los textos que ve el cliente están en inglés; las instrucciones, en español.
 
 ## 3. Workflow "03 - Clic en newsletter sin cita" (GHL, PC)
 
-1. **Trigger:** Contact Tag → **Tag Added** = `newsletter-clic`.
+1. **Trigger:** **Trigger Link Clicked** → el trigger link "Book (newsletter)". Créalo en **Marketing → Trigger Links** con la URL de la sección 4, y úsalo como botón en cada newsletter.
 2. **Wait:** 2 días.
 3. **If/Else:** "Has appointment" (o tag `agendo`).
    - Si ya agendó → **End**.
@@ -54,11 +56,10 @@ Los textos que ve el cliente están en inglés; las instrucciones, en español.
      > Or pick a slot here: https://go.orchidpros.com/book?utm_source=newsletter&utm_medium=email&utm_campaign=followup
      >
      > — The Orchid team
-5. **Remove Tag:** `newsletter-clic`, para que pueda volver a entrar con otro newsletter.
-6. **Settings** del workflow:
+5. **Settings** del workflow:
    - **From** = growth@orchidpros.com.
    - **Allow re-entry:** sí.
-7. Haz clic en **Save → Publish**.
+6. Haz clic en **Save → Publish**.
 
 ## 4. Link del botón en cada newsletter
 
@@ -69,12 +70,12 @@ https://go.orchidpros.com/book?utm_source=newsletter&utm_medium=email&utm_campai
 - Cambia `AAAA-MM-DD` por la fecha de envío.
 - **Nunca agregues el correo de la persona en el link.** El pixel de Meta lee la URL completa.
 
-## 5. Newsletter #1 (Mailchimp)
+## 5. Newsletter #1 (GHL → Marketing → Emails → Campaigns)
 
 - **Subject:** `The 5 tasks owners hand off first`
 - **Preview text:** `And how much of your week they take back.`
 
-> Hi *|FNAME|*,
+> Hi {{contact.first_name}},
 >
 > When owners of law firms, real-estate offices and accounting practices start with an assistant, the same five tasks come off their plate first:
 >
@@ -94,20 +95,27 @@ https://go.orchidpros.com/book?utm_source=newsletter&utm_medium=email&utm_campai
 
 **Antes de enviar:**
 - El remitente es **growth@orchidpros.com**.
+- Destinatarios: la Smart List de la audiencia, excluyendo los tags `mc-baja` y `job-seeker`, y los contactos en DND.
+- Las primeras semanas, envía **en tandas** (opción "Send in batches"; por ejemplo 300 por día). Así el dominio nuevo gana reputación y no cae en spam.
 - Envíate una prueba a ti mismo.
 - Revisa que el botón lleve el link con la fecha correcta.
 
-## 6. Sincronización diaria (Claude)
+## 6. Migración desde Mailchimp (Claude)
 
-Script: `scripts/mailchimp_sync.py`.
+Script: `scripts/mailchimp_to_ghl.py`.
 
-Cada día:
-- Agrega a Mailchimp a los leads de GHL con el tag `newsletter`. Nunca agrega a los `job-seeker`.
-- Respeta las bajas en ambos sentidos.
-- Le pone el tag `newsletter-clic` a quien hizo clic en `/book` y no agendó.
+- Copia cada audiencia de Mailchimp a GHL con un tag:
+  - `mc-attorneys`
+  - `mc-real-estate`
+  - `mc-hiring-colombia`
+- Quien se dio de baja o rebotó en Mailchimp entra con **DND de email** y el tag `mc-baja`. Así nunca recibe marketing desde GHL.
+- Los tags que ya existen en GHL se conservan.
+- Por defecto solo cuenta lo que haría. Importa solo con `--apply`.
 
-Por defecto solo muestra cuántos contactos movería, sin cambiar nada. Escribe solo con `--apply`.
+Necesita `MAILCHIMP_API_KEY` en el entorno. No hace falta el Audience ID: el script encuentra las audiencias solo.
 
-Necesita estas variables en el entorno:
-- `MAILCHIMP_API_KEY`
-- `MAILCHIMP_AUDIENCE_ID`
+**Smart Lists en GHL** (Contacts → Smart Lists), una por newsletter:
+- **Attorneys:** tag `mc-attorneys`, o Business type = Law firm.
+- **Real Estate:** tag `mc-real-estate`, o Business type = Real estate.
+- **General Services:** el resto de leads con el tag `newsletter`.
+- **Equipo Colombia:** tag `mc-hiring-colombia`. Es solo para comunicaciones internas: nunca la mezcles con los newsletters de clientes.
