@@ -4,3 +4,4 @@ build/*.log
 creatives/*.mp4
 creatives/*.mov
 __pycache__/
+build/reports/mailchimp_health.md
