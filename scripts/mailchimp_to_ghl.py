@@ -95,7 +95,7 @@ def main():
         print("Dry run: nothing written. Run with --apply to import.")
         return
 
-    done = bad_phones = 0
+    done = bad_phones = shared_phones = 0
     for a, m in plan:
         mf = m.get("merge_fields") or {}
         body = {"locationId": LOCATION, "email": m["email_address"], "source": "Mailchimp import"}
@@ -107,7 +107,14 @@ def main():
         if company:
             body["companyName"] = company
         if isinstance(mf.get("PHONE"), str) and mf["PHONE"].strip():
-            body["phone"] = mf["PHONE"].strip()
+            # GHL matches contacts by email OR phone: a phone already used by another contact
+            # (e.g. a firm's main line) would merge this person into it and overwrite its email.
+            dup = call(ghl, "GET", GHL_API + "/contacts/search/duplicate",
+                       params={"locationId": LOCATION, "number": mf["PHONE"].strip()}).get("contact")
+            if not dup or (dup.get("email") or "").lower() == m["email_address"].lower():
+                body["phone"] = mf["PHONE"].strip()
+            else:
+                shared_phones += 1
         if m["status"] in NOT_MARKETABLE:
             body["dndSettings"] = {"Email": {"status": "active", "message": f"Mailchimp: {m['status']}"}}
         r = ghl.post(GHL_API + "/contacts/upsert", json=body, timeout=60) if "phone" in body else None
@@ -117,6 +124,8 @@ def main():
             r = None
         contact = ((r.json() if r is not None and r.ok else None)
                    or call(ghl, "POST", GHL_API + "/contacts/upsert", json=body)).get("contact") or {}
+        if (contact.get("email") or "").lower() != m["email_address"].lower():
+            sys.exit(f"Stopped at row {done + 1}: GHL returned a different contact (merge). Nothing else written.")
         tags = [f"mc-{slug(a['name'])}"] + [f"mc-{slug(t['name'])}" for t in m.get("tags") or []]
         if m["status"] in NOT_MARKETABLE:
             tags.append("mc-baja")
@@ -125,7 +134,8 @@ def main():
         if done % 100 == 0:
             print(f"{done}/{len(plan)}")
         time.sleep(0.25)  # GHL limit: 100 requests / 10 s per location
-    print(f"Imported {done} rows ({bad_phones} without phone: GHL rejected the Mailchimp value).")
+    print(f"Imported {done} rows ({bad_phones} without phone: GHL rejected the Mailchimp value; "
+          f"{shared_phones} without phone: number already used by another contact).")
 
 
 if __name__ == "__main__":
