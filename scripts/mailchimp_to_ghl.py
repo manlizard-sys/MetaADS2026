@@ -95,7 +95,7 @@ def main():
         print("Dry run: nothing written. Run with --apply to import.")
         return
 
-    done = 0
+    done = bad_phones = 0
     for a, m in plan:
         mf = m.get("merge_fields") or {}
         body = {"locationId": LOCATION, "email": m["email_address"], "source": "Mailchimp import"}
@@ -110,7 +110,13 @@ def main():
             body["phone"] = mf["PHONE"].strip()
         if m["status"] in NOT_MARKETABLE:
             body["dndSettings"] = {"Email": {"status": "active", "message": f"Mailchimp: {m['status']}"}}
-        contact = call(ghl, "POST", GHL_API + "/contacts/upsert", json=body).get("contact") or {}
+        r = ghl.post(GHL_API + "/contacts/upsert", json=body, timeout=60) if "phone" in body else None
+        if r is not None and r.status_code == 400 and "phone" in r.text.lower():
+            body.pop("phone")  # GHL rejects malformed Mailchimp phones; import the contact without it
+            bad_phones += 1
+            r = None
+        contact = ((r.json() if r is not None and r.ok else None)
+                   or call(ghl, "POST", GHL_API + "/contacts/upsert", json=body)).get("contact") or {}
         tags = [f"mc-{slug(a['name'])}"] + [f"mc-{slug(t['name'])}" for t in m.get("tags") or []]
         if m["status"] in NOT_MARKETABLE:
             tags.append("mc-baja")
@@ -119,7 +125,7 @@ def main():
         if done % 100 == 0:
             print(f"{done}/{len(plan)}")
         time.sleep(0.25)  # GHL limit: 100 requests / 10 s per location
-    print(f"Imported {done} rows.")
+    print(f"Imported {done} rows ({bad_phones} without phone: GHL rejected the Mailchimp value).")
 
 
 if __name__ == "__main__":
