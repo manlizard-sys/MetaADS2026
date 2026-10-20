@@ -340,8 +340,8 @@ pres.addSection({ title: "Próximos pasos" });
 s = slide("CONTENT", "Próximos pasos");
 s.addText("Plan · 19 – 25 oct", { placeholder: "title" });
 const plan = [
-  ["Validar la conversión", "Envío de prueba del formulario desde el celular. Verificar que llegue a GHL y que Meta registre el evento Lead."],
-  ["Revisión miércoles 21", "Criterio de corte: $40 sin lead. Rotación desde la banca (H5, H4). Sin otros cambios hasta entonces."],
+  ["Formulario con menos fricción", "Revisar el formulario de la landing para reducir pasos y campos. Prueba de envío desde el celular: que llegue a GHL y que Meta registre el evento Lead."],
+  ["Resultados el viernes 23", "Anuncios sin cambios hasta el viernes. Criterio de corte: $40 sin lead; rotación desde la banca (H5, H4)."],
   ["Creativos y página", "Cambio de categorías de la página. Pedir a Debi texto en imagen desde la firma y versiones 9:16."],
 ];
 plan.forEach(([head, body], i) => {
