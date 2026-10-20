@@ -342,7 +342,7 @@ s.addText("Plan · 19 – 25 oct", { placeholder: "title" });
 const plan = [
   ["Formulario con menos fricción", "Revisar el formulario de la landing para reducir pasos y campos. Prueba de envío desde el celular: que llegue a GHL y que Meta registre el evento Lead."],
   ["Resultados el viernes 23", "Anuncios sin cambios hasta el viernes. Criterio de corte: $40 sin lead; rotación desde la banca (H5, H4)."],
-  ["Creativos y página", "Cambio de categorías de la página. Pedir a Debi texto en imagen desde la firma y versiones 9:16."],
+  ["Anuncios en video", "Necesitamos 2–3 videos 9:16 para probar, con un abogado en cámara. El video tuvo CTR 6.2% vs. 1.9% del estático y trajo el único lead calificado (V2)."],
 ];
 plan.forEach(([head, body], i) => {
   const x = 0.5 + i * 3.07;
@@ -359,7 +359,7 @@ s.addText("Decisiones requeridas", { placeholder: "title" });
 const dec = [
   ["Categorías de la página de Facebook", "Quitar Recruiter, Real Estate y Lawyer & Law Firm; dejar Business Service / Consulting Agency. Requiere un administrador."],
   ["Pausar fines de semana", "Aprobar el cambio a presupuesto total con horario (lunes a viernes) si el patrón de CPM alto se repite."],
-  ["Pendientes de la semana anterior", "CPL calificado objetivo y envío del evento Lead vía CAPI solo para \"I want to hire.\"."],
+  ["Producción de videos", "Aprobar 2–3 anuncios en video para el piloto. Hoy solo hay estáticos activos; sin video no podemos probar el formato que mejor ha convertido."],
 ];
 dec.forEach(([head, body], i) => {
   const y = 1.25 + i * 1.25;
@@ -367,7 +367,7 @@ dec.forEach(([head, body], i) => {
   T(s, head, { x: 1.1, y, w: 8.4, h: 0.45, fontSize: 18, bold: true, color: C.accent1, valign: "middle", objectName: `Decision head ${i + 1}` });
   T(s, body, { x: 1.1, y: y + 0.47, w: 8.4, h: 0.65, fontSize: 14, color: C.background1, valign: "top", objectName: `Decision body ${i + 1}` });
 });
-s.addNotes("Las tres afectan la calidad de los leads más que cualquier ajuste de anuncios.");
+s.addNotes("Siguen pendientes de la semana anterior: CPL calificado objetivo y envío del evento Lead vía CAPI solo para \"I want to hire.\".");
 
 (async () => {
   await pres.writeFile({ fileName: OUT });
