@@ -172,7 +172,8 @@ if g:
     q.append(["Fecha (UTC)", "Anuncio de origen", "Hiring or job seeking", "Vertical", "Agendó", "Clasificación"])
     for c in q[1]:
         c.font, c.fill = HEAD, HFILL
-    for c in sorted(json.load(open(g[-1]))["contacts"], key=lambda x: x["date"]):
+    period = [c for c in json.load(open(g[-1]))["contacts"] if SINCE <= c["date"] <= UNTIL]
+    for c in sorted(period, key=lambda x: x["date"]):
         q.append([c["date"], c["ad"], c.get("hiring_or_job", ""), c.get("vertical", ""), "Sí" if c.get("booked") else "No",
                   "No calificado" if c["job_seeker"] else ("Calificado" if c.get("hiring_or_job") else "Sin respuesta")])
     n = q.max_row
@@ -181,7 +182,8 @@ if g:
     q.append(["No calificados", f'=COUNTIF(F2:F{n},"No calificado")'])
     q.append(["% no calificados (con respuesta)", f"=IF(B{n+2}+B{n+3}>0,B{n+3}/(B{n+2}+B{n+3}),\"\")"])
     q[f"B{n+4}"].number_format = "0.0%"
-    q.append([f"Fuente: GHL ({g[-1].split('/')[-1]}), sin datos personales."])
+    q.append([f"Fuente: GHL ({g[-1].split('/')[-1]}), contactos creados entre {SINCE} y {UNTIL}, sin datos personales. "
+              "Excluye importaciones de Mailchimp."])
     for row in q.iter_rows():
         for c in row:
             if c.row > 1:
