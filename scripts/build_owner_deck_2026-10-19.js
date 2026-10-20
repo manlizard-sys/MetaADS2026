@@ -266,7 +266,7 @@ s.addNotes("V1 ($1.64) y S1 ($0.06) gastaron montos marginales y siguen pausados
 
 // ---------- 10. Bench ----------
 s = slide("CONTENT", "Anuncios");
-s.addText("Banca lista: 6 anuncios en pausa", { placeholder: "title" });
+s.addText("Banca lista", { placeholder: "title" });
 s.addTable([["", "Anuncio", "Imagen (Debi)", "Ángulo"],
   ["H1", "Sticky Notes Follow-ups", "for the attorneys 1", "Seguimientos pendientes"],
   ["H2", "After-Hours Paperwork", "for the attorneys 2", "Papeleo después de las 7 pm"],
@@ -286,7 +286,7 @@ s.addNotes("Prioridad de rotación: H5 y H4 (los ángulos más específicos para
 // ---------- 11. Conclusions ----------
 pres.addSection({ title: "Conclusiones" });
 s = slide("CONTENT", "Conclusiones");
-s.addText("Conclusiones: qué funciona y qué no", { placeholder: "title" });
+s.addText("Conclusiones", { placeholder: "title" });
 const good = [
   ["Segmentación hiperlocal", "CPM −44% y costo por visita −32% frente al nacional."],
   ["Copy dirigido a la firma", "0 buscadores de empleo desde el lanzamiento del 16 oct."],
@@ -314,7 +314,7 @@ s.addNotes("Prioridad: validar el formulario y el evento Lead antes de seguir ca
 // ---------- 12. Andromeda ----------
 pres.addSection({ title: "Estrategia creativa" });
 s = slide("CONTENT", "Estrategia creativa");
-s.addText("Andromeda: el creativo define la audiencia", { placeholder: "title" });
+s.addText("Andromeda", { placeholder: "title" });
 const andr = [
   ["Lee todo el anuncio, no solo el copy", "Texto en imagen, página y categoría también son señales. \"Recruiter\" y \"Hire a part-time professional\" apuntan a candidatos."],
   ["Imágenes repetidas = un solo concepto", "Se separaron las imágenes entre S10 y S11 para que Meta los trate como conceptos distintos."],
