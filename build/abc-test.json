@@ -1,0 +1,59 @@
+{
+  "ad_study_id": "1157711676609090",
+  "adsets": {
+    "C": {
+      "adset_id": "120257470343710196",
+      "name": "TEST C · Formulario instantáneo · NY-NJ-PA abogados 30-65 · 2026 Oct-Nov",
+      "ads": [
+        [
+          "TEST C · 🔵 H5 Phones While In Court",
+          "120257470352640196"
+        ],
+        [
+          "TEST C · 🔵 H3 Saturdays Back",
+          "120257470351880196"
+        ],
+        [
+          "TEST C · S9 Attorneys In-Person Cost",
+          "120257470351510196"
+        ]
+      ]
+    },
+    "B": {
+      "adset_id": "120257470336210196",
+      "name": "TEST B · Landing completa · NY-NJ-PA abogados 30-65 · 2026 Oct-Nov",
+      "ads": [
+        [
+          "TEST B · S9 Attorneys In-Person Cost",
+          "120257470338170196"
+        ],
+        [
+          "TEST B · 🔵 H5 Phones While In Court",
+          "120257470339710196"
+        ],
+        [
+          "TEST B · 🔵 H3 Saturdays Back",
+          "120257470338630196"
+        ]
+      ]
+    },
+    "A": {
+      "adset_id": "120257470333040196",
+      "name": "TEST A · Landing solo formulario · NY-NJ-PA abogados 30-65 · 2026 Oct-Nov",
+      "ads": [
+        [
+          "TEST A · 🔵 H5 Phones While In Court",
+          "120257470335920196"
+        ],
+        [
+          "TEST A · S9 Attorneys In-Person Cost",
+          "120257470334790196"
+        ],
+        [
+          "TEST A · 🔵 H3 Saturdays Back",
+          "120257470335650196"
+        ]
+      ]
+    }
+  }
+}
