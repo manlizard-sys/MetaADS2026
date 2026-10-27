@@ -70,11 +70,16 @@ def main():
     days = int(sys.argv[sys.argv.index("--days") + 1]) if "--days" in sys.argv else 30
     start = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)
     names = field_names()
-    rows, imported = [], 0
+    rows, imported, tests = [], 0, 0
     for c in contacts_since(start):
         # Bulk imports (e.g. Mailchimp lists) are not form leads; count them apart.
         if (c.get("source") or "").strip().lower() == "mailchimp" or any(str(t).startswith("mc-") for t in c.get("tags") or []):
             imported += 1
+            continue
+        # Our own form tests (names "Test ...", Meta's "<test lead: dummy data>") are not leads.
+        name = f"{c.get('firstName') or ''} {c.get('lastName') or ''}".strip().lower()
+        if name.startswith("test") or name.startswith("<test lead"):
+            tests += 1
             continue
         cf = c.get("customFields") or []
         attr = c.get("attributionSource") or {}
@@ -96,6 +101,8 @@ def main():
     total, jobs = len(rows), sum(r["job_seeker"] for r in rows)
     print(f"GHL, últimos {days} días: {total} contactos · {jobs} buscan trabajo ({100 * jobs / total:.0f}%)" if total
           else f"GHL, últimos {days} días: 0 contactos")
+    if tests:
+        print(f"  (+{tests} envíos de prueba excluidos: nombre 'Test…' o lead de prueba de Meta)")
     if imported:
         print(f"  (+{imported} contactos importados de Mailchimp, excluidos: no son leads de formulario)")
     for ad, v in sorted(by_ad.items(), key=lambda x: -x[1]["leads"]):
