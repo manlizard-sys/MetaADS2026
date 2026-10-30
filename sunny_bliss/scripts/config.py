@@ -17,6 +17,26 @@ LANDING = env("SUNNY_LANDING")                # TODO: "https://..."
 TIMEZONE = env("SUNNY_TZ") or "America/New_York"
 MAX_DAILY_BUDGET = None                       # TODO: USD/day ceiling; never exceeded without owner approval
 
+# Next campaign geography (owner, 2026-10-30), validated against Meta's ZIP search.
+# 33153 (Miami Shores) is not targetable in Meta (PO Box ZIP); its area is covered by 33138/33150.
+NEXT_CAMPAIGN_ZIPS = {
+    "Coral Gables": ["33133", "33134", "33145", "33146", "33155"],
+    "Miami Beach": ["33139", "33140", "33141"],
+    "Miami Shores": ["33138", "33150", "33168"],
+    "Pinecrest": ["33156"],
+    "South Miami": ["33143"],
+    "Cutler Bay": ["33157", "33189", "33190"],
+    "Key Biscayne": ["33149"],
+    "Palmetto Bay": ["33158"],
+}
+
+
+def zip_geo():
+    """geo_locations for the next campaign: people who live in those ZIPs."""
+    zips = sorted({z for zs in NEXT_CAMPAIGN_ZIPS.values() for z in zs})
+    return {"zips": [{"key": f"US:{z}"} for z in zips], "location_types": ["home"]}
+
+
 # Campaigns whose name contains one of these are recruiting (job applicants), not customers.
 HIRING_KEYWORDS = ("hiring",)
 
