@@ -111,13 +111,16 @@ def build(data):
     ads.sort(key=lambda a: (a["cpl"] is None, a["cpl"] or 0, -a["spend"]))
     camps = [{"name": rows[0]["campaign_name"], **summarize(rows)}
              for _, rows in group(data["ads"], ["campaign_id"]).items()]
+    hiring = lambda r: any(k in r["campaign_name"].lower() for k in C.HIRING_KEYWORDS)
+    split = {"Clientes": summarize([r for r in data["ads"] if not hiring(r)]),
+             "Contratación": summarize([r for r in data["ads"] if hiring(r)])}
     bds = {}
     for k, rows in data["breakdowns"].items():
         keys = BREAKDOWNS[k].split(",")
         bds[k] = sorted(({"segment": " / ".join(v for v in key if v), **summarize(rs)}
                          for key, rs in group(rows, keys).items()), key=lambda x: -x["spend"])
     return {"range": data["range"], "account_info": data["account"], "account": acct, "daily": daily,
-            "campaigns": camps, "ads": ads, "breakdowns": bds, "alerts": alerts(acct, ads)}
+            "campaigns": camps, "split": split, "ads": ads, "breakdowns": bds, "alerts": alerts(acct, ads)}
 
 
 # ---------------------------------------------------------------- output
@@ -185,6 +188,7 @@ def dashboard(s):
         '<section class="tiles">' + "".join(f'<div class="tile"><div class="muted">{k}</div><div class="big">{v}</div></div>' for k, v in tiles) + "</section>",
         '<section class="charts">' + bar_chart(s["daily"], "spend", "Gasto diario", money)
         + bar_chart(s["daily"], "leads", "Leads diarios", lambda v: f"{v:.0f}") + "</section>",
+        "<h2>Clientes vs. contratación</h2>" + table([{"name": k, **v} for k, v in s["split"].items()], [("Tipo", "name", None)] + STD, "spend"),
         "<h2>Embudo</h2><div class='funnel'>" + "".join(
             f'<div class="frow"><span>{k}</span><span class="fbar"><span class="cellbar" style="width:{100 * v / ftop:.1f}%"></span></span>'
             f'<span class="num">{v:,}</span></div>' for k, v in funnel) +

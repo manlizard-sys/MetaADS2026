@@ -45,8 +45,17 @@ if not C.AD_ACCOUNT:
     print("\nFalta SUNNY_AD_ACCOUNT: elige la cuenta de la lista de arriba y configúrala.")
 else:
     C.require("AD_ACCOUNT")
-    acc = get(C.AD_ACCOUNT, fields="name,currency,timezone_name,account_status,disable_reason,spend_cap,"
-              "amount_spent,balance,funding_source_details,is_prepay_account,min_daily_budget,business{id,name}")
+    base = ("name,currency,timezone_name,account_status,disable_reason,spend_cap,amount_spent,balance,"
+            "is_prepay_account,min_daily_budget")
+    acc = None
+    for extra in (",funding_source_details,business{id,name}", ",funding_source_details", ""):
+        try:  # business{} and funding details need business_management on user tokens
+            acc = get(C.AD_ACCOUNT, fields=base + extra)
+            break
+        except MetaError as e:
+            last = e
+    if acc is None:
+        sys.exit(f"No se puede leer la cuenta:\n{last}")
     show("account", acc)
     status = {1: "ACTIVA", 2: "DESACTIVADA", 3: "PAGO PENDIENTE", 7: "EN REVISIÓN", 9: "EN PERIODO DE GRACIA",
               100: "CIERRE PENDIENTE", 101: "CERRADA"}.get(acc.get("account_status"), acc.get("account_status"))

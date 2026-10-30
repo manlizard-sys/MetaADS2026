@@ -1,0 +1,287 @@
+<meta name="dash-one-writer">
+<style>
+  .sb { font-family: var(--font-anthropic-sans); display: grid; gap: var(--cds-gap-xl); }
+  .sb h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .sb h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; text-wrap: balance; }
+  .sb h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .sb p { margin: 0; max-width: 72ch; }
+  .sb .muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .sb .head { display: grid; gap: var(--cds-gap-sm); }
+  .sb .lede { font-size: var(--cds-font-size-body); line-height: 1.5; }
+  .sb .lede b, .sb .find b { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .sb .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr)); gap: var(--cds-gap-md); }
+  .sb .tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); display: grid; gap: var(--cds-gap-xs); min-width: 0; }
+  .sb .tile .big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; }
+  .sb .tile .sub { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+  .sb .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+  .sb .card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: grid; gap: var(--cds-gap-sm); align-content: start; min-width: 0; }
+  .sb .finds { display: grid; gap: var(--cds-gap-sm); margin: 0; padding: 0; list-style: none; }
+  .sb .find { display: grid; grid-template-columns: auto 1fr; gap: var(--cds-gap-sm); align-items: baseline; line-height: 1.5; }
+  .sb .sev { font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); border-radius: 999px; padding: 0 var(--cds-pad-sm); border: 1px solid currentColor; white-space: nowrap; }
+  .sb .sev.bad { color: var(--color-bad); } .sb .sev.warn { color: var(--color-warn); } .sb .sev.ok { color: var(--color-ok); }
+  .sb .chart { position: relative; min-height: 240px; }
+  .sb .chart.short { min-height: 200px; }
+  .sb .legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .sb .sw { display: inline-block; width: .7rem; height: .7rem; border-radius: 2px; margin-right: .35rem; vertical-align: -1px; }
+  .sb .sw.c0 { background: var(--sb-c0); } .sb .sw.c1 { background: var(--sb-c1); }
+  .sb .tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); white-space: nowrap; z-index: 2; }
+  .sb .tip .k { color: var(--cds-text-secondary); }
+  .sb .tw { overflow: auto; max-height: 28rem; }
+  .sb table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+  .sb th, .sb td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); text-align: right; white-space: nowrap; }
+  .sb th:first-child, .sb td:first-child { text-align: left; white-space: normal; min-width: 12rem; }
+  .sb th { position: sticky; top: 0; background: var(--color-panel); color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); z-index: 1; }
+  .sb td.txt, .sb th.txt { text-align: left; }
+  .sb .pill { border-radius: 999px; padding: 0 var(--cds-pad-sm); border: 1px solid currentColor; }
+  .sb .pill.run { color: var(--color-ok); } .sb .pill.idle { color: var(--color-warn); } .sb .pill.off { color: var(--color-fg-muted); }
+  .sb .hi { color: var(--color-bad); }
+  .sb [data-dash-source-state=empty] { color: transparent; }
+  .sb [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+</style>
+
+<div class="sb" id="top">
+  <header class="head">
+    <h1>Sunny Bliss · Meta Ads</h1>
+    <p class="muted">Últimos 30 días (30 sep – 29 oct 2026) · cuenta act_406803358900425 · USD · hora de Nueva York · solo lectura</p>
+    <p class="lede">Las campañas de clientes gastaron <b data-draw="v" data-source="split" data-field="gasto" data-where="tipo=Clientes" data-fmt="money0">—</b> y trajeron <b data-draw="v" data-source="split" data-field="leads" data-where="tipo=Clientes" data-fmt="int">—</b> leads, a <b data-draw="v" data-source="split" data-field="costo_por_lead" data-where="tipo=Clientes" data-fmt="money">—</b> cada uno. Los <b data-draw="v" data-source="split" data-field="leads" data-where="tipo=Contratación" data-fmt="int">—</b> postulantes de las campañas de contratación salen a <b data-draw="v" data-source="split" data-field="costo_por_lead" data-where="tipo=Contratación" data-fmt="money">—</b> y hacen que la cuenta parezca más barata de lo que es.</p>
+  </header>
+
+  <section class="head" id="clientes">
+    <h2>Clientes (plomería y aire acondicionado)</h2>
+    <div class="tiles">
+      <div class="tile"><span class="muted">Leads de clientes</span><span class="big" data-draw="v" data-source="split" data-field="leads" data-where="tipo=Clientes" data-fmt="int">—</span><span class="sub">formulario + landing</span></div>
+      <div class="tile"><span class="muted">Costo por lead</span><span class="big" data-draw="v" data-source="split" data-field="costo_por_lead" data-where="tipo=Clientes" data-fmt="money">—</span><span class="sub">gasto ÷ leads de Meta</span></div>
+      <div class="tile"><span class="muted">Gasto</span><span class="big" data-draw="v" data-source="split" data-field="gasto" data-where="tipo=Clientes" data-fmt="money0">—</span><span class="sub">30 días</span></div>
+      <div class="tile"><span class="muted">CTR de enlace</span><span class="big" data-draw="v" data-source="split" data-field="ctr" data-where="tipo=Clientes" data-fmt="pct">—</span><span class="sub">clics al enlace ÷ impresiones</span></div>
+      <div class="tile"><span class="muted">CPM</span><span class="big" data-draw="v" data-source="split" data-field="cpm" data-where="tipo=Clientes" data-fmt="money">—</span><span class="sub">costo por mil impresiones</span></div>
+      <div class="tile"><span class="muted">Costo por clic</span><span class="big" data-draw="v" data-source="split" data-field="cpc" data-where="tipo=Clientes" data-fmt="money">—</span><span class="sub">en el enlace</span></div>
+    </div>
+  </section>
+
+  <section class="card" id="hallazgos">
+    <h2>Hallazgos</h2>
+    <p class="muted">Ordenados por impacto. No se cambió nada en la cuenta.</p>
+    <ul class="finds">
+      <li class="find"><span class="sev bad">Crítico</span><span>Contratación y clientes comparten la misma página, el mismo píxel y la misma cuenta. En 30 días entraron <b data-draw="v" data-source="split" data-field="leads" data-where="tipo=Contratación" data-fmt="int">—</b> postulantes contra <b data-draw="v" data-source="split" data-field="leads" data-where="tipo=Clientes" data-fmt="int">—</b> clientes, y el píxel de la landing registra eventos <i>SubmitApplication</i>. Meta (Andromeda) aprende que esta página atrae a gente que busca trabajo.</span></li>
+      <li class="find"><span class="sev bad">Crítico</span><span>Se lanzaron <b data-draw="v" data-source="conteo" data-field="campanas" data-where="tipo=Clientes" data-fmt="int">—</b> campañas de clientes en 30 días, cada una con 3 a 6 anuncios. Cada campaña nueva arranca el aprendizaje desde cero y ninguna llegó a 50 leads por semana. La de plomería con formulario instantáneo figura con aprendizaje fallido (<i>FAIL</i>).</span></li>
+      <li class="find"><span class="sev bad">Crítico</span><span>Los anuncios de HVAC prometen 0% de interés a 24 meses y equipos desde $5,800, pero sunny-bliss.com/hvac-help y /hvac-ayuda solo muestran un formulario genérico de "estimado gratis", sin precio ni financiación.</span></li>
+      <li class="find"><span class="sev warn">Atención</span><span>La campaña "HVAC Landing – 2026-10-08" sigue activa con <b data-draw="v" data-source="campaigns" data-field="presupuesto_dia" data-where="campana=HVAC Landing – 2026-10-08 – EN + ES – CBO" data-fmt="money0">—</b>/día, pero sus dos conjuntos están pausados desde el 26 oct. Ya gastó <b data-draw="v" data-source="campaigns" data-field="gasto" data-where="campana=HVAC Landing – 2026-10-08 – EN + ES – CBO" data-fmt="money0">—</b> a <b data-draw="v" data-source="campaigns" data-field="costo_por_lead" data-where="campana=HVAC Landing – 2026-10-08 – EN + ES – CBO" data-fmt="money">—</b> por lead y con un CPM de <b data-draw="v" data-source="campaigns" data-field="cpm" data-where="campana=HVAC Landing – 2026-10-08 – EN + ES – CBO" data-fmt="money">—</b>.</span></li>
+      <li class="find"><span class="sev warn">Atención</span><span>Hoy solo gasta una campaña de clientes, plomería con formulario instantáneo (Tank Flush $149): <b data-draw="v" data-source="campaigns" data-field="gasto" data-where="campana=SB – Plumbing Leads – Instant Form – Sep 24" data-fmt="money0">—</b> y <b data-draw="v" data-source="campaigns" data-field="leads" data-where="campana=SB – Plumbing Leads – Instant Form – Sep 24" data-fmt="int">—</b> leads en 30 días (<b data-draw="v" data-source="campaigns" data-field="costo_por_lead" data-where="campana=SB – Plumbing Leads – Instant Form – Sep 24" data-fmt="money">—</b> c/u). En los últimos 7 días subió a $102 por lead. La imagen dice "Book my flush" y el botón dice "Get quote".</span></li>
+      <li class="find"><span class="sev warn">Atención</span><span>El público mayor rinde mejor. Mayores de 65: <b data-draw="v" data-source="segments" data-field="costo_por_lead" data-where="dimension=Edad&amp;segmento=65+" data-fmt="money">—</b> por lead; 35–44 años: <b data-draw="v" data-source="segments" data-field="costo_por_lead" data-where="dimension=Edad&amp;segmento=35-44" data-fmt="money">—</b>. Los hombres salen a <b data-draw="v" data-source="segments" data-field="costo_por_lead" data-where="dimension=Género&amp;segmento=Hombre" data-fmt="money">—</b> y las mujeres a <b data-draw="v" data-source="segments" data-field="costo_por_lead" data-where="dimension=Género&amp;segmento=Mujer" data-fmt="money">—</b>.</span></li>
+      <li class="find"><span class="sev warn">Atención</span><span>Ubicaciones automáticas: Audience Network gastó <b data-draw="v" data-source="segments" data-field="gasto" data-where="dimension=Ubicación&amp;segmento=audience_network / an_classic" data-fmt="money">—</b> con <b data-draw="v" data-source="segments" data-field="clics" data-where="dimension=Ubicación&amp;segmento=audience_network / an_classic" data-fmt="int">—</b> clics y <b data-draw="v" data-source="segments" data-field="leads" data-where="dimension=Ubicación&amp;segmento=audience_network / an_classic" data-fmt="int">—</b> leads (clics accidentales). El feed de Instagram es la ubicación más barata por lead: <b data-draw="v" data-source="segments" data-field="costo_por_lead" data-where="dimension=Ubicación&amp;segmento=instagram / feed" data-fmt="money">—</b>.</span></li>
+      <li class="find"><span class="sev warn">Atención</span><span>Hay tres dominios (sunnybliss.com, sunnyblissplumbingandcooling.com y sunny-bliss.com) y dos píxeles. El del sitio principal solo registra visitas, ninguna conversión. No hay CRM conectado, así que no se sabe cuántos leads se volvieron trabajos.</span></li>
+      <li class="find"><span class="sev ok">Bien</span><span>La cuenta está activa, con tarjeta registrada y en USD con la hora de Nueva York. Los anuncios de landing llevan UTM con los IDs de campaña, conjunto y anuncio. Los creativos son claros, con precio y marca visibles.</span></li>
+    </ul>
+  </section>
+
+  <section class="card" id="diario">
+    <h2>Gasto diario: clientes vs. contratación</h2>
+    <p class="muted">USD por día. Pasa el cursor sobre una barra para ver los leads.</p>
+    <div class="legend"><span><span class="sw c0"></span>Clientes</span><span><span class="sw c1"></span>Contratación</span></div>
+    <div class="chart" data-draw="daily" data-source="daily"></div>
+  </section>
+
+  <section class="card" id="campanas">
+    <h2>Campañas</h2>
+    <p class="muted">Todas las campañas con gasto en el periodo. "Gastando" = campaña y al menos un conjunto activos.</p>
+    <div class="tw">
+      <table data-source="campaigns" data-row-key="campana" data-sort="gasto">
+        <thead><tr>
+          <th data-field="campana">Campaña</th><th class="txt" data-field="tipo">Tipo</th><th class="txt" data-field="estado" data-fmt="estado">Estado</th>
+          <th data-field="presupuesto_dia" data-fmt="money0">$/día</th><th data-field="gasto" data-fmt="money">Gasto</th><th data-field="leads" data-fmt="int">Leads</th>
+          <th data-field="costo_por_lead" data-fmt="money">Costo/lead</th><th data-field="ctr" data-fmt="pct">CTR</th><th data-field="cpm" data-fmt="money">CPM</th>
+          <th data-field="visitas_landing" data-fmt="int">Visitas landing</th><th data-field="frecuencia" data-fmt="dec">Frec.</th><th class="txt" data-field="ultimo_gasto">Último gasto</th>
+        </tr></thead>
+        <tbody data-draw="tbl" data-source="campaigns"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card" id="anuncios">
+    <h2>Anuncios de clientes</h2>
+    <p class="muted">Ordenados por gasto. En rojo, los que gastaron más de $40 sin un solo lead.</p>
+    <div class="tw">
+      <table data-source="ads" data-row-key="anuncio,campana" data-sort="gasto">
+        <thead><tr>
+          <th data-field="anuncio">Anuncio</th><th class="txt" data-field="campana">Campaña</th><th class="txt" data-field="formato">Destino</th><th class="txt" data-field="cta">Botón</th>
+          <th data-field="gasto" data-fmt="money">Gasto</th><th data-field="leads" data-fmt="int">Leads</th><th data-field="costo_por_lead" data-fmt="money">Costo/lead</th>
+          <th data-field="ctr" data-fmt="pct">CTR</th><th data-field="cpm" data-fmt="money">CPM</th><th data-field="frecuencia" data-fmt="dec">Frec.</th>
+        </tr></thead>
+        <tbody data-draw="tbl" data-source="ads"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="head" id="desgloses">
+    <h2>Desgloses (solo campañas de clientes)</h2>
+    <div class="grid">
+      <div class="card"><h3>Edad</h3>
+        <div class="tw"><table data-source="segments" data-row-key="dimension,segmento" data-filter="Edad" data-sort="segmento">
+          <thead><tr><th data-field="segmento">Edad</th><th data-field="gasto" data-fmt="money">Gasto</th><th data-field="leads" data-fmt="int">Leads</th><th data-field="costo_por_lead" data-fmt="money">Costo/lead</th><th data-field="ctr" data-fmt="pct">CTR</th></tr></thead>
+          <tbody data-draw="tbl" data-source="segments"></tbody></table></div></div>
+      <div class="card"><h3>Género y dispositivo</h3>
+        <div class="tw"><table data-source="segments" data-row-key="dimension,segmento" data-filter="Género" data-sort="gasto">
+          <thead><tr><th data-field="segmento">Género</th><th data-field="gasto" data-fmt="money">Gasto</th><th data-field="leads" data-fmt="int">Leads</th><th data-field="costo_por_lead" data-fmt="money">Costo/lead</th><th data-field="ctr" data-fmt="pct">CTR</th></tr></thead>
+          <tbody data-draw="tbl" data-source="segments"></tbody></table></div>
+        <div class="tw"><table data-source="segments" data-row-key="dimension,segmento" data-filter="Dispositivo" data-sort="gasto">
+          <thead><tr><th data-field="segmento">Dispositivo</th><th data-field="gasto" data-fmt="money">Gasto</th><th data-field="leads" data-fmt="int">Leads</th><th data-field="costo_por_lead" data-fmt="money">Costo/lead</th><th data-field="ctr" data-fmt="pct">CTR</th></tr></thead>
+          <tbody data-draw="tbl" data-source="segments"></tbody></table></div></div>
+    </div>
+    <div class="card"><h3>Ubicación</h3>
+      <p class="muted">Ubicaciones automáticas en la campaña activa de plomería; en las de landing solo feeds e historias.</p>
+      <div class="tw"><table data-source="segments" data-row-key="dimension,segmento" data-filter="Ubicación" data-sort="gasto">
+        <thead><tr><th data-field="segmento">Plataforma / posición</th><th data-field="gasto" data-fmt="money">Gasto</th><th data-field="impresiones" data-fmt="int">Impr.</th><th data-field="clics" data-fmt="int">Clics</th><th data-field="leads" data-fmt="int">Leads</th><th data-field="costo_por_lead" data-fmt="money">Costo/lead</th><th data-field="ctr" data-fmt="pct">CTR</th><th data-field="cpm" data-fmt="money">CPM</th></tr></thead>
+        <tbody data-draw="tbl" data-source="segments"></tbody></table></div></div>
+    <div class="card"><h3>Hora del día</h3>
+      <p class="muted">Gasto por hora (Nueva York). Pasa el cursor para ver los leads. Entre las 10 pm y las 5 am se va cerca del 14% del gasto.</p>
+      <div class="chart short" data-draw="hour" data-source="segments"></div></div>
+  </section>
+
+  <p class="muted">Fuente: Meta Marketing API v24, atribución por defecto de cada conjunto (clic de 1 a 7 días). "Lead" es el total de Meta: formulario instantáneo más evento Lead del píxel. Puede diferir un poco de Ads Manager. Las campañas de contratación son las que llevan "Hiring" en el nombre.</p>
+</div>
+
+<script>
+  window.sbFmt = {
+    money: d3.format('$,.2f'), money0: d3.format('$,.0f'), int: d3.format(','),
+    pct: (v) => `${(+v).toFixed(2)}%`, dec: d3.format('.2f'), estado: (v) => v,
+  };
+  window.sbFmtVal = (v, f) => (v === null || v === undefined || v === '') ? '—' : (sbFmt[f] ? sbFmt[f](v) : String(v));
+  window.sbWhere = (row, where) => where.split('&').every((p) => {
+    const [k, v] = p.split('=').map(decodeURIComponent);
+    return String(row[k]) === v;
+  });
+  const root = document.querySelector('.sb');
+  if (root) {
+    root.style.setProperty('--sb-c0', dash.colors[0]);
+    root.style.setProperty('--sb-c1', dash.colors[1]);
+  }
+  dash.calc('conteo', {
+    inputs: ['campaigns'],
+    fn: (campaigns) => [{tipo: 'Clientes', campanas: campaigns.filter((c) => c.tipo === 'Clientes').length}],
+    title: 'Campañas de clientes con gasto',
+    description: 'Cuenta las campañas de clientes que gastaron en el periodo.',
+  });
+
+  dash.draw('v', (el) => {
+    const d = dash.data(el.dataset.source);
+    if (d.status !== 'ok') { el.textContent = '—'; return; }
+    const row = el.dataset.where ? d.data.find((r) => sbWhere(r, el.dataset.where)) : d.data[0];
+    el.textContent = row ? sbFmtVal(row[el.dataset.field], el.dataset.fmt) : '—';
+  });
+
+  dash.draw('tbl', (tbody) => {
+    const table = tbody.closest('table');
+    const d = dash.data(table.dataset.source);
+    tbody.replaceChildren();
+    if (d.status !== 'ok') return;
+    const cols = [...table.querySelectorAll('thead th')].map((th) => ({field: th.dataset.field, fmt: th.dataset.fmt, txt: th.classList.contains('txt')}));
+    let rows = d.data.slice();
+    if (table.dataset.filter) rows = rows.filter((r) => r.dimension === table.dataset.filter);
+    const s = table.dataset.sort;
+    rows.sort((a, b) => (typeof a[s] === 'number' ? b[s] - a[s] : String(a[s]).localeCompare(String(b[s]))));
+    for (const r of rows) {
+      const tr = document.createElement('tr');
+      for (const c of cols) {
+        const td = document.createElement('td');
+        if (c.txt) td.className = 'txt';
+        if (c.fmt === 'estado') {
+          const sp = document.createElement('span');
+          sp.className = 'pill ' + (r.estado === 'Gastando' ? 'run' : r.estado === 'Pausada' ? 'off' : 'idle');
+          sp.textContent = r.estado;
+          td.append(sp);
+        } else {
+          td.textContent = c.fmt ? sbFmtVal(r[c.field], c.fmt) : (r[c.field] ?? '—');
+        }
+        if (c.field === 'gasto' && table.dataset.source === 'ads' && r.gasto > 40 && !r.leads) td.className = 'hi';
+        tr.append(td);
+      }
+      tbody.append(tr);
+    }
+  });
+
+  window.sbTip = (box) => {
+    let tip = box.querySelector('.tip');
+    if (!tip) { tip = document.createElement('div'); tip.className = 'tip'; tip.hidden = true; box.append(tip); }
+    return tip;
+  };
+  window.sbAxisStyle = (g) => {
+    g.attr('font-size', null).attr('font-family', null);
+    g.selectAll('text').style('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+    g.selectAll('line,path').style('stroke', 'var(--cds-chart-axis)');
+  };
+</script>
+
+<script>
+  dash.draw('daily', (box) => {
+    const d = dash.data('daily');
+    box.replaceChildren();
+    if (d.status !== 'ok') { box.textContent = '—'; return; }
+    const rows = d.data.map((r) => ({...r, date: new Date(r.day + 'T12:00:00Z'), a: +r.gasto_clientes, b: +r.gasto_contratacion}));
+    const W = box.clientWidth || 600, H = 240, m = {t: 8, r: 8, b: 24, l: 48};
+    const x = d3.scaleBand(rows.map((r) => r.day), [m.l, W - m.r]).padding(0.2);
+    const y = d3.scaleLinear([0, d3.max(rows, (r) => r.a + r.b) || 1], [H - m.b, m.t]).nice();
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    svg.append('g').selectAll('line').data(y.ticks(4)).join('line')
+      .attr('x1', m.l).attr('x2', W - m.r).attr('y1', (v) => y(v)).attr('y2', (v) => y(v)).style('stroke', 'var(--cds-chart-grid)');
+    const g = svg.append('g');
+    g.selectAll('.a').data(rows).join('rect').attr('x', (r) => x(r.day)).attr('width', x.bandwidth())
+      .attr('y', (r) => y(r.a)).attr('height', (r) => y(0) - y(r.a)).attr('rx', 1).style('fill', dash.colors[0]);
+    g.selectAll('.b').data(rows).join('rect').attr('x', (r) => x(r.day)).attr('width', x.bandwidth())
+      .attr('y', (r) => y(r.a + r.b)).attr('height', (r) => y(r.a) - y(r.a + r.b)).attr('rx', 1).style('fill', dash.colors[1]);
+    const step = Math.max(1, Math.ceil(rows.length / Math.max(2, Math.floor(W / 70))));
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`)
+      .call(d3.axisBottom(x).tickValues(rows.filter((_, i) => i % step === 0).map((r) => r.day)).tickFormat((v) => d3.utcFormat('%b %-d')(new Date(v + 'T12:00:00Z'))).tickSizeOuter(0)).call(sbAxisStyle);
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(d3.format('$,.0f'))).call(sbAxisStyle).call((g2) => g2.select('.domain').remove());
+    const tip = sbTip(box);
+    svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r) => x(r.day) - x.step() * x.padding() / 2).attr('width', x.step())
+      .attr('y', m.t).attr('height', H - m.t - m.b).style('fill', 'transparent')
+      .on('mousemove', (ev, r) => {
+        tip.replaceChildren();
+        const k = document.createElement('div'); k.className = 'k'; k.textContent = d3.utcFormat('%a %b %-d')(r.date); tip.append(k);
+        for (const [i, lab, v, l] of [[0, 'Clientes', r.a, r.leads_clientes], [1, 'Contratación', r.b, r.leads_contratacion]]) {
+          const line = document.createElement('div');
+          const sw = document.createElement('span'); sw.className = 'sw c' + i; line.append(sw);
+          line.append(`${lab}: ${d3.format('$,.2f')(v)} · ${l} leads`); tip.append(line);
+        }
+        tip.hidden = false;
+        const [px, py] = d3.pointer(ev, box);
+        tip.style.left = Math.min(px + 12, box.clientWidth - tip.offsetWidth - 4) + 'px';
+        tip.style.top = Math.max(0, py - 40) + 'px';
+      })
+      .on('mouseleave', () => { tip.hidden = true; });
+  });
+
+  dash.draw('hour', (box) => {
+    const d = dash.data('segments');
+    box.replaceChildren();
+    if (d.status !== 'ok') { box.textContent = '—'; return; }
+    const rows = d.data.filter((r) => r.dimension === 'Hora').sort((a, b) => a.segmento.localeCompare(b.segmento));
+    const W = box.clientWidth || 600, H = 200, m = {t: 8, r: 8, b: 24, l: 44};
+    const x = d3.scaleBand(rows.map((r) => r.segmento), [m.l, W - m.r]).padding(0.2);
+    const y = d3.scaleLinear([0, d3.max(rows, (r) => r.gasto) || 1], [H - m.b, m.t]).nice();
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    svg.append('g').selectAll('line').data(y.ticks(3)).join('line')
+      .attr('x1', m.l).attr('x2', W - m.r).attr('y1', (v) => y(v)).attr('y2', (v) => y(v)).style('stroke', 'var(--cds-chart-grid)');
+    const night = (h) => { const n = +h.slice(0, 2); return n >= 22 || n < 5; };
+    svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r) => x(r.segmento)).attr('width', x.bandwidth())
+      .attr('y', (r) => y(r.gasto)).attr('height', (r) => y(0) - y(r.gasto)).attr('rx', 1)
+      .style('fill', (r) => night(r.segmento) ? 'var(--cds-chart-muted)' : dash.colors[0]);
+    const step = W < 500 ? 6 : 3;
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`)
+      .call(d3.axisBottom(x).tickValues(rows.filter((_, i) => i % step === 0).map((r) => r.segmento)).tickSizeOuter(0)).call(sbAxisStyle);
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(3).tickFormat(d3.format('$,.0f'))).call(sbAxisStyle).call((g2) => g2.select('.domain').remove());
+    const tip = sbTip(box);
+    svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r) => x(r.segmento) - x.step() * x.padding() / 2).attr('width', x.step())
+      .attr('y', m.t).attr('height', H - m.t - m.b).style('fill', 'transparent')
+      .on('mousemove', (ev, r) => {
+        tip.replaceChildren();
+        const k = document.createElement('div'); k.className = 'k'; k.textContent = `${r.segmento} h`; tip.append(k);
+        const l = document.createElement('div'); l.textContent = `${d3.format('$,.2f')(r.gasto)} · ${r.leads} leads · CTR ${(+r.ctr).toFixed(2)}%`; tip.append(l);
+        tip.hidden = false;
+        const [px, py] = d3.pointer(ev, box);
+        tip.style.left = Math.min(px + 12, box.clientWidth - tip.offsetWidth - 4) + 'px';
+        tip.style.top = Math.max(0, py - 40) + 'px';
+      })
+      .on('mouseleave', () => { tip.hidden = true; });
+  });
+</script>
