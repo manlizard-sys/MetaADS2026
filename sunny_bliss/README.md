@@ -20,3 +20,6 @@ python3 ad_previews.py       # capturas de cada anuncio en feed móvil
 python3 weekly_report.py     # semana vs. semana anterior
 ```
 `weekend_pause.py` **sí escribe** en Meta: solo con orden explícita del dueño, y se anota en `build/CHANGELOG_META.md`.
+
+## Cliente
+- Dueño: Mehdi. Toda comunicación con el cliente (mensajes, presentaciones, anuncios) va en inglés, sin guiones largos.
