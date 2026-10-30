@@ -2,8 +2,8 @@
 pipeline stage, plus data-quality checks. Writes aggregates only (no names, phones or emails) to
 build/reports/ghl-<today>.json.
 
-Needs GHL_TOKEN (Private Integration token, read scopes) and GHL_LOCATION_ID in the environment
-or in sunny_bliss/.env. The token is never printed.
+Needs only GHL_TOKEN (Private Integration token, read scopes) in the environment or in
+sunny_bliss/.env; the location ID is built in (GHL_LOCATION_ID overrides it). The token is never printed.
 Usage: python3 ghl_report.py
 """
 import collections, datetime as dt, json, os, pathlib, sys
@@ -23,7 +23,10 @@ def env(name):
     return os.environ.get(name, "").strip() or sys.exit(f"{name} missing (.env or environment variable)")
 
 
-TOKEN, LOC = env("GHL_TOKEN"), env("GHL_LOCATION_ID")
+# Sunny Bliss sub-account; not a secret, so it lives here and only the token comes from the environment.
+LOCATION_ID = "FWSYVq6jT5aL8WUhVV5E"
+TOKEN = env("GHL_TOKEN")
+LOC = os.environ.get("GHL_LOCATION_ID", "").strip() or LOCATION_ID
 S = requests.Session()
 S.headers.update({"Authorization": f"Bearer {TOKEN}", "Version": "2021-07-28", "Accept": "application/json"})
 
