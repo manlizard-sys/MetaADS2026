@@ -1,0 +1,26 @@
+[
+ {
+  "tipo": "Clientes",
+  "gasto": 2696.99,
+  "impresiones": 57389,
+  "clics": 641,
+  "visitas_landing": 270,
+  "leads": 36,
+  "costo_por_lead": 74.92,
+  "ctr": 1.12,
+  "cpm": 46.99,
+  "cpc": 4.21
+ },
+ {
+  "tipo": "Contratación",
+  "gasto": 525.46,
+  "impresiones": 33721,
+  "clics": 616,
+  "visitas_landing": 7,
+  "leads": 254,
+  "costo_por_lead": 2.07,
+  "ctr": 1.83,
+  "cpm": 15.58,
+  "cpc": 0.85
+ }
+]

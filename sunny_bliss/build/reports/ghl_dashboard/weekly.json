@@ -1,0 +1,44 @@
+[
+ {
+  "semana": "2026-09-21",
+  "meta_formulario": 8,
+  "meta_landing": 2,
+  "ghl_landing": 1,
+  "ghl_otros": 5
+ },
+ {
+  "semana": "2026-09-28",
+  "meta_formulario": 9,
+  "meta_landing": 3,
+  "ghl_landing": 3,
+  "ghl_otros": 5
+ },
+ {
+  "semana": "2026-10-05",
+  "meta_formulario": 2,
+  "meta_landing": 5,
+  "ghl_landing": 6,
+  "ghl_otros": 0
+ },
+ {
+  "semana": "2026-10-12",
+  "meta_formulario": 2,
+  "meta_landing": 5,
+  "ghl_landing": 5,
+  "ghl_otros": 0
+ },
+ {
+  "semana": "2026-10-19",
+  "meta_formulario": 6,
+  "meta_landing": 4,
+  "ghl_landing": 3,
+  "ghl_otros": 0
+ },
+ {
+  "semana": "2026-10-26",
+  "meta_formulario": 1,
+  "meta_landing": 0,
+  "ghl_landing": 0,
+  "ghl_otros": 0
+ }
+]

@@ -1,0 +1,22 @@
+[
+ {
+  "control": "Contactos sin fuente",
+  "contactos": 9,
+  "total": 28
+ },
+ {
+  "control": "Contactos sin teléfono",
+  "contactos": 9,
+  "total": 28
+ },
+ {
+  "control": "Contactos sin anuncio (UTM)",
+  "contactos": 28,
+  "total": 28
+ },
+ {
+  "control": "Contactos sin oportunidad en el pipeline",
+  "contactos": 15,
+  "total": 28
+ }
+]

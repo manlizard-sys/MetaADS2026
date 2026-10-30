@@ -1,0 +1,30 @@
+{
+  "account": "act_406803358900425",
+  "saved_at": "2026-10-30T15:40:11.515508+00:00",
+  "campaigns": [
+    {
+      "id": "120254393139960640",
+      "name": "HVAC Landing – 2026-10-08 – EN + ES – CBO",
+      "status": "ACTIVE",
+      "effective_status": "ACTIVE",
+      "objective": "OUTCOME_LEADS",
+      "daily_budget": "6000"
+    },
+    {
+      "id": "120254182600240640",
+      "name": "SB – Plumbing Leads – Instant Form – Sep 24",
+      "status": "ACTIVE",
+      "effective_status": "ACTIVE",
+      "objective": "OUTCOME_LEADS",
+      "daily_budget": "3000"
+    },
+    {
+      "id": "120253656866680640",
+      "name": "Sunny Bliss – Tech Hiring – HVAC & Plumbing – Aug 2026",
+      "status": "ACTIVE",
+      "effective_status": "ACTIVE",
+      "objective": "OUTCOME_LEADS",
+      "daily_budget": "4000"
+    }
+  ]
+}
