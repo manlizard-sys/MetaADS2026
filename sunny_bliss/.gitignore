@@ -1,0 +1,6 @@
+.env
+.env.*
+build/*.log
+build/step1_raw.json
+build/reports/previews/
+__pycache__/
