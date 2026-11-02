@@ -68,15 +68,26 @@
       "daily": 800,
       "status": "PAUSED (consolidado 1 nov)"
     },
-    "lead_pros": {
+    "cr_V1_lead": "2060922671249108",
+    "lead_pros_old": {
       "adset": "120257579677500196",
       "ads": {
         "A1 · $0Upfront · Black · Nov01": "120257579677980196",
         "B1 · GetStartedFree · Color · Nov01": "120257579678620196",
         "V1 · POVEmail · Lead · Nov01": "120257579790910196"
       },
-      "daily": 2759
+      "daily": 2759,
+      "status": "PAUSED 2 nov (reemplazado por horario)"
     },
-    "cr_V1_lead": "2060922671249108"
+    "lead_pros": {
+      "adset": "120257589638070196",
+      "ads": {
+        "A1 · $0Upfront · Black · Nov01": "120257589641050196",
+        "B1 · GetStartedFree · Color · Nov01": "120257589642210196",
+        "V1 · POVEmail · Lead · Nov01": "120257589643020196"
+      },
+      "lifetime": 77423,
+      "schedule": "06:00-22:00 NY, todos los días"
+    }
   }
 }
