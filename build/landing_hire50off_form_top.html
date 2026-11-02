@@ -1,0 +1,57 @@
+<!-- ============================================================
+  ORCHID | Attorneys funnel, FORM-ON-TOP version
+  PIECE 2B: hero + offer, LEFT column of the form section.
+  The form section (2 columns, background #3F1D82) is moved to the TOP of the page.
+  This code replaces piece 2 in the LEFT column; the GHL form stays in the RIGHT column.
+  Styles come from piece 1 (it must stay on the page, below this section).
+  It also: hides piece 1's original hero, keeps the fixed header from covering
+  this section, and points every "Claim My 50% Off" button to this form.
+============================================================ -->
+<style>
+  #orchid-lp .hero{display:none!important}
+  #orchid-lp{padding-top:0!important}
+  #book{scroll-margin-top:170px}
+  #orchid-lp-book .book-copy h1{color:#fff;font-size:clamp(1.9rem,3.2vw,2.6rem);margin-top:6px}
+  #orchid-lp-book .book-copy h1 em{font-style:italic;color:var(--orchid-yellow)}
+  #orchid-lp-book .book-copy .qual{margin-bottom:10px}
+  #orchid-lp-book .book-copy .ticket{margin:30px 0 28px;max-width:520px}
+  #orchid-lp-book .book-copy .terms{margin:14px 0 0;text-align:left}
+  @media (max-width:767px){#orchid-lp-book .book-copy .ticket{margin:26px auto 22px}}
+</style>
+<div id="orchid-lp-book">
+  <div class="book-copy" id="book">
+    <div class="qual">For U.S. Law Firms &amp; Attorneys</div>
+    <div class="ticket">
+      <span class="offer-label">Limited-time offer</span>
+      <div class="offer">
+        <div><b>$0</b><small>upfront</small></div>
+        <div><b>50% OFF</b><small>your first month</small></div>
+      </div>
+      <div class="bigclock" aria-hidden="true"><span class="bl">Offer ends in</span><span class="clock"><span class="d mm">30</span><i>:</i><span class="d ss">00</span></span></div>
+    </div>
+    <h1><em>Buy your time back</em> with a bilingual legal professional from Colombia, selected for your firm by people, not AI.</h1>
+    <p class="lead">Book a free 30-minute call. We'll map the tasks slowing you down and show you exactly what delegating them looks like.</p>
+    <ul class="checks" style="margin-top:20px">
+      <li>U.S. business hours</li>
+      <li>Fluent English &amp; Spanish</li>
+      <li>Replaced at $0 if it's not the right fit</li>
+    </ul>
+    <p class="terms">$0 upfront: no setup or placement fee before your professional starts. 50% off applies to Orchid's first monthly service fee.</p>
+  </div>
+</div>
+<script>
+(function(){
+  var book=document.getElementById('orchid-lp-book');
+  var section=book&&(book.closest('section')||book.closest('.c-section'));
+  var tries=0;
+  function fit(){
+    var top=document.getElementById('top');
+    if(top&&section) section.style.paddingTop=(top.offsetHeight+24)+'px';
+    // Every "Claim My 50% Off" button scrolls to this form, whatever the section id is.
+    document.querySelectorAll('a[href^="#section-"]').forEach(function(a){ a.setAttribute('href','#book'); });
+    return !!top;
+  }
+  (function wait(){ if(!fit()&&tries++<40) setTimeout(wait,250); })();
+  window.addEventListener('resize',fit);
+})();
+</script>
