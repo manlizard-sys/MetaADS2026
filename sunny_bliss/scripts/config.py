@@ -28,6 +28,7 @@ NEXT_CAMPAIGN_ZIPS = {
     "Cutler Bay": ["33157", "33189", "33190"],
     "Key Biscayne": ["33149"],
     "Palmetto Bay": ["33158"],
+    "Kendall": ["33176", "33173", "33186"],  # added by the owner 2026-11-03
 }
 
 
