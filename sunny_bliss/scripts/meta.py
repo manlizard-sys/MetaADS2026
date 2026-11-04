@@ -20,7 +20,8 @@ def _load_token():
                 return line.split("=", 1)[1].strip()
     if os.environ.get("SUNNY_META_ACCESS_TOKEN"):
         return os.environ["SUNNY_META_ACCESS_TOKEN"].strip()
-    sys.exit("Token de Sunny Bliss ausente: sunny_bliss/.env (META_ACCESS_TOKEN=...) o variable SUNNY_META_ACCESS_TOKEN")
+    # In the "Sunny Bliss Meta" cloud environment the proxy injects the real token for graph.facebook.com.
+    return "proxy-injected"
 
 
 TOKEN = _load_token()

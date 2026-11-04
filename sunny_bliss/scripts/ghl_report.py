@@ -25,7 +25,7 @@ def env(name):
 
 # Sunny Bliss sub-account; not a secret, so it lives here and only the token comes from the environment.
 LOCATION_ID = "FWSYVq6jT5aL8WUhVV5E"
-TOKEN = env("GHL_TOKEN")
+TOKEN = os.environ.get("GHL_TOKEN", "").strip() or "proxy-injected"  # the cloud environment injects the real token
 LOC = os.environ.get("GHL_LOCATION_ID", "").strip() or LOCATION_ID
 S = requests.Session()
 S.headers.update({"Authorization": f"Bearer {TOKEN}", "Version": "2021-07-28", "Accept": "application/json"})
