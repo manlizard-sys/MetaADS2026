@@ -1,5 +1,7 @@
 # Sunny Bliss · Formulario a GHL, mercado y promociones (noviembre 2026)
 
+> **Actualización 2026-11-06:** electricidad queda **suspendida** por orden del usuario. Las promociones y conceptos eléctricos se guardan aquí y en `build/ads/source/Electrical.dc.html` para retomarlos más adelante. Precios aprobados: AC tune-up $129, reemplazo de AC desde $5,800 (oferta por tiempo limitado), inspección con cámara desde $249, Holiday Guest-Ready $149.
+
 ## 1. Conectar el formulario de Meta con GoHighLevel
 
 **Diagnóstico:** los leads del formulario dejaron de llegar el 1 de octubre. La causa más común es que se venció o se perdió la conexión de Facebook dentro de GHL (por ejemplo, la persona que la conectó perdió su rol en la página o cambió su contraseña), o que la página restringió el acceso a leads. Desde aquí no lo puedo confirmar: el usuario del sistema ML_Ads no tiene permiso de leads sobre la página.
