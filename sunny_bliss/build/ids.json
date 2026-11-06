@@ -1,0 +1,38 @@
+{
+  "launch_nov2026": {
+    "SB \u00b7 Awareness \u00b7 Top-rated \u00b7 Nov 2026": {
+      "id": "120254881047350640",
+      "adsets": {
+        "Awareness \u00b7 21 ZIPs \u00b7 30-65 \u00b7 EN+ES": {
+          "id": "120254881047590640",
+          "ads": {
+            "A1 \u00b7 Neighbors \u00b7 ES": "120254881052530640",
+            "A2 \u00b7 Real customer reviews \u00b7 Video": "120254881053210640"
+          }
+        }
+      }
+    },
+    "SB \u00b7 Leads \u00b7 Nov 2026": {
+      "id": "120254881060300640",
+      "adsets": {
+        "Prospecting \u00b7 21 ZIPs \u00b7 30-65 \u00b7 Instant form": {
+          "id": "120254881066410640",
+          "ads": {
+            "L1 \u00b7 Tank Flush $149 \u00b7 EN": "120254881069500640",
+            "L2 \u00b7 0% 60 meses \u00b7 Video \u00b7 ES": "120254881070080640",
+            "L2 \u00b7 0% 60 months \u00b7 Video \u00b7 EN": "120254881070750640",
+            "L3 \u00b7 25-year-old AC \u00b7 0% 24mo \u00b7 EN": "120254881072330640",
+            "L5 \u00b7 Instalaci\u00f3n Miami-Dade $5,800 \u00b7 ES": "120254881073740640"
+          }
+        },
+        "Retargeting \u00b7 Visitors 180d + Engagers 365d \u00b7 Instant form": {
+          "id": "120254881074790640",
+          "ads": {
+            "R0 \u00b7 0% 60 months \u00b7 Video \u00b7 EN": "120254881075790640",
+            "R0 \u00b7 0% 60 meses \u00b7 Video \u00b7 ES": "120254881077530640"
+          }
+        }
+      }
+    }
+  }
+}
