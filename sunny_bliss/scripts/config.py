@@ -33,9 +33,10 @@ NEXT_CAMPAIGN_ZIPS = {
 
 
 def zip_geo():
-    """geo_locations for the next campaign: people who live in those ZIPs."""
+    """geo_locations for the next campaign. No location_types: Meta removed "people living in"
+    (error #1870194); the default is people living in or recently in those ZIPs."""
     zips = sorted({z for zs in NEXT_CAMPAIGN_ZIPS.values() for z in zs})
-    return {"zips": [{"key": f"US:{z}"} for z in zips], "location_types": ["home"]}
+    return {"zips": [{"key": f"US:{z}"} for z in zips]}
 
 
 # Campaigns whose name contains one of these are recruiting (job applicants), not customers.
