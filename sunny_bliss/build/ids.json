@@ -1,38 +1,90 @@
 {
   "launch_nov2026": {
-    "SB \u00b7 Awareness \u00b7 Top-rated \u00b7 Nov 2026": {
+    "SB · Awareness · Top-rated · Nov 2026": {
       "id": "120254881047350640",
       "adsets": {
-        "Awareness \u00b7 21 ZIPs \u00b7 30-65 \u00b7 EN+ES": {
+        "Awareness · 21 ZIPs · 30-65 · EN+ES": {
           "id": "120254881047590640",
           "ads": {
-            "A1 \u00b7 Neighbors \u00b7 ES": "120254881052530640",
-            "A2 \u00b7 Real customer reviews \u00b7 Video": "120254881053210640"
+            "A1 · Neighbors · ES": "120254881052530640",
+            "A2 · Real customer reviews · Video": "120254881053210640"
           }
         }
       }
     },
-    "SB \u00b7 Leads \u00b7 Nov 2026": {
+    "SB · Leads · Nov 2026": {
       "id": "120254881060300640",
       "adsets": {
-        "Prospecting \u00b7 21 ZIPs \u00b7 30-65 \u00b7 Instant form": {
+        "Prospecting · 21 ZIPs · 30-65 · Instant form": {
           "id": "120254881066410640",
           "ads": {
-            "L1 \u00b7 Tank Flush $149 \u00b7 EN": "120254881069500640",
-            "L2 \u00b7 0% 60 meses \u00b7 Video \u00b7 ES": "120254881070080640",
-            "L2 \u00b7 0% 60 months \u00b7 Video \u00b7 EN": "120254881070750640",
-            "L3 \u00b7 25-year-old AC \u00b7 0% 24mo \u00b7 EN": "120254881072330640",
-            "L5 \u00b7 Instalaci\u00f3n Miami-Dade $5,800 \u00b7 ES": "120254881073740640"
+            "L1 · Tank Flush $149 · EN": "120254881069500640",
+            "L2 · 0% 60 meses · Video · ES": "120254881070080640",
+            "L2 · 0% 60 months · Video · EN": "120254881070750640",
+            "L3 · 25-year-old AC · 0% 24mo · EN": "120254881072330640",
+            "L5 · Instalación Miami-Dade $5,800 · ES": "120254881073740640"
           }
         },
-        "Retargeting \u00b7 Visitors 180d + Engagers 365d \u00b7 Instant form": {
+        "Retargeting · Visitors 180d + Engagers 365d · Instant form": {
           "id": "120254881074790640",
           "ads": {
-            "R0 \u00b7 0% 60 months \u00b7 Video \u00b7 EN": "120254881075790640",
-            "R0 \u00b7 0% 60 meses \u00b7 Video \u00b7 ES": "120254881077530640"
+            "R0 · 0% 60 months · Video · EN": "120254881075790640",
+            "R0 · 0% 60 meses · Video · ES": "120254881077530640"
           }
         }
       }
     }
+  },
+  "launch_v2": {
+    "form_tu_en": "1659538212232461",
+    "form_tu_es": "2316498809173347",
+    "form_si_en": "2182508126015127",
+    "form_si_es": "2299709944213201",
+    "form_ac_en": "1130243719722841",
+    "form_ac_es": "1696843915440785",
+    "form_fl_en": "1620907293118040",
+    "form_fl_es": "1517454166884736",
+    "img_tu_en": "ae15fd9e585b2123258df25a80a5b033",
+    "img_tu_es": "b5af360dec3d09bcee9882967614812f",
+    "img_si_en": "70a05c63dd114e971b4074f51e7daeb1",
+    "img_si_es": "98045f3b0d4547c7d2df5324452fd5d8",
+    "img_ac_en": "391885d50a2ce41c5ae76b77b30fe950",
+    "img_ac_es": "2f217c797d6bcfb4c8c1820c9289de04",
+    "img_fl_en": "2254cbc8b0359a9b899a7fe6eea664b8",
+    "img_fl_es": "72f491d021b4d913dd470d5ee7944cf6",
+    "img_a1_en": "962c3afdce009318fac70d7d21b0650b",
+    "img_a1_es": "b023ccc73fea751f45aa0501a1cb7f98",
+    "img_a2_en": "a7d6f06743afe5e95637f5c4826586b5",
+    "img_a2_es": "c3f4b39f16e0e66730b227b4b19dd611",
+    "camp_leads": "120254888157230640",
+    "camp_aware": "120254888157620640",
+    "adset_leads": "120254888157690640",
+    "adset_aware": "120254888158030640",
+    "cr_tu_en": "1125667439858594",
+    "ad_tu_en": "120254888158730640",
+    "cr_tu_es": "1317251923821921",
+    "ad_tu_es": "120254888159400640",
+    "cr_si_en": "1448968786583389",
+    "ad_si_en": "120254888159470640",
+    "cr_si_es": "1488543136524820",
+    "ad_si_es": "120254888160530640",
+    "cr_ac_en": "1816076809510925",
+    "ad_ac_en": "120254888160900640",
+    "cr_ac_es": "1447175470164017",
+    "ad_ac_es": "120254888161210640",
+    "cr_fl_en": "1700482995025095",
+    "ad_fl_en": "120254888161280640",
+    "cr_fl_es": "4413302372317554",
+    "ad_fl_es": "120254888161610640",
+    "cr_a1_en": "4576112632645907",
+    "ad_a1_en": "120254888162100640",
+    "cr_a1_es": "1973106687186591",
+    "ad_a1_es": "120254888163000640",
+    "cr_a2_en": "1521678359788096",
+    "ad_a2_en": "120254888163700640",
+    "cr_a2_es": "1652234069868664",
+    "ad_a2_es": "120254888163830640",
+    "archived_120254881047350640": "ARCHIVED",
+    "archived_120254881060300640": "ARCHIVED"
   }
 }
