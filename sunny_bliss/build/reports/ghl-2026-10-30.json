@@ -1,0 +1,321 @@
+{
+  "location": "FWSYVq6jT5aL8WUhVV5E",
+  "generated": "2026-10-30T16:43:08.883066+00:00",
+  "checks": {
+    "contactos": 28,
+    "sin_fuente": 9,
+    "sin_anuncio_utm": 28,
+    "sin_telefono": 9,
+    "sin_oportunidad": 15
+  },
+  "leads": [
+    {
+      "day": "2026-10-23",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "No calificado",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-23",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "No calificado",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-19",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "No calificado",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-18",
+      "source": "Sunny Bliss - HVAC Survey (ES)",
+      "service": "Sin dato",
+      "language": "Español",
+      "qualification": "No calificado",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "Estimate Booked (Appointment)",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-18",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "No calificado",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-16",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "No calificado",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-15",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "No calificado",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-13",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "HVAC",
+      "language": "Inglés",
+      "qualification": "Calificado",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "Estimate Booked (Appointment)",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-11",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "HVAC",
+      "language": "Inglés",
+      "qualification": "Calificado",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "New Lead (Contact ASAP)",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-11",
+      "source": "Sunny Bliss - HVAC Survey (ES)",
+      "service": "HVAC",
+      "language": "Español",
+      "qualification": "Calificado",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "New Lead (Contact ASAP)",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-10",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "HVAC",
+      "language": "Inglés",
+      "qualification": "Calificado",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "Estimate Booked (Appointment)",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-09",
+      "source": "Sunny Bliss - HVAC Survey (ES)",
+      "service": "HVAC",
+      "language": "Español",
+      "qualification": "Calificado",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "New Lead (Contact ASAP)",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-06",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "HVAC",
+      "language": "Inglés",
+      "qualification": "Calificado",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "Estimate Booked (Appointment)",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-05",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "HVAC",
+      "language": "Inglés",
+      "qualification": "Calificado",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "New Lead (Contact ASAP)",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-04",
+      "source": "Sunny Bliss - HVAC Survey (ES)",
+      "service": "HVAC",
+      "language": "Español",
+      "qualification": "Calificado",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "Estimate Booked (Appointment)",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-04",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "HVAC",
+      "language": "Inglés",
+      "qualification": "Calificado",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "New Lead (Contact ASAP)",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-03",
+      "source": "Sunny Bliss - HVAC Survey (ES)",
+      "service": "HVAC",
+      "language": "Español",
+      "qualification": "Calificado",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "New Lead (Contact ASAP)",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-10-01",
+      "source": "Sin fuente",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "Sin clasificar",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": false
+    },
+    {
+      "day": "2026-09-30",
+      "source": "Sin fuente",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "Sin clasificar",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": false
+    },
+    {
+      "day": "2026-09-29",
+      "source": "Sin fuente",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "Sin clasificar",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": false
+    },
+    {
+      "day": "2026-09-28",
+      "source": "Sin fuente",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "Sin clasificar",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": false
+    },
+    {
+      "day": "2026-09-28",
+      "source": "Sin fuente",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "Sin clasificar",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": false
+    },
+    {
+      "day": "2026-09-26",
+      "source": "Sin fuente",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "Sin clasificar",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": false
+    },
+    {
+      "day": "2026-09-25",
+      "source": "Sin fuente",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "Sin clasificar",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": false
+    },
+    {
+      "day": "2026-09-24",
+      "source": "Sin fuente",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "Sin clasificar",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": false
+    },
+    {
+      "day": "2026-09-24",
+      "source": "Sin fuente",
+      "service": "Sin dato",
+      "language": "Inglés",
+      "qualification": "Sin clasificar",
+      "pipeline": "Sin oportunidad",
+      "stage": "Sin oportunidad",
+      "has_ad_name": false,
+      "has_phone": false
+    },
+    {
+      "day": "2026-09-24",
+      "source": "Sunny Bliss - HVAC Survey",
+      "service": "HVAC",
+      "language": "Español",
+      "qualification": "Calificado",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "Estimate Booked (Appointment)",
+      "has_ad_name": false,
+      "has_phone": true
+    },
+    {
+      "day": "2026-09-24",
+      "source": "Meta Lead - HVAC Landing",
+      "service": "HVAC",
+      "language": "Inglés",
+      "qualification": "Sin clasificar",
+      "pipeline": "Sunny Bliss Lead Pipeline",
+      "stage": "Not Qualified",
+      "has_ad_name": false,
+      "has_phone": true
+    }
+  ]
+}

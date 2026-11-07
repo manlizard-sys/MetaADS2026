@@ -1,0 +1,212 @@
+[
+ {
+  "day": "2026-09-30",
+  "gasto_clientes": 115.46,
+  "gasto_contratacion": 20.73,
+  "leads_clientes": 2,
+  "leads_contratacion": 10
+ },
+ {
+  "day": "2026-10-01",
+  "gasto_clientes": 130.76,
+  "gasto_contratacion": 21.27,
+  "leads_clientes": 6,
+  "leads_contratacion": 2
+ },
+ {
+  "day": "2026-10-02",
+  "gasto_clientes": 97.34,
+  "gasto_contratacion": 19.35,
+  "leads_clientes": 1,
+  "leads_contratacion": 10
+ },
+ {
+  "day": "2026-10-03",
+  "gasto_clientes": 95.19,
+  "gasto_contratacion": 12.9,
+  "leads_clientes": 1,
+  "leads_contratacion": 4
+ },
+ {
+  "day": "2026-10-04",
+  "gasto_clientes": 143.18,
+  "gasto_contratacion": 20.83,
+  "leads_clientes": 1,
+  "leads_contratacion": 9
+ },
+ {
+  "day": "2026-10-05",
+  "gasto_clientes": 115.4,
+  "gasto_contratacion": 22.19,
+  "leads_clientes": 0,
+  "leads_contratacion": 9
+ },
+ {
+  "day": "2026-10-06",
+  "gasto_clientes": 107.33,
+  "gasto_contratacion": 18.6,
+  "leads_clientes": 1,
+  "leads_contratacion": 2
+ },
+ {
+  "day": "2026-10-07",
+  "gasto_clientes": 89.55,
+  "gasto_contratacion": 19.37,
+  "leads_clientes": 0,
+  "leads_contratacion": 6
+ },
+ {
+  "day": "2026-10-08",
+  "gasto_clientes": 110.75,
+  "gasto_contratacion": 26.39,
+  "leads_clientes": 0,
+  "leads_contratacion": 67
+ },
+ {
+  "day": "2026-10-09",
+  "gasto_clientes": 103.48,
+  "gasto_contratacion": 28.74,
+  "leads_clientes": 1,
+  "leads_contratacion": 75
+ },
+ {
+  "day": "2026-10-10",
+  "gasto_clientes": 88.74,
+  "gasto_contratacion": 10.02,
+  "leads_clientes": 1,
+  "leads_contratacion": 7
+ },
+ {
+  "day": "2026-10-11",
+  "gasto_clientes": 123.64,
+  "gasto_contratacion": 10.73,
+  "leads_clientes": 4,
+  "leads_contratacion": 2
+ },
+ {
+  "day": "2026-10-12",
+  "gasto_clientes": 100.28,
+  "gasto_contratacion": 12.17,
+  "leads_clientes": 0,
+  "leads_contratacion": 2
+ },
+ {
+  "day": "2026-10-13",
+  "gasto_clientes": 97.09,
+  "gasto_contratacion": 8.99,
+  "leads_clientes": 2,
+  "leads_contratacion": 0
+ },
+ {
+  "day": "2026-10-14",
+  "gasto_clientes": 89.28,
+  "gasto_contratacion": 11.09,
+  "leads_clientes": 1,
+  "leads_contratacion": 1
+ },
+ {
+  "day": "2026-10-15",
+  "gasto_clientes": 92.8,
+  "gasto_contratacion": 8.86,
+  "leads_clientes": 1,
+  "leads_contratacion": 1
+ },
+ {
+  "day": "2026-10-16",
+  "gasto_clientes": 71.38,
+  "gasto_contratacion": 8.12,
+  "leads_clientes": 0,
+  "leads_contratacion": 2
+ },
+ {
+  "day": "2026-10-17",
+  "gasto_clientes": 53.82,
+  "gasto_contratacion": 9.73,
+  "leads_clientes": 1,
+  "leads_contratacion": 6
+ },
+ {
+  "day": "2026-10-18",
+  "gasto_clientes": 116.09,
+  "gasto_contratacion": 13.44,
+  "leads_clientes": 2,
+  "leads_contratacion": 3
+ },
+ {
+  "day": "2026-10-19",
+  "gasto_clientes": 127.12,
+  "gasto_contratacion": 11.53,
+  "leads_clientes": 3,
+  "leads_contratacion": 3
+ },
+ {
+  "day": "2026-10-20",
+  "gasto_clientes": 98.29,
+  "gasto_contratacion": 7.88,
+  "leads_clientes": 0,
+  "leads_contratacion": 1
+ },
+ {
+  "day": "2026-10-21",
+  "gasto_clientes": 76.31,
+  "gasto_contratacion": 9.94,
+  "leads_clientes": 1,
+  "leads_contratacion": 1
+ },
+ {
+  "day": "2026-10-22",
+  "gasto_clientes": 82.88,
+  "gasto_contratacion": 10.38,
+  "leads_clientes": 2,
+  "leads_contratacion": 4
+ },
+ {
+  "day": "2026-10-23",
+  "gasto_clientes": 76.64,
+  "gasto_contratacion": 7.27,
+  "leads_clientes": 2,
+  "leads_contratacion": 3
+ },
+ {
+  "day": "2026-10-24",
+  "gasto_clientes": 51.76,
+  "gasto_contratacion": 9.0,
+  "leads_clientes": 0,
+  "leads_contratacion": 1
+ },
+ {
+  "day": "2026-10-25",
+  "gasto_clientes": 115.07,
+  "gasto_contratacion": 11.39,
+  "leads_clientes": 2,
+  "leads_contratacion": 0
+ },
+ {
+  "day": "2026-10-26",
+  "gasto_clientes": 37.67,
+  "gasto_contratacion": 48.05,
+  "leads_clientes": 1,
+  "leads_contratacion": 6
+ },
+ {
+  "day": "2026-10-27",
+  "gasto_clientes": 31.48,
+  "gasto_contratacion": 37.8,
+  "leads_clientes": 0,
+  "leads_contratacion": 7
+ },
+ {
+  "day": "2026-10-28",
+  "gasto_clientes": 26.7,
+  "gasto_contratacion": 31.33,
+  "leads_clientes": 0,
+  "leads_contratacion": 5
+ },
+ {
+  "day": "2026-10-29",
+  "gasto_clientes": 31.51,
+  "gasto_contratacion": 37.37,
+  "leads_clientes": 0,
+  "leads_contratacion": 5
+ }
+]
