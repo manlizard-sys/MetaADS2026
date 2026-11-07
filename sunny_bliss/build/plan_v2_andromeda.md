@@ -65,7 +65,7 @@ Cada formulario manda con cada lead `utm_source=facebook`, `utm_medium=paid_soci
 
 ## Antes de activar
 
-1. **GHL:** la página **no tiene ninguna app suscrita a los leads** (lo comprobé el 2026-11-06: `subscribed_apps` vacío). Hay que reconectar Facebook en GHL y mapear estos 8 formularios.
+1. **GHL:** los leads del formulario llegan a Meta pero no aparecen en GHL desde octubre. La causa no está confirmada: la revisión del 2026-11-06 que decía que la página no tenía ninguna app suscrita era un error de permiso mal leído. Hay que reconectar Facebook en GHL, mapear estos 8 formularios y probar con un lead de prueba.
 2. **Teléfono:** el botón de llamada del formulario usa el +1 305-707-6081, igual que los formularios anteriores. La web muestra el 305-504-6091. Hay que confirmar cuál quiere Mehdi.
 3. **Revisión de Meta:** los 12 anuncios están en revisión. Se activan cuando estén aprobados.
 
