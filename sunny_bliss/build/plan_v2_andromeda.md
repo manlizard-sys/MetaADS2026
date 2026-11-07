@@ -50,16 +50,18 @@ Cada aumento es de un 10% aproximado. Andromeda y la fase de aprendizaje toleran
 
 ## Formularios: mapa para el workflow de GHL
 
+Cada formulario manda con cada lead `utm_source=facebook`, `utm_medium=paid_social`, `utm_campaign=sb_leads_nov2026_v2` y `utm_content=<oferta>_<idioma>` (por ejemplo `tu_en`). Los anuncios de awareness llevan a sunnybliss.com con `utm_source=facebook&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{ad.name}}`. Los 8 primeros formularios (sin UTM) quedaron archivados.
+
 | Formulario | Anuncio | Etiqueta sugerida en GHL |
 |---|---|---|
-| 1659538212232461 | TU · Mantenimiento $129 · EN | meta-tu-en |
-| 2316498809173347 | TU · Mantenimiento $129 · ES | meta-tu-es |
-| 2182508126015127 | SI · Plan Silver 50% · EN | meta-si-en |
-| 2299709944213201 | SI · Plan Silver 50% · ES | meta-si-es |
-| 1130243719722841 | AC · A/C nuevo desde $5,800 · EN | meta-ac-en |
-| 1696843915440785 | AC · A/C nuevo desde $5,800 · ES | meta-ac-es |
-| 1620907293118040 | FL · Tank Flush $149 · EN | meta-fl-en |
-| 1517454166884736 | FL · Tank Flush $149 · ES | meta-fl-es |
+| 1643919603937060 | TU · Mantenimiento $129 · EN | meta-tu-en |
+| 1152152620696238 | TU · Mantenimiento $129 · ES | meta-tu-es |
+| 1505083551681279 | SI · Plan Silver 50% · EN | meta-si-en |
+| 1587832526363738 | SI · Plan Silver 50% · ES | meta-si-es |
+| 1184339093920318 | AC · A/C nuevo desde $5,800 · EN | meta-ac-en |
+| 1374469254565758 | AC · A/C nuevo desde $5,800 · ES | meta-ac-es |
+| 1537487624893874 | FL · Tank Flush $149 · EN | meta-fl-en |
+| 2154961215229218 | FL · Tank Flush $149 · ES | meta-fl-es |
 
 ## Antes de activar
 

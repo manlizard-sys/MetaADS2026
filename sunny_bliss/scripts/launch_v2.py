@@ -155,48 +155,53 @@ def creative(name, story):
     return meta.post(f"{ACT}/adcreatives", name=name, object_story_spec={"page_id": PAGE, "instagram_user_id": IG, **story})["id"]
 
 
-config.require() if hasattr(config, "require") else None
-geo = config.zip_geo()
-excl = [{"id": "120254170491030640"}]            # SB – Lead Form Submitted – 90d
+def main():
+    config.require() if hasattr(config, "require") else None
+    geo = config.zip_geo()
+    excl = [{"id": "120254170491030640"}]            # SB – Lead Form Submitted – 90d
 
-print("FORMS (Higher Intent, one per offer and language)")
-forms = {f"{o}_{l}": once(f"form_{o}_{l}", f"form {o} {l}", lambda o=o, l=l: make_form(o, l)) for o in OFFERS for l in ("en", "es")}
+    print("FORMS (Higher Intent, one per offer and language)")
+    forms = {f"{o}_{l}": once(f"form_{o}_{l}", f"form {o} {l}", lambda o=o, l=l: make_form(o, l)) for o in OFFERS for l in ("en", "es")}
 
-print("IMAGES")
-hashes = {n: once(f"img_{n}", f"image {n}.png", lambda n=n: upload(n)) for n in [f"{k}_{l}" for k in list(OFFERS) + list(AWARE) for l in ("en", "es")]}
+    print("IMAGES")
+    hashes = {n: once(f"img_{n}", f"image {n}.png", lambda n=n: upload(n)) for n in [f"{k}_{l}" for k in list(OFFERS) + list(AWARE) for l in ("en", "es")]}
 
-print("CAMPAIGNS AND AD SETS (PAUSED)")
-c_leads = once("camp_leads", "campaign SB · Leads · Nov 2026 v2", lambda: meta.post(f"{ACT}/campaigns", name="SB · Leads · Nov 2026 v2", objective="OUTCOME_LEADS", status="PAUSED", special_ad_categories=[], is_adset_budget_sharing_enabled=False, buying_type="AUCTION")["id"])
-c_aware = once("camp_aware", "campaign SB · Awareness · Reviews · Nov 2026 v2", lambda: meta.post(f"{ACT}/campaigns", name="SB · Awareness · Reviews · Nov 2026 v2", objective="OUTCOME_AWARENESS", status="PAUSED", special_ad_categories=[], is_adset_budget_sharing_enabled=False, buying_type="AUCTION")["id"])
-s_leads = once("adset_leads", f"ad set Leads · 21 ZIPs · broad · ${LEADS_BUDGET/100:.0f}/day", lambda: meta.post(f"{ACT}/adsets", campaign_id=c_leads, name="Leads · 21 ZIPs · broad 25+ · EN+ES · Higher Intent", status="PAUSED",
-    daily_budget=LEADS_BUDGET, optimization_goal="LEAD_GENERATION", billing_event="IMPRESSIONS", destination_type="ON_AD", bid_strategy="LOWEST_COST_WITHOUT_CAP",
-    promoted_object={"page_id": PAGE}, targeting={"age_min": 25, "geo_locations": geo, "excluded_custom_audiences": excl, "targeting_automation": {"advantage_audience": 1}})["id"])
-s_aware = once("adset_aware", f"ad set Awareness · 21 ZIPs · ${AWARE_BUDGET/100:.0f}/day", lambda: meta.post(f"{ACT}/adsets", campaign_id=c_aware, name="Awareness · 21 ZIPs · 25+ · EN+ES", status="PAUSED",
-    daily_budget=AWARE_BUDGET, optimization_goal="REACH", billing_event="IMPRESSIONS", bid_strategy="LOWEST_COST_WITHOUT_CAP",
-    promoted_object={"page_id": PAGE}, targeting={"age_min": 25, "geo_locations": geo, "targeting_automation": {"advantage_audience": 0}})["id"])
+    print("CAMPAIGNS AND AD SETS (PAUSED)")
+    c_leads = once("camp_leads", "campaign SB · Leads · Nov 2026 v2", lambda: meta.post(f"{ACT}/campaigns", name="SB · Leads · Nov 2026 v2", objective="OUTCOME_LEADS", status="PAUSED", special_ad_categories=[], is_adset_budget_sharing_enabled=False, buying_type="AUCTION")["id"])
+    c_aware = once("camp_aware", "campaign SB · Awareness · Reviews · Nov 2026 v2", lambda: meta.post(f"{ACT}/campaigns", name="SB · Awareness · Reviews · Nov 2026 v2", objective="OUTCOME_AWARENESS", status="PAUSED", special_ad_categories=[], is_adset_budget_sharing_enabled=False, buying_type="AUCTION")["id"])
+    s_leads = once("adset_leads", f"ad set Leads · 21 ZIPs · broad · ${LEADS_BUDGET/100:.0f}/day", lambda: meta.post(f"{ACT}/adsets", campaign_id=c_leads, name="Leads · 21 ZIPs · broad 25+ · EN+ES · Higher Intent", status="PAUSED",
+        daily_budget=LEADS_BUDGET, optimization_goal="LEAD_GENERATION", billing_event="IMPRESSIONS", destination_type="ON_AD", bid_strategy="LOWEST_COST_WITHOUT_CAP",
+        promoted_object={"page_id": PAGE}, targeting={"age_min": 25, "geo_locations": geo, "excluded_custom_audiences": excl, "targeting_automation": {"advantage_audience": 1}})["id"])
+    s_aware = once("adset_aware", f"ad set Awareness · 21 ZIPs · ${AWARE_BUDGET/100:.0f}/day", lambda: meta.post(f"{ACT}/adsets", campaign_id=c_aware, name="Awareness · 21 ZIPs · 25+ · EN+ES", status="PAUSED",
+        daily_budget=AWARE_BUDGET, optimization_goal="REACH", billing_event="IMPRESSIONS", bid_strategy="LOWEST_COST_WITHOUT_CAP",
+        promoted_object={"page_id": PAGE}, targeting={"age_min": 25, "geo_locations": geo, "targeting_automation": {"advantage_audience": 0}})["id"])
 
-print("LEAD ADS (PAUSED)")
-for o, spec in OFFERS.items():
-    for l in ("en", "es"):
-        c = spec[l]
-        name = f"{o.upper()} · {c['head']} · {l.upper()}"
-        cr = once(f"cr_{o}_{l}", f"creative {name}", lambda o=o, l=l, c=c, name=name: creative(name, {"link_data": {
-            "image_hash": hashes[f"{o}_{l}"], "link": "http://fb.me/", "message": c["msg"], "name": c["head"], "description": c["desc"],
-            "call_to_action": {"type": spec["cta"], "value": {"lead_gen_form_id": forms[f"{o}_{l}"]}}}}))
-        once(f"ad_{o}_{l}", f"ad {name}", lambda cr=cr, name=name: meta.post(f"{ACT}/ads", adset_id=s_leads, name=name, status="PAUSED", creative={"creative_id": cr})["id"])
+    print("LEAD ADS (PAUSED)")
+    for o, spec in OFFERS.items():
+        for l in ("en", "es"):
+            c = spec[l]
+            name = f"{o.upper()} · {c['head']} · {l.upper()}"
+            cr = once(f"cr_{o}_{l}", f"creative {name}", lambda o=o, l=l, c=c, name=name: creative(name, {"link_data": {
+                "image_hash": hashes[f"{o}_{l}"], "link": "http://fb.me/", "message": c["msg"], "name": c["head"], "description": c["desc"],
+                "call_to_action": {"type": spec["cta"], "value": {"lead_gen_form_id": forms[f"{o}_{l}"]}}}}))
+            once(f"ad_{o}_{l}", f"ad {name}", lambda cr=cr, name=name: meta.post(f"{ACT}/ads", adset_id=s_leads, name=name, status="PAUSED", creative={"creative_id": cr})["id"])
 
-print("AWARENESS ADS (PAUSED)")
-for a, spec in AWARE.items():
-    for l in ("en", "es"):
-        msg, head = spec[l]
-        name = f"{a.upper()} · {head} · {l.upper()}"
-        cr = once(f"cr_{a}_{l}", f"creative {name}", lambda a=a, l=l, msg=msg, head=head, name=name: creative(name, {"link_data": {
-            "image_hash": hashes[f"{a}_{l}"], "link": "https://sunnybliss.com/", "message": msg, "name": head,
-            "call_to_action": {"type": "LEARN_MORE", "value": {"link": "https://sunnybliss.com/"}}}}))
-        once(f"ad_{a}_{l}", f"ad {name}", lambda cr=cr, name=name: meta.post(f"{ACT}/ads", adset_id=s_aware, name=name, status="PAUSED", creative={"creative_id": cr})["id"])
+    print("AWARENESS ADS (PAUSED)")
+    for a, spec in AWARE.items():
+        for l in ("en", "es"):
+            msg, head = spec[l]
+            name = f"{a.upper()} · {head} · {l.upper()}"
+            cr = once(f"cr_{a}_{l}", f"creative {name}", lambda a=a, l=l, msg=msg, head=head, name=name: creative(name, {"link_data": {
+                "image_hash": hashes[f"{a}_{l}"], "link": "https://sunnybliss.com/", "message": msg, "name": head,
+                "call_to_action": {"type": "LEARN_MORE", "value": {"link": "https://sunnybliss.com/"}}}}))
+            once(f"ad_{a}_{l}", f"ad {name}", lambda cr=cr, name=name: meta.post(f"{ACT}/ads", adset_id=s_aware, name=name, status="PAUSED", creative={"creative_id": cr})["id"])
 
-print("ARCHIVE the earlier paused campaigns (never ran)")
-for cid in OLD_CAMPAIGNS:
-    once(f"archived_{cid}", f"archive {cid}", lambda cid=cid: (meta.post(cid, status="ARCHIVED"), "ARCHIVED")[1])
+    print("ARCHIVE the earlier paused campaigns (never ran)")
+    for cid in OLD_CAMPAIGNS:
+        once(f"archived_{cid}", f"archive {cid}", lambda cid=cid: (meta.post(cid, status="ARCHIVED"), "ARCHIVED")[1])
 
-print(f"\nTotal ${(LEADS_BUDGET + AWARE_BUDGET)/100:.0f}/day (leads ${LEADS_BUDGET/100:.0f}, awareness ${AWARE_BUDGET/100:.0f}) · {'APPLIED, all PAUSED' if APPLY else 'dry run, nothing created'}")
+    print(f"\nTotal ${(LEADS_BUDGET + AWARE_BUDGET)/100:.0f}/day (leads ${LEADS_BUDGET/100:.0f}, awareness ${AWARE_BUDGET/100:.0f}) · {'APPLIED, all PAUSED' if APPLY else 'dry run, nothing created'}")
+
+
+if __name__ == "__main__":
+    main()
