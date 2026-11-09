@@ -50,18 +50,18 @@ Cada aumento es de un 10% aproximado. Andromeda y la fase de aprendizaje toleran
 
 ## Formularios: mapa para el workflow de GHL
 
-Cada formulario manda con cada lead `utm_source=facebook`, `utm_medium=paid_social`, `utm_campaign=sb_leads_nov2026_v2` y `utm_content=<oferta>_<idioma>` (por ejemplo `tu_en`). Los anuncios de awareness llevan a sunnybliss.com con `utm_source=facebook&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{ad.name}}`. Los 8 primeros formularios (sin UTM) quedaron archivados.
+Cada formulario manda con cada lead `utm_source=facebook`, `utm_medium=paid_social`, `utm_campaign=sb_leads_nov2026_v2` y `utm_content=<oferta>_<idioma>` (por ejemplo `tu_en`). Los anuncios de awareness llevan a sunnybliss.com con `utm_source=facebook&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{ad.name}}`. Los 8 primeros formularios (sin UTM) quedaron archivados. Desde el 2026-11-09 los formularios son cortos (5 campos: qué necesita, si es dueño, ZIP, nombre y teléfono), sin Higher Intent; los de 7 campos también quedaron archivados.
 
 | Formulario | Anuncio | Etiqueta sugerida en GHL |
 |---|---|---|
-| 1643919603937060 | TU · Mantenimiento $129 · EN | meta-tu-en |
-| 1152152620696238 | TU · Mantenimiento $129 · ES | meta-tu-es |
-| 1505083551681279 | SI · Plan Silver 50% · EN | meta-si-en |
-| 1587832526363738 | SI · Plan Silver 50% · ES | meta-si-es |
-| 1184339093920318 | AC · A/C nuevo desde $5,800 · EN | meta-ac-en |
-| 1374469254565758 | AC · A/C nuevo desde $5,800 · ES | meta-ac-es |
-| 1537487624893874 | FL · Tank Flush $149 · EN | meta-fl-en |
-| 2154961215229218 | FL · Tank Flush $149 · ES | meta-fl-es |
+| 1084999147920287 | TU · Mantenimiento $129 · EN | meta-tu-en |
+| 1423564973094560 | TU · Mantenimiento $129 · ES | meta-tu-es |
+| 1652576019903472 | SI · Plan Silver 50% · EN | meta-si-en |
+| 3412297362286078 | SI · Plan Silver 50% · ES | meta-si-es |
+| 959726403631130 | AC · A/C nuevo desde $5,800 · EN | meta-ac-en |
+| 1449886997100915 | AC · A/C nuevo desde $5,800 · ES | meta-ac-es |
+| 2563881114137771 | FL · Tank Flush $149 · EN | meta-fl-en |
+| 1470794828543814 | FL · Tank Flush $149 · ES | meta-fl-es |
 
 ## Antes de activar
 
