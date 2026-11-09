@@ -8,7 +8,7 @@ const require = createRequire(import.meta.url);
 const { chromium } = require(`${execSync("npm root -g").toString().trim()}/playwright`);
 
 const jobs = JSON.parse(readFileSync(process.argv[2], "utf8"));
-const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium-1194/chrome-linux/chrome" });
+const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 540, height: 1400 }, deviceScaleFactor: 2 });
 for (const job of jobs) {
   try {

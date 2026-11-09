@@ -137,7 +137,10 @@ ws.title = "Resumen"
 
 sheets = [
     ("Diario", [("Fecha", lambda r: r["date_start"])], dict(time_increment=1), None, False),
-    ("Anuncios", [("Anuncio", lambda r: r["ad_name"])], dict(level="ad", fields=FIELDS + ",ad_name"), None, True),
+    ("Campañas", [("Campaña", lambda r: r["campaign_name"])], dict(level="campaign", fields=FIELDS + ",campaign_name"), None, True),
+    ("Conjuntos", [("Conjunto", lambda r: r["adset_name"])], dict(level="adset", fields=FIELDS + ",adset_name"), None, True),
+    ("Anuncios", [("Anuncio", lambda r: r["ad_name"]), ("Conjunto", lambda r: r["adset_name"])],
+     dict(level="ad", fields=FIELDS + ",ad_name,adset_name"), None, True),
     ("Edad", [("Edad", lambda r: r["age"])], dict(breakdowns="age"), None, True),
     ("Género", [("Género", lambda r: {"female": "Mujer", "male": "Hombre"}.get(r["gender"], "Sin dato"))], dict(breakdowns="gender"), None, True),
     ("Edad x Género", [("Edad", lambda r: r["age"]), ("Género", lambda r: {"female": "Mujer", "male": "Hombre"}.get(r["gender"], "Sin dato"))], dict(breakdowns="age,gender"), None, True),
@@ -145,8 +148,9 @@ sheets = [
      "Meta no reporta landing page views ni leads por estado (restricción de privacidad): esas columnas salen en 0.", True),
     ("Mercado", [("Mercado (Comscore)", lambda r: r.get("comscore_market", ""))], dict(breakdowns="comscore_market"),
      "Mercado de Comscore: reemplazo de Meta para el desglose por DMA, retirado.", True),
-    ("Placement", [("Plataforma", lambda r: r["publisher_platform"]), ("Posición", lambda r: r["platform_position"])],
-     dict(breakdowns="publisher_platform,platform_position"), None, True),
+    ("Placement", [("Campaña", lambda r: r["campaign_name"]), ("Plataforma", lambda r: r["publisher_platform"]),
+                   ("Posición", lambda r: r["platform_position"])],
+     dict(level="campaign", fields=FIELDS + ",campaign_name", breakdowns="publisher_platform,platform_position"), None, True),
     ("Dispositivo", [("Dispositivo", lambda r: r["impression_device"])], dict(breakdowns="impression_device"), None, True),
     ("Hora", [("Hora (Nueva York)", lambda r: r["hourly_stats_aggregated_by_advertiser_time_zone"][:5])],
      dict(breakdowns="hourly_stats_aggregated_by_advertiser_time_zone", fields=FIELDS.replace("reach,", "")),
@@ -197,7 +201,7 @@ tot = next(r for r in range(2, d.max_row + 1) if d.cell(row=r, column=1).value =
 hd = {c.value: c.column_letter for c in d[1]}
 ws.append(["Reporte técnico · Meta Ads · OrchidPros"])
 ws["A1"].font = Font(name=ARIAL, bold=True, size=14, color="3B1C78")
-ws.append([f"Periodo: {SINCE} a {UNTIL} · campaña ORCHID - Leads - Hire VA - 2026 OCT - ABO · cuenta {ACT}"])
+ws.append([f"Periodo: {SINCE} a {UNTIL} · todas las campañas de la cuenta {ACT}"])
 ws.append([])
 ws.append(["Métrica", "Valor"])
 for c in ws[4]:
