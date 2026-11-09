@@ -18,16 +18,18 @@ JOB_WORDS = re.compile(r"\b(job|jobs|work for|hiring me|apply|applying|applicati
                        r"position|vacan\w*|trabajo|empleo|aplicar|hoja de vida|busco)\b", re.I)
 
 
-def env(name):
+def env(name, default=None):
     f = ROOT / ".env"
     if f.exists():
         for line in f.read_text(encoding="utf-8-sig").splitlines():
             if line.startswith(name + "="):
                 return line.split("=", 1)[1].strip()
-    return os.environ.get(name, "").strip() or sys.exit(f"{name} missing (.env or environment variable)")
+    return os.environ.get(name, "").strip() or default or sys.exit(f"{name} missing (.env or environment variable)")
 
 
-TOKEN, LOCATION = env("GHL_TOKEN"), env("GHL_LOCATION_ID")
+# Without a local token, the session's network proxy injects the saved GHL credential into the header.
+TOKEN = env("GHL_TOKEN", "proxy-injected")
+LOCATION = env("GHL_LOCATION_ID", "r5demglXbNG9LoCszFIw")
 S = requests.Session()
 S.headers.update({"Authorization": f"Bearer {TOKEN}", "Version": "2021-07-28", "Accept": "application/json"})
 
