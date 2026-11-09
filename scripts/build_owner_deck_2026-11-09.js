@@ -322,22 +322,6 @@ plan.forEach(([head, body], i) => {
 });
 s.addNotes("Noviembre al 8 nov: $304.10 de $1,000. Próximo reporte: lunes 16 nov (semana 9 – 15 nov).");
 
-// ---------- 12. Decisions ----------
-s = slide("DARK_CONTENT", "Próximos pasos");
-s.addText("Decisiones requeridas", { placeholder: "title" });
-const dec = [
-  ["Resultado del lead del 2 nov", "Confirmar si la llamada se hizo y en qué quedó. Es el primer dato real de cuánto vale un lead calificado."],
-  ["Píxel en orchidpros.com", "Instalar el píxel de Meta en el sitio principal para sumar sus visitantes al retargeting."],
-  ["Creativos A2 y B2", "Aprobarlos para entrar el 15 nov junto a B1. Formato vertical 9:16 si es posible."],
-];
-dec.forEach(([head, body], i) => {
-  const y = 1.25 + i * 1.25;
-  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.5, y: y + 0.05, w: 0.38, h: 0.38, fill: { color: C.text2 }, line: { color: C.accent1, width: 2 }, rectRadius: 0.06, objectName: `Decision box ${i + 1}` });
-  T(s, head, { x: 1.1, y, w: 8.4, h: 0.45, fontSize: 18, bold: true, color: C.accent1, valign: "middle", objectName: `Decision head ${i + 1}` });
-  T(s, body, { x: 1.1, y: y + 0.47, w: 8.4, h: 0.65, fontSize: 14, color: C.background1, valign: "top", objectName: `Decision body ${i + 1}` });
-});
-s.addNotes("Pendiente anterior: categorías de la página (Recruiter, Real Estate).");
-
 (async () => {
   await pres.writeFile({ fileName: OUT });
   await applyTheme(OUT, THEME);
