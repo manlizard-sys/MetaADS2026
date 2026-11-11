@@ -189,6 +189,16 @@
     "swap2_pn_en": "40033680349612704",
     "img2_pn_es": "22dbea0dee3bc45ccd3f8243a7e8000e",
     "cr2_pn_es": "1103350555918571",
-    "swap2_pn_es": "1103350555918571"
+    "swap2_pn_es": "1103350555918571",
+    "elec_camp": "120254964771590640",
+    "elec_adset": "120254964771980640",
+    "elec_ad_ev_en": "120254964774450640",
+    "elec_paused_old_ev_en": "PAUSED",
+    "elec_ad_ev_es": "120254964775710640",
+    "elec_paused_old_ev_es": "PAUSED",
+    "elec_ad_pn_en": "120254964778110640",
+    "elec_paused_old_pn_en": "PAUSED",
+    "elec_ad_pn_es": "120254964779460640",
+    "elec_paused_old_pn_es": "PAUSED"
   }
 }
