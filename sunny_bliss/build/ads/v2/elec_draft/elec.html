@@ -39,9 +39,9 @@ const plug = `<svg width="150" height="150" viewBox="0 0 64 64" fill="none" stro
 // panel with breakers
 const panel = `<div aria-hidden="true" style="width:150px;height:190px;background:#E9EEF0;border:5px solid #004B45;border-radius:12px;box-sizing:border-box;padding:12px;display:grid;grid-template-columns:repeat(2,1fr);gap:8px">
   ${Array.from({length:10},(_,i)=>`<div style="background:${i===3?'#F7921D':'#004B45'};border-radius:4px"></div>`).join('')}</div>`;
-const head = (badgeBg, badgeFg, badge) => `<div style="height:132px;flex:none;background:#FFFDF2;display:flex;align-items:center;justify-content:space-between;padding:0 28px;box-sizing:border-box">
-    <img src="img/logo.png" alt="Sunny Bliss Plumbing &amp; Air" style="height:100px;width:auto">
-    <span style="background:${badgeBg};color:${badgeFg};font:900 15px/1.2 'Nunito';letter-spacing:1.5px;text-transform:uppercase;padding:9px 14px;border-radius:12px;text-align:center;max-width:170px">${badge}</span></div>
+const head = (badgeBg, badgeFg, badge) => `<div style="height:170px;flex:none;background:#FFFDF2;display:flex;align-items:center;justify-content:space-between;padding:0 22px;box-sizing:border-box">
+    <img src="img/logo.png" alt="Sunny Bliss Plumbing &amp; Air" style="height:136px;width:auto">
+    <span style="background:${badgeBg};color:${badgeFg};font:900 14px/1.2 'Nunito';letter-spacing:1px;text-transform:uppercase;padding:9px 12px;border-radius:12px;text-align:center;max-width:140px">${badge}</span></div>
   <div style="height:10px;flex:none;background:var(--orange)"></div><div style="height:10px;flex:none;background:var(--sky)"></div>`;
 const foot = (fg, t) => `<p style="font:800 15px 'Nunito';color:${fg};opacity:.9">sunnybliss.com · ${t.lic}${LIC}</p>`;
 const T = {
