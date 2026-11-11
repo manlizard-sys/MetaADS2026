@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sunny Bliss electrical launch ads</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800;900&display=swap">
+<style>
+:root{--teal:#004B45;--yellow:#F3EF69;--orange:#F7921D;--sky:#2FA8DC;--lime:#C3D62F;--cream:#FFFDF2}
+body{margin:0;background:#ddd;display:flex;flex-wrap:wrap;gap:20px;padding:20px;font-family:'Nunito',Arial,sans-serif}
+.ad{width:540px;height:675px;position:relative;overflow:hidden;box-sizing:border-box;flex:none}
+.disp{font-family:'Lilita One','Arial Black',sans-serif;font-weight:400;margin:0}
+p{margin:0}
+.stripes{position:absolute;left:0;right:0;bottom:0;height:32px;display:flex;flex-direction:column}
+.stripes div{height:16px}
+.pill{align-self:flex-start;border-radius:999px;font:900 18px 'Nunito',Arial,sans-serif;padding:8px 16px;letter-spacing:1px;text-transform:uppercase}
+.check{font:800 21px/1.25 'Nunito',Arial,sans-serif}
+</style>
+</head>
+<body>
+<div id="root" style="display:contents"></div>
+<script>
+const LIC = new URLSearchParams(location.search).get('lic') || 'EC[_______]';
+const L = {
+  en: {
+    ev: {badge:'New · electrical launch', off:'$200 OFF', what:'EV charger installation', checks:['Level 2 home charger','Panel check included','Licensed electricians'], bundle:'EV + panel upgrade: save $750', lic:'Lic. '},
+    pn: {badge:'New · electrical launch', off:'$500 OFF', what:'Electrical panel upgrade', checks:['Federal Pacific, Zinsco or 100A panels','Permit and inspection included','Insurance-ready'], bundle:'Panel + EV charger: save $750', lic:'Lic. '}
+  },
+  es: {
+    ev: {badge:'Nuevo · lanzamiento eléctrico', off:'$200 MENOS', what:'Instalación de cargador para auto eléctrico', checks:['Cargador de casa Nivel 2','Revisión del panel incluida','Electricistas con licencia'], bundle:'Cargador + cambio de panel: ahorra $750', lic:'Lic. '},
+    pn: {badge:'Nuevo · lanzamiento eléctrico', off:'$500 MENOS', what:'Cambio de panel eléctrico', checks:['Paneles Federal Pacific, Zinsco o de 100A','Permiso e inspección incluidos','Listo para el seguro'], bundle:'Panel + cargador: ahorra $750', lic:'Lic. '}
+  }
+};
+const stripes = (a, b) => `<div class="stripes"><div style="background:${a}"></div><div style="background:${b}"></div></div>`;
+// EV plug icon (stroke SVG)
+const plug = `<svg width="150" height="150" viewBox="0 0 64 64" fill="none" stroke="#004B45" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <rect x="10" y="14" width="26" height="40" rx="5" fill="#F3EF69"/><path d="M16 22h14v10H16z" fill="#fff"/>
+  <path d="M36 30h8a6 6 0 0 1 6 6v8a4 4 0 0 0 8 0V22"/><path d="M54 14v8M62 14v8M52 22h12"/>
+  <path d="M24 36l-5 9h7l-4 7" stroke="#F7921D"/></svg>`;
+// panel with breakers
+const panel = `<div aria-hidden="true" style="width:150px;height:190px;background:#E9EEF0;border:5px solid #004B45;border-radius:12px;box-sizing:border-box;padding:12px;display:grid;grid-template-columns:repeat(2,1fr);gap:8px">
+  ${Array.from({length:10},(_,i)=>`<div style="background:${i===3?'#F7921D':'#004B45'};border-radius:4px"></div>`).join('')}</div>`;
+const T = {
+  ev: t => `<div class="ad" style="background:var(--sky);padding:36px;display:flex;flex-direction:column;gap:14px">
+    <span class="pill" style="background:var(--teal);color:var(--yellow)">${t.badge}</span>
+    <p class="disp" style="font-size:${t.off.length>8?92:118}px;line-height:.92;color:#fff;-webkit-text-stroke:3px var(--teal)">${t.off}</p>
+    <p style="font:900 30px/1.12 'Nunito';color:#002A27;max-width:330px">${t.what}</p>
+    <div style="display:flex;flex-direction:column;gap:6px">${t.checks.map(c=>`<p class="check" style="color:#002A27">✓ ${c}</p>`).join('')}</div>
+    <span style="align-self:flex-start;background:var(--yellow);color:var(--teal);font:900 20px 'Nunito';padding:10px 16px;border-radius:12px">${t.bundle}</span>
+    <div style="position:absolute;right:22px;top:150px">${plug}</div>
+    <img src="img/logo.png" alt="" style="position:absolute;left:30px;bottom:46px;height:52px">
+    <p style="position:absolute;right:30px;bottom:52px;font:800 15px 'Nunito';color:#002A27">${t.lic}${LIC}</p>
+    ${stripes('var(--orange)','var(--teal)')}</div>`,
+  pn: t => `<div class="ad" style="background:var(--teal);padding:36px;display:flex;flex-direction:column;gap:14px">
+    <span class="pill" style="background:var(--yellow);color:var(--teal)">${t.badge}</span>
+    <p class="disp" style="font-size:${t.off.length>8?92:118}px;line-height:.92;color:var(--yellow);max-width:330px">${t.off}</p>
+    <p style="font:900 30px/1.12 'Nunito';color:#fff;max-width:320px">${t.what}</p>
+    <div style="display:flex;flex-direction:column;gap:6px">${t.checks.map(c=>`<p class="check" style="color:#fff">✓ ${c}</p>`).join('')}</div>
+    <span style="align-self:flex-start;background:var(--orange);color:#003B36;font:900 20px 'Nunito';padding:10px 16px;border-radius:12px">${t.bundle}</span>
+    <div style="position:absolute;right:34px;bottom:92px;transform:scale(.8);transform-origin:bottom right">${panel}</div>
+    <p style="position:absolute;left:36px;bottom:52px;font:800 17px 'Nunito';color:var(--yellow)">Sunny Bliss Plumbing &amp; Air</p>
+    <p style="position:absolute;right:30px;bottom:52px;font:800 15px 'Nunito';color:#fff">${t.lic}${LIC}</p>
+    ${stripes('var(--orange)','var(--sky)')}</div>`
+};
+const root = document.getElementById('root');
+for (const k of ['ev','pn']) for (const lang of ['en','es']) {
+  const w = document.createElement('div'); w.innerHTML = T[k](L[lang][k]); const el = w.firstElementChild; el.id = `${k}_${lang}`; root.appendChild(el);
+}
+</script>
+</body>
+</html>
