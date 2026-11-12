@@ -58,7 +58,7 @@ code{font-family:var(--mono);font-size:.88em;background:var(--surface);padding:1
     <div class="rule"><span class="tag must">Obligatorio</span><p>Campos ocultos de UTM en cada formulario (<code>utm_source</code>, <code>utm_campaign</code>, <code>utm_content</code>). <code>utm_content</code> trae el nombre del anuncio y así sabemos qué anuncio trajo cada lead.</p></div>
     <div class="rule"><span class="tag must">Obligatorio</span><p>Diseño pensado primero en celular: más del 90% del tráfico de Meta llega desde el teléfono. El formulario debe verse sin tener que buscarlo.</p></div>
     <div class="rule"><span class="tag must">Obligatorio</span><p>Enlace visible “Looking for a job at Orchid? Apply here” cerca del formulario. Filtra a quienes buscan empleo antes de que llenen el formulario.</p></div>
-    <div class="rule"><span class="tag ok">Recomendado</span><p>La página dice lo mismo que el anuncio: misma oferta, mismo público, mismo botón. Si el anuncio dice “Get started free”, el título también.</p></div>
+    <div class="rule"><span class="tag ok">Recomendado</span><p>La página dice lo mismo que el anuncio: misma oferta, mismo público, mismo botón. Si el anuncio dice “Your first month free”, el título también.</p></div>
     <div class="rule"><span class="tag ok">Recomendado</span><p>Casilla de SMS opcional, nunca obligatoria para enviar el formulario.</p></div>
   </div>
 </section>
@@ -66,15 +66,16 @@ code{font-family:var(--mono);font-size:.88em;background:var(--surface);padding:1
 <section>
   <span class="eyebrow">Página 1 · captación de clientes</span>
   <h2>Landing para consultorios médicos</h2>
-  <p>Mismo funcionamiento que hire-50off, con el lenguaje de un consultorio. Público: dueños y gerentes de consultorios médicos, dentales y de terapia en EE. UU. Trabajo de la página: que agenden una llamada.</p>
+  <p>Mismo funcionamiento que hire-50off, con el lenguaje de un consultorio. <strong>Promo: primer mes gratis.</strong> Público: dueños y gerentes de consultorios médicos, dentales y de terapia en EE. UU. Trabajo de la página: que agenden una llamada.</p>
   <div class="grid">
     <div class="wire" aria-label="Estructura de la página de consultorios">
-      <div class="block"><b>URL</b><span class="copy">go.orchidpros.com/practices-50off (página de GHL)</span></div>
+      <div class="block"><b>URL</b><span class="copy">go.orchidpros.com/practices-free-month (página de GHL)</span></div>
       <div class="block"><b>Etiqueta</b><span class="copy">For U.S. medical &amp; dental practices</span></div>
-      <div class="block"><b>Título</b><span class="copy">Get started free, then 50% off your first month</span></div>
+      <div class="block"><b>Título</b><span class="copy">Your first month free</span></div>
+      <div class="block"><b>Línea bajo el título</b><span class="copy">Try a dedicated bilingual assistant for 30 days at no cost. Terms apply.</span></div>
       <div class="block"><b>Subtítulo</b><span class="copy">A dedicated bilingual assistant for your front desk and back office, working your business hours.</span></div>
       <div class="block"><b>Viñetas</b><span class="copy">Appointment scheduling and reminders<br>Insurance verification calls<br>Intake paperwork<br>Patient follow-ups in English and Spanish</span></div>
-      <span class="btn">Get started free</span>
+      <span class="btn">Claim your free month</span>
       <div class="block"><b>Cómo funciona</b><span class="copy">1 Book a free call · 2 We match your assistant · 3 They start on your hours</span></div>
       <div class="block"><b>Your week, delegated</b><span class="copy">Scheduling → Assistant · Insurance calls → Assistant · Intake forms → Assistant · Your patients → You</span></div>
       <div class="block"><b>Preguntas frecuentes</b><span class="copy">Do they need access to our EHR? · What hours do they work? · What if it's not the right fit?</span></div>
@@ -94,6 +95,7 @@ code{font-family:var(--mono);font-size:.88em;background:var(--surface);padding:1
         <li>Al agendar en el calendario: <strong>Schedule</strong> (ya lo envía el calendario de GHL).</li>
         <li>El lead calificado lo envía GHL por servidor. La página no tiene que hacer nada más.</li>
       </ul>
+      <div class="note"><strong>Condiciones del mes gratis:</strong> poner en letra pequeña bajo el formulario lo que Orchid defina (por ejemplo, si requiere compromiso mínimo después del mes gratis o tarjeta). No publicar sin ese texto.</div>
       <div class="note"><strong>Antes de publicar:</strong> confirmar con Orchid si las asistentes tienen capacitación HIPAA y si Orchid firma BAA. Si la respuesta es sí, agregar una línea “HIPAA-trained assistants” cerca del formulario. Si no, no mencionar HIPAA.</div>
     </div>
   </div>
@@ -117,7 +119,7 @@ code{font-family:var(--mono);font-size:.88em;background:var(--surface);padding:1
       <div class="block"><b>Vista previa</b><span class="copy">Imagen de un número del brief (asunto + primeras líneas)</span></div>
       <div class="block"><b>Formulario</b><span class="copy">First name · Email · Type of business (lista)</span></div>
       <span class="btn">Send me the brief</span>
-      <div class="block"><b>Página de gracias</b><span class="copy">You're in. First issue lands in your inbox soon.<br>Need help now? → Book a free call (hire-50off)</span></div>
+      <div class="block"><b>Página de gracias</b><span class="copy">You're in. First issue lands in your inbox soon.<br>Need help now? → Book a free call (landing de la promo vigente)</span></div>
     </div>
     <div class="col">
       <h3>Formulario</h3>
@@ -143,7 +145,8 @@ code{font-family:var(--mono);font-size:.88em;background:var(--surface);padding:1
     <table>
       <thead><tr><th>Punto</th><th>Consultorios</th><th>Newsletter</th></tr></thead>
       <tbody>
-        <tr><td>URL (GHL)</td><td>/practices-50off</td><td>/brief</td></tr>
+        <tr><td>URL (GHL)</td><td>/practices-free-month</td><td>/brief</td></tr>
+        <tr><td>Promo</td><td>First month free</td><td>Ninguna; solo enlace a la llamada</td></tr>
         <tr><td>Evento de Meta al enviar</td><td>Lead</td><td>Subscribe</td></tr>
         <tr><td>Campos</td><td>Filtro empleo · tipo de consultorio · nombre · email · teléfono opcional</td><td>Nombre · email · tipo de negocio</td></tr>
         <tr><td>Después de enviar</td><td>Calendario para agendar llamada</td><td>Página de gracias con enlace a llamada</td></tr>
