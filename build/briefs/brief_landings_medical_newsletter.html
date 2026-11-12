@@ -1,0 +1,158 @@
+<title>Brief landings: consultorios y newsletter</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: a single readable column, like a printed brief; each landing is a section with a wireframe column beside the notes on wide screens. */
+:root{
+  --bg:#FBFAFE; --surface:#F1EDFA; --fg:#1F1235; --muted:#5E5873; --line:#DCD4EE;
+  --brand:#3B1C78; --gold:#E9B32A; --ok:#2E7D57; --warn:#B4442F;
+  --display:"Fraunces", Georgia, serif; --body:"Source Sans 3", "Segoe UI", system-ui, sans-serif; --mono:"JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#15101F; --surface:#211A31; --fg:#ECE7F7; --muted:#AAA2BF; --line:#3A3150;
+  --brand:#B9A2F2; --gold:#F2C75A; --ok:#6CC799; --warn:#F08A72; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#15101F; --surface:#211A31; --fg:#ECE7F7; --muted:#AAA2BF; --line:#3A3150;
+  --brand:#B9A2F2; --gold:#F2C75A; --ok:#6CC799; --warn:#F08A72; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{font-family:var(--display);color:var(--brand);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(30px,5vw,44px)} h2{font-size:clamp(24px,3.6vw,32px)} h3{font-size:20px}
+p{margin:0;max-width:68ch} ul,ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header{display:flex;flex-direction:column;gap:14px;border-bottom:2px solid var(--brand);padding-bottom:24px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:20px}
+.grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+.col{display:flex;flex-direction:column;gap:18px;min-width:0}
+.wire{border:1.5px dashed var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.block{border:1px solid var(--line);border-radius:6px;padding:10px 12px;background:var(--surface);display:flex;flex-direction:column;gap:4px}
+.block b{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.copy{font-family:var(--mono);font-size:14px;line-height:1.5;color:var(--fg);overflow-wrap:anywhere}
+.btn{align-self:flex-start;background:var(--gold);color:#1F1235;font-weight:700;border-radius:999px;padding:6px 14px;font-size:14px}
+.rules{display:flex;flex-direction:column;gap:10px}
+.rule{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start}
+.tag{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:4px;padding:2px 7px;white-space:nowrap}
+.must{background:var(--brand);color:var(--bg)} .no{background:var(--warn);color:var(--bg)} .ok{background:var(--ok);color:var(--bg)}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:520px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+code{font-family:var(--mono);font-size:.88em;background:var(--surface);padding:1px 5px;border-radius:4px}
+.note{border-left:3px solid var(--gold);padding:10px 14px;background:var(--surface);border-radius:0 6px 6px 0}
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">Orchid Pros · brief de diseño · noviembre 2026</span>
+  <h1>Landings para consultorios médicos y newsletter</h1>
+  <p>Qué debe tener cada página para que funcione con los anuncios de Meta y con GHL. El diseño visual es libre dentro de la marca Orchid; lo que está marcado como <strong>obligatorio</strong> afecta la medición o la aprobación de los anuncios.</p>
+  <div class="meta"><span>Para: diseñadora de landings</span><span>De: equipo de Meta Ads</span><span>Referencia: go.orchidpros.com/hire-50off y /50off-form</span></div>
+</header>
+
+<section>
+  <h2>Reglas para las dos páginas</h2>
+  <div class="rules">
+    <div class="rule"><span class="tag must">Obligatorio</span><p>Píxel de Meta (OrchidPixel 2271987886986577) en todas las páginas, con el evento de cada página tal como se indica abajo. Nada más dispara eventos.</p></div>
+    <div class="rule"><span class="tag must">Obligatorio</span><p>Campos ocultos de UTM en cada formulario (<code>utm_source</code>, <code>utm_campaign</code>, <code>utm_content</code>). <code>utm_content</code> trae el nombre del anuncio y así sabemos qué anuncio trajo cada lead.</p></div>
+    <div class="rule"><span class="tag must">Obligatorio</span><p>Diseño pensado primero en celular: más del 90% del tráfico de Meta llega desde el teléfono. El formulario debe verse sin tener que buscarlo.</p></div>
+    <div class="rule"><span class="tag must">Obligatorio</span><p>Enlace visible “Looking for a job at Orchid? Apply here” cerca del formulario. Filtra a quienes buscan empleo antes de que llenen el formulario.</p></div>
+    <div class="rule"><span class="tag ok">Recomendado</span><p>La página dice lo mismo que el anuncio: misma oferta, mismo público, mismo botón. Si el anuncio dice “Get started free”, el título también.</p></div>
+    <div class="rule"><span class="tag ok">Recomendado</span><p>Casilla de SMS opcional, nunca obligatoria para enviar el formulario.</p></div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Página 1 · captación de clientes</span>
+  <h2>Landing para consultorios médicos</h2>
+  <p>Mismo funcionamiento que hire-50off, con el lenguaje de un consultorio. Público: dueños y gerentes de consultorios médicos, dentales y de terapia en EE. UU. Trabajo de la página: que agenden una llamada.</p>
+  <div class="grid">
+    <div class="wire" aria-label="Estructura de la página de consultorios">
+      <div class="block"><b>URL</b><span class="copy">go.orchidpros.com/practices-50off<br>Versión corta con formulario arriba: /practices-form</span></div>
+      <div class="block"><b>Etiqueta</b><span class="copy">For U.S. medical &amp; dental practices</span></div>
+      <div class="block"><b>Título</b><span class="copy">Get started free, then 50% off your first month</span></div>
+      <div class="block"><b>Subtítulo</b><span class="copy">A dedicated bilingual assistant for your front desk and back office, working your business hours.</span></div>
+      <div class="block"><b>Viñetas</b><span class="copy">Appointment scheduling and reminders<br>Insurance verification calls<br>Intake paperwork<br>Patient follow-ups in English and Spanish</span></div>
+      <span class="btn">Get started free</span>
+      <div class="block"><b>Cómo funciona</b><span class="copy">1 Book a free call · 2 We match your assistant · 3 They start on your hours</span></div>
+      <div class="block"><b>Your week, delegated</b><span class="copy">Scheduling → Assistant · Insurance calls → Assistant · Intake forms → Assistant · Your patients → You</span></div>
+      <div class="block"><b>Preguntas frecuentes</b><span class="copy">Do they need access to our EHR? · What hours do they work? · What if it's not the right fit?</span></div>
+      <div class="block"><b>Formulario + calendario</b><span class="copy">Ver campos a la derecha</span></div>
+    </div>
+    <div class="col">
+      <h3>Formulario</h3>
+      <p>Mismos campos y mismo orden que las landings actuales: GHL y la medición dependen de eso.</p>
+      <ol>
+        <li><code>Are you looking to hire an assistant, or looking for a job?</code> Obligatorio. Mismas respuestas que hoy (“I want to hire.” / “I'm looking for a job”).</li>
+        <li><code>What type of practice do you run?</code> Obligatorio. Primary care · Dental · Physical therapy · Specialty clinic · Other.</li>
+        <li>First name · Email · Phone (opcional).</li>
+      </ol>
+      <h3>Medición</h3>
+      <ul>
+        <li>Al enviar el formulario: evento <strong>Lead</strong>.</li>
+        <li>Al agendar en el calendario: <strong>Schedule</strong> (ya lo envía el calendario de GHL).</li>
+        <li>El lead calificado lo envía GHL por servidor. La página no tiene que hacer nada más.</li>
+      </ul>
+      <div class="note"><strong>Antes de publicar:</strong> confirmar con Orchid si las asistentes tienen capacitación HIPAA y si Orchid firma BAA. Si la respuesta es sí, agregar una línea “HIPAA-trained assistants” cerca del formulario. Si no, no mencionar HIPAA.</div>
+    </div>
+  </div>
+  <div class="rules">
+    <div class="rule"><span class="tag no">Evitar</span><p>Las palabras “medical”, “health” o “clinic” en el URL, y cualquier mención de enfermedades, tratamientos o condiciones de pacientes. Meta puede clasificar la página como “salud” y limitar la optimización de los anuncios. Hablar solo de tareas administrativas.</p></div>
+    <div class="rule"><span class="tag no">Evitar</span><p>Fotos de pacientes, estetoscopios en primer plano o imágenes clínicas. Mejor: recepción de un consultorio, una persona al teléfono con agenda, el equipo administrativo.</p></div>
+    <div class="rule"><span class="tag no">Evitar</span><p>Testimonios inventados. Si no hay un cliente real del sector salud, no poner testimonio.</p></div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Página 2 · nutrir a quien todavía no está listo</span>
+  <h2>Landing de newsletter</h2>
+  <p>Para quien conoce Orchid pero no quiere agendar todavía, por ejemplo quienes vieron el video. Pide muy poco: nombre y correo. Trabajo de la página: suscribir.</p>
+  <div class="grid">
+    <div class="wire" aria-label="Estructura de la página de newsletter">
+      <div class="block"><b>URL</b><span class="copy">go.orchidpros.com/brief</span></div>
+      <div class="block"><b>Nombre (propuesta)</b><span class="copy">The Delegate Brief</span></div>
+      <div class="block"><b>Título</b><span class="copy">One task to take off your plate, every other week</span></div>
+      <div class="block"><b>Qué recibes</b><span class="copy">A task worth delegating, with a step-by-step guide<br>A ready-to-use template<br>A real number: time or money saved</span></div>
+      <div class="block"><b>Vista previa</b><span class="copy">Imagen de un número del brief (asunto + primeras líneas)</span></div>
+      <div class="block"><b>Formulario</b><span class="copy">First name · Email · Type of business (lista)</span></div>
+      <span class="btn">Send me the brief</span>
+      <div class="block"><b>Página de gracias</b><span class="copy">You're in. First issue lands in your inbox soon.<br>Need help now? → Book a free call (hire-50off)</span></div>
+    </div>
+    <div class="col">
+      <h3>Formulario</h3>
+      <ol>
+        <li>First name · Email (obligatorios).</li>
+        <li><code>What type of business do you run?</code> Law firm · Medical or dental practice · Real estate · Accounting or finance · Other.</li>
+        <li>Sin teléfono. Cada campo extra baja la tasa de suscripción.</li>
+      </ol>
+      <h3>Medición</h3>
+      <ul>
+        <li>Al enviar: evento <strong>Subscribe</strong>.</li>
+        <li><strong>No usar Lead ni CompleteRegistration.</strong> Si usamos Lead, Meta mezcla suscriptores con clientes y la campaña de leads aprende a buscar suscriptores baratos.</li>
+        <li>En GHL: etiqueta <code>newsletter</code>, pipeline aparte del de ventas.</li>
+      </ul>
+      <div class="note">Página corta: una sola pantalla en celular si es posible. Sin menú ni secciones largas.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Resumen para revisar antes de entregar</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Punto</th><th>Consultorios</th><th>Newsletter</th></tr></thead>
+      <tbody>
+        <tr><td>URL</td><td>/practices-50off y /practices-form</td><td>/brief</td></tr>
+        <tr><td>Evento de Meta al enviar</td><td>Lead</td><td>Subscribe</td></tr>
+        <tr><td>Campos</td><td>Filtro empleo · tipo de consultorio · nombre · email · teléfono opcional</td><td>Nombre · email · tipo de negocio</td></tr>
+        <tr><td>Después de enviar</td><td>Calendario para agendar llamada</td><td>Página de gracias con enlace a llamada</td></tr>
+        <tr><td>UTM ocultos</td><td>Sí</td><td>Sí</td></tr>
+        <tr><td>Enlace “Apply here” para empleo</td><td>Sí</td><td>Sí</td></tr>
+        <tr><td>Etiqueta en GHL</td><td>Igual que hire-50off + tipo de consultorio</td><td>newsletter</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Cuando estén publicadas, avisar al equipo de Meta Ads para hacer un envío de prueba en cada una y confirmar que los eventos llegan bien antes de poner anuncios.</p>
+</section>
+</div>
