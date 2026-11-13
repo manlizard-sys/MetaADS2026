@@ -1,0 +1,245 @@
+<meta name="dash-one-writer">
+<style>
+  .gl { font-family: var(--font-anthropic-sans); display: grid; gap: var(--cds-gap-xl); }
+  .gl h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .gl h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; text-wrap: balance; }
+  .gl p { margin: 0; max-width: 76ch; }
+  .gl .muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .gl .head { display: grid; gap: var(--cds-gap-sm); }
+  .gl .lede { line-height: 1.55; }
+  .gl .lede b, .gl .finds b { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .gl .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: var(--cds-gap-md); }
+  .gl .tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); display: grid; gap: var(--cds-gap-xs); min-width: 0; }
+  .gl .tile .big { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; }
+  .gl .tile.alert .big { color: var(--color-bad); }
+  .gl .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+  .gl .card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: grid; gap: var(--cds-gap-sm); align-content: start; min-width: 0; }
+  .gl .finds { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--cds-gap-sm); }
+  .gl .find { display: grid; grid-template-columns: auto 1fr; gap: var(--cds-gap-sm); align-items: baseline; line-height: 1.5; }
+  .gl .sev { font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); border: 1px solid currentColor; border-radius: 999px; padding: 0 var(--cds-pad-sm); white-space: nowrap; }
+  .gl .sev.bad { color: var(--color-bad); } .gl .sev.warn { color: var(--color-warn); } .gl .sev.ok { color: var(--color-ok); }
+  .gl .chart { position: relative; min-height: 240px; }
+  .gl .funnel { position: relative; min-height: 200px; }
+  .gl .legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .gl .sw { display: inline-block; width: .7rem; height: .7rem; border-radius: 2px; margin-right: .35rem; vertical-align: -1px; }
+  .gl .tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); white-space: nowrap; z-index: 2; }
+  .gl .tip .k { color: var(--cds-text-secondary); }
+  .gl .tw { overflow: auto; max-height: 28rem; }
+  .gl table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+  .gl th, .gl td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); text-align: left; white-space: nowrap; }
+  .gl th { position: sticky; top: 0; background: var(--color-panel); color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); }
+  .gl td.num, .gl th.num { text-align: right; }
+  .gl .q-ok { color: var(--color-ok); } .gl .q-bad { color: var(--color-bad); } .gl .q-none { color: var(--color-fg-muted); }
+  .gl [data-dash-source-state=empty] { color: transparent; }
+  .gl [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+</style>
+
+<div class="gl" id="top">
+  <header class="head">
+    <h1>Sunny Bliss · Leads en GoHighLevel</h1>
+    <p class="muted">Subcuenta Sunny Bliss Plumbing &amp; Air · contactos del 24 sep al 30 oct 2026 · sin datos personales</p>
+    <p class="lede">Meta reportó <b data-draw="v" data-source="cruce" data-field="meta">—</b> leads de clientes desde el 21 de septiembre; a GoHighLevel llegaron <b data-draw="v" data-source="cruce" data-field="ghl">—</b>. De los contactos, <b data-draw="v" data-source="resumen" data-field="calificados">—</b> están marcados como calificados y <b data-draw="v" data-source="resumen" data-field="estimados">—</b> agendaron un estimado, pero ninguno figura como vendido y <b data-draw="v" data-source="resumen" data-field="sin_contactar">—</b> calificados siguen en “New Lead (Contact ASAP)”.</p>
+  </header>
+
+  <section class="tiles" id="kpis">
+    <div class="tile"><span class="muted">Contactos en GHL</span><span class="big" data-draw="v" data-source="resumen" data-field="contactos">—</span></div>
+    <div class="tile"><span class="muted">Calificados</span><span class="big" data-draw="v" data-source="resumen" data-field="calificados">—</span></div>
+    <div class="tile"><span class="muted">Estimados agendados</span><span class="big" data-draw="v" data-source="resumen" data-field="estimados">—</span></div>
+    <div class="tile"><span class="muted">Vendidos</span><span class="big" data-draw="v" data-source="resumen" data-field="vendidos">—</span></div>
+    <div class="tile alert"><span class="muted">Calificados sin contactar</span><span class="big" data-draw="v" data-source="resumen" data-field="sin_contactar">—</span></div>
+    <div class="tile alert"><span class="muted">Leads de Meta que no llegaron</span><span class="big" data-draw="v" data-source="cruce" data-field="perdidos">—</span></div>
+  </section>
+
+  <section class="card" id="hallazgos">
+    <h2>Hallazgos</h2>
+    <ul class="finds">
+      <li class="find"><span class="sev bad">Crítico</span><span>Los leads del formulario instantáneo dejaron de llegar a GHL después del 1 de octubre. Meta registró <b data-draw="v" data-source="cruce" data-field="meta_formulario_oct">—</b> leads de formulario desde el 5 de octubre y GHL no recibió ninguno. Los contactos anteriores sin fuente tampoco tienen teléfono.</span></li>
+      <li class="find"><span class="sev bad">Crítico</span><span>Ningún contacto tiene guardado el anuncio o la campaña de origen (UTM), aunque los campos existen. Hoy no se puede saber qué anuncio trajo cada cliente.</span></li>
+      <li class="find"><span class="sev warn">Atención</span><span>Hubo leads calificados: <b data-draw="v" data-source="resumen" data-field="calificados">—</b> con etiqueta “qualified” y <b data-draw="v" data-source="resumen" data-field="estimados">—</b> estimados agendados, todos de la encuesta HVAC (landing). El problema está en el seguimiento: ninguno avanzó a cotización ni venta en el pipeline.</span></li>
+      <li class="find"><span class="sev warn">Atención</span><span>Desde el 15 de octubre todos los leads de la landing se marcaron como no calificados, en coincidencia con la campaña HVAC del 8 de octubre.</span></li>
+      <li class="find"><span class="sev ok">Bien</span><span>El pipeline de ventas, las etiquetas de calificación y los campos de atribución ya existen; solo falta que se llenen de forma automática.</span></li>
+    </ul>
+  </section>
+
+  <section class="card" id="cruce">
+    <h2>Leads por semana: Meta vs. GoHighLevel</h2>
+    <p class="muted">Barra izquierda: lo que reporta Meta. Barra derecha: lo que llegó a GHL. Semanas de lunes a domingo.</p>
+    <div class="legend"><span><span class="sw" style="background: var(--gl-c0)"></span>Meta · formulario</span><span><span class="sw" style="background: var(--gl-c1)"></span>Meta · landing</span><span><span class="sw" style="background: var(--gl-c2)"></span>GHL · encuesta landing</span><span><span class="sw" style="background: var(--gl-c3)"></span>GHL · otros</span></div>
+    <div class="chart" data-draw="weekly" data-source="weekly"></div>
+  </section>
+
+  <div class="grid">
+    <section class="card" id="etapas">
+      <h2>Etapa en el pipeline</h2>
+      <p class="muted">Contactos por etapa actual. Sin etapas de cotización, venta ni trabajo.</p>
+      <div class="funnel" data-draw="stages" data-source="etapas"></div>
+    </section>
+    <section class="card" id="fuentes">
+      <h2>Calidad por fuente</h2>
+      <div class="tw"><table data-source="fuentes" data-row-key="fuente">
+        <thead><tr><th data-field="fuente">Fuente</th><th class="num" data-field="contactos">Contactos</th><th class="num" data-field="calificados">Calificados</th><th class="num" data-field="no_calificados">No calificados</th><th class="num" data-field="estimados">Estimados</th></tr></thead>
+        <tbody data-draw="tbl"></tbody>
+      </table></div>
+      <h2>Controles de datos</h2>
+      <div class="tw"><table data-source="checks" data-row-key="control">
+        <thead><tr><th data-field="control">Control</th><th class="num" data-field="contactos">Contactos</th><th class="num" data-field="total">De</th></tr></thead>
+        <tbody data-draw="tbl"></tbody>
+      </table></div>
+    </section>
+  </div>
+
+  <section class="card" id="contactos">
+    <h2>Contactos (sin datos personales)</h2>
+    <div class="tw"><table data-source="leads" data-row-key="id">
+      <thead><tr><th data-field="id">#</th><th data-field="day">Fecha</th><th data-field="source">Fuente</th><th data-field="language">Idioma</th><th data-field="qualification">Calificación</th><th data-field="stage">Etapa</th></tr></thead>
+      <tbody data-draw="tbl"></tbody>
+    </table></div>
+  </section>
+
+  <p class="muted">Fuente: API de GoHighLevel (solo lectura) y Meta Marketing API, 30 oct 2026. “Calificado” y “No calificado” son las etiquetas qualified / unqualified de GHL.</p>
+</div>
+
+<script>
+  const root = document.querySelector('.gl');
+  if (root) dash.colors.slice(0, 4).forEach((c, i) => root.style.setProperty(`--gl-c${i}`, c));
+  window.glAxis = (g) => {
+    g.attr('font-size', null).attr('font-family', null);
+    g.selectAll('text').style('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+    g.selectAll('line,path').style('stroke', 'var(--cds-chart-axis)');
+  };
+  window.glTip = (box) => {
+    let t = box.querySelector('.tip');
+    if (!t) { t = document.createElement('div'); t.className = 'tip'; t.hidden = true; box.append(t); }
+    return t;
+  };
+
+  dash.calc('resumen', {
+    inputs: ['leads'],
+    title: 'Resumen de contactos',
+    description: 'Cuenta contactos, calificados, estimados, ventas y calificados aún en contacto pendiente.',
+    fn: (leads) => [{
+      contactos: leads.length,
+      calificados: leads.filter((l) => l.qualification === 'Calificado').length,
+      estimados: leads.filter((l) => /Estimate Booked|Visit Booked/.test(l.stage)).length,
+      vendidos: leads.filter((l) => /Sold/.test(l.stage)).length,
+      sin_contactar: leads.filter((l) => l.qualification === 'Calificado' && /Contact ASAP/.test(l.stage)).length,
+    }],
+  });
+  dash.calc('cruce', {
+    inputs: ['weekly'],
+    title: 'Meta vs. GHL, totales',
+    description: 'Suma los leads semanales de Meta y de GHL y su diferencia.',
+    fn: (weekly) => {
+      const s = (k, f = () => true) => weekly.filter(f).reduce((a, w) => a + Number(w[k]), 0);
+      const meta = s('meta_formulario') + s('meta_landing');
+      const ghl = s('ghl_landing') + s('ghl_otros');
+      return [{meta, ghl, perdidos: meta - ghl, meta_formulario_oct: s('meta_formulario', (w) => w.semana >= '2026-10-05')}];
+    },
+  });
+  dash.calc('etapas', {
+    inputs: ['leads'],
+    title: 'Contactos por etapa',
+    description: 'Cuenta los contactos según su etapa actual en el pipeline.',
+    fn: (leads) => Object.entries(leads.reduce((a, l) => ({...a, [l.stage]: (a[l.stage] || 0) + 1}), {}))
+      .map(([etapa, contactos]) => ({etapa, contactos})).sort((a, b) => b.contactos - a.contactos),
+  });
+  dash.calc('fuentes', {
+    inputs: ['leads'],
+    title: 'Calidad por fuente',
+    description: 'Agrupa los contactos por fuente con su calificación y estimados.',
+    fn: (leads) => [...new Set(leads.map((l) => l.source))].map((fuente) => {
+      const g = leads.filter((l) => l.source === fuente);
+      return {fuente, contactos: g.length,
+        calificados: g.filter((l) => l.qualification === 'Calificado').length,
+        no_calificados: g.filter((l) => l.qualification === 'No calificado').length,
+        estimados: g.filter((l) => /Estimate Booked|Visit Booked/.test(l.stage)).length};
+    }).sort((a, b) => b.contactos - a.contactos),
+  });
+
+  dash.draw('v', (el) => {
+    const d = dash.data(el.dataset.source);
+    const row = d.status === 'ok' ? d.data[0] : null;
+    el.textContent = row && row[el.dataset.field] !== undefined ? d3.format(',')(row[el.dataset.field]) : '—';
+  });
+
+  dash.draw('tbl', (tbody) => {
+    const table = tbody.closest('table');
+    const d = dash.data(table.dataset.source);
+    tbody.replaceChildren();
+    if (d.status !== 'ok') return;
+    const cols = [...table.querySelectorAll('thead th')].map((th) => ({f: th.dataset.field, num: th.classList.contains('num')}));
+    for (const r of d.data) {
+      const tr = document.createElement('tr');
+      for (const c of cols) {
+        const td = document.createElement('td');
+        if (c.num) td.className = 'num';
+        if (c.f === 'qualification') td.className = r[c.f] === 'Calificado' ? 'q-ok' : r[c.f] === 'No calificado' ? 'q-bad' : 'q-none';
+        td.textContent = r[c.f] ?? '—';
+        tr.append(td);
+      }
+      tbody.append(tr);
+    }
+  });
+</script>
+
+<script>
+  dash.draw('weekly', (box) => {
+    const d = dash.data('weekly');
+    box.replaceChildren();
+    if (d.status !== 'ok') { box.textContent = '—'; return; }
+    const rows = d.data.map((r) => ({...r, a: +r.meta_formulario, b: +r.meta_landing, c: +r.ghl_landing, e: +r.ghl_otros}));
+    const W = box.clientWidth || 600, H = 240, m = {t: 8, r: 8, b: 26, l: 32};
+    const x = d3.scaleBand(rows.map((r) => r.semana), [m.l, W - m.r]).padding(0.25);
+    const xi = d3.scaleBand(['meta', 'ghl'], [0, x.bandwidth()]).padding(0.12);
+    const y = d3.scaleLinear([0, d3.max(rows, (r) => Math.max(r.a + r.b, r.c + r.e)) || 1], [H - m.b, m.t]).nice();
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    svg.append('g').selectAll('line').data(y.ticks(4)).join('line').attr('x1', m.l).attr('x2', W - m.r)
+      .attr('y1', (v) => y(v)).attr('y2', (v) => y(v)).style('stroke', 'var(--cds-chart-grid)');
+    const col = (i) => dash.colors[i];
+    const bar = (r, key, lo, hi, ci) => svg.append('rect').attr('x', x(r.semana) + xi(key)).attr('width', xi.bandwidth())
+      .attr('y', y(hi)).attr('height', Math.max(0, y(lo) - y(hi))).attr('rx', 2).style('fill', col(ci));
+    for (const r of rows) {
+      bar(r, 'meta', 0, r.a, 0); bar(r, 'meta', r.a, r.a + r.b, 1);
+      bar(r, 'ghl', 0, r.c, 2); bar(r, 'ghl', r.c, r.c + r.e, 3);
+    }
+    const fmt = (s) => d3.utcFormat('%b %-d')(new Date(s + 'T12:00:00Z'));
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickFormat(fmt).tickSizeOuter(0)).call(glAxis);
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(d3.format('d'))).call(glAxis).call((g) => g.select('.domain').remove());
+    const tip = glTip(box);
+    svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r) => x(r.semana)).attr('width', x.bandwidth())
+      .attr('y', m.t).attr('height', H - m.t - m.b).style('fill', 'transparent')
+      .on('mousemove', (ev, r) => {
+        tip.replaceChildren();
+        const k = document.createElement('div'); k.className = 'k'; k.textContent = `Semana del ${fmt(r.semana)}`; tip.append(k);
+        for (const [i, lab, v] of [[0, 'Meta · formulario', r.a], [1, 'Meta · landing', r.b], [2, 'GHL · encuesta landing', r.c], [3, 'GHL · otros', r.e]]) {
+          const line = document.createElement('div');
+          const sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = col(i); line.append(sw);
+          line.append(`${lab}: ${v}`); tip.append(line);
+        }
+        tip.hidden = false;
+        const [px, py] = d3.pointer(ev, box);
+        tip.style.left = Math.max(0, Math.min(px + 12, box.clientWidth - tip.offsetWidth - 4)) + 'px';
+        tip.style.top = Math.max(0, py - 60) + 'px';
+      })
+      .on('mouseleave', () => { tip.hidden = true; });
+  });
+
+  dash.draw('stages', (box) => {
+    const d = dash.data('etapas');
+    box.replaceChildren();
+    if (d.status !== 'ok') { box.textContent = '—'; return; }
+    const rows = d.data;
+    const W = box.clientWidth || 400, rowH = 30, H = rows.length * rowH + 8;
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const labels = svg.append('g');
+    labels.selectAll('text').data(rows).join('text').attr('x', 0).attr('y', (r, i) => i * rowH + 20)
+      .text((r) => r.etapa).style('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)');
+    const lw = Math.min(W * 0.55, d3.max(labels.selectAll('text').nodes(), (n) => n.getComputedTextLength()) + 12);
+    const x = d3.scaleLinear([0, d3.max(rows, (r) => r.contactos) || 1], [lw, W - 36]);
+    svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', lw).attr('y', (r, i) => i * rowH + 6)
+      .attr('height', rowH - 12).attr('width', (r) => x(r.contactos) - lw).attr('rx', 2)
+      .style('fill', (r) => /Contact ASAP/.test(r.etapa) ? 'var(--cds-chart-status-critical)' : dash.colors[0]);
+    svg.append('g').selectAll('text').data(rows).join('text').attr('x', (r) => x(r.contactos) + 6).attr('y', (r, i) => i * rowH + 20)
+      .text((r) => r.contactos).style('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+  });
+</script>
