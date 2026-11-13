@@ -88,6 +88,17 @@
       },
       "lifetime": 77423,
       "schedule": "06:00-22:00 NY, todos los días"
+    },
+    "bf_health": {
+      "adset": "120257780775030196",
+      "lifetime": 15000,
+      "status": "PAUSED (sin anuncios: faltan creativos y landing)"
+    },
+    "engagement": {
+      "campaign": "120257780775350196",
+      "adset": "120257780776320196",
+      "creative": "1650916266782782",
+      "ad": "120257780777990196"
     }
   }
 }
