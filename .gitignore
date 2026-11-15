@@ -6,3 +6,5 @@ creatives/*.mov
 __pycache__/
 build/reports/ghl-*.json
 build/reports/previews/
+
+build/creatives/bf_nov16/*.mov

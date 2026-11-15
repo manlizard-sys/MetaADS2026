@@ -1,0 +1,20 @@
+{
+  "hc": {
+    "bodies": [
+      "Your front desk shouldn't be the reason patients wait on hold. Orchid places a verified, bilingual patient intake coordinator on your team, working your U.S. hours: scheduling, insurance verification calls, intake and follow-ups. Black Friday offer: get started free, then 50% off your first month. Terms apply.",
+      "Black Friday for healthcare practitioners: get started free, then 50% off your first month. A HIPAA-trained, bilingual medical scheduler or patient support rep from Colombia, working your business hours. Limited spots, valid until December 1st.",
+      "Many of your patients would rather talk in Spanish. Your new assistant can. Bilingual medical scheduling, interpretation and patient support, HIPAA-trained. Start free this Black Friday, then 50% off your first month. Terms apply."
+    ],
+    "titles": ["Get started free, then 50% off", "A bilingual front desk, free to start", "HIPAA-trained support. Start free."],
+    "description": "Black Friday offer. Valid until December 1st."
+  },
+  "ent": {
+    "bodies": [
+      "You started a business to grow it, not to spend your day on admin. Orchid places a verified, bilingual professional from Colombia on your team, working your U.S. hours: admin support, operations, bookkeeping or marketing. Black Friday offer: get started free, then 50% off your first month. Terms apply.",
+      "Black Friday for U.S. companies and entrepreneurs: get started free, then 50% off your first month. A dedicated bilingual assistant for admin, operations, bookkeeping or marketing, in your time zone. Limited spots, valid until December 1st.",
+      "Every hour you spend on email, invoices and scheduling is an hour you're not growing your business. Hand it to a qualified bilingual assistant who works your hours. Start free this Black Friday, then 50% off your first month. Terms apply."
+    ],
+    "titles": ["Get started free, then 50% off", "Black Friday: start free", "Your bilingual assistant, free to start"],
+    "description": "Black Friday offer. Valid until December 1st."
+  }
+}
