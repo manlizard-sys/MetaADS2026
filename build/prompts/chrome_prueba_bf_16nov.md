@@ -1,4 +1,4 @@
-Dos cosas más en GHL de Orchid, antes de las 11:30 pm (hora de Bogotá). Avísame al terminar cada una y detente si algo no coincide.
+Dos cosas más en GHL de Orchid, antes de la 1:45 am (hora de Bogotá). Avísame al terminar cada una y detente si algo no coincide.
 
 REGLAS
 - No toques hire-50off, su formulario ni nada de abogados.
