@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sunny Bliss services ads (official format)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800;900&display=swap">
+<style>
+/* Official brand colors (KickCharge guide) */
+:root{--teal:#005151;--yellow:#EDE939;--orange:#FF671F;--blue:#0097A9;--aqua:#00C7B1;--cream:#FFFDF2}
+body{margin:0;background:#ddd;display:flex;flex-wrap:wrap;gap:20px;padding:20px;font-family:'Nunito',Arial,sans-serif}
+.ad{width:540px;height:675px;position:relative;overflow:hidden;box-sizing:border-box;flex:none;display:flex;flex-direction:column}
+.disp{font-family:'Lilita One','Arial Black',sans-serif;font-weight:400;margin:0}
+p{margin:0}
+.check{font:800 20px/1.25 'Nunito',Arial,sans-serif}
+.strike{text-decoration:line-through;text-decoration-thickness:3px}
+</style>
+</head>
+<body>
+<div id="root" style="display:contents"></div>
+<script>
+const D = {
+  tu: {bg:'var(--teal)', fg:'#fff', accent:'var(--yellow)', badgeBg:'var(--orange)', photo:null, lic:'CAC1823405',
+    en:{badge:'Winter AC tune-up', who:'For Miami-Dade homeowners', price:'$129', reg:'reg. $325', title:'AC tune-up', checks:['Coil and drain line cleaning','Refrigerant and wiring check','Written report on system age'], pill:'Book now'},
+    es:{badge:'Mantenimiento de A/C', who:'Para dueños de casa en Miami-Dade', price:'$129', reg:'antes $325', title:'Mantenimiento de A/C', checks:['Limpieza de serpentín y drenaje','Revisión de refrigerante y cableado','Reporte de la edad del equipo'], pill:'Reserva ya'}},
+  si: {bg:'var(--yellow)', fg:'var(--teal)', accent:'var(--teal)', badgeBg:'var(--teal)', photo:null, lic:'CAC1823405 · CFC1433145',
+    en:{badge:'Special promotion', who:'For Miami-Dade homeowners', price:'50% OFF', reg:'', title:'Silver Maintenance Plan · $150/yr (reg. $300)', checks:['2 AC tune-ups a year','1 plumbing visit','No dispatch fee','10% off repairs'], pill:'Join the plan'},
+    es:{badge:'Promoción especial', who:'Para dueños de casa en Miami-Dade', price:'50% MENOS', reg:'', title:'Plan Silver · $150/año (antes $300)', checks:['2 mantenimientos de A/C al año','1 visita de plomería','Sin cargo por visita','10% menos en reparaciones'], pill:'Únete al plan'}},
+  ac: {bg:'var(--teal)', fg:'#fff', accent:'var(--yellow)', badgeBg:'var(--orange)', photo:'img/ac_install.jpg', lic:'CAC1823405',
+    en:{badge:'Limited time', who:'For Miami-Dade homeowners', price:'New AC from $5,800', reg:'', title:'0% interest for 60 months*', checks:['Flat-rate price before we start','Licensed installers, permits included'], pill:'Get a free quote', fine:'*With approved credit'},
+    es:{badge:'Por tiempo limitado', who:'Para dueños de casa en Miami-Dade', price:'Aire nuevo desde $5,800', reg:'', title:'0% de interés por 60 meses*', checks:['Precio fijo antes de empezar','Instaladores con licencia y permisos'], pill:'Cotización gratis', fine:'*Sujeto a aprobación de crédito'}},
+  fl: {bg:'var(--yellow)', fg:'var(--teal)', accent:'var(--teal)', badgeBg:'var(--teal)', photo:'img/waterheater.jpg', lic:'CFC1433145',
+    en:{badge:'Same-day appointments', who:'For Miami-Dade homeowners', price:'Water heater flush $149', reg:'reg. $279', title:'Tankless descale $289', checks:['Removes sediment from the tank','Adds years to your heater'], pill:'Book now'},
+    es:{badge:'Citas el mismo día', who:'Para dueños de casa en Miami-Dade', price:'Limpieza del calentador $149', reg:'antes $279', title:'Calentador sin tanque $289', checks:['Saca el sedimento del tanque','Le suma años al calentador'], pill:'Reserva ya'}}
+};
+const header = (badgeBg, badge) => `<div style="height:170px;flex:none;background:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:0 22px;box-sizing:border-box">
+  <img src="img/logo.png" alt="Sunny Bliss Plumbing &amp; Air" style="height:136px;width:auto">
+  <span style="background:${badgeBg};color:#fff;font:900 14px/1.2 'Nunito';letter-spacing:1px;text-transform:uppercase;padding:9px 12px;border-radius:12px;text-align:center;max-width:140px">${badge}</span></div>
+  <div style="height:10px;flex:none;background:var(--orange)"></div><div style="height:10px;flex:none;background:var(--blue)"></div>`;
+function ad(k, lang){
+  const o=D[k], t=o[lang];
+  const big = t.price.length<=9;
+  const photo = o.photo ? `<div style="height:132px;flex:none;background:url(${o.photo}) center 35%/cover"></div>` : '';
+  return `<div class="ad" style="background:${o.bg}">${header(o.badgeBg,t.badge)}${photo}
+  <div style="flex:1;padding:${o.photo?16:22}px 32px 22px;display:flex;flex-direction:column;gap:${o.photo?8:11}px;color:${o.fg}">
+    <p style="font:900 17px 'Nunito';letter-spacing:1.5px;text-transform:uppercase;color:${o.accent};opacity:.95">${t.who}</p>
+    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <p class="disp" style="font-size:${t.price.length<=8?110:(t.price.length<=10?84:(t.price.length>24?34:(o.photo?40:46)))}px;line-height:.95;white-space:${t.price.length<=10?'nowrap':'normal'};color:${o.accent}">${t.price}</p>
+      ${t.reg?`<p class="strike" style="font:800 20px 'Nunito';text-decoration-color:var(--orange)">${t.reg}</p>`:''}</div>
+    <p style="font:900 ${o.photo?22:25}px/1.15 'Nunito'">${t.title}</p>
+    <div style="display:flex;flex-direction:column;gap:4px">${t.checks.map(c=>`<p class="check">✓ ${c}</p>`).join('')}</div>
+    <span style="align-self:flex-start;background:var(--orange);color:#fff;font:900 19px 'Nunito';padding:9px 16px;border-radius:12px">${t.pill}</span>
+    <p style="margin-top:auto;font:800 14px 'Nunito';opacity:.9">sunnybliss.com · Lic. ${o.lic}${t.fine?' · '+t.fine:''}</p>
+  </div></div>`;
+}
+const root=document.getElementById('root');
+for (const k of ['tu','si','ac','fl']) for (const l of ['en','es']) { const w=document.createElement('div'); w.innerHTML=ad(k,l); const el=w.firstElementChild; el.id=`${k}_${l}`; root.appendChild(el); }
+</script>
+</body>
+</html>
