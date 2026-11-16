@@ -70,3 +70,15 @@ Cada formulario manda con cada lead `utm_source=facebook`, `utm_medium=paid_soci
 3. **Revisión de Meta:** los 12 anuncios están en revisión. Se activan cuando estén aprobados.
 
 Fuentes: confect.io, segwise.ai, theoptimizer.io, adsuploader.com y jetfuel.agency (Andromeda 2026); clickheredigital.com y lilachbullock.com (Conversion Leads). Son guías de agencias y proveedores, no documentación oficial de Meta.
+
+## Decisiones 16 nov (reunión con Mehdi)
+- Hiring: no se toca ($170/día).
+- Servicios: +$4/día cada semana con reparto 80/20 leads/awareness, desde $66/día. 19 nov: $70/día (leads $56, awareness $14). Tope $3,000/mes (~$99/día), a mediados de enero.
+- Número de rastreo para Meta: 305-239-4987. Va en el botón de llamada de los formularios nuevos, en el texto y la imagen de los ads y en el mensaje de GHL para inquilinos. CTA de los ads: "Book now". Se hace en el lote del 19 nov (un solo reinicio de aprendizaje).
+- Financiamiento: solo en la llamada, nunca en los ads.
+- Inquilinos: el lead sirve, pero el dueño o el arrendador debe llamar para pedir el servicio (GHL se lo pide).
+- Fuera del área de servicio: no se atiende.
+- IAQ: se queda igual ($49 service call).
+- Eléctrico: el 25 nov los ads de EV y panel vuelven al ad set de servicios.
+- Videos y testimonios del Drive: Mehdi dio OK para usarlos en ads.
+- Seguimiento: nadie había llamado a los leads. Los avisos de lead nuevo salen por email (info@), Slack (#lead-follow-up-csr) y WhatsApp (CSR y, por ahora, Mehdi). Se entregó al CSR la lista de 27 leads desde el 1 oct (fuera del repo, tiene datos personales).
