@@ -47,12 +47,39 @@ for r in get_all(f"{ACT}/insights", level="ad", time_increment=1, fields=FIELDS,
         "video_3s": int(act(r, "video_view")), "video_50": int(first(r, "video_p50_watched_actions")),
         "thruplay": int(first(r, "video_thruplay_watched_actions")),
     })
+# GHL: real leads per ad and day (counts only, no personal data), matched by utm_content = ad name.
+import glob, subprocess
+for r in rows:
+    r.update(ghl_leads=0, ghl_qualified=0, ghl_booked=0)
+days = (dt.date.today() - dt.date.fromisoformat(SINCE)).days + 1
+ghl_note = "GHL: contacts by utm_content (= ad name), excluding Mailchimp imports and test submissions."
+try:
+    subprocess.run([sys.executable, str(Path(__file__).with_name("ghl.py")), "--days", str(days)], check=True,
+                   capture_output=True, text=True, timeout=300)
+    contacts = json.load(open(sorted(glob.glob(str(BUILD / "reports" / "ghl-*.json")))[-1]))["contacts"]
+    by_key = {(r["date"], r["ad"]): r for r in rows}
+    info = {r["ad"]: r for r in rows}
+    for c in contacts:
+        if c["date"] < SINCE or c["ad"] not in info:
+            continue
+        r = by_key.get((c["date"], c["ad"]))
+        if r is None:
+            base = info[c["ad"]]
+            r = {k: (0 if isinstance(v, (int, float)) else v) for k, v in base.items()}
+            r["date"] = c["date"]; rows.append(r); by_key[(c["date"], c["ad"])] = r
+        r["ghl_leads"] += 1
+        r["ghl_qualified"] += int(bool(c.get("hiring_or_job")) and not c["job_seeker"])
+        r["ghl_booked"] += int(bool(c.get("booked")))
+except Exception as e:  # Meta numbers still publish if GHL is unreachable
+    ghl_note = f"GHL not read this run: {str(e)[:200]}"
+    print("GHL:", ghl_note)
 rows.sort(key=lambda x: (x["date"], x["market"], x["ad"]))
 code = Path(__file__).read_text()
 out = BUILD / "reports" / "tracker_ads.json"
 out.write_text(json.dumps({"rows": rows, "meta": [
     {"label": "track_new_ads.py", "value": code, "type": "code", "lang": "python"},
     {"label": "Source", "value": f"Meta Marketing API, ad account {ACT}, campaigns whose name contains 🟢, {SINCE} to {UNTIL}"},
+    {"label": "GHL", "value": ghl_note},
     {"label": "Updated", "value": dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes")},
 ]}, ensure_ascii=False))
 print(out, len(rows), "rows")

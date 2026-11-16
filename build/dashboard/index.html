@@ -27,9 +27,9 @@
 <div class="trk" lang="es">
   <header id="resumen">
     <h1>Anuncios nuevos · Black Friday</h1>
-    <p class="lede" data-read lang="es"><span data-draw="lede-switch"></span><span class="has-data">Desde el lanzamiento del 16 de noviembre, las campañas con 🟢<span data-draw="t-scope"></span> invirtieron <b data-draw="t-spend" data-source="totals" data-field="spend" data-row="0">—</b>, trajeron <b data-draw="t-lpv" data-source="totals" data-field="landing_views" data-row="0">—</b> visitas a la landing, <b data-draw="t-leads" data-source="totals" data-field="leads" data-row="0">—</b> leads y <b data-draw="t-qual" data-source="totals" data-field="qualified" data-row="0">—</b> leads calificados. Último día con datos: <b data-draw="t-date" data-source="totals" data-field="last_date" data-row="0">—</b>.</span><span class="no-data" hidden>Las campañas con 🟢 arrancan el 16 de noviembre a las 6 am (hora local de cada persona). Los primeros números aparecen después de la primera actualización diaria.</span></p>
+    <p class="lede" data-read lang="es"><span data-draw="lede-switch"></span><span class="has-data">Desde el lanzamiento del 16 de noviembre, las campañas con 🟢<span data-draw="t-scope"></span> invirtieron <b data-draw="t-spend" data-source="totals" data-field="spend" data-row="0">—</b>, trajeron <b data-draw="t-lpv" data-source="totals" data-field="landing_views" data-row="0">—</b> visitas a la landing, <b data-draw="t-leads" data-source="totals" data-field="leads" data-row="0">—</b> leads y <b data-draw="t-qual" data-source="totals" data-field="qualified" data-row="0">—</b> leads calificados según Meta. En GHL llegaron <b data-draw="t-gleads" data-source="totals" data-field="ghl_leads" data-row="0">—</b> leads, <b data-draw="t-gqual" data-source="totals" data-field="ghl_qualified" data-row="0">—</b> calificados y <b data-draw="t-gbook" data-source="totals" data-field="ghl_booked" data-row="0">—</b> agendaron. Último día con datos: <b data-draw="t-date" data-source="totals" data-field="last_date" data-row="0">—</b>.</span><span class="no-data" hidden>Las campañas con 🟢 arrancan el 16 de noviembre a las 6 am (hora local de cada persona). Los primeros números aparecen después de la primera actualización diaria.</span></p>
     <div class="filters"><label for="trk-market">Mercado</label> <select id="trk-market" class="dash-select" data-draw="market-filter" aria-label="Filtrar por mercado" data-source="by_market"></select></div>
-    <p class="muted">Se actualiza todos los días a las 8 am (Bogotá) desde Meta. Leads y calificados vienen del píxel y de la API de Conversiones.</p>
+    <p class="muted">Se actualiza todos los días a las 8 am (Bogotá). Gasto y entrega vienen de Meta; las columnas «GHL» cuentan los contactos reales que llegaron a GoHighLevel con el nombre del anuncio (solo conteos, sin datos personales).</p>
   </header>
 
   <section id="mercados">
@@ -37,7 +37,7 @@
     <p class="muted">Esta tabla muestra siempre todos los mercados; el filtro cambia el resumen, el gráfico y la tabla por anuncio.</p>
     <div class="tablewrap">
       <table data-source="by_market" data-row-key="market">
-        <thead><tr><th data-field="market">Mercado</th><th data-field="spend">Gasto</th><th data-field="cpm">CPM</th><th data-field="ctr">CTR enlace</th><th data-field="link_clicks">Clics</th><th data-field="landing_views">Visitas landing</th><th data-field="leads">Leads</th><th data-field="qualified">Calificados</th><th data-field="cpl">Costo por lead</th><th data-field="profile_visits">Visitas perfil IG</th><th data-field="thruplay">ThruPlay</th></tr></thead>
+        <thead><tr><th data-field="market">Mercado</th><th data-field="spend">Gasto</th><th data-field="cpm">CPM</th><th data-field="ctr">CTR enlace</th><th data-field="link_clicks">Clics</th><th data-field="landing_views">Visitas landing</th><th data-field="leads">Leads</th><th data-field="qualified">Calificados</th><th data-field="cpl">Costo por lead</th><th data-field="ghl_leads">Leads GHL</th><th data-field="ghl_qualified">Calif. GHL</th><th data-field="ghl_booked">Agendaron</th><th data-field="cpq">Costo por calificado</th><th data-field="profile_visits">Visitas perfil IG</th><th data-field="thruplay">ThruPlay</th></tr></thead>
         <tbody data-draw="market-rows"></tbody>
       </table>
     </div>
@@ -51,17 +51,17 @@
 
   <section id="anuncios">
     <h2>Por anuncio</h2>
-    <p class="muted">Estado: «Sin entrega» si no tuvo impresiones; «Revisar» si un anuncio de leads gastó $25 o más sin leads, o si el CTR es menor a 0.5% con más de 1,000 impresiones.</p>
+    <p class="muted">Estado: «Sin entrega» si no tuvo impresiones; «Revisar» si un anuncio de leads gastó $25 o más sin leads (ni en Meta ni en GHL), o si el CTR es menor a 0.5% con más de 1,000 impresiones.</p>
     <div class="tablewrap">
       <table data-source="by_ad" data-row-key="ad_id">
-        <thead><tr><th data-field="ad" class="l">Anuncio</th><th data-field="market" class="l">Mercado</th><th data-field="status" class="l">Estado</th><th data-field="spend">Gasto</th><th data-field="impressions">Impresiones</th><th data-field="cpm">CPM</th><th data-field="ctr">CTR enlace</th><th data-field="landing_views">Visitas</th><th data-field="leads">Leads</th><th data-field="qualified">Calif.</th><th data-field="cpl">Costo/lead</th><th data-field="profile_visits">Perfil IG</th><th data-field="video_50">Video 50%</th></tr></thead>
+        <thead><tr><th data-field="ad" class="l">Anuncio</th><th data-field="market" class="l">Mercado</th><th data-field="status" class="l">Estado</th><th data-field="spend">Gasto</th><th data-field="impressions">Impresiones</th><th data-field="cpm">CPM</th><th data-field="ctr">CTR enlace</th><th data-field="landing_views">Visitas</th><th data-field="leads">Leads</th><th data-field="qualified">Calif.</th><th data-field="cpl">Costo/lead</th><th data-field="ghl_leads">Leads GHL</th><th data-field="ghl_qualified">Calif. GHL</th><th data-field="ghl_booked">Agendaron</th><th data-field="profile_visits">Perfil IG</th><th data-field="video_50">Video 50%</th></tr></thead>
         <tbody data-draw="ad-rows"></tbody>
       </table>
     </div>
   </section>
 
   <details id="definiciones"><summary>Qué significa cada columna</summary>
-    <p>CPM: costo por cada mil impresiones. CTR enlace: clics en el enlace divididos por impresiones. Visitas landing: personas que hicieron clic y la página terminó de cargar. Leads: formularios enviados (evento Lead del píxel). Calificados: leads que respondieron «I want to hire» (evento CompleteRegistration por la API de Conversiones). Visitas perfil IG: visitas al perfil de Instagram desde la campaña de seguidores. ThruPlay y Video 50%: reproducciones de 15 segundos o completas, y personas que vieron al menos la mitad.</p>
+    <p>CPM: costo por cada mil impresiones. CTR enlace: clics en el enlace divididos por impresiones. Visitas landing: personas que hicieron clic y la página terminó de cargar. Leads: formularios enviados (evento Lead del píxel). Calificados: leads que respondieron «I want to hire» (evento CompleteRegistration por la API de Conversiones). Visitas perfil IG: visitas al perfil de Instagram desde la campaña de seguidores. Leads GHL, Calif. GHL y Agendaron: contactos que llegaron a GoHighLevel con el nombre del anuncio en el UTM; calificado es quien respondió que quiere contratar, agendaron lleva la etiqueta «agendo». Costo por calificado: gasto dividido entre calificados de GHL. ThruPlay y Video 50%: reproducciones de 15 segundos o completas, y personas que vieron al menos la mitad.</p>
   </details>
 </div>
 <script>
@@ -71,15 +71,15 @@ const sum = (rows, k) => d3.sum(rows, (r) => +r[k] || 0);
 function agg(rows) {
   const spend = sum(rows, 'spend'), imp = sum(rows, 'impressions'), clicks = sum(rows, 'link_clicks'), leads = sum(rows, 'leads');
   return {spend: +spend.toFixed(2), impressions: imp, link_clicks: clicks, landing_views: sum(rows, 'landing_views'), leads,
-    qualified: sum(rows, 'qualified'), profile_visits: sum(rows, 'profile_visits'), thruplay: sum(rows, 'thruplay'), video_50: sum(rows, 'video_50'),
-    cpm: imp ? +(spend / imp * 1000).toFixed(2) : null, ctr: imp ? +(clicks / imp * 100).toFixed(2) : null, cpl: leads ? +(spend / leads).toFixed(2) : null};
+    qualified: sum(rows, 'qualified'), ghl_leads: sum(rows, 'ghl_leads'), ghl_qualified: sum(rows, 'ghl_qualified'), ghl_booked: sum(rows, 'ghl_booked'), profile_visits: sum(rows, 'profile_visits'), thruplay: sum(rows, 'thruplay'), video_50: sum(rows, 'video_50'),
+    cpm: imp ? +(spend / imp * 1000).toFixed(2) : null, ctr: imp ? +(clicks / imp * 100).toFixed(2) : null, cpl: leads ? +(spend / leads).toFixed(2) : null, cpq: sum(rows, 'ghl_qualified') ? +(spend / sum(rows, 'ghl_qualified')).toFixed(2) : null};
 }
 dash.calc('by_market', {inputs: ['ads'], title: 'Totales por mercado desde el 16 nov', description: 'Suma de cada mercado; CPM, CTR y costo por lead calculados sobre esas sumas.',
   fn: (ads) => d3.rollups(ads.filter((r) => r.date >= '2026-11-16'), (rs) => agg(rs), (r) => r.market).map(([market, a]) => ({market, ...a})).sort((a, b) => b.spend - a.spend)});
 dash.calc('by_ad', {inputs: ['ads'], title: 'Totales por anuncio desde el 16 nov', description: 'Suma de cada anuncio del mercado elegido, con un estado: sin entrega, revisar o en marcha.',
   fn: (ads) => d3.rollups(ads.filter(inScope), (rs) => {
     const a = agg(rs), leadAd = ['Salud', 'Emprendedores', 'Retargeting'].includes(rs[0].market);
-    const status = a.impressions === 0 ? 'Sin entrega' : (leadAd && a.spend >= 25 && a.leads === 0) || (a.impressions > 1000 && a.ctr < 0.5) ? 'Revisar' : 'En marcha';
+    const status = a.impressions === 0 ? 'Sin entrega' : (leadAd && a.spend >= 25 && a.leads === 0 && a.ghl_leads === 0) || (a.impressions > 1000 && a.ctr < 0.5) ? 'Revisar' : 'En marcha';
     return {ad_id: rs[0].ad_id, ad: rs[0].ad, market: rs[0].market, status, ...a};
   }, (r) => r.ad_id).map(([, v]) => v).sort((a, b) => b.spend - a.spend)});
 dash.calc('totals', {inputs: ['ads'], title: 'Totales desde el 16 nov', description: 'Suma de las campañas con 🟢 del mercado elegido (o de todas) desde el lanzamiento, y el último día con datos.',
@@ -107,6 +107,9 @@ dash.draw('t-spend', one('totals', 'spend', F.usd));
 dash.draw('t-lpv', one('totals', 'landing_views', F.int));
 dash.draw('t-leads', one('totals', 'leads', F.int));
 dash.draw('t-qual', one('totals', 'qualified', F.int));
+dash.draw('t-gleads', one('totals', 'ghl_leads', F.int));
+dash.draw('t-gqual', one('totals', 'ghl_qualified', F.int));
+dash.draw('t-gbook', one('totals', 'ghl_booked', F.int));
 dash.draw('t-date', one('totals', 'last_date', F.day));
 dash.draw('lede-switch', (el) => {
   const d = dash.data('totals'), has = d.status === 'ok' && d.data[0] && d.data[0].last_date;
@@ -128,8 +131,8 @@ function rowsTable(id, cols) {
   };
 }
 const id = (v) => v;
-dash.draw('market-rows', rowsTable('by_market', [['market', id, 'l'], ['spend', F.usd], ['cpm', F.usd], ['ctr', F.pct], ['link_clicks', F.int], ['landing_views', F.int], ['leads', F.int], ['qualified', F.int], ['cpl', F.usd], ['profile_visits', F.int], ['thruplay', F.int]]));
-dash.draw('ad-rows', rowsTable('by_ad', [['ad', id, 'l'], ['market', id, 'l'], ['status', id, 'l'], ['spend', F.usd], ['impressions', F.int], ['cpm', F.usd], ['ctr', F.pct], ['landing_views', F.int], ['leads', F.int], ['qualified', F.int], ['cpl', F.usd], ['profile_visits', F.int], ['video_50', F.int]]));
+dash.draw('market-rows', rowsTable('by_market', [['market', id, 'l'], ['spend', F.usd], ['cpm', F.usd], ['ctr', F.pct], ['link_clicks', F.int], ['landing_views', F.int], ['leads', F.int], ['qualified', F.int], ['cpl', F.usd], ['ghl_leads', F.int], ['ghl_qualified', F.int], ['ghl_booked', F.int], ['cpq', F.usd], ['profile_visits', F.int], ['thruplay', F.int]]));
+dash.draw('ad-rows', rowsTable('by_ad', [['ad', id, 'l'], ['market', id, 'l'], ['status', id, 'l'], ['spend', F.usd], ['impressions', F.int], ['cpm', F.usd], ['ctr', F.pct], ['landing_views', F.int], ['leads', F.int], ['qualified', F.int], ['cpl', F.usd], ['ghl_leads', F.int], ['ghl_qualified', F.int], ['ghl_booked', F.int], ['profile_visits', F.int], ['video_50', F.int]]));
 const color = (m) => dash.colors[window.TRK_MARKETS.indexOf(m) % dash.colors.length] || dash.colors[0];
 dash.draw('legend', (el) => {
   const d = dash.data('daily'); const ms = d.status === 'ok' ? [...new Set(d.data.map((r) => r.market))] : [];
