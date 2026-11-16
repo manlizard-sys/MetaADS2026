@@ -20,18 +20,21 @@
 .trk .axis line,.trk .axis path{stroke:var(--cds-chart-axis)}
 .trk .legend{display:flex;flex-wrap:wrap;gap:var(--cds-gap-md);font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
 .trk .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.trk .filters{display:flex;align-items:center;gap:var(--cds-gap-sm);margin-top:var(--cds-gap-md);font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
 .trk details{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
 .trk [data-dash-source-state=refreshing]{opacity:.5}
 </style>
 <div class="trk" lang="es">
   <header id="resumen">
     <h1>Anuncios nuevos · Black Friday</h1>
-    <p class="lede" data-read lang="es"><span data-draw="lede-switch"></span><span class="has-data">Desde el lanzamiento del 16 de noviembre, las campañas con 🟢 invirtieron <b data-draw="t-spend" data-source="totals" data-field="spend" data-row="0">—</b>, trajeron <b data-draw="t-lpv" data-source="totals" data-field="landing_views" data-row="0">—</b> visitas a la landing, <b data-draw="t-leads" data-source="totals" data-field="leads" data-row="0">—</b> leads y <b data-draw="t-qual" data-source="totals" data-field="qualified" data-row="0">—</b> leads calificados. Último día con datos: <b data-draw="t-date" data-source="totals" data-field="last_date" data-row="0">—</b>.</span><span class="no-data" hidden>Las campañas con 🟢 arrancan el 16 de noviembre a las 6 am (hora local de cada persona). Los primeros números aparecen después de la primera actualización diaria.</span></p>
+    <p class="lede" data-read lang="es"><span data-draw="lede-switch"></span><span class="has-data">Desde el lanzamiento del 16 de noviembre, las campañas con 🟢<span data-draw="t-scope"></span> invirtieron <b data-draw="t-spend" data-source="totals" data-field="spend" data-row="0">—</b>, trajeron <b data-draw="t-lpv" data-source="totals" data-field="landing_views" data-row="0">—</b> visitas a la landing, <b data-draw="t-leads" data-source="totals" data-field="leads" data-row="0">—</b> leads y <b data-draw="t-qual" data-source="totals" data-field="qualified" data-row="0">—</b> leads calificados. Último día con datos: <b data-draw="t-date" data-source="totals" data-field="last_date" data-row="0">—</b>.</span><span class="no-data" hidden>Las campañas con 🟢 arrancan el 16 de noviembre a las 6 am (hora local de cada persona). Los primeros números aparecen después de la primera actualización diaria.</span></p>
+    <div class="filters"><label for="trk-market">Mercado</label> <select id="trk-market" class="dash-select" data-draw="market-filter" aria-label="Filtrar por mercado" data-source="by_market"></select></div>
     <p class="muted">Se actualiza todos los días a las 8 am (Bogotá) desde Meta. Leads y calificados vienen del píxel y de la API de Conversiones.</p>
   </header>
 
   <section id="mercados">
     <h2>Por mercado</h2>
+    <p class="muted">Esta tabla muestra siempre todos los mercados; el filtro cambia el resumen, el gráfico y la tabla por anuncio.</p>
     <div class="tablewrap">
       <table data-source="by_market" data-row-key="market">
         <thead><tr><th data-field="market">Mercado</th><th data-field="spend">Gasto</th><th data-field="cpm">CPM</th><th data-field="ctr">CTR enlace</th><th data-field="link_clicks">Clics</th><th data-field="landing_views">Visitas landing</th><th data-field="leads">Leads</th><th data-field="qualified">Calificados</th><th data-field="cpl">Costo por lead</th><th data-field="profile_visits">Visitas perfil IG</th><th data-field="thruplay">ThruPlay</th></tr></thead>
@@ -63,6 +66,7 @@
 </div>
 <script>
 window.TRK_START = '2026-11-16';
+const inScope = (r) => r.date >= '2026-11-16' && (!dash.params().market || r.market === dash.params().market);
 const sum = (rows, k) => d3.sum(rows, (r) => +r[k] || 0);
 function agg(rows) {
   const spend = sum(rows, 'spend'), imp = sum(rows, 'impressions'), clicks = sum(rows, 'link_clicks'), leads = sum(rows, 'leads');
@@ -72,16 +76,16 @@ function agg(rows) {
 }
 dash.calc('by_market', {inputs: ['ads'], title: 'Totales por mercado desde el 16 nov', description: 'Suma de cada mercado; CPM, CTR y costo por lead calculados sobre esas sumas.',
   fn: (ads) => d3.rollups(ads.filter((r) => r.date >= '2026-11-16'), (rs) => agg(rs), (r) => r.market).map(([market, a]) => ({market, ...a})).sort((a, b) => b.spend - a.spend)});
-dash.calc('by_ad', {inputs: ['ads'], title: 'Totales por anuncio desde el 16 nov', description: 'Suma de cada anuncio, con un estado: sin entrega, revisar o en marcha.',
-  fn: (ads) => d3.rollups(ads.filter((r) => r.date >= '2026-11-16'), (rs) => {
+dash.calc('by_ad', {inputs: ['ads'], title: 'Totales por anuncio desde el 16 nov', description: 'Suma de cada anuncio del mercado elegido, con un estado: sin entrega, revisar o en marcha.',
+  fn: (ads) => d3.rollups(ads.filter(inScope), (rs) => {
     const a = agg(rs), leadAd = ['Salud', 'Emprendedores', 'Retargeting'].includes(rs[0].market);
     const status = a.impressions === 0 ? 'Sin entrega' : (leadAd && a.spend >= 25 && a.leads === 0) || (a.impressions > 1000 && a.ctr < 0.5) ? 'Revisar' : 'En marcha';
     return {ad_id: rs[0].ad_id, ad: rs[0].ad, market: rs[0].market, status, ...a};
   }, (r) => r.ad_id).map(([, v]) => v).sort((a, b) => b.spend - a.spend)});
-dash.calc('totals', {inputs: ['ads'], title: 'Totales desde el 16 nov', description: 'Suma de todas las campañas con 🟢 desde el lanzamiento y el último día con datos.',
-  fn: (ads) => { const rs = ads.filter((r) => r.date >= '2026-11-16'); return [{...agg(rs), last_date: rs.length ? d3.max(rs, (r) => r.date) : null}]; }});
+dash.calc('totals', {inputs: ['ads'], title: 'Totales desde el 16 nov', description: 'Suma de las campañas con 🟢 del mercado elegido (o de todas) desde el lanzamiento, y el último día con datos.',
+  fn: (ads) => { const rs = ads.filter(inScope); return [{...agg(rs), last_date: rs.length ? d3.max(rs, (r) => r.date) : null}]; }});
 dash.calc('daily', {inputs: ['ads'], title: 'Gasto diario por mercado', description: 'Gasto de cada día y mercado desde el 16 nov.',
-  fn: (ads) => d3.rollups(ads.filter((r) => r.date >= '2026-11-16'), (rs) => +sum(rs, 'spend').toFixed(2), (r) => r.date, (r) => r.market)
+  fn: (ads) => d3.rollups(ads.filter(inScope), (rs) => +sum(rs, 'spend').toFixed(2), (r) => r.date, (r) => r.market)
     .flatMap(([date, ms]) => ms.map(([market, spend]) => ({date, market, spend}))).sort((a, b) => d3.ascending(a.date, b.date))});
 
 window.TRK_MARKETS = ['Salud', 'Emprendedores', 'Seguidores IG', 'Awareness', 'Retargeting'];
@@ -90,6 +94,15 @@ window.trkFmt = {usd: d3.format('$,.2f'), int: d3.format(','), pct: (v) => v == 
 <script>
 const F = window.trkFmt;
 const one = (id, field, f) => (el) => { const d = dash.data(id); el.textContent = d.status === 'ok' && d.data[0] ? f(d.data[0][field]) : '—'; };
+dash.draw('t-scope', (el) => { const m = dash.params().market; el.textContent = m ? ' de ' + m : ''; });
+dash.draw('market-filter', (sel) => {
+  const d = dash.data('ads');
+  const seen = d.status === 'ok' ? [...new Set(d.data.filter((r) => r.date >= '2026-11-16').map((r) => r.market))] : [];
+  const opts = window.TRK_MARKETS.filter((m) => m !== 'Retargeting' || seen.includes(m)).concat(seen.filter((m) => !window.TRK_MARKETS.includes(m)));
+  sel.replaceChildren(new Option('Todos los mercados', ''), ...opts.map((m) => new Option(m, m)));
+  sel.value = dash.params().market || '';
+  sel.onchange = () => dash.setParams({market: sel.value || null});
+});
 dash.draw('t-spend', one('totals', 'spend', F.usd));
 dash.draw('t-lpv', one('totals', 'landing_views', F.int));
 dash.draw('t-leads', one('totals', 'leads', F.int));
