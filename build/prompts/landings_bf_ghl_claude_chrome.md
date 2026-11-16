@@ -1,4 +1,4 @@
-Necesito que crees tres landings nuevas en GoHighLevel (cuenta Orchid): una para consultorios médicos, una para empresas y emprendedores y una para el newsletter. Son cortas, con el formulario arriba y una cuenta regresiva hasta Thanksgiving. El código ya está escrito; tú armas las páginas, pegas el código y conectas los formularios. Trabaja en este orden, avísame al terminar cada paso y detente si algo no coincide.
+Necesito que crees tres landings nuevas en GoHighLevel (cuenta Orchid): una para consultorios médicos, una para empresas y emprendedores y una para el newsletter. Son cortas, con el formulario arriba y una cuenta regresiva hasta el 1 de diciembre a las 11:59 pm (hora del Este). El código ya está escrito; tú armas las páginas, pegas el código y conectas los formularios. Trabaja en este orden, avísame al terminar cada paso y detente si algo no coincide.
 
 DATOS
 - Dominio: go.orchidpros.com · Píxel de Meta: 2271987886986577
@@ -40,7 +40,7 @@ PASO 3 · Newsletter (va en un funnel aparte)
 1. Crea un funnel nuevo "Orchid · Newsletter" en el dominio go.orchidpros.com. Paso "Brief", path brief.
 2. Código de seguimiento del funnel (Settings → Head tracking code): solo el código base del píxel 2271987886986577 con PageView. Cópialo del funnel de hire-50off pero SIN ningún evento Lead.
 3. Formulario nuevo "Orchid · Newsletter": First name (obligatorio), Email (obligatorio), "What type of business do you run?" (Law firm · Medical or dental practice · Real estate · Accounting or finance · Home services · Other), y los mismos campos ocultos de UTM de hire-50off. Sin teléfono. Etiqueta "newsletter". Si el formulario tiene opción de evento de píxel al enviar, elige "Subscribe" (NO "Lead"). Al enviar: redirigir al paso de gracias.
-4. Paso de gracias "Brief Thanks", path brief-thanks, con este texto: título "You're in." · texto "Your first Delegate Brief lands in your inbox soon. Want help now? Our Black Friday offer ($0 upfront + 50% off your first month) runs until Thanksgiving." · botón "Book a free call" que lleva a https://go.orchidpros.com/business-free-month.
+4. Paso de gracias "Brief Thanks", path brief-thanks, con este texto: título "You're in." · texto "Your first Delegate Brief lands in your inbox soon. Want help now? Our Black Friday offer ($0 upfront + 50% off your first month) runs until December 1st." · botón "Book a free call" que lleva a https://go.orchidpros.com/business-free-month.
 5. Arma la página con la estructura de arriba usando los bloques de newsletter. Publica y comprueba que https://go.orchidpros.com/brief carga.
 
 PASO 4 · Workflow de la API de Conversiones

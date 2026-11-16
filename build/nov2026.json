@@ -92,7 +92,7 @@
     "bf_health": {
       "adset": "120257780775030196",
       "lifetime": 15000,
-      "status": "PAUSED (sin anuncios: faltan creativos y landing)"
+      "status": "NO USAR: reemplazado por bf16.hc_adset en su propia campaña (15 nov)"
     },
     "engagement": {
       "campaign": "120257780775350196",
@@ -118,7 +118,9 @@
       "hc_creative": "2339650580203459",
       "ent_campaign": "120257823104710196",
       "ent_adset": "120257823105150196",
-      "ent_creative": "1503934924991465"
+      "ent_creative": "1503934924991465",
+      "hc_campaign": "120257824793200196",
+      "hc_adset": "120257824793320196"
     }
   }
 }

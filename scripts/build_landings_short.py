@@ -1,5 +1,5 @@
-"""Three short, independent Black Friday landings for GHL, form first, countdown to Thanksgiving
-(Thu Nov 26 2026, 11:59 pm ET). Styles are reused from the live attorneys landing so the brand matches.
+"""Three short, independent Black Friday landings for GHL, form first, countdown to
+December 1st 2026, 11:59 pm ET. Styles are reused from the live attorneys landing so the brand matches.
 Each page = 3 GHL Custom Code blocks:
   block1: top section (purple, 2 columns) LEFT column: all styles + hero + countdown. RIGHT column: GHL form.
   block2: full-width section below: short content (roles, how it works, FAQ, final CTA).
@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1] / "build" / "landings"
 src = (ROOT / "source" / "attorneys_piece1.html").read_text()
 STYLES = src[src.index("<style>:root"):src.index("</style>", src.index("<style>\n")) + len("</style>")]
 FOOTER = (ROOT / "source" / "attorneys_piece3.html").read_text()
-DEADLINE = "2026-11-26T23:59:00-05:00"  # Thanksgiving, 11:59 pm Eastern
+DEADLINE = "2026-12-01T23:59:00-05:00"  # December 1st, 11:59 pm Eastern (matches the ads: "Valid until December 1st")
 LOGO = "https://assets.cdn.filesafe.space/r5demglXbNG9LoCszFIw/media/6adbab5e651cc02cde258343.png"
 SPIKE = "https://orchidpros.com/wp-content/uploads/2026/05/shape5.svg"
 
@@ -36,7 +36,7 @@ EXTRA = """<style>
 </style>"""
 
 SCRIPT = """<script>
-// Countdown to Thanksgiving (Thu Nov 26 2026, 11:59 pm ET). Same deadline for every visitor.
+// Countdown to December 1st 2026, 11:59 pm ET. Same deadline for every visitor.
 (function(){
   var end=new Date('%s').getTime(), box=document.querySelector('#orchid-lp-book .bf-count');
   if(!box) return;
@@ -108,7 +108,7 @@ PAGES = {
     "healthcare": dict(
         name="Healthcare", tag="For U.S. healthcare practitioners",
         title='A bilingual front desk for your practice. <span class="y">Get started free.</span>',
-        offer="Black Friday: $0 upfront + 50% off your first month", count_label="Offer ends Thanksgiving at 11:59 pm ET",
+        offer="Black Friday: $0 upfront + 50% off your first month", count_label="Offer ends December 1st at 11:59 pm ET",
         expired="'The Black Friday offer has ended. Book a call to check availability.'",
         checks=["HIPAA-trained and certified, renewed every year", "Fluent English &amp; Spanish, U.S. business hours", "Replaced at $0 if it's not the right fit"],
         terms="$0 upfront: no setup or placement fee before your professional starts. 50% off applies to Orchid's first monthly service fee. Limited spots. Terms &amp; conditions apply.",
@@ -121,17 +121,17 @@ PAGES = {
         steps=[("Book a free call", "30 minutes to understand your practice, your tools and what you want off your front desk."),
                ("Meet your shortlist", "Candidates selected by our HR team for your practice. You interview them and choose."),
                ("Start delegating", "$0 upfront and 50% off your first month, with HIPAA training and ongoing HR support from Orchid.")],
-        faq=[("What does the Black Friday offer include?", "$0 upfront (no setup or placement fee) and 50% off Orchid's first monthly service fee, for calls booked before Thanksgiving at 11:59 pm ET, while spots last."),
+        faq=[("What does the Black Friday offer include?", "$0 upfront (no setup or placement fee) and 50% off Orchid's first monthly service fee, for calls booked by December 1st at 11:59 pm ET, while spots last."),
              ("Are they HIPAA-trained?", "Yes. Every professional placed with a healthcare practice completes HIPAA training and certification before starting, and Orchid renews it every year."),
              ("How do you select them?", SELECTION),
              ("How much does it cost after the first month?", "It depends on the role and schedule. Most full-time roles start around $1,700 to $2,200 per month, all-in. You get an exact number on the call.")],
         cta="Get Started Free",
         seo_title="Orchid for Healthcare Practices | Black Friday: Get Started Free",
-        seo_desc="HIPAA-trained, bilingual healthcare support professionals from Colombia for U.S. practices. Black Friday: $0 upfront and 50% off your first month, until Thanksgiving."),
+        seo_desc="HIPAA-trained, bilingual healthcare support professionals from Colombia for U.S. practices. Black Friday: $0 upfront and 50% off your first month, until December 1st."),
     "entrepreneurs": dict(
         name="Entrepreneurs", tag="For U.S. companies &amp; entrepreneurs",
         title='Hand off the admin. <span class="y">Get started free.</span>',
-        offer="Black Friday: $0 upfront + 50% off your first month", count_label="Offer ends Thanksgiving at 11:59 pm ET",
+        offer="Black Friday: $0 upfront + 50% off your first month", count_label="Offer ends December 1st at 11:59 pm ET",
         expired="'The Black Friday offer has ended. Book a call to check availability.'",
         checks=["Verified, bilingual professionals from Colombia", "Your U.S. business hours", "Replaced at $0 if it's not the right fit"],
         terms="$0 upfront: no setup or placement fee before your professional starts. 50% off applies to Orchid's first monthly service fee. Limited spots. Terms &amp; conditions apply.",
@@ -144,17 +144,17 @@ PAGES = {
         steps=[("Book a free call", "30 minutes to understand your business, your tools and the tasks you want off your plate."),
                ("Meet your shortlist", "Candidates selected by our HR team for your business. You interview them and choose."),
                ("Start delegating", "$0 upfront and 50% off your first month, with ongoing coaching and HR support from Orchid.")],
-        faq=[("What does the Black Friday offer include?", "$0 upfront (no setup or placement fee) and 50% off Orchid's first monthly service fee, for calls booked before Thanksgiving at 11:59 pm ET, while spots last."),
+        faq=[("What does the Black Friday offer include?", "$0 upfront (no setup or placement fee) and 50% off Orchid's first monthly service fee, for calls booked by December 1st at 11:59 pm ET, while spots last."),
              ("What kind of businesses do you work with?", "U.S. companies and entrepreneurs in home services, construction, insurance, real estate, e-commerce and professional services."),
              ("How do you select them?", SELECTION),
              ("How much does it cost after the first month?", "It depends on the role and schedule. Most full-time roles start around $1,700 to $2,200 per month, all-in. You get an exact number on the call.")],
         cta="Get Started Free",
         seo_title="Orchid for U.S. Companies | Black Friday: Get Started Free",
-        seo_desc="Bilingual admin, operations, bookkeeping and marketing professionals from Colombia for U.S. companies. Black Friday: $0 upfront and 50% off your first month, until Thanksgiving."),
+        seo_desc="Bilingual admin, operations, bookkeeping and marketing professionals from Colombia for U.S. companies. Black Friday: $0 upfront and 50% off your first month, until December 1st."),
     "newsletter": dict(
         name="Newsletter", tag="The Delegate Brief · free, every other week",
         title='One task to take off your plate, <span class="y">every other week.</span>',
-        offer="Subscribers get the Black Friday offer too", count_label="Black Friday offer ends Thanksgiving at 11:59 pm ET",
+        offer="Subscribers get the Black Friday offer too", count_label="Black Friday offer ends December 1st at 11:59 pm ET",
         expired="'The Black Friday offer has ended. The Brief keeps coming every other week.'",
         checks=["A task worth delegating, step by step", "A ready-to-use template", "A real number: time or money saved"],
         terms="3-minute read. Unsubscribe anytime. We never share your email.",
@@ -168,7 +168,7 @@ PAGES = {
                ("Read in 3 minutes", "Every other week, one idea you can use that same day."),
                ("Delegate when you're ready", "If you want help, book a free call. No pressure.")],
         faq=[("How often will I get it?", "Every other week. Short, practical, no spam."),
-             ("What's the Black Friday offer?", "$0 upfront and 50% off Orchid's first monthly service fee when you book a call before Thanksgiving at 11:59 pm ET. Subscribers get the link in their welcome email."),
+             ("What's the Black Friday offer?", "$0 upfront and 50% off Orchid's first monthly service fee when you book a call by December 1st at 11:59 pm ET. Subscribers get the link in their welcome email."),
              ("Can I unsubscribe?", "Yes, with one click from any email.")],
         cta="Send Me the Brief",
         seo_title="The Delegate Brief by Orchid | One Task to Delegate, Every Other Week",
