@@ -18,9 +18,7 @@ Usa una ventana normal de Chrome (no incógnito). Para cada landing:
    - https://go.orchidpros.com/business-free-month?utm_source=meta&utm_medium=paid&utm_campaign=test&utm_content=TEST%20Claude%20Entrepreneurs
    - https://go.orchidpros.com/brief?utm_source=meta&utm_medium=paid&utm_campaign=test&utm_content=TEST%20Claude%20Newsletter
 2. Llena el formulario:
-   - Nombre: "Test Claude BF" (en newsletter: "Test Claude Brief")
-   - Email: test.claude.hc@orchidpros.com / test.claude.biz@orchidpros.com / test.claude.brief@orchidpros.com
-   - Teléfono (si lo pide): +1 555 000 0000
+   - Nombre, teléfono y email según build/prompts/datos_de_prueba.md: TEST 47 (salud), TEST 48 (emprendedores), TEST 49 (newsletter); teléfono 3057124047 / 48 / 49; email hmlizarralde+47@gmail.com / +48 / +49
    - "Hiring or job seeking": la opción de contratar ("I want to hire.")
    - Tipo de consultorio / negocio: la primera opción
    - Acepta la casilla si es obligatoria y resuelve el captcha si aparece.
