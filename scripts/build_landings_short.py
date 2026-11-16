@@ -20,6 +20,9 @@ EXTRA = """<style>
 #orchid-lp-book .bf-title{font-family:var(--font-display);font-weight:700;color:#fff;font-size:clamp(2rem,4.2vw,3.1rem);line-height:1.08;margin:14px 0 14px;text-wrap:balance}
 #orchid-lp-book .bf-title .y{color:var(--orchid-yellow)}
 #orchid-lp-book .bf-offer{display:inline-block;background:var(--orchid-yellow);color:var(--orchid-violet-deep);font-weight:800;border-radius:12px 16px 11px 15px;padding:8px 16px;font-size:1.05rem;margin:4px 0 18px}
+#orchid-lp-book .bf-badges{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+#orchid-lp-book .bf-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--orchid-violet);font-weight:800;font-size:1rem;border-radius:999px;padding:8px 16px;box-shadow:0 4px 0 rgba(0,0,0,.18)}
+#orchid-lp-book .bf-badge::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--orchid-yellow);flex:none}
 #orchid-lp-book .bf-count{margin:6px 0 20px}
 #orchid-lp-book .bf-count .bl{display:block;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:8px;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase}
 #orchid-lp-book .bf-count .units{display:flex;gap:10px;flex-wrap:wrap}
@@ -56,6 +59,11 @@ COUNT = """<div class="bf-count" aria-live="polite"><span class="bl">%s</span><d
   <div class="u"><b data-u="m">00</b><small>min</small></div><div class="u"><b data-u="s">00</b><small>sec</small></div></div></div>"""
 
 
+def badges(p):
+    b = p.get("badges")
+    return ('<div class="bf-badges">' + "".join(f'<span class="bf-badge">{x}</span>' for x in b) + "</div>\n  ") if b else ""
+
+
 def block1(p):
     checks = "".join(f"<li>{c}</li>" for c in p["checks"])
     return f"""<!-- ORCHID | {p['name']} landing (Black Friday, short) | BLOCK 1 of 3
@@ -69,7 +77,7 @@ def block1(p):
   <img class="bf-logo" src="{LOGO}" alt="Orchid" width="120" height="36">
   <span class="tag">{p['tag']}</span>
   <h1 class="bf-title">{p['title']}</h1>
-  <div class="bf-offer">{p['offer']}</div>
+  {badges(p)}<div class="bf-offer">{p['offer']}</div>
   {COUNT % p['count_label']}
   <ul class="checks">{checks}</ul>
   <p class="bf-terms">{p['terms']}</p>
@@ -107,27 +115,29 @@ SELECTION = "Our HR team interviews every candidate personally, runs a behaviora
 PAGES = {
     "healthcare": dict(
         name="Healthcare", tag="For U.S. healthcare practitioners",
+        badges=["HIPAA-trained", "Ongoing HR support from Orchid"],
         title='A bilingual front desk for your practice. <span class="y">Get started free.</span>',
         offer="Black Friday: $0 upfront + 50% off your first month", count_label="Offer ends December 1st at 11:59 pm ET",
         expired="'The Black Friday offer has ended. Book a call to check availability.'",
-        checks=["HIPAA-trained and certified, renewed every year", "Fluent English &amp; Spanish, U.S. business hours", "Replaced at $0 if it's not the right fit"],
+        checks=["HIPAA-trained and certified, renewed every year", "Ongoing HR support and coaching from Orchid", "Fluent English &amp; Spanish, U.S. business hours", "Replaced at $0 if it's not the right fit"],
         terms="$0 upfront: no setup or placement fee before your professional starts. 50% off applies to Orchid's first monthly service fee. Limited spots. Terms &amp; conditions apply.",
         cards_tag="Built for healthcare practices", cards_title="Roles we place in practices like yours",
-        cards_lead="Professionals with experience in healthcare administration, selected for your practice by people, not AI.",
+        cards_lead="HIPAA-trained professionals with experience in healthcare administration, selected for your practice by people, not AI, and backed by ongoing HR support from Orchid.",
         cards=[("Patient Intake Coordinator", ["New patient calls in English and Spanish", "Intake forms and records", "Reminders and confirmations"]),
                ("Medical Scheduler", ["Schedule, cancellations and waitlist", "Insurance eligibility and verification calls", "Prior authorization follow-up"]),
                ("Interpreter &amp; Patient Support", ["Spanish interpretation on calls", "Patient follow-ups and questions", "Inbox and records management"])],
         steps_tag="How it works", steps_title="Three steps to your new team member.",
         steps=[("Book a free call", "30 minutes to understand your practice, your tools and what you want off your front desk."),
                ("Meet your shortlist", "Candidates selected by our HR team for your practice. You interview them and choose."),
-               ("Start delegating", "$0 upfront and 50% off your first month, with HIPAA training and ongoing HR support from Orchid.")],
+               ("Start delegating", "$0 upfront and 50% off your first month. Your assistant is HIPAA-trained and Orchid keeps supporting them with ongoing HR and coaching.")],
         faq=[("What does the Black Friday offer include?", "$0 upfront (no setup or placement fee) and 50% off Orchid's first monthly service fee, for calls booked by December 1st at 11:59 pm ET, while spots last."),
              ("Are they HIPAA-trained?", "Yes. Every professional placed with a healthcare practice completes HIPAA training and certification before starting, and Orchid renews it every year."),
+             ("What support do you give after they start?", "Ongoing HR support from Orchid: regular check-ins with your assistant, coaching, yearly HIPAA renewal and a $0 replacement if it's not the right fit. You manage the work; we take care of the people side."),
              ("How do you select them?", SELECTION),
              ("How much does it cost after the first month?", "It depends on the role and schedule. Most full-time roles start around $1,700 to $2,200 per month, all-in. You get an exact number on the call.")],
         cta="Get Started Free",
         seo_title="Orchid for Healthcare Practices | Black Friday: Get Started Free",
-        seo_desc="HIPAA-trained, bilingual healthcare support professionals from Colombia for U.S. practices. Black Friday: $0 upfront and 50% off your first month, until December 1st."),
+        seo_desc="HIPAA-trained, bilingual healthcare support professionals from Colombia for U.S. practices, with ongoing HR support from Orchid. Black Friday: $0 upfront and 50% off your first month, until December 1st."),
     "entrepreneurs": dict(
         name="Entrepreneurs", tag="For U.S. companies &amp; entrepreneurs",
         title='Hand off the admin. <span class="y">Get started free.</span>',
