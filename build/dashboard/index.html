@@ -1,0 +1,149 @@
+<meta name="dash-one-writer">
+<style>
+.trk{display:flex;flex-direction:column;gap:var(--cds-gap-xl);font-family:var(--font-anthropic-sans);color:var(--color-fg)}
+.trk h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
+.trk h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0 0 var(--cds-gap-sm)}
+.trk .lede{font-size:var(--cds-font-size-body);color:var(--color-fg);margin:var(--cds-gap-sm) 0 0;max-width:70ch}
+.trk .muted{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
+.trk .tablewrap{overflow-x:auto}
+.trk table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:var(--cds-font-size-caption)}
+.trk th,.trk td{padding:6px 8px;border-bottom:1px solid var(--color-border-line);text-align:right;white-space:nowrap}
+.trk th:first-child,.trk td:first-child,.trk th.l,.trk td.l{text-align:left}
+.trk th{color:var(--color-fg-muted);font-weight:var(--cds-font-weight-medium)}
+.trk .chip{display:inline-block;padding:1px 8px;border-radius:999px;font-size:var(--cds-font-size-caption);border:1px solid var(--color-border-line)}
+.trk .chip.ok{color:var(--color-ok);border-color:var(--color-ok)}
+.trk .chip.warn{color:var(--color-warn);border-color:var(--color-warn)}
+.trk .chip.bad{color:var(--color-bad);border-color:var(--color-bad)}
+.trk .chart{position:relative;min-height:260px}
+.trk .tip{position:absolute;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);box-shadow:var(--cds-shadow-popover);border-radius:var(--cds-radius);padding:6px 10px;font-size:var(--cds-font-size-caption);white-space:nowrap}
+.trk .axis text{fill:var(--cds-text-secondary);font-size:var(--cds-font-size-caption)}
+.trk .axis line,.trk .axis path{stroke:var(--cds-chart-axis)}
+.trk .legend{display:flex;flex-wrap:wrap;gap:var(--cds-gap-md);font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.trk .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.trk details{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.trk [data-dash-source-state=refreshing]{opacity:.5}
+</style>
+<div class="trk" lang="es">
+  <header id="resumen">
+    <h1>Anuncios nuevos · Black Friday</h1>
+    <p class="lede" data-read lang="es"><span data-draw="lede-switch"></span><span class="has-data">Desde el lanzamiento del 16 de noviembre, las campañas con 🟢 invirtieron <b data-draw="t-spend" data-source="totals" data-field="spend" data-row="0">—</b>, trajeron <b data-draw="t-lpv" data-source="totals" data-field="landing_views" data-row="0">—</b> visitas a la landing, <b data-draw="t-leads" data-source="totals" data-field="leads" data-row="0">—</b> leads y <b data-draw="t-qual" data-source="totals" data-field="qualified" data-row="0">—</b> leads calificados. Último día con datos: <b data-draw="t-date" data-source="totals" data-field="last_date" data-row="0">—</b>.</span><span class="no-data" hidden>Las campañas con 🟢 arrancan el 16 de noviembre a las 6 am (hora local de cada persona). Los primeros números aparecen después de la primera actualización diaria.</span></p>
+    <p class="muted">Se actualiza todos los días a las 8 am (Bogotá) desde Meta. Leads y calificados vienen del píxel y de la API de Conversiones.</p>
+  </header>
+
+  <section id="mercados">
+    <h2>Por mercado</h2>
+    <div class="tablewrap">
+      <table data-source="by_market" data-row-key="market">
+        <thead><tr><th data-field="market">Mercado</th><th data-field="spend">Gasto</th><th data-field="cpm">CPM</th><th data-field="ctr">CTR enlace</th><th data-field="link_clicks">Clics</th><th data-field="landing_views">Visitas landing</th><th data-field="leads">Leads</th><th data-field="qualified">Calificados</th><th data-field="cpl">Costo por lead</th><th data-field="profile_visits">Visitas perfil IG</th><th data-field="thruplay">ThruPlay</th></tr></thead>
+        <tbody data-draw="market-rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="diario">
+    <h2>Gasto diario por mercado</h2>
+    <div class="legend" data-draw="legend" data-source="daily"></div>
+    <div class="chart" data-draw="daily-chart" data-source="daily"></div>
+  </section>
+
+  <section id="anuncios">
+    <h2>Por anuncio</h2>
+    <p class="muted">Estado: «Sin entrega» si no tuvo impresiones; «Revisar» si un anuncio de leads gastó $25 o más sin leads, o si el CTR es menor a 0.5% con más de 1,000 impresiones.</p>
+    <div class="tablewrap">
+      <table data-source="by_ad" data-row-key="ad_id">
+        <thead><tr><th data-field="ad" class="l">Anuncio</th><th data-field="market" class="l">Mercado</th><th data-field="status" class="l">Estado</th><th data-field="spend">Gasto</th><th data-field="impressions">Impresiones</th><th data-field="cpm">CPM</th><th data-field="ctr">CTR enlace</th><th data-field="landing_views">Visitas</th><th data-field="leads">Leads</th><th data-field="qualified">Calif.</th><th data-field="cpl">Costo/lead</th><th data-field="profile_visits">Perfil IG</th><th data-field="video_50">Video 50%</th></tr></thead>
+        <tbody data-draw="ad-rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <details id="definiciones"><summary>Qué significa cada columna</summary>
+    <p>CPM: costo por cada mil impresiones. CTR enlace: clics en el enlace divididos por impresiones. Visitas landing: personas que hicieron clic y la página terminó de cargar. Leads: formularios enviados (evento Lead del píxel). Calificados: leads que respondieron «I want to hire» (evento CompleteRegistration por la API de Conversiones). Visitas perfil IG: visitas al perfil de Instagram desde la campaña de seguidores. ThruPlay y Video 50%: reproducciones de 15 segundos o completas, y personas que vieron al menos la mitad.</p>
+  </details>
+</div>
+<script>
+window.TRK_START = '2026-11-16';
+const sum = (rows, k) => d3.sum(rows, (r) => +r[k] || 0);
+function agg(rows) {
+  const spend = sum(rows, 'spend'), imp = sum(rows, 'impressions'), clicks = sum(rows, 'link_clicks'), leads = sum(rows, 'leads');
+  return {spend: +spend.toFixed(2), impressions: imp, link_clicks: clicks, landing_views: sum(rows, 'landing_views'), leads,
+    qualified: sum(rows, 'qualified'), profile_visits: sum(rows, 'profile_visits'), thruplay: sum(rows, 'thruplay'), video_50: sum(rows, 'video_50'),
+    cpm: imp ? +(spend / imp * 1000).toFixed(2) : null, ctr: imp ? +(clicks / imp * 100).toFixed(2) : null, cpl: leads ? +(spend / leads).toFixed(2) : null};
+}
+dash.calc('by_market', {inputs: ['ads'], title: 'Totales por mercado desde el 16 nov', description: 'Suma de cada mercado; CPM, CTR y costo por lead calculados sobre esas sumas.',
+  fn: (ads) => d3.rollups(ads.filter((r) => r.date >= '2026-11-16'), (rs) => agg(rs), (r) => r.market).map(([market, a]) => ({market, ...a})).sort((a, b) => b.spend - a.spend)});
+dash.calc('by_ad', {inputs: ['ads'], title: 'Totales por anuncio desde el 16 nov', description: 'Suma de cada anuncio, con un estado: sin entrega, revisar o en marcha.',
+  fn: (ads) => d3.rollups(ads.filter((r) => r.date >= '2026-11-16'), (rs) => {
+    const a = agg(rs), leadAd = ['Salud', 'Emprendedores', 'Retargeting'].includes(rs[0].market);
+    const status = a.impressions === 0 ? 'Sin entrega' : (leadAd && a.spend >= 25 && a.leads === 0) || (a.impressions > 1000 && a.ctr < 0.5) ? 'Revisar' : 'En marcha';
+    return {ad_id: rs[0].ad_id, ad: rs[0].ad, market: rs[0].market, status, ...a};
+  }, (r) => r.ad_id).map(([, v]) => v).sort((a, b) => b.spend - a.spend)});
+dash.calc('totals', {inputs: ['ads'], title: 'Totales desde el 16 nov', description: 'Suma de todas las campañas con 🟢 desde el lanzamiento y el último día con datos.',
+  fn: (ads) => { const rs = ads.filter((r) => r.date >= '2026-11-16'); return [{...agg(rs), last_date: rs.length ? d3.max(rs, (r) => r.date) : null}]; }});
+dash.calc('daily', {inputs: ['ads'], title: 'Gasto diario por mercado', description: 'Gasto de cada día y mercado desde el 16 nov.',
+  fn: (ads) => d3.rollups(ads.filter((r) => r.date >= '2026-11-16'), (rs) => +sum(rs, 'spend').toFixed(2), (r) => r.date, (r) => r.market)
+    .flatMap(([date, ms]) => ms.map(([market, spend]) => ({date, market, spend}))).sort((a, b) => d3.ascending(a.date, b.date))});
+
+window.TRK_MARKETS = ['Salud', 'Emprendedores', 'Seguidores IG', 'Awareness', 'Retargeting'];
+window.trkFmt = {usd: d3.format('$,.2f'), int: d3.format(','), pct: (v) => v == null ? '–' : d3.format('.2f')(v) + '%', day: (s) => s ? d3.utcFormat('%d %b')(new Date(s + 'T00:00:00Z')) : '–'};
+</script>
+<script>
+const F = window.trkFmt;
+const one = (id, field, f) => (el) => { const d = dash.data(id); el.textContent = d.status === 'ok' && d.data[0] ? f(d.data[0][field]) : '—'; };
+dash.draw('t-spend', one('totals', 'spend', F.usd));
+dash.draw('t-lpv', one('totals', 'landing_views', F.int));
+dash.draw('t-leads', one('totals', 'leads', F.int));
+dash.draw('t-qual', one('totals', 'qualified', F.int));
+dash.draw('t-date', one('totals', 'last_date', F.day));
+dash.draw('lede-switch', (el) => {
+  const d = dash.data('totals'), has = d.status === 'ok' && d.data[0] && d.data[0].last_date;
+  const p = el.parentElement; if (!p) return;
+  p.querySelectorAll('.has-data').forEach((n) => { n.hidden = !has; });
+  p.querySelectorAll('.no-data').forEach((n) => { n.hidden = !!has; });
+});
+function rowsTable(id, cols) {
+  return (tb) => {
+    const d = dash.data(id);
+    if (d.status !== 'ok') { tb.replaceChildren(); return; }
+    if (!d.data.length) { const tr = document.createElement('tr'), td = document.createElement('td'); td.colSpan = cols.length; td.className = 'l'; td.textContent = 'Todavía sin datos desde el 16 de noviembre.'; tr.append(td); tb.replaceChildren(tr); return; }
+    tb.replaceChildren(...d.data.map((r) => { const tr = document.createElement('tr');
+      cols.forEach(([k, f, cls]) => { const td = document.createElement('td'); if (cls) td.className = cls;
+        if (k === 'status') { const s = document.createElement('span'); s.className = 'chip ' + ({'En marcha': 'ok', 'Revisar': 'warn', 'Sin entrega': 'bad'}[r[k]] || ''); s.textContent = r[k]; td.append(s); }
+        else td.textContent = r[k] == null ? '–' : f(r[k]);
+        tr.append(td); });
+      return tr; }));
+  };
+}
+const id = (v) => v;
+dash.draw('market-rows', rowsTable('by_market', [['market', id, 'l'], ['spend', F.usd], ['cpm', F.usd], ['ctr', F.pct], ['link_clicks', F.int], ['landing_views', F.int], ['leads', F.int], ['qualified', F.int], ['cpl', F.usd], ['profile_visits', F.int], ['thruplay', F.int]]));
+dash.draw('ad-rows', rowsTable('by_ad', [['ad', id, 'l'], ['market', id, 'l'], ['status', id, 'l'], ['spend', F.usd], ['impressions', F.int], ['cpm', F.usd], ['ctr', F.pct], ['landing_views', F.int], ['leads', F.int], ['qualified', F.int], ['cpl', F.usd], ['profile_visits', F.int], ['video_50', F.int]]));
+const color = (m) => dash.colors[window.TRK_MARKETS.indexOf(m) % dash.colors.length] || dash.colors[0];
+dash.draw('legend', (el) => {
+  const d = dash.data('daily'); const ms = d.status === 'ok' ? [...new Set(d.data.map((r) => r.market))] : [];
+  el.replaceChildren(...ms.map((m) => { const s = document.createElement('span'), i = document.createElement('i'); i.style.background = color(m); s.append(i, m); return s; }));
+});
+dash.draw('daily-chart', (el) => {
+  const d = dash.data('daily');
+  el.replaceChildren();
+  if (d.status === 'error') { el.textContent = 'No se pudo cargar'; return; }
+  if (d.status !== 'ok') { el.textContent = '—'; return; }
+  if (!d.data.length) { const p = document.createElement('p'); p.className = 'muted'; p.textContent = 'El gráfico aparece con el primer día de datos.'; el.append(p); return; }
+  const dates = [...new Set(d.data.map((r) => r.date))], ms = [...new Set(d.data.map((r) => r.market))];
+  const table = dates.map((dt) => { const o = {date: dt}; ms.forEach((m) => { o[m] = 0; }); d.data.filter((r) => r.date === dt).forEach((r) => { o[r.market] = r.spend; }); return o; });
+  const series = d3.stack().keys(ms)(table);
+  const W = Math.max(280, el.clientWidth), H = 260, m = {t: 10, r: 10, b: 28, l: 48};
+  const x = d3.scaleBand().domain(dates).range([m.l, W - m.r]).padding(0.25);
+  const y = d3.scaleLinear().domain([0, d3.max(series, (s) => d3.max(s, (p) => p[1])) || 1]).nice().range([H - m.b, m.t]);
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Gasto diario por mercado desde el 16 de noviembre');
+  const step = Math.ceil(dates.length / Math.max(1, Math.floor((W - m.l) / 60)));
+  svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickValues(dates.filter((_, i) => i % step === 0)).tickFormat(F.day));
+  svg.append('g').attr('class', 'axis').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(d3.format('$,.0f')));
+  const tip = d3.select(el).append('div').attr('class', 'tip').style('display', 'none');
+  svg.append('g').selectAll('g').data(series).join('g').each(function (s) {
+    d3.select(this).selectAll('rect').data(s).join('rect').attr('x', (p) => x(p.data.date)).attr('width', x.bandwidth())
+      .attr('y', (p) => y(p[1])).attr('height', (p) => Math.max(0, y(p[0]) - y(p[1]))).style('fill', color(s.key))
+      .on('pointermove', (ev, p) => { const [px, py] = d3.pointer(ev, el); tip.style('display', null).style('left', Math.min(px + 12, el.clientWidth - 160) + 'px').style('top', (py - 10) + 'px').text(`${F.day(p.data.date)} · ${s.key}: ${F.usd(p.data[s.key])}`); })
+      .on('pointerleave', () => tip.style('display', 'none'));
+  });
+});
+</script>
