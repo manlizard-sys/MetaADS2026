@@ -7,6 +7,7 @@ const OUT = "/home/user/MetaADS2026/build/reports/informes/Informe_Meta_Ads_Orch
 const IMG = "/home/user/MetaADS2026/build/reports/previews/2026-11-16/";
 const SIZE = { // px of each image, to keep aspect ratio
   "hc_4x5": [640, 800], "ent_4x5": [640, 800], "ig_3x4": [640, 853],
+  "lp_practices-free-month": [780, 1688], "lp_business-free-month": [780, 1688], "lp_brief": [780, 1688],
 };
 
 const THEME = {
@@ -93,7 +94,7 @@ const TBL = { fontFace: THEME.bodyFontFace, border: { type: "none" }, margin: [0
 // ---------- 1. Title ----------
 pres.addSection({ title: "Resumen" });
 let s = slide("DARK_TITLE", "Resumen");
-s.addText("Informe Meta Ads", { placeholder: "title" });
+s.addText("Informe semanal", { placeholder: "title" });
 s.addText([
   { text: "Semana del 9 al 15 nov 2026", options: { breakLine: true } },
   { text: "Reporte de desempeño y lanzamiento Black Friday · Dirección de Orchid · 16 nov 2026", options: { fontSize: 14, color: C.background1 } },
@@ -120,7 +121,7 @@ s.addNotes("Noviembre al 15: $529.62 de $1,000. Plan 16–30 nov: $469.50.");
 // ---------- 3. By campaign ----------
 pres.addSection({ title: "Resultados" });
 s = slide("CONTENT", "Resultados");
-s.addText("Resultados por campaña", { placeholder: "title" });
+s.addText("Campañas", { placeholder: "title" });
 s.addChart(pres.charts.DOUGHNUT, [{ name: "Inversión", labels: ["Awareness · video", "Abogados · leads"], values: [48.27, 176.49] }], {
   x: 0.4, y: 1.15, w: 4.2, h: 3.85, objectName: "Spend split chart", holeSize: 55,
   chartColors: [HEX.accent3, HEX.dk2], showPercent: true, showValue: false, dataLabelColor: HEX.lt1, dataLabelFontSize: 12, dataLabelFontFace: "+mn-lt",
@@ -144,7 +145,7 @@ s.addNotes("El público Advantage+ del 9 nov no bajó el CPM de abogados: subió
 
 // ---------- 4. Attorneys daily ----------
 s = slide("CONTENT", "Resultados");
-s.addText("Campaña de abogados día a día", { placeholder: "title" });
+s.addText("Abogados", { placeholder: "title" });
 s.addTable(tb([
   ["Día", "Gasto", "CPM", "Clics", "Visitas", "Nota"],
   ["Lun 9", "$43.87", "$240", "2", "0", "Feed de Facebook + Advantage+; A1 sale, V1 entra"],
@@ -160,7 +161,7 @@ s.addNotes("La campaña de abogados queda en pausa un tiempo por decisión de la
 
 // ---------- 5. Awareness by vertical ----------
 s = slide("CONTENT", "Resultados");
-s.addText("Video de awareness por vertical", { placeholder: "title" });
+s.addText("Awareness", { placeholder: "title" });
 s.addTable(tb([
   ["Vertical", "Gasto", "Alcance", "ThruPlay", "Vieron 50%", "$ / ThruPlay"],
   ["Healthcare", "$8.13", "955", "313", "641", "$0.026"],
@@ -203,7 +204,7 @@ s.addNotes("En la reunión del 10 nov se acordó pasar a salud y emprendedores c
 // ---------- 7. Timeline ----------
 pres.addSection({ title: "Qué hicimos" });
 s = slide("CONTENT", "Qué hicimos");
-s.addText("Cronología de cambios", { placeholder: "title" });
+s.addText("Cronología", { placeholder: "title" });
 const events = [
   ["9 nov", "Feed + Advantage+", "Abogados solo en el feed de Facebook con público ampliado. A1 sale, V1 entra."],
   ["13 nov", "Pausa", "Abogados en pausa desde el viernes a las 4 pm."],
@@ -224,7 +225,7 @@ s.addNotes("Detalle y motivo de cada cambio en build/CHANGELOG_META.md.");
 // ---------- 8. What starts today ----------
 pres.addSection({ title: "Lanzamiento" });
 s = slide("CONTENT", "Lanzamiento");
-s.addText("Lo que se activa hoy, 16 nov", { placeholder: "title" });
+s.addText("Lanzamiento", { placeholder: "title" });
 s.addTable([["Campaña", "Para qué", "Destino", "Presupuesto 16–30 nov"],
   ["🟢 Healthcare BF", "Leads de consultorios médicos y dentales", "go.orchidpros.com/practices-free-month", "$159.75"],
   ["🟢 Entrepreneurs BF", "Leads de empresas y emprendedores", "go.orchidpros.com/business-free-month", "$159.75"],
@@ -242,7 +243,7 @@ s.addNotes("Noviembre: $529.62 gastado al 15 + $469.50 planeado = ~$999.");
 
 // ---------- 9. Creatives ----------
 s = slide("CONTENT", "Lanzamiento");
-s.addText("Creativos que arrancan hoy", { placeholder: "title" });
+s.addText("Creativos", { placeholder: "title" });
 [["hc_4x5", "Healthcare BF", "Patient intake, scheduler, interpreter"], ["ent_4x5", "Entrepreneurs BF", "Admin, operations, bookkeeping, marketing"], ["ig_3x4", "IG Followers", "\"Does your VA speak Spanish?\" · video"]]
   .forEach(([file, name, sub], i) => {
     const x = 0.6 + i * 3.05, h = 2.85, [pw, ph] = SIZE[file], w = h * pw / ph;
@@ -252,9 +253,25 @@ s.addText("Creativos que arrancan hoy", { placeholder: "title" });
   });
 s.addNotes("Pendiente con Debi: corregir HIPPA por HIPAA en el creativo de salud. El retargeting usa el creativo de emprendedores.");
 
+// ---------- 9b. Landings ----------
+s = slide("CONTENT", "Lanzamiento");
+s.addText("Landings", { placeholder: "title" });
+[["lp_practices-free-month", "Salud", "go.orchidpros.com/practices-free-month", "practices-free-month-thanks (calendario) · evento Lead"],
+ ["lp_business-free-month", "Emprendedores", "go.orchidpros.com/business-free-month", "business-free-month-thanks (calendario) · evento Lead"],
+ ["lp_brief", "Newsletter", "go.orchidpros.com/brief", "brief-thanks · evento Subscribe · correo de bienvenida"]]
+  .forEach(([file, name, url, sub], i) => {
+    const x = 0.6 + i * 3.05, h = 2.75, [pw, ph] = SIZE[file], w = h * pw / ph;
+    capture(s, file, x + (2.7 - w) / 2, 1.0, h, `Landing ${name}`);
+    T(s, name, { x, y: 3.85, w: 2.7, h: 0.3, fontSize: 13, bold: true, color: C.text2, align: "center", objectName: `Landing name ${i + 1}` });
+    T(s, [{ text: url, options: { hyperlink: { url: "https://" + url, tooltip: "Abrir landing" }, color: HEX.dk2, underline: true } }],
+      { x, y: 4.15, w: 2.7, h: 0.28, fontSize: 10, align: "center", objectName: `Landing link ${i + 1}` });
+    T(s, sub, { x, y: 4.43, w: 2.7, h: 0.45, fontSize: 9, color: C.accent6, align: "center", objectName: `Landing sub ${i + 1}` });
+  });
+s.addNotes("Formulario arriba y cuenta regresiva hasta el 1 dic, 11:59 pm hora del Este. Salud y emprendedores viven en el funnel de hire-50off; newsletter en su propio funnel.");
+
 // ---------- 10. Measurement ----------
 s = slide("CONTENT", "Lanzamiento");
-s.addText("Medición y seguimiento", { placeholder: "title" });
+s.addText("Medición", { placeholder: "title" });
 const meas = [
   ["Prueba antes de prender", "Envíos de prueba en las 3 landings el 15 nov a las 11 pm: Meta registró Lead ×2, lead calificado ×2 (API de Conversiones) y Subscribe ×1. Los contactos llegaron a GHL con su etiqueta y su anuncio de origen."],
   ["Leads a ventas", "Pendiente de confirmar: que el workflow de nuevo lead en GHL (correo, asignación y oportunidad) también se dispare con los formularios de salud y emprendedores."],
@@ -271,7 +288,7 @@ s.addNotes("Landing de newsletter (go.orchidpros.com/brief) publicada; dispara S
 // ---------- 11. Plan ----------
 pres.addSection({ title: "Próximos pasos" });
 s = slide("CONTENT", "Próximos pasos");
-s.addText("Plan · 16 – 22 nov", { placeholder: "title" });
+s.addText("Plan semanal", { placeholder: "title" });
 const plan = [
   ["Dejar aprender", "Sin cambios en salud y emprendedores hasta el jueves 19: Meta necesita unos días para encontrar a quién mostrar los anuncios."],
   ["Corte del jueves 19", "Comparar costo por lead real (GHL) entre salud y emprendedores y mover presupuesto al que rinda más."],

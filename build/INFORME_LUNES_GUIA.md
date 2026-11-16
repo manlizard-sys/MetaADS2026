@@ -26,3 +26,8 @@ Lo lee la dirección de Orchid, no un especialista en anuncios. Debe entenderse 
 - Las capturas se suben al documento (o al Artifact) junto al informe; no se guardan en git.
 - Copia del informe en `build/reports/informes/<lunes-de-entrega>.md`.
 - Si existe el tipo de documento Claude Docs, el informe se publica como documento para que los dueños puedan comentarlo y exportarlo a PDF. Si no existe, se publica como página (Artifact).
+
+## Reglas de formato del dueño (16 nov 2026)
+- Títulos de diapositiva de **1 o 2 palabras** (ej.: "Campañas", "Abogados", "Plan semanal"). Sin conclusiones después de ":".
+- Incluir una diapositiva **"Landings"** con la captura en celular de la landing de cada funnel activo y su enlace clicable.
+- Sin diapositiva de "Decisiones requeridas".
