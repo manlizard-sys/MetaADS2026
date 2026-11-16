@@ -80,13 +80,15 @@ def main():
             continue
         # Our own form tests (names "Test ...", Meta's "<test lead: dummy data>") are not leads.
         name = f"{c.get('firstName') or ''} {c.get('lastName') or ''}".strip().lower()
-        if name.startswith("test") or name.startswith("<test lead"):
+        if (name.startswith("test") or name.startswith("<test lead")) and "--include-tests" not in sys.argv:
             tests += 1
             continue
         cf = c.get("customFields") or []
-        attr = c.get("attributionSource") or {}
+        # Last touch = the visit that converted (a returning visitor's first touch can be an old page).
+        last, first = c.get("lastAttributionSource") or {}, c.get("attributionSource") or {}
+        attr = last if last.get("utmContent") else first
         help_ = answer(cf, names, r"hiring or job")
-        biz = answer(cf, names, r"^vertical$")
+        biz = answer(cf, names, r"^vertical$|practice type|business type")
         role = answer(cf, names, r"your role")
         tags = c.get("tags") or []
         job = "job-seeker" in tags or bool(JOB_WORDS.search(help_))
