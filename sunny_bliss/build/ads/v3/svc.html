@@ -28,7 +28,7 @@ const D = {
   ac: {bg:'var(--teal)', fg:'#fff', accent:'var(--yellow)', badgeBg:'var(--orange)', photo:'img/ac_install.jpg', lic:'CAC1823405',
     en:{badge:'Limited time', who:'For Miami-Dade homeowners', price:'New AC from $5,800', reg:'', title:'0% interest for 60 months*', checks:['Flat-rate price before we start','Licensed installers, permits included'], pill:'Get a free quote', fine:'*With approved credit'},
     es:{badge:'Por tiempo limitado', who:'Para dueños de casa en Miami-Dade', price:'Aire nuevo desde $5,800', reg:'', title:'0% de interés por 60 meses*', checks:['Precio fijo antes de empezar','Instaladores con licencia y permisos'], pill:'Cotización gratis', fine:'*Sujeto a aprobación de crédito'}},
-  fl: {bg:'var(--yellow)', fg:'var(--teal)', accent:'var(--teal)', badgeBg:'var(--teal)', photo:'img/waterheater.jpg', lic:'CFC1433145',
+  fl: {bg:'var(--yellow)', fg:'var(--teal)', accent:'var(--teal)', badgeBg:'var(--teal)', photo:'img/waterheater.jpg', pos:'center 71%', lic:'CFC1433145',
     en:{badge:'Same-day appointments', who:'For Miami-Dade homeowners', price:'Water heater flush $149', reg:'reg. $279', title:'Tankless descale $289', checks:['Removes sediment from the tank','Adds years to your heater'], pill:'Book now'},
     es:{badge:'Citas el mismo día', who:'Para dueños de casa en Miami-Dade', price:'Limpieza del calentador $149', reg:'antes $279', title:'Calentador sin tanque $289', checks:['Saca el sedimento del tanque','Le suma años al calentador'], pill:'Reserva ya'}}
 };
@@ -39,7 +39,7 @@ const header = (badgeBg, badge) => `<div style="height:170px;flex:none;backgroun
 function ad(k, lang){
   const o=D[k], t=o[lang];
   const big = t.price.length<=9;
-  const photo = o.photo ? `<div style="height:132px;flex:none;background:url(${o.photo}) center 35%/cover"></div>` : '';
+  const photo = o.photo ? `<div style="height:132px;flex:none;background:url(${o.photo}) ${o.pos||'center 35%'}/cover"></div>` : '';
   return `<div class="ad" style="background:${o.bg}">${header(o.badgeBg,t.badge)}${photo}
   <div style="flex:1;padding:${o.photo?16:22}px 32px 22px;display:flex;flex-direction:column;gap:${o.photo?8:11}px;color:${o.fg}">
     <p style="font:900 17px 'Nunito';letter-spacing:1.5px;text-transform:uppercase;color:${o.accent};opacity:.95">${t.who}</p>
