@@ -83,6 +83,10 @@ def main():
         if (name.startswith("test") or name.startswith("<test lead")) and "--include-tests" not in sys.argv:
             tests += 1
             continue
+        # Leads the team marked as fake/spam in GHL (tag "spam" or "lead-falso") don't count as leads.
+        if any(str(t).lower() in ("spam", "lead-falso", "fake") for t in c.get("tags") or []):
+            tests += 1
+            continue
         cf = c.get("customFields") or []
         # Last touch = the visit that converted (a returning visitor's first touch can be an old page).
         last, first = c.get("lastAttributionSource") or {}, c.get("attributionSource") or {}
