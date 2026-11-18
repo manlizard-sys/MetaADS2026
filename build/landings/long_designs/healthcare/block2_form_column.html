@@ -1,0 +1,36 @@
+<!-- ORCHID · HEALTHCARE · Bloque HTML de la columna izquierda (al lado del formulario de GHL)
+     Fondo de la sección en GHL: #3F1D82 (violeta Orchid). -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..800;1,9..144,500..700&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Orchid · Black Friday · columna izquierda de la sección del formulario (bloque HTML de GHL)
+   Estilos con alcance .orxb para no tocar el resto de la página ni el formulario de GHL. */
+.orxb{
+  --violet:#3F1D82; --yellow:#FFC75A; --lilac:#C1C6FF; --ok-bright:#34B36A;
+  --font-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --font-body:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-family:var(--font-body);color:#fff;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  background:transparent;padding:clamp(8px,2vw,24px) 0;
+}
+.orxb *,.orxb *::before,.orxb *::after{box-sizing:border-box;margin:0;padding:0}
+/* Destino de todos los botones "#book" de la LP */
+.orxb #book{display:block;height:0;scroll-margin-top:-120px}
+.orxb .tag{display:inline-block;font-family:var(--font-display);font-style:italic;font-weight:600;font-size:1rem;line-height:1.3;background:var(--yellow);color:var(--violet);padding:7px 18px 8px;border-radius:18px 24px 16px 22px;margin-bottom:20px;transform:rotate(-1.5deg)}
+.orxb h2{font-family:var(--font-display);font-optical-sizing:auto;font-weight:650;line-height:1.1;letter-spacing:-.012em;font-size:clamp(1.85rem,3.9vw,2.9rem);color:#fff}
+.orxb .y{color:var(--yellow)}
+.orxb .lead{font-size:1.15rem;color:rgba(255,255,255,.86);max-width:740px;margin:18px 0 0}
+.orxb .mini-offer{display:inline-flex;gap:10px;align-items:center;background:rgba(255,199,90,.14);border:1.5px solid var(--yellow);border-radius:14px 18px 12px 16px;padding:10px 16px;margin-top:22px;font-weight:700;color:var(--yellow)}
+.orxb .checks{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:10px 28px;list-style:none;font-weight:600}
+.orxb .checks li{display:flex;align-items:center}
+.orxb .checks li::before{content:"✓";flex-shrink:0;display:inline-flex;width:23px;height:23px;border-radius:9px 12px 8px 11px;background:var(--ok-bright);color:#fff;font-size:.78rem;font-weight:800;align-items:center;justify-content:center;margin-right:9px}
+@media (max-width:860px){.orxb{padding:0}}
+</style>
+<div class="orxb">
+  <span id="book" aria-hidden="true"></span>
+  <span class="tag">Black Friday · Limited spots</span>
+      <h2>Ready to <span class="y">give your patients a faster answer?</span></h2>
+      <p class="lead">HIPAA-trained, bilingual and selected by people, not AI. Tell us about your practice. We'll map the calls, scheduling and admin slowing your team down and show you what delegating them looks like.</p>
+      <div class="mini-offer">FREE to get started · 50% off your first month</div>
+      <ul class="checks" style="margin-top:22px"><li>No commitment</li><li>Takes 30 seconds</li><li>A real person replies</li></ul>
+</div>
