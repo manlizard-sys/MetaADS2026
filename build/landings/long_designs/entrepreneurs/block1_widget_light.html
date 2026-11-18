@@ -1,0 +1,681 @@
+<script>
+/* A/B test: marca esta landing como variante B (larga) para que GHL guarde lp_variant=long en la atribución */
+(function(){try{var u=new URL(location.href);if(u.searchParams.get('lp_variant')!=='long'){u.searchParams.set('lp_variant','long');history.replaceState(null,'',u.toString());}}catch(e){}})();
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orchid Black Friday | Get Started FREE + 50% Off Your First Month</title>
+<meta name="description" content="Black Friday offer for U.S. companies and entrepreneurs: bilingual admin, operations, bookkeeping and marketing assistants from Colombia, selected by people, not AI. Get started free and get 50% off your first month.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..800;1,9..144,500..700&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Meta Pixel: pegar aquí el código base del Pixel + Conversions API (evento Lead en el envío del formulario) -->
+<style>
+/* =====================================================================
+   ORCHID BRAND SYSTEM · Black Friday Healthcare LP
+   Every rule is scoped to .orx so nothing leaks into the GHL builder
+   (and GHL/Bootstrap styles like .btn can't override the funnel).
+   ===================================================================== */
+html{scroll-behavior:smooth;scroll-padding-top:150px}
+
+.orx{
+  /* Brand palette */
+  --violet:#3F1D82; --violet-deep:#2A1259;
+  --yellow:#FFC75A; --yellow-deep:#D9A13D; --yellow-soft:#FFF2D6;
+  --lilac:#C1C6FF; --lilac-soft:#EDEEFF;
+  --paper:#FBF8F3; --white:#FFFFFF;
+  --urgent:#E5383B; --urgent-hover:#C92A2D; --urgent-deep:#9C1D20;   /* CTAs, offer bar, countdown (same red as the attorneys funnel) */
+  --ink:#22163F; --muted:#5B5475; --line:#DDDFF6;
+  --ok:#2F8F5B; --ok-bright:#34B36A; --no:#C44536;
+  /* Legacy names still referenced by inline styles in the markup */
+  --purple:var(--violet); --purple-deep:var(--violet-deep); --red:var(--urgent);
+  /* Type */
+  --font-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --font-body:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  /* Shape */
+  --r:22px; --r-org:28px 44px 26px 40px; --r-org-alt:44px 26px 40px 28px; --r-org-lg:36px 64px 36px 56px;
+  --section-y:clamp(72px,9vw,112px);
+  /* Textures */
+  --grid-light:linear-gradient(rgba(63,29,130,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(63,29,130,.055) 1px,transparent 1px);
+  --grid-dark:linear-gradient(rgba(193,198,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(193,198,255,.07) 1px,transparent 1px);
+  /* Official Orchid assets */
+  --a-wheel:url("https://orchidpros.com/wp-content/uploads/2026/07/wheel.svg");
+  --a-spike:url("https://orchidpros.com/wp-content/uploads/2026/05/shape5.svg");
+  --a-lilac-bg:url("https://orchidpros.com/wp-content/uploads/2026/07/lilac-bg.svg");
+  --a-lilac-shape:url("https://orchidpros.com/wp-content/uploads/2026/07/lilac-shape.svg");
+
+  font-family:var(--font-body);color:var(--ink);background:var(--white);
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  color-scheme:only light;
+  overflow-x:clip;           /* stops decor from causing sideways scroll without breaking the sticky header */
+}
+.orx *,.orx *::before,.orx *::after{box-sizing:border-box;margin:0;padding:0}
+
+/* ---------- Typography ---------- */
+.orx h1,.orx h2,.orx h3{font-family:var(--font-display);font-optical-sizing:auto;font-weight:650;line-height:1.1;letter-spacing:-.012em}
+.orx h1{font-size:clamp(2.1rem,4.8vw,3.5rem)}
+.orx h2{font-size:clamp(1.85rem,3.9vw,2.9rem);color:var(--violet)}
+.orx .hero h2,.orx .method-sec h2,.orx .testi h2{color:#fff}
+.orx h3{font-size:1.32rem;font-weight:600;line-height:1.2;letter-spacing:-.005em}
+.orx h4{font-family:var(--font-body)}
+.orx a{color:inherit}
+.orx img{max-width:100%;display:block}
+.orx b,.orx strong{font-weight:700}
+
+/* ---------- Layout primitives ---------- */
+.orx .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
+.orx section{padding:var(--section-y) 0;position:relative;overflow:hidden}
+.orx section > .wrap,.orx .hero > .wrap{position:relative;z-index:1}
+.orx .center{text-align:center}
+.orx .lead{font-size:1.15rem;color:var(--muted);max-width:740px;margin:18px auto 0}
+.orx .y{color:var(--yellow)}
+
+/* Eyebrow tags */
+.orx .tag{display:inline-block;font-family:var(--font-display);font-style:italic;font-weight:600;font-size:1rem;line-height:1.3;background:var(--yellow);color:var(--violet);padding:7px 18px 8px;border-radius:18px 24px 16px 22px;margin-bottom:20px;transform:rotate(-1.5deg)}
+.orx .tag.lilac{background:var(--lilac)}
+
+
+/* ---------- Buttons (red 3D CTA, same as the attorneys funnel) ---------- */
+.orx .btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--urgent);color:#fff;border:0;
+  font:800 1.06rem/1.2 var(--font-body);letter-spacing:.01em;text-decoration:none;text-align:center;
+  padding:18px 36px;border-radius:999px;cursor:pointer;
+  box-shadow:0 5px 0 var(--urgent-deep);
+  transition:transform .15s ease,box-shadow .15s ease,background-color .15s ease;
+}
+.orx .btn:hover{background:var(--urgent-hover);transform:translateY(-2px);box-shadow:0 7px 0 var(--urgent-deep)}
+.orx .btn:active{transform:translateY(3px);box-shadow:0 2px 0 var(--urgent-deep)}
+.orx .btn:focus-visible{outline:3px solid var(--violet);outline-offset:4px}
+.orx .btn:disabled,.orx .btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed;transform:none}
+.orx nav .btn:focus-visible,.orx .hero .btn:focus-visible,.orx .method-sec .btn:focus-visible,.orx .testi .btn:focus-visible{outline-color:var(--yellow)}
+
+.orx .cta-row{margin-top:48px;text-align:center}
+.orx .micro{font-size:.86rem;opacity:.85;margin-top:16px}
+
+/* ---------- Decorative layer (official assets) ---------- */
+.orx .doodle,.orx .deco{position:absolute;pointer-events:none;z-index:0;user-select:none}
+.orx .deco{aspect-ratio:1/1;background:center/contain no-repeat}
+.orx .deco-wheel{background-image:var(--a-wheel);opacity:.55;animation:orx-spin 40s linear infinite}
+.orx .deco-spike{background-image:var(--a-spike);animation:orx-sway 7s ease-in-out infinite}
+.orx .deco-lilac-shape{background-image:var(--a-lilac-shape)}
+.orx .deco-lilac-bg{background-image:var(--a-lilac-bg)}
+@keyframes orx-spin{to{transform:rotate(360deg)}}
+@keyframes orx-float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(4deg)}}
+@keyframes orx-sway{0%,100%{transform:rotate(-6deg) scale(1)}50%{transform:rotate(6deg) scale(1.05)}}
+
+/* ---------- Sticky header + offer timer ---------- */
+.orx .top{position:sticky;top:0;z-index:50}
+.orx nav{background:var(--violet)}
+.orx nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.orx nav img{height:36px;width:auto}
+.orx nav .btn{padding:11px 22px;font-size:.92rem}
+
+.orx .offerbar{background:var(--urgent);color:#fff;font-weight:800;font-size:1.15rem}
+.orx .offerbar .wrap{max-width:1240px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px;min-height:72px;padding-top:8px;padding-bottom:8px}
+.orx .offerbar a{color:#fff;font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.orx .offerbar a:focus-visible{outline:3px solid #fff;outline-offset:3px;border-radius:4px}
+
+/* Countdown digits (shared by the bar and the hero) */
+.orx .clock{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-variant-numeric:tabular-nums;color:inherit}
+.orx .clock .u{display:inline-flex;flex-direction:column;align-items:center;gap:4px}
+.orx .clock .u small{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;opacity:.9}
+.orx .clock .d{display:block;text-align:center;font-family:var(--font-body);font-weight:800;line-height:1.15;border-radius:12px 14px 11px 13px}
+.orx .clock i{font-style:normal;animation:orx-blink 1s steps(1) infinite}
+.orx .offerbar .clock{animation:orx-pulse 1.8s ease-in-out infinite}
+.orx .offerbar .clock .d{background:#fff;color:var(--urgent);font-size:1.6rem;min-width:56px;padding:2px 10px;box-shadow:0 5px 0 rgba(0,0,0,.18)}
+.orx .offerbar .clock .u small{display:none}
+.orx .offerbar .clock i{font-size:1.5rem}
+.orx .expired .clock .d{background:#E2E0EA!important;color:#7A7690!important;box-shadow:none!important}
+@keyframes orx-blink{50%{opacity:0}}
+@keyframes orx-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+
+/* ---------- Hero ---------- */
+.orx .hero{position:relative;overflow:hidden;color:#fff;padding:56px 0 120px;
+  background-color:var(--violet);background-image:var(--grid-dark);background-size:34px 34px}
+.orx .hero .d-hero-moon{top:70px;right:4%;width:clamp(78px,8vw,120px)}
+.orx .hero .d-hero-wheel{top:640px;right:5%;width:clamp(60px,6vw,90px)}
+.orx .hero .lead{color:rgba(255,255,255,.86)}
+.orx .hero h1{color:#fff;max-width:1000px;margin:0 auto}
+.orx .hero h1 em{font-style:italic;font-weight:600;color:var(--yellow)}
+
+.orx .qual{display:inline-block;background:var(--lilac);color:var(--violet);border-radius:6px;padding:10px 22px;margin-bottom:26px;
+  font:800 .9rem/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.05em;box-shadow:0 0 0 3px rgba(193,198,255,.35)}
+.orx .bfband{display:inline-block;background:var(--yellow);color:var(--violet);font:800 clamp(1.4rem,4vw,2.4rem)/1 var(--font-body);letter-spacing:.03em;
+  padding:12px 28px;border-radius:6px;transform:rotate(-1.5deg);box-shadow:0 6px 0 var(--violet-deep);margin:4px 0 26px}
+.orx .gsf{margin:0 auto 34px;font-family:var(--font-display);text-transform:uppercase;line-height:.95}
+.orx .gsf span{display:block;color:#fff;font-weight:700;font-size:clamp(1.9rem,5.2vw,3.7rem);letter-spacing:-.01em}
+.orx .gsf b{display:block;color:var(--yellow);font-weight:800;font-size:clamp(5.4rem,17vw,12rem);letter-spacing:.01em;line-height:.9;text-shadow:0 8px 0 var(--violet-deep)}
+.orx .gsf small{display:block;color:var(--yellow);font-family:var(--font-display);font-style:italic;text-transform:none;font-weight:600;font-size:clamp(1.15rem,2.6vw,1.75rem);margin-top:14px}
+
+.orx .bigclock{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px auto 42px;color:#fff;font-weight:800;font-size:1.35rem;text-transform:uppercase;letter-spacing:.08em}
+.orx .bigclock .clock{gap:10px}
+.orx .bigclock .clock .d{background:var(--urgent);color:#fff;font-size:3.1rem;min-width:100px;padding:4px 14px;box-shadow:0 7px 0 rgba(0,0,0,.28)}
+.orx .bigclock .clock i{font-size:2.8rem}
+.orx .bigclock .clock .u small{color:var(--lilac);font-size:.76rem}
+
+.orx .roles{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px auto 0;max-width:860px;list-style:none}
+.orx .roles li{background:rgba(193,198,255,.14);border:1.5px solid var(--lilac);color:#fff;border-radius:999px;padding:8px 18px;font-weight:600;font-size:.95rem}
+.orx .checks{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:26px;list-style:none;font-weight:600}
+.orx .checks li::before{content:"✓";flex-shrink:0;display:inline-flex;width:23px;height:23px;border-radius:9px 12px 8px 11px;background:var(--ok-bright);color:#fff;font-size:.78rem;font-weight:800;align-items:center;justify-content:center;margin-right:9px}
+.orx .spots{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1.5px dashed var(--yellow);color:var(--yellow);font-weight:700;border-radius:999px;padding:8px 18px;margin-top:22px;font-size:.92rem}
+.orx .spots::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--urgent);box-shadow:0 0 0 0 rgba(229,56,59,.6);animation:orx-ping 1.6s infinite}
+@keyframes orx-ping{70%{box-shadow:0 0 0 10px rgba(229,56,59,0)}100%{box-shadow:0 0 0 0 rgba(229,56,59,0)}}
+.orx .terms{font-size:.78rem;color:var(--lilac);max-width:640px;margin:14px auto 0;opacity:.95}
+
+/* Video card */
+.orx .video{max-width:900px;margin:56px auto 0;aspect-ratio:16/9;position:relative;overflow:hidden;background:#000;
+  border:5px solid var(--lilac);border-radius:var(--r-org-alt);box-shadow:16px 16px 0 var(--yellow)}
+.orx .video img{width:100%;height:100%;object-fit:cover;object-position:center}
+.orx .video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,18,89,0) 45%,rgba(42,18,89,.88) 100%)}
+.orx .pay{position:absolute;z-index:2;background:#fff;color:var(--ink);border-radius:16px 20px 14px 18px;padding:12px 18px;text-align:center;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.orx .pay.up{left:4%;bottom:16%;transform:rotate(-3deg)}
+.orx .pay.down{right:4%;bottom:16%;transform:rotate(3deg);background:var(--yellow)}
+.orx .pay small{display:block;font-weight:700;font-size:.76rem;color:var(--muted)}
+.orx .pay.down small{color:var(--violet)}
+.orx .pay b{font-family:var(--font-display);font-weight:800;font-size:clamp(1.3rem,3vw,2.1rem);color:var(--violet)}
+.orx .play{position:absolute;z-index:2;left:50%;top:52%;transform:translate(-50%,-50%);width:86px;height:86px;border-radius:50%;
+  background:var(--urgent);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 14px rgba(229,56,59,.3)}
+.orx .play::after{content:"";border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent;margin-left:7px}
+.orx .video{cursor:pointer}
+.orx .play{cursor:pointer;transition:transform .15s ease}
+.orx .play:hover{transform:translate(-50%,-50%) scale(1.06)}
+.orx .play:focus-visible{outline:3px solid var(--yellow);outline-offset:6px}
+.orx .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5}
+.orx .video.playing{cursor:default}
+.orx .video.playing::after,.orx .video.playing .pay,.orx .video.playing .play,.orx .video.playing .vcap{display:none}
+.orx .vcap{position:absolute;z-index:2;left:0;right:0;bottom:14px;text-align:center;font-size:.9rem;font-weight:600;color:#fff}
+
+/* ---------- Stats strip ---------- */
+.orx .stats{position:relative;z-index:2;background:var(--lilac);padding:0 0 56px}
+.orx .stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;transform:translateY(-58px);margin-bottom:-58px}
+.orx .stat{background:#fff;border-radius:var(--r-org);padding:28px 20px 26px;text-align:center;border-bottom:5px solid var(--yellow)}
+.orx .stat:nth-child(even){border-radius:var(--r-org-alt)}
+.orx .stat b{font-family:var(--font-display);font-weight:800;font-size:2.8rem;color:var(--violet);display:block;line-height:1;letter-spacing:-.02em}
+.orx .stat span{font-size:.92rem;color:var(--muted);display:block;margin-top:10px}
+
+/* ---------- Pain ---------- */
+.orx .pain-sec{background-color:var(--paper);background-image:var(--grid-light);background-size:34px 34px}
+.orx .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:54px;text-align:left}
+.orx .card{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:32px;position:relative}
+.orx .cards3 .card:nth-child(3n+2){border-radius:var(--r-org)}
+.orx .card h3{color:var(--violet)}
+.orx .card p{color:var(--muted);margin-top:10px;font-size:.97rem}
+.orx .ico{width:56px;height:56px;border-radius:16px 22px 14px 20px;background:var(--yellow);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.orx .ico svg{width:28px;height:28px;stroke:var(--violet);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.orx .chip{display:inline-block;margin-top:20px;background:var(--lilac-soft);color:var(--violet);font-weight:700;font-size:.84rem;padding:7px 14px;border-radius:999px}
+.orx .reframe{position:relative;max-width:860px;margin:60px auto 0;background:var(--violet);color:#fff;border-radius:30px 56px 30px 48px;padding:46px 52px;text-align:center}
+.orx .reframe h3{font-size:clamp(1.5rem,3vw,2.1rem);color:#fff}
+.orx .reframe h3 em{color:var(--yellow)}
+.orx .reframe p{margin-top:12px;color:var(--lilac)}
+.orx .reframe::after{content:"";position:absolute;width:62px;aspect-ratio:1;right:-16px;top:-26px;background:var(--a-spike) center/contain no-repeat;pointer-events:none;animation:orx-sway 7s ease-in-out infinite}
+
+/* Shared "without / with" comparison panels */
+.orx .vs{display:grid;grid-template-columns:1fr 1fr;gap:22px;text-align:left}
+.orx .vs{max-width:920px;margin:46px auto 0}
+.orx .vs > div{border-radius:var(--r);padding:32px}
+.orx .vs .us{border-radius:var(--r-org-alt)!important}
+.orx .vs h4{font-family:var(--font-display);font-size:1.35rem;font-weight:650;line-height:1.2;margin-bottom:16px}
+.orx .vs ul{list-style:none;display:grid;gap:11px}
+.orx .vs li{display:flex;gap:10px}
+.orx .vs .them{background:rgba(255,255,255,.06);border:1.5px dashed rgba(193,198,255,.45);color:rgba(255,255,255,.82)}
+.orx .vs .them li::before{content:"✗";color:#FF9A8C;font-weight:800;flex-shrink:0}
+.orx .vs .us{background:var(--yellow);color:var(--violet);font-weight:500}
+.orx .vs .us li::before{content:"✓";font-weight:800;flex-shrink:0;color:var(--ok)}
+
+/* ---------- Human vs AI ---------- */
+.orx .method-sec{color:#fff;background-color:var(--violet-deep);background-image:var(--grid-dark);background-size:34px 34px}
+.orx .method-sec .lead{color:rgba(255,255,255,.86)}
+.orx .method-sec .tag{background:var(--lilac)}
+.orx .funnel{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin-top:46px;font-weight:600}
+.orx .funnel div{background:rgba(193,198,255,.12);border:1.5px solid rgba(193,198,255,.35);padding:14px 24px;border-radius:16px 20px 14px 18px}
+.orx .funnel b{color:var(--yellow);font-size:1.5rem;font-family:var(--font-display);font-weight:800}
+.orx .funnel .arr{background:none;border:0;padding:0;color:var(--lilac);font-size:1.3rem}
+.orx .method{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:42px;text-align:left}
+.orx .step{background:#fff;color:var(--ink);border-radius:var(--r);padding:30px}
+.orx .step h3{color:var(--violet)}
+.orx .step .n{width:46px;height:46px;border-radius:14px 18px 12px 16px;background:var(--yellow);color:var(--violet);font:800 1.3rem/1 var(--font-display);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.orx .step p{color:var(--muted);margin-top:10px;font-size:.96rem}
+
+/* ---------- Roles ---------- */
+.orx .verts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px;text-align:left}
+.orx .verts.four{grid-template-columns:repeat(2,1fr)}
+.orx .vert{background:var(--lilac-soft);border-radius:var(--r-org);padding:30px}
+.orx .vert:nth-child(2),.orx .vert:nth-child(4){background:var(--yellow-soft);border-radius:var(--r-org-alt)}
+.orx .vert h3{color:var(--violet)}
+.orx .vert ul{list-style:none;margin-top:14px;color:var(--muted)}
+.orx .vert li{padding:9px 0;border-top:1px solid rgba(63,29,130,.13)}
+
+/* ---------- How it works ---------- */
+.orx .how-sec{background-color:var(--lilac-soft);background-image:var(--a-lilac-bg);background-size:cover;background-position:center;background-repeat:no-repeat}
+.orx .how{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;text-align:left;counter-reset:s}
+.orx .how .card{position:relative;z-index:1;padding-top:50px;border:0}
+.orx .how .card::before{counter-increment:s;content:counter(s);position:absolute;top:-24px;left:28px;width:50px;height:50px;border-radius:50%;background:var(--violet);color:var(--yellow);font:800 1.35rem/1 var(--font-display);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px var(--lilac-soft)}
+.orx .how-sec .time{display:inline-block;margin-top:40px;background:var(--violet);color:#fff;font-weight:600;padding:12px 24px;border-radius:999px}
+
+/* ---------- Values ---------- */
+.orx .values-sec{background:var(--paper)}
+.orx .split{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.orx .split > div{position:relative;z-index:1}
+.orx .split ul{list-style:none;margin-top:26px}
+.orx .split li{padding:13px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;font-weight:500}
+.orx .split li::before{content:"✿";color:var(--violet)}
+.orx .split .d-val-shape{width:min(640px,62%);right:-110px;top:50%;transform:translateY(-50%)}
+.orx .split .d-val-moon{width:104px;right:-6px;top:-34px;z-index:2}
+.orx .photo{position:relative;z-index:1;border-radius:40px 120px 40px 90px;overflow:hidden;border:4px solid var(--violet);aspect-ratio:4/5;box-shadow:18px 18px 0 var(--yellow)}
+.orx .photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.orx .photo figcaption{position:absolute;left:16px;bottom:16px;background:#fff;color:var(--violet);border-radius:12px;padding:8px 14px;font-size:.82rem;font-weight:600}
+.orx .quote{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:1.45rem;line-height:1.35;color:var(--violet);margin-top:28px;padding-left:20px;border-left:4px solid var(--yellow)}
+
+/* ---------- Comparison table ---------- */
+.orx .tablewrap{overflow-x:auto;margin-top:50px;-webkit-overflow-scrolling:touch}
+.orx table{width:100%;min-width:700px;border-collapse:separate;border-spacing:0;border-radius:var(--r);overflow:hidden;border:1.5px solid var(--line);background:#fff}
+.orx th,.orx td{padding:16px 18px;text-align:left;font-size:.96rem;border-bottom:1px solid var(--line);vertical-align:top}
+.orx th{font-family:var(--font-display);font-weight:650;font-size:1.12rem;background:var(--lilac-soft);color:var(--violet)}
+.orx th.us{background:var(--violet);color:var(--yellow)}
+.orx td.us{background:var(--yellow-soft);font-weight:600;border-left:2px solid var(--yellow);border-right:2px solid var(--yellow)}
+.orx tr:last-child td{border-bottom:0}
+.orx td:first-child{font-weight:700;color:var(--violet)}
+.orx .ok{color:var(--ok);font-weight:800}
+.orx .no{color:var(--no);font-weight:800}
+
+/* ---------- Testimonials ---------- */
+.orx .testi{color:#fff;background-color:var(--violet);background-image:var(--grid-dark);background-size:34px 34px}
+.orx .testi .d-testi-moon{top:80px;right:5%;width:clamp(60px,6vw,90px)}
+.orx .testi .d-testi-spike{bottom:140px;left:5%;width:clamp(40px,4vw,56px)}
+.orx .wall{columns:2 340px;max-width:900px;margin:52px auto 0;column-gap:24px}
+.orx .wall > *{break-inside:avoid;margin-bottom:24px}
+.orx .shot{background:#fff;border-radius:var(--r);padding:10px;box-shadow:0 16px 34px rgba(10,2,30,.35)}
+.orx .shot:nth-child(odd){transform:rotate(-.8deg)}
+.orx .shot:nth-child(even){transform:rotate(.8deg)}
+.orx .shot img{width:100%;border-radius:14px}
+.orx .shot.narrow img{max-width:260px;margin:0 auto}
+.orx .shot p{color:var(--violet);font-weight:600;font-size:.86rem;padding:10px 6px 4px}
+
+/* ---------- Guarantee ---------- */
+.orx .guar-sec .wrap{background-image:var(--a-lilac-shape);background-size:contain;background-position:center;background-repeat:no-repeat;padding-top:40px;padding-bottom:40px}
+.orx .guar{position:relative;max-width:900px;margin:0 auto;background:var(--yellow);border-radius:var(--r-org-lg);padding:52px;display:flex;gap:38px;align-items:center}
+.orx .seal{flex-shrink:0;width:146px;height:146px;transform:rotate(-6deg);border-radius:50%;background:var(--violet);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-family:var(--font-display);font-weight:600;line-height:1.1;box-shadow:0 0 0 9px rgba(63,29,130,.16)}
+.orx .seal b{font-size:2.5rem;font-weight:800;color:var(--yellow)}
+.orx .guar h2{font-size:clamp(1.55rem,3vw,2.25rem);color:var(--violet)}
+.orx .guar p{margin-top:12px;color:var(--violet)}
+
+/* ---------- FAQ ---------- */
+.orx .faq{max-width:800px;margin:46px auto 0;text-align:left}
+.orx details{background:#fff;border:1.5px solid var(--line);border-radius:18px;margin-bottom:12px;padding:0 24px;transition:border-color .15s ease}
+.orx details[open]{border-color:var(--lilac);background:var(--lilac-soft)}
+.orx summary{cursor:pointer;font-weight:700;font-size:1.04rem;padding:20px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--violet)}
+.orx summary::-webkit-details-marker{display:none}
+.orx summary::after{content:"+";flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--yellow);color:var(--violet);display:flex;align-items:center;justify-content:center;font-size:1.3rem;line-height:1}
+.orx details[open] summary::after{content:"×"}
+.orx summary:focus-visible{outline:3px solid var(--violet);outline-offset:4px;border-radius:8px}
+.orx details p{color:var(--muted);padding-bottom:22px}
+
+
+/* ---------- Business: decor + industries ---------- */
+.orx .method-sec .d-method-wheel{top:90px;left:4%;width:clamp(70px,7vw,104px)}
+.orx .method-sec .d-method-spike{bottom:120px;right:5%;width:clamp(44px,4.5vw,64px)}
+.orx .verts-sec .d-verts-spike{top:80px;right:6%;width:clamp(40px,4vw,58px)}
+.orx .verts-sec .d-verts-wheel{bottom:50px;left:3%;width:clamp(56px,5.5vw,80px);opacity:.5}
+.orx .inds{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px}
+.orx .ind{background:#fff;border-radius:var(--r);padding:24px 16px;text-align:center;font-weight:700;font-size:1.02rem;color:var(--violet)}
+.orx .ind:nth-child(even){border-radius:var(--r-org)}
+.orx .ind .ico{margin:0 auto 14px}
+.orx .ind span{display:block;font-weight:500;color:var(--muted);font-size:.88rem;margin-top:6px}
+
+/* Mobile sticky CTA */
+.orx .mbar{display:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .orx .method{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:860px){
+  html{scroll-padding-top:150px}
+  .orx section{padding:68px 0}
+  .orx .cards3,.orx .method,.orx .how,.orx .split,.orx .vs,.orx .verts,.orx .verts.four{grid-template-columns:1fr}
+  .orx .stats .grid{grid-template-columns:repeat(2,1fr)}
+  .orx nav .btn{display:none}
+  .orx .offerbar{font-size:1rem}
+  .orx .offerbar .wrap{min-height:68px;gap:10px;font-size:.88rem}
+  .orx .offerbar .txt-long{display:none}
+  .orx .offerbar .clock .d{font-size:1.15rem;min-width:36px;padding:2px 6px;border-radius:8px}
+  .orx .offerbar .clock i{font-size:1.1rem}
+  .orx .bigclock{flex-direction:column;gap:10px;font-size:1.05rem}
+  .orx .bigclock .clock .d{font-size:2.1rem;min-width:62px;padding:4px 8px}
+  .orx .bigclock .clock i{font-size:1.8rem}
+  .orx .video{aspect-ratio:1/1;box-shadow:10px 10px 0 var(--yellow)}
+  .orx .pay{padding:7px 10px}
+  .orx .pay.up,.orx .pay.down{bottom:25%}
+  .orx .pay small{font-size:.6rem}
+  .orx .pay b{font-size:1.25rem}
+  .orx .play{top:36%;width:64px;height:64px}
+  .orx .play::after{border-left-width:19px;border-top-width:12px;border-bottom-width:12px;margin-left:5px}
+  .orx .vcap{bottom:8px;padding:0 10px;font-size:.78rem}
+  .orx .video.playing{aspect-ratio:16/9}
+  .orx .guar{flex-direction:column;text-align:center;padding:40px 24px}
+  .orx .photo{box-shadow:12px 12px 0 var(--yellow)}
+  .orx .shot:nth-child(n){transform:none}
+  /* Decor: same mobile treatment as the attorneys funnel */
+  .orx .doodle,.orx .d-hero-wheel,.orx .d-method-spike,.orx .d-verts-wheel,.orx .d-testi-spike{display:none}
+  .orx .deco{width:46px!important;opacity:.7}
+  .orx .hero .d-hero-moon{top:18px;right:12px}
+  .orx .method-sec .d-method-wheel{top:22px;bottom:auto;left:12px}
+  .orx .testi .d-testi-moon,.orx .verts-sec .d-verts-spike{top:22px;right:12px;left:auto;bottom:auto}
+  .orx .inds{grid-template-columns:repeat(2,1fr)}
+  .orx .split .d-val-shape{width:90%!important;right:-25%;top:auto;bottom:-40px;transform:none;opacity:1}
+  .orx .split .d-val-moon{right:4px;top:auto;bottom:calc(100% - 60px)}
+  .orx .guar-sec .wrap{background-size:cover;padding-top:24px;padding-bottom:24px}
+  .orx .reframe{padding:36px 24px}
+  .orx .reframe::after{width:46px;right:-6px;top:-22px}
+  .orx .mbar{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:60}
+  .orx .mbar .btn{width:100%;box-shadow:0 0 0 3px #fff,0 10px 24px rgba(20,6,50,.35)}
+  .orx{padding-bottom:84px}
+}
+@media (max-width:420px){
+  .orx .gsf b{font-size:5rem}
+  .orx .stats .grid{gap:12px}
+  .orx .stat{padding:22px 12px}
+  .orx .stat b{font-size:2.3rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .orx *,.orx *::before,.orx *::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="orx">
+
+<div class="top" id="top">
+  <nav><div class="wrap">
+    <img src="__IMG1__" alt="Orchid" width="120" height="36">
+    <a class="btn" href="#book">Get Started Free</a>
+  </div></nav>
+  <div class="offerbar" id="offerbar"><div class="wrap">
+    <span class="txt-long">🖤 Black Friday: FREE start + 50% off month one.</span>
+    <span class="txt">Ends in</span>
+    <span class="clock" aria-live="polite"><span class="u"><span class="d dd">00</span><small>days</small></span><i>:</i><span class="u"><span class="d hh">00</span><small>hours</small></span><i>:</i><span class="u"><span class="d mm">00</span><small>min</small></span><i>:</i><span class="u"><span class="d ss">00</span><small>sec</small></span></span>
+    <a href="#book">Claim my spot</a>
+  </div></div>
+</div>
+
+<!-- HERO -->
+<header class="hero center">
+  <svg class="doodle" style="top:40px;left:-30px;width:220px" viewBox="0 0 200 120"><path d="M10 90 C40 10, 80 10, 70 60 S120 110, 140 50 S190 20, 195 70" fill="none" stroke="#C1C6FF" stroke-width="3" stroke-linecap="round" opacity=".5"/></svg>
+  <span class="deco deco-spike d-hero-moon" aria-hidden="true"></span>
+  <span class="deco deco-wheel d-hero-wheel" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="qual">For U.S. Companies &amp; Entrepreneurs</div><br>
+    <div class="bfband">BLACK FRIDAY OFFER</div>
+    <div class="gsf"><span>Get started for</span><b>FREE</b><small>Then 50% off your first month</small></div>
+    <div class="bigclock" aria-hidden="true"><span class="bl">Black Friday offer ends in</span><span class="clock" aria-live="polite"><span class="u"><span class="d dd">00</span><small>days</small></span><i>:</i><span class="u"><span class="d hh">00</span><small>hours</small></span><i>:</i><span class="u"><span class="d mm">00</span><small>min</small></span><i>:</i><span class="u"><span class="d ss">00</span><small>sec</small></span></span></div>
+    <h1><em>Get started for free</em> with a bilingual professional from Colombia, selected for your business by people, not AI.</h1>
+    <p class="lead">Fully qualified and verified bilingual support, online during your hours. Hand off the calls, inbox, books and busywork, and <b style="color:#fff">you focus on growing your business.</b></p>
+    <ul class="roles"><li>Admin Support</li><li>Operations Assistant</li><li>Bookkeeping</li><li>Marketing Assistant</li></ul>
+    <ul class="checks"><li>U.S. business hours</li><li>Fluent English &amp; Spanish</li><li>Replaced at $0 if it's not the right fit</li></ul>
+    <div class="cta-row">
+      <a class="btn" href="#book">Get Started Free</a>
+      <p class="micro">Free 30-minute strategy call · No commitment</p>
+      <span class="spots">Limited spots · Offer ends Dec 1 at 11:59 PM (ET)</span>
+      <p class="terms">Free onboarding: no setup, recruiting or placement fee before your professional starts. 50% off applies to Orchid's first monthly service fee. Valid for calls booked by Dec 1, 2026 at 11:59 PM ET. Limited spots. Terms and conditions apply.</p>
+    </div>
+    <div class="video" data-yt="uCUpvTMis-Y">
+      <img src="__IMG2__" alt="Josué and Andrea, Orchid founders" width="1280" height="720">
+      <div class="pay up"><small>Local U.S. hire / year</small><b>$62,000</b></div>
+      <div class="play" role="button" tabindex="0" aria-label="Play video"></div>
+      <div class="pay down"><small>Orchid / year</small><b>$20,800</b></div>
+      <div class="vcap">Meet Josué &amp; Andrea, Orchid's founders · 90 seconds</div>
+    </div>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="stats"><div class="wrap"><div class="grid">
+  <div class="stat"><b>60%</b><span>typical cost saved vs. hiring the same role locally</span></div>
+  <div class="stat"><b>20+</b><span>hours a week back for every business owner</span></div>
+  <div class="stat"><b>90%</b><span>of professionals still on the team after 12 months</span></div>
+  <div class="stat"><b>$0</b><span>onboarding fee, and $0 to replace a fit that isn't right</span></div>
+</div></div></div>
+
+<!-- PAIN -->
+<section class="center pain-sec">
+  <div class="wrap">
+    <span class="tag">Sound familiar?</span>
+    <h2>Most businesses don't lack talent.<br>They lack structure.</h2>
+    <div class="cards3">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
+        <h3>Every missed call is a deal your competitor closes</h3>
+        <p>You're on a job site, in a meeting or with a client. A lead calls, nobody answers (or nobody answers in Spanish), and they hire the next company that picks up.</p>
+        <span class="chip">Leads go cold while you work</span>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
+        <h3>The revolving door</h3>
+        <p>You hired an assistant. A few weeks later they were gone. Now you're posting the job again, screening again and teaching your process from zero.</p>
+        <span class="chip">Weeks lost on every rehire</span>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div>
+        <h3>Picked by an algorithm</h3>
+        <p>An AI filter said they were a match. Then your new hire can't hold a client call, misses context, or simply isn't who the profile promised.</p>
+        <span class="chip">A bad fit means paying twice</span>
+      </div>
+    </div>
+    <div class="reframe">
+      <h3>Delegation is a <em>growth decision</em>, not a luxury.</h3>
+      <p>Every hour you spend on admin is an hour you're not selling, serving clients or growing the business.</p>
+    </div>
+    <div class="cta-row"><a class="btn" href="#book">Get Started Free</a></div>
+  </div>
+</section>
+
+<!-- HUMAN VS AI -->
+<section class="method-sec center">
+  <span class="deco deco-wheel d-method-wheel" aria-hidden="true"></span>
+  <span class="deco deco-spike d-method-spike" aria-hidden="true"></span>
+  <svg class="doodle" style="bottom:30px;right:-20px;width:260px" viewBox="0 0 200 120"><path d="M5 60 C30 10, 60 110, 90 60 S150 10, 195 60" fill="none" stroke="#FFC75A" stroke-width="3" stroke-linecap="round" opacity=".55"/></svg>
+  <div class="wrap">
+    <span class="tag">The Orchid Match Method</span>
+    <h2>Other companies filter their talent with AI.<br><span class="y">We do it person by person.</span></h2>
+    <p class="lead">AI screening leaves room for errors and bias, and it can't tell you whether someone will actually work well inside your team. At Orchid, our HR team handles every selection process one by one: behavioral assessments, English assessments, role-relevant assessments and reference checks — so you get a high-quality professional chosen for your business.</p>
+    <div class="vs">
+      <div class="them"><h4>AI-filtered hiring</h4><ul>
+        <li>Keyword scores decide who moves forward</li>
+        <li>Room for errors and built-in bias</li>
+        <li>Context and attitude get missed</li>
+        <li>You find out who they really are after they start</li>
+      </ul></div>
+      <div class="us"><h4>Orchid</h4><ul>
+        <li>Every candidate interviewed by a real person</li>
+        <li>References checked one by one</li>
+        <li>Behavioral assessment validated with each candidate</li>
+        <li>Live English assessment</li>
+        <li>Shortlist chosen for your business</li>
+      </ul></div>
+    </div>
+    <div class="funnel">
+      <div><b>500+</b> applicants a month</div><span class="arr">→</span>
+      <div><b>80</b> bilingual interviews</div><span class="arr">→</span>
+      <div><b>3</b> reach your shortlist</div>
+    </div>
+    <div class="method">
+      <div class="step"><div class="n">1</div><h3>Bilingual interview</h3><p>A member of our HR team interviews every candidate personally, in English and Spanish, assessing communication, judgment and attitude.</p></div>
+      <div class="step"><div class="n">2</div><h3>Behavioral assessment</h3><p>Every candidate completes a behavioral assessment, and our HR team reviews the results with them one on one, so we know their working style fits the role before they reach your shortlist.</p></div>
+      <div class="step"><div class="n">3</div><h3>English &amp; skills assessment</h3><p>Live English evaluation plus role-specific tests: CRM and inbox management, scheduling, bookkeeping software, social media and client follow-up.</p></div>
+      <div class="step"><div class="n">4</div><h3>Reference checks</h3><p>We call previous employers one by one, so the track record you see on your shortlist is one we've confirmed.</p></div>
+    </div>
+    <div class="cta-row"><a class="btn" href="#book">Meet Your Shortlist</a></div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="center how-sec">
+  <div class="wrap">
+    <span class="tag">Who we help</span>
+    <h2>Built for busy U.S. businesses and the entrepreneurs who run them.</h2>
+    <p class="lead">If your phone, inbox and books are growing faster than your team, we've probably already staffed a business like yours.</p>
+    <div class="inds"><div class="ind"><div class="ico"><svg viewBox="0 0 24 24"><path d="M2 12a10 10 0 0 1 20 0z"/><path d="M12 12v7a2 2 0 0 0 4 0"/></svg></div>Insurance<span>Agencies &amp; carriers</span></div><div class="ind"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg></div>Mortgage &amp; Title<span>Loan officers, title &amp; mortgage companies</span></div><div class="ind"><div class="ico"><svg viewBox="0 0 24 24"><path d="M14 6l4 4"/><path d="M9 11l-6 6 3 3 6-6"/><path d="M12 8l4-4 4 4-4 4z"/></svg></div>Construction &amp; Roofing<span>Contractors &amp; field-service teams</span></div><div class="ind"><div class="ico"><svg viewBox="0 0 24 24"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2"/><path d="M14.5 4.5C17 2 21 3 21 3s1 4-1.5 6.5L13 16l-5-5z"/><path d="M8 11l-3-1 3-3h4M13 16l1 3 3-3v-4"/></svg></div>Entrepreneurs<span>Founders &amp; growing small businesses</span></div></div>
+  </div>
+</section>
+
+<!-- ROLES -->
+<section class="center verts-sec">
+  <span class="deco deco-spike d-verts-spike" aria-hidden="true"></span>
+  <span class="deco deco-wheel d-verts-wheel" aria-hidden="true"></span>
+  <div class="wrap">
+    <span class="tag lilac">Roles we fill</span>
+    <h2>The support your business is missing.</h2>
+    <p class="lead">Fully qualified and verified bilingual professionals, ready to plug into your tools and your workflow.</p>
+    <div class="verts four"><div class="vert"><h3>Admin Support</h3><ul><li>Inbox, calendar and phone management</li><li>Client and customer follow-up in English &amp; Spanish</li><li>Data entry, CRM updates and records</li></ul></div><div class="vert"><h3>Operations Assistant</h3><ul><li>Scheduling crews, appointments and vendors</li><li>Order, job and project tracking</li><li>Process documentation and reporting</li></ul></div><div class="vert"><h3>Bookkeeping</h3><ul><li>Invoicing and accounts receivable follow-up</li><li>Bill pay and expense tracking</li><li>Reconciliations in QuickBooks or Xero</li></ul></div><div class="vert"><h3>Marketing Assistant</h3><ul><li>Social media scheduling and community management</li><li>Email campaigns and CRM lists</li><li>Lead tracking and simple reporting</li></ul></div></div>
+    <div class="cta-row"><a class="btn" href="#book">Get Started Free</a></div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="how-sec center">
+  <div class="wrap">
+    <span class="tag">How it works</span>
+    <h2>Three steps to your new team member.</h2>
+    <div class="how">
+      <div class="card"><h3>Tell us what you need</h3><p>A free 30-minute call to understand your workload, your tools and the tasks you want off your plate.</p></div>
+      <div class="card"><h3>Meet your match</h3><p>We present a shortlist selected by our HR team for your business. You interview them and choose who joins your team.</p></div>
+      <div class="card"><h3>Start for free</h3><p>Onboarding is on us. Your professional joins your workflow at 50% off your first month, with ongoing coaching and HR support from Orchid.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values-sec">
+  <div class="wrap split">
+    <span class="deco deco-lilac-shape d-val-shape" aria-hidden="true"></span>
+    <span class="deco deco-spike d-val-moon" aria-hidden="true"></span>
+    <div>
+      <span class="tag lilac">Why Colombia. Why Orchid.</span>
+      <h2>We create dignifying jobs in Colombia. That's why our people stay.</h2>
+      <p class="lead" style="margin-left:0">We believe talent and professionalism must be well valued. Orchid creates dignifying jobs for Colombian professionals and backs them with ongoing coaching and HR support. People who feel valued show up, grow and stay, and that is what keeps great professionals on your team.</p>
+      <ul>
+        <li>Dignifying jobs for Colombian professionals</li>
+        <li>Ongoing coaching and HR support from Orchid</li>
+        <li>Same business hours as the U.S.</li>
+        <li>People who feel valued stay and grow with you</li>
+      </ul>
+      <p class="quote">Talent flourishes when it is given structure, opportunity and respect.</p>
+    </div>
+    <figure class="photo"><img src="__IMG3__" alt="Andrea, Orchid Co-Founder" width="640" height="800"><figcaption>Andrea, Co-Founder &amp; COO</figcaption></figure>
+  </div>
+</section>
+
+<!-- TABLE -->
+<section class="center" style="background:var(--lilac-soft)">
+  <div class="wrap">
+    <span class="tag">Compare your options</span>
+    <h2>Orchid vs. your other options.</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th class="us">Orchid</th><th>Local U.S. hire</th><th>Freelancer / AI-matched platform</th></tr></thead>
+        <tbody><tr><td>Upfront cost</td><td class="us"><span class="ok">✓</span> FREE onboarding, 50% off month one</td><td><span class="no">✗</span> Recruiting fees, onboarding costs</td><td><span class="no">✗</span> Platform or placement fees</td></tr><tr><td>Ongoing cost</td><td class="us"><span class="ok">✓</span> Typically ~60% less than local</td><td><span class="no">✗</span> Salary, benefits, payroll taxes</td><td><span class="ok">✓</span> Low hourly rate</td></tr><tr><td>Selection</td><td class="us"><span class="ok">✓</span> HR team, one by one: behavioral, English, references</td><td><span class="no">✗</span> You run it yourself</td><td><span class="no">✗</span> AI filters or none</td></tr><tr><td>Talent care</td><td class="us"><span class="ok">✓</span> Dignifying jobs, ongoing HR support</td><td><span class="ok">✓</span> Yes, at a high cost</td><td><span class="no">✗</span> Race to the lowest rate</td></tr><tr><td>Retention</td><td class="us"><span class="ok">✓</span> Long-term, supported</td><td>Varies</td><td><span class="no">✗</span> High turnover</td></tr><tr><td>Bad fit?</td><td class="us"><span class="ok">✓</span> Replaced at $0</td><td><span class="no">✗</span> Start over</td><td><span class="no">✗</span> Start over</td></tr><tr><td>Time zone</td><td class="us"><span class="ok">✓</span> U.S. hours</td><td><span class="ok">✓</span> Same</td><td>Varies</td></tr></tbody>
+      </table>
+    </div>
+    <div class="cta-row"><a class="btn" href="#book">Get Started Free</a></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <span class="deco deco-spike d-testi-moon" aria-hidden="true"></span>
+  <span class="deco deco-spike d-testi-spike" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="center"><span class="tag">What our clients say</span><h2>Real clients. Real messages.</h2>
+    <p class="lead" style="color:var(--lilac)">Josué and Andrea check in with every client personally. Here's what they hear back.</p></div>
+    <div class="wall">
+      <div class="shot"><img src="__IMG4__" alt="Client message from Robert Wills"><p>Robert W.</p></div>
+      <div class="shot narrow"><img src="__IMG5__" alt="Client messages from Giselle Castel and Lourdes Marte"><p>Giselle C. &amp; Lourdes M.</p></div>
+      <div class="shot"><img src="__IMG6__" alt="Client message from Winston Delfs"><p>Winston D.</p></div>
+      <div class="shot"><img src="__IMG7__" alt="Client message from Lourdes Marte"><p>Lourdes M.</p></div>
+    </div>
+    <div class="cta-row"><a class="btn" href="#book">Get Started Free</a></div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guar-sec">
+  <div class="wrap">
+    <div class="guar">
+      <div class="seal"><b>$0</b>replacement<br>guarantee</div>
+      <div>
+        <h2>If it's not the right fit, we replace them. At no extra cost.</h2>
+        <p>We stand behind every match. If your professional isn't working out, we find and onboard a replacement with the same person-by-person selection process. Covered for the first <b>90 days</b> of every placement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="center" style="padding-top:0">
+  <div class="wrap">
+    <h2>Frequently asked questions</h2>
+    <div class="faq"><details open><summary>What does the Black Friday offer include?</summary><p>Getting started is free: there's no setup, recruiting or placement fee before your professional starts. Then you get 50% off Orchid's first monthly service fee. Spots are limited and the offer is reserved for calls booked by Dec 1, 2026 at 11:59 PM ET.</p></details><details><summary>What kind of businesses do you work with?</summary><p>U.S. companies and entrepreneurs of all sizes: insurance agencies, loan officers, title and mortgage companies, roofing and construction companies, healthcare practices and growing small businesses.</p></details><details><summary>Which roles can I hire?</summary><p>Admin support, operations assistants, bookkeepers and marketing assistants, all bilingual in English and Spanish. Not sure which one you need? We'll map it with you on the call.</p></details><details><summary>Do you use AI to select candidates?</summary><p>No. AI screening leaves room for errors and bias. Our HR team interviews every candidate personally, runs a behavioral assessment and a live English assessment, and checks references one by one.</p></details><details><summary>How much does it cost after the first month?</summary><p>It depends on the role and schedule. Most full-time roles start around <b>$1,700 to $2,200 per month</b>, all-in, and we give you an exact number on the call.</p></details><details><summary>Will they work my hours?</summary><p>Yes. Colombia shares U.S. business hours, so your professional is online when you are.</p></details><details><summary>Do I get to interview candidates?</summary><p>Always. We present the shortlist, and you choose who joins your team.</p></details><details><summary>What if it's not the right fit?</summary><p>We replace your placement at no extra cost under our replacement guarantee.</p></details></div>
+  </div>
+</section>
+
+
+<div class="mbar"><a class="btn" href="#book">Get Started Free</a></div>
+
+</div><!-- /.orx -->
+
+<script>
+// Black Friday countdown: fixed deadline for every visitor.
+// Ends Tuesday, Dec 1, 2026 at 11:59 PM Eastern Time (UTC-5; same as Bogota time).
+(function(){
+  var deadline=new Date('2026-12-01T23:59:00-05:00').getTime();
+  var q=function(c){return document.querySelectorAll(c)};
+  var dd=q('.dd'),hh=q('.hh'),mm=q('.mm'),ss=q('.ss'),bar=document.getElementById('offerbar'),big=document.querySelector('.bigclock');
+  var pad=function(n){return String(n).padStart(2,'0')};
+  var set=function(list,val){list.forEach(function(e){e.textContent=pad(val)})};
+  function tick(){
+    var left=Math.max(0,deadline-Date.now());
+    set(dd,Math.floor(left/864e5)); set(hh,Math.floor(left%864e5/36e5)); set(mm,Math.floor(left%36e5/6e4)); set(ss,Math.floor(left%6e4/1e3));
+    if(left<=0){
+      bar.classList.add('expired'); if(big){big.classList.add('expired'); big.querySelector('.bl').textContent='The Black Friday offer has ended';}
+      bar.querySelector('.txt').textContent='The Black Friday offer has ended.';
+      var tl=bar.querySelector('.txt-long'); if(tl) tl.style.display='none';
+      bar.querySelector('a').textContent='Book a call to check availability';
+      clearInterval(t);
+    }
+  }
+  var t=setInterval(tick,1000); tick();
+  var lf=document.getElementById('leadform'); // el formulario ahora es el de GHL, fuera de este widget
+  if(lf) lf.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(window.fbq){ try{ fbq('track','Lead'); }catch(_){} }
+    this.querySelector('button').textContent="Thank you! We'll be in touch.";
+  });
+})();
+</script>
+<script>
+// Video: swap the poster for a YouTube embed on click. Change data-yt on .video to replace the video.
+(function(){
+  var v=document.querySelector('.orx .video[data-yt]');
+  if(!v) return;
+  var play=function(){
+    if(v.classList.contains('playing')) return;
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+v.getAttribute('data-yt')+'?autoplay=1&rel=0&playsinline=1';
+    f.title="Meet Josué & Andrea, Orchid's founders";
+    f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    f.referrerPolicy='strict-origin-when-cross-origin';
+    f.allowFullscreen=true;
+    v.appendChild(f); v.classList.add('playing');
+  };
+  v.addEventListener('click',play);
+  var btn=v.querySelector('.play');
+  if(btn) btn.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); play(); } });
+})();
+</script>
+</body>
+</html>
