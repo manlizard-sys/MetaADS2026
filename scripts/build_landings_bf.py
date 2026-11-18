@@ -23,7 +23,17 @@ COMMON = [  # both markets
     ("Tell us about your firm.", "Tell us about your {unit}.", 1),
     ('<div class="mini-offer">$0 upfront · 50% off your first month</div>',
      '<div class="mini-offer">Get started free · 50% off your first month</div>', 1),
-    ("var KEY='orchid_offer_deadline_final'", "var KEY='orchid_offer_deadline_{key}'", 1),
+    # Countdown: same fixed deadline as the short landings and the ads (Dec 1, 11:59 pm ET), shown as days / hours / minutes.
+    ('<span class="d mm">30</span><i>:</i><span class="d ss">00</span>',
+     '<span class="d dd">00</span><i>d</i><span class="d mm">00</span><i>h</i><span class="d ss">00</span><i>m</i>', 2),
+    ("// 30-minute offer window per visitor. Persisted so a reload doesn't reset it.", "// Black Friday countdown: fixed deadline for every visitor (Dec 1 2026, 11:59 pm ET).", 1),
+    ("  var KEY='orchid_offer_deadline_final', LEN=30*60*1000, deadline;\n  // Internal testing: add ?resettimer to the URL to restart the 30 minutes.\n  if(/[?&]resettimer/.test(location.search)){ try{localStorage.removeItem(KEY);}catch(e){} }\n  try{ deadline=parseInt(localStorage.getItem(KEY),10); }catch(e){}\n  if(!deadline||isNaN(deadline)){ deadline=Date.now()+LEN; try{localStorage.setItem(KEY,deadline);}catch(e){} }\n  var mms=",
+     "  var deadline=new Date('2026-12-01T23:59:00-05:00').getTime();\n  var dds=document.querySelectorAll('.dd'), mms=", 1),
+    ("var left=Math.max(0,deadline-Date.now()), m=Math.floor(left/60000), s=Math.floor(left%60000/1000);\n    mms.forEach(function(e){e.textContent=String(m).padStart(2,'0')});",
+     "var left=Math.max(0,deadline-Date.now()), dd=Math.floor(left/864e5), m=Math.floor(left%864e5/36e5), s=Math.floor(left%36e5/6e4);\n    dds.forEach(function(e){e.textContent=String(dd).padStart(2,'0')}); mms.forEach(function(e){e.textContent=String(m).padStart(2,'0')});", 1),
+    ("The 50% offer window has closed.", "The Black Friday offer has ended.", 1),
+    ('<span class="txt">Offer ends in</span>', '<span class="txt">Ends Dec 1 · days / hrs / min</span>', 1),
+    ('<span class="bl">Offer ends in</span>', '<span class="bl">Ends Dec 1 · days / hrs / min</span>', 1),
     ("ORCHID | Attorneys funnel (hero option B)", "ORCHID | {name} funnel (Black Friday, from attorneys hero B)", None),
     ("SEO title (Page settings): Orchid for Law Firms | $0 Upfront, 50% Off Your First Month", "SEO title (Page settings): {seo_title}", 1),
     ("SEO description (Page settings): Bilingual legal professionals from Colombia for U.S. law firms, selected one by one by our HR team. $0 upfront and 50% off your first month.",
@@ -45,7 +55,7 @@ MARKETS = {
     "healthcare": dict(
         name="Healthcare", unit="practice", key="bf_health",
         seo_title="Orchid for Healthcare Practices | Get Started Free, 50% Off Your First Month",
-        seo_desc="HIPAA-trained, bilingual healthcare support professionals from Colombia for U.S. practices, selected one by one by our HR team. Black Friday: get started free and 50% off your first month.",
+        seo_desc="HIPAA-trained, bilingual healthcare support professionals from Colombia for U.S. practices, selected one by one and backed by ongoing HR support from Orchid. Black Friday: get started free and 50% off your first month.",
         rep=[
             ("For U.S. Law Firms &amp; Attorneys", "For U.S. Healthcare Practitioners", 1),
             ("with a bilingual legal professional from Colombia, selected for your firm by people, not AI.",
@@ -53,7 +63,7 @@ MARKETS = {
             ("<p class=\"lead\">Delegation is a revenue decision. Hand off client calls, intake, follow-ups and back-office work to a full-time professional with proven experience in legal operations, online during your hours.</p>",
              "<p class=\"lead\">Your front desk shouldn't be the reason patients wait on hold. Hand off scheduling, patient intake, insurance verification calls and follow-ups to a full-time, HIPAA-trained professional, online during your hours.</p>", 1),
             ("<li>Replaced at $0 if it's not the right fit</li>\n    </ul>",
-             "<li>HIPAA-trained and certified, renewed every year</li>\n      <li>Replaced at $0 if it's not the right fit</li>\n    </ul>", 1),
+             "<li>HIPAA-trained and certified, renewed every year</li>\n      <li>Ongoing HR support and coaching from Orchid</li>\n      <li>Replaced at $0 if it's not the right fit</li>\n    </ul>", 1),
             ("hours a week back for every attorney", "hours a week back for your front desk", 1),
             ("<h2>Most firms don't lack talent.<br>They lack structure.</h2>", "<h2>Most practices don't lack patients.<br>They lack front-desk capacity.</h2>", 1),
             (PAIN_CARD1, "<h3>Every unanswered call is a patient who books elsewhere</h3>\n        <p>You're with a patient. Someone calls to book, nobody answers in Spanish, and they book with the next practice that picks up.</p>\n        <span class=\"chip\">Appointments lost while you treat</span>", 1),
@@ -68,6 +78,7 @@ MARKETS = {
                     '      <div class="vert"><h3>Medical Scheduler</h3><ul><li>Manages the schedule, cancellations and waitlist</li><li>Insurance eligibility and verification calls</li><li>Prior authorization follow-up</li></ul></div>\n'
                     '      <div class="vert"><h3>Interpreter &amp; Patient Support</h3><ul><li>Spanish interpretation on calls</li><li>Patient follow-ups and questions</li><li>Inbox and records management</li></ul></div>', 1),
             (FAQ_LEGAL, "<details name=\"faq\"><summary>Are they HIPAA-trained?</summary><p>Yes. Every professional placed with a healthcare practice completes HIPAA training and certification before starting, and Orchid renews it every year.</p></details>\n"
+                        "      <details name=\"faq\"><summary>What support do you give after they start?</summary><p>Ongoing HR support from Orchid: regular check-ins with your assistant, coaching, yearly HIPAA renewal and a $0 replacement if it's not the right fit. You manage the work; we take care of the people side.</p></details>\n"
                         "      <details name=\"faq\"><summary>Do they need access to our systems?</summary><p>They work inside your scheduling, EHR or phone tools with the access you choose to grant, following your practice's policies.</p></details>", 1),
         ]),
     "entrepreneurs": dict(
@@ -100,7 +111,10 @@ MARKETS = {
 
 def apply(text, reps, m):
     for old, new, count in reps:
-        old_f, new_f = old, (new.format(**m) if "{" in new else new)
+        new_f = new
+        for k in ("unit", "key", "name", "seo_title", "seo_desc"):
+            new_f = new_f.replace("{" + k + "}", str(m.get(k, "")))
+        old_f = old
         n = text.count(old_f)
         if count is not None and n != count:
             raise SystemExit(f"[{m['name']}] expected {count} match(es), found {n}: {old_f[:80]}")
@@ -117,6 +131,12 @@ for market, m in MARKETS.items():
     p1 = apply(SRC[1], [r for r in reps if r[0] not in ("Tell us about your firm.", '<div class="mini-offer">$0 upfront · 50% off your first month</div>')], m)
     p2 = apply(SRC[2], [r for r in COMMON if r[0] in ("Tell us about your firm.", '<div class="mini-offer">$0 upfront · 50% off your first month</div>',
                                                         "ORCHID | Attorneys funnel (hero option B)", "Claim My 50% Off")], m)
+    # Split-test marker: GHL stores the page URL on the contact, so the long variant tags it with lp_variant=long.
+    p1 += """
+<script>
+// A/B test marker (long landing): adds lp_variant=long to the URL so GHL records which variant the lead saw.
+(function(){ try{ var u=new URL(location.href); if(!u.searchParams.has('lp_variant')){ u.searchParams.set('lp_variant','long'); history.replaceState(null,'',u.toString()); } }catch(e){} })();
+</script>"""
     (out / "piece1.html").write_text(p1); (out / "piece2.html").write_text(p2); (out / "piece3.html").write_text(SRC[3])
     left = [w for w in ("legal", "attorney", "law firm", "Law Firm", "litigate", "paralegal") if w in p1.split("</style>", 1)[1] + p2]
     print(market, "ok", len(p1), len(p2), "· leftover legal words:", left)

@@ -3,7 +3,7 @@
   GHL: full-width section > row > column, padding/margins 0 > Custom Code.
   This piece holds ALL styles for pieces 2 and 3, so it must be on the page.
   SEO title (Page settings): Orchid for Healthcare Practices | Get Started Free, 50% Off Your First Month
-  SEO description (Page settings): HIPAA-trained, bilingual healthcare support professionals from Colombia for U.S. practices, selected one by one by our HR team. Black Friday: get started free and 50% off your first month.
+  SEO description (Page settings): HIPAA-trained, bilingual healthcare support professionals from Colombia for U.S. practices, selected one by one and backed by ongoing HR support from Orchid. Black Friday: get started free and 50% off your first month.
   Image URLs already point to the GHL Media Library.
 ============================================================ -->
 <style>:root{color-scheme:only light}</style>
@@ -394,8 +394,8 @@ html{scroll-behavior:smooth;scroll-padding-top:150px}
   </div></nav>
   <div class="offerbar" id="offerbar"><div class="wrap">
     <span class="txt-long">🔥 Black Friday: get started free + 50% off your first month.</span>
-    <span class="txt">Offer ends in</span>
-    <span class="clock" aria-live="polite"><span class="d mm">30</span><i>:</i><span class="d ss">00</span></span>
+    <span class="txt">Ends Dec 1 · days / hrs / min</span>
+    <span class="clock" aria-live="polite"><span class="d dd">00</span><i>d</i><span class="d mm">00</span><i>h</i><span class="d ss">00</span><i>m</i></span>
     <a href="#book">Claim it</a>
   </div></div>
 </div>
@@ -415,7 +415,7 @@ html{scroll-behavior:smooth;scroll-padding-top:150px}
         <div><b>$0</b><small>upfront</small></div>
         <div><b>50% OFF</b><small>your first month</small></div>
       </div>
-      <div class="bigclock" aria-hidden="true"><span class="bl">Offer ends in</span><span class="clock"><span class="d mm">30</span><i>:</i><span class="d ss">00</span></span></div>
+      <div class="bigclock" aria-hidden="true"><span class="bl">Ends Dec 1 · days / hrs / min</span><span class="clock"><span class="d dd">00</span><i>d</i><span class="d mm">00</span><i>h</i><span class="d ss">00</span><i>m</i></span></div>
     </div>
     <h1><em>Buy your time back</em> with a bilingual healthcare support professional from Colombia, selected for your practice by people, not AI.</h1>
     <p class="lead">Your front desk shouldn't be the reason patients wait on hold. Hand off scheduling, patient intake, insurance verification calls and follow-ups to a full-time, HIPAA-trained professional, online during your hours.</p>
@@ -423,6 +423,7 @@ html{scroll-behavior:smooth;scroll-padding-top:150px}
       <li>U.S. business hours</li>
       <li>Fluent English &amp; Spanish</li>
       <li>HIPAA-trained and certified, renewed every year</li>
+      <li>Ongoing HR support and coaching from Orchid</li>
       <li>Replaced at $0 if it's not the right fit</li>
     </ul>
     <div class="cta-row">
@@ -629,6 +630,7 @@ html{scroll-behavior:smooth;scroll-padding-top:150px}
       <details name="faq" open><summary>What does the offer include?</summary><p>$0 upfront: there's no setup or placement fee before your professional starts. Then you get 50% off Orchid's first monthly service fee. The Black Friday offer is valid for calls booked until December 1st, while spots last.</p></details>
       <details name="faq"><summary>Do you use AI to select candidates?</summary><p>No. AI screening leaves room for errors and bias. Our HR team interviews every candidate personally, runs a behavioral assessment and a live English assessment, and checks references one by one.</p></details>
       <details name="faq"><summary>Are they HIPAA-trained?</summary><p>Yes. Every professional placed with a healthcare practice completes HIPAA training and certification before starting, and Orchid renews it every year.</p></details>
+      <details name="faq"><summary>What support do you give after they start?</summary><p>Ongoing HR support from Orchid: regular check-ins with your assistant, coaching, yearly HIPAA renewal and a $0 replacement if it's not the right fit. You manage the work; we take care of the people side.</p></details>
       <details name="faq"><summary>Do they need access to our systems?</summary><p>They work inside your scheduling, EHR or phone tools with the access you choose to grant, following your practice's policies.</p></details>
       <details name="faq"><summary>How much does it cost after the first month?</summary><p>It depends on the role and schedule. Most full-time roles start around <b>$1,700 to $2,200 per month</b>, all-in, and we give you an exact number on the call.</p></details>
       <details name="faq"><summary>Will they work my hours?</summary><p>Yes. Colombia shares U.S. business hours, so your professional is online when you are.</p></details>
@@ -640,20 +642,16 @@ html{scroll-behavior:smooth;scroll-padding-top:150px}
 </div>
 
 <script>
-// 30-minute offer window per visitor. Persisted so a reload doesn't reset it.
+// Black Friday countdown: fixed deadline for every visitor (Dec 1 2026, 11:59 pm ET).
 (function(){
-  var KEY='orchid_offer_deadline_bf_health', LEN=30*60*1000, deadline;
-  // Internal testing: add ?resettimer to the URL to restart the 30 minutes.
-  if(/[?&]resettimer/.test(location.search)){ try{localStorage.removeItem(KEY);}catch(e){} }
-  try{ deadline=parseInt(localStorage.getItem(KEY),10); }catch(e){}
-  if(!deadline||isNaN(deadline)){ deadline=Date.now()+LEN; try{localStorage.setItem(KEY,deadline);}catch(e){} }
-  var mms=document.querySelectorAll('.mm'), sss=document.querySelectorAll('.ss'), bar=document.getElementById('offerbar'), big=document.querySelector('.bigclock');
+  var deadline=new Date('2026-12-01T23:59:00-05:00').getTime();
+  var dds=document.querySelectorAll('.dd'), mms=document.querySelectorAll('.mm'), sss=document.querySelectorAll('.ss'), bar=document.getElementById('offerbar'), big=document.querySelector('.bigclock');
   function tick(){
-    var left=Math.max(0,deadline-Date.now()), m=Math.floor(left/60000), s=Math.floor(left%60000/1000);
-    mms.forEach(function(e){e.textContent=String(m).padStart(2,'0')}); sss.forEach(function(e){e.textContent=String(s).padStart(2,'0')});
+    var left=Math.max(0,deadline-Date.now()), dd=Math.floor(left/864e5), m=Math.floor(left%864e5/36e5), s=Math.floor(left%36e5/6e4);
+    dds.forEach(function(e){e.textContent=String(dd).padStart(2,'0')}); mms.forEach(function(e){e.textContent=String(m).padStart(2,'0')}); sss.forEach(function(e){e.textContent=String(s).padStart(2,'0')});
     if(left<=0){
       bar.classList.add('expired'); if(big){big.classList.add('expired'); big.querySelector('.bl').textContent='Offer window closed';}
-      bar.querySelector('.txt').textContent='The 50% offer window has closed.';
+      bar.querySelector('.txt').textContent='The Black Friday offer has ended.';
       var tl=bar.querySelector('.txt-long'); if(tl) tl.style.display='none';
       bar.querySelector('a').textContent='Book a call to check availability';
       clearInterval(t);
@@ -716,4 +714,8 @@ html{scroll-behavior:smooth;scroll-padding-top:150px}
     });
   });
 })();
+</script>
+<script>
+// A/B test marker (long landing): adds lp_variant=long to the URL so GHL records which variant the lead saw.
+(function(){ try{ var u=new URL(location.href); if(!u.searchParams.has('lp_variant')){ u.searchParams.set('lp_variant','long'); history.replaceState(null,'',u.toString()); } }catch(e){} })();
 </script>

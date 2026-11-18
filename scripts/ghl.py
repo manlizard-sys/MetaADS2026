@@ -99,7 +99,8 @@ def main():
         rows.append({"id": c.get("id"), "date": (c.get("dateAdded") or "")[:10],
                      "ad": attr.get("utmContent") or "(sin utm)", "source": attr.get("sessionSource") or c.get("source") or "",
                      "hiring_or_job": help_, "vertical": biz, "role": role, "tags": tags,
-                     "booked": "agendo" in tags, "job_seeker": job})
+                     "booked": "agendo" in tags, "job_seeker": job,
+                     "lp": "long" if "lp_variant=long" in (last.get("url") or first.get("url") or "") else "short"})
 
     by_ad = collections.defaultdict(lambda: {"leads": 0, "job_seekers": 0, "booked": 0})
     for r in rows:
