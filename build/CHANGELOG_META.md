@@ -80,3 +80,4 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 
 ## 2026-11-19 · Landing corto al 100%
 - Manuel pide que los anuncios lleven solo al landing corto (el largo no es claro). Prueba A/B en GHL activa (verificado: practices-free-month y business-free-month sirven la larga ~50%). Prompt: build/prompts/chrome_quitar_landing_largo.md. Los anuncios no cambian (ya apuntan a esas URLs).
+- Actualización: Manuel decide mantener la prueba A/B 50/50 en GHL. El prompt chrome_quitar_landing_largo.md NO se usa.
