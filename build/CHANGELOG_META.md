@@ -106,3 +106,4 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - Landings largos: el espacio de video del hero tenía un ID de YouTube de relleno (video musical de My Chemical Romance). Diseños actualizados para reproducir el MP4; parche para GHL en build/landings/long_designs/video_patch.html; prompt build/prompts/chrome_video_landings_largos.md.
 - Ojo: el video dice "save 40–50%"; el anuncio Same work y el landing largo dicen "60% less".
 - 2026-11-19: Chrome subió el video a GHL (https://files.leadconnectorhq.com/file/6aff3dfcff777b8c6ebdbe51/video-web-2-web720.mp4) y aplicó el parche en ambas variantes largas. Source del repo actualizado con esa URL y '90 seconds' → '1 minute' (pendiente en GHL: build/prompts/chrome_video_90s.md).
+- 2026-11-19: Manuel decide mantener ambos mensajes de ahorro (40–50% en el video de fundadores, 60% en Same work y landing largo): mensajes distintos según el mercado.
