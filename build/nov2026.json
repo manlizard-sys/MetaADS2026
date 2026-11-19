@@ -138,7 +138,10 @@
       "ent_creative": "1693504285739531",
       "ent_adset": "120257891833940196",
       "ent_ad": "120257891834940196",
-      "ent_old_paused": true
+      "ent_old_paused": true,
+      "audience": "advantage_off",
+      "daily_budget_usd": 20
     }
-  }
+  },
+  "budget_month_usd": 1300
 }

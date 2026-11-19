@@ -70,3 +70,10 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - Creativo: 4x5 en feeds, 9x16 en stories/reels; primera variante de copy; mismo UTM.
 - Pausados: 120257824793320196 (HC 6am-10pm) y 120257823105150196 (ENT 6am-10pm).
 - Script: scripts/lpv_switch_nov19.py. Estado: build/nov2026.json → build.lpv19.
+
+## 2026-11-19 · Audiencia fija y presupuesto (aprobado por Manuel)
+- Presupuesto mensual sube de $1,000 a $1,300.
+- Conjuntos LPV: Advantage+ audience OFF, edad 30–65, EE. UU., excluye WEB - Leads 180D.
+  - Healthcare: industria "Healthcare and Medical Services" Y (Small business owners O Business page admins O cargos de consultorio) → ~300–350 mil.
+  - Entrepreneurs: Small business owners O Business page admins → ~10–12 millones.
+- Presupuesto diario: $9 → $20 por conjunto hasta Nov 30. Script: scripts/upd_audience_nov19.py.
