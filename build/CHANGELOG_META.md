@@ -107,3 +107,4 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - Ojo: el video dice "save 40–50%"; el anuncio Same work y el landing largo dicen "60% less".
 - 2026-11-19: Chrome subió el video a GHL (https://files.leadconnectorhq.com/file/6aff3dfcff777b8c6ebdbe51/video-web-2-web720.mp4) y aplicó el parche en ambas variantes largas. Source del repo actualizado con esa URL y '90 seconds' → '1 minute' (pendiente en GHL: build/prompts/chrome_video_90s.md).
 - 2026-11-19: Manuel decide mantener ambos mensajes de ahorro (40–50% en el video de fundadores, 60% en Same work y landing largo): mensajes distintos según el mercado.
+- 2026-11-19: Chrome confirmó '1 minute' en GHL (ambas variantes largas). Nota para prompts: el editor de Custom Code de GHL no tiene búsqueda (Ctrl+F escribe 'f'); indicar número de línea o texto vecino.
