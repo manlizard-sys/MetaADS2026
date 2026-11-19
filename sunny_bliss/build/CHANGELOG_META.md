@@ -33,3 +33,9 @@ Las horas están en la zona horaria de la cuenta.
 
 ## 2026-11-16 · Slack alert test
 - Test lead sent through the API to the IAQ EN form (2432388560901375) to test the new GHL to Slack alert. It reached GHL with the tag meta-iaq-en. Delete the test contact in GHL and the test lead in Meta afterwards. No changes to campaigns, ad sets or ads.
+
+## 2026-11-19 · Budget ramp, week 1 (approved by the user)
+- Services leads ad set (120254888157690640): $53 to $56/day.
+- Awareness ad set (120254888158030640): $13 to $14/day.
+- Total services $66 to $70/day (80/20). Hiring unchanged. Increase under 20%, so no learning reset.
+- Weekly reminder created (Thursdays 8:41 ET) to propose +$4/day up to ~$99/day ($3,000/month).
