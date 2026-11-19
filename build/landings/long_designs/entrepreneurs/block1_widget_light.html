@@ -423,7 +423,7 @@ html{scroll-behavior:smooth;scroll-padding-top:150px}
       <span class="spots">Limited spots · Offer ends Dec 1 at 11:59 PM (ET)</span>
       <p class="terms">Free onboarding: no setup, recruiting or placement fee before your professional starts. 50% off applies to Orchid's first monthly service fee. Valid for calls booked by Dec 1, 2026 at 11:59 PM ET. Limited spots. Terms and conditions apply.</p>
     </div>
-    <div class="video" data-yt="uCUpvTMis-Y">
+    <div class="video" data-mp4="__VIDEO_URL__">
       <img src="__IMG2__" alt="Josué and Andrea, Orchid founders" width="1280" height="720">
       <div class="pay up"><small>Local U.S. hire / year</small><b>$62,000</b></div>
       <div class="play" role="button" tabindex="0" aria-label="Play video"></div>
@@ -658,18 +658,16 @@ html{scroll-behavior:smooth;scroll-padding-top:150px}
 })();
 </script>
 <script>
-// Video: swap the poster for a YouTube embed on click. Change data-yt on .video to replace the video.
+// Video: swap the poster for the founders video (MP4 hosted in GHL Media Library) on click. Change data-mp4 on .video to replace it.
 (function(){
-  var v=document.querySelector('.orx .video[data-yt]');
+  var v=document.querySelector('.orx .video[data-mp4]');
   if(!v) return;
   var play=function(){
     if(v.classList.contains('playing')) return;
-    var f=document.createElement('iframe');
-    f.src='https://www.youtube-nocookie.com/embed/'+v.getAttribute('data-yt')+'?autoplay=1&rel=0&playsinline=1';
-    f.title="Meet Josué & Andrea, Orchid's founders";
-    f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-    f.referrerPolicy='strict-origin-when-cross-origin';
-    f.allowFullscreen=true;
+    var f=document.createElement('video');
+    f.src=v.getAttribute('data-mp4'); f.controls=true; f.autoplay=true; f.playsInline=true;
+    f.setAttribute('playsinline',''); f.title="Meet Josué & Andrea, Orchid's founders";
+    f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5;background:#000;object-fit:contain';
     v.appendChild(f); v.classList.add('playing');
   };
   v.addEventListener('click',play);

@@ -100,3 +100,8 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - 5 anuncios V1 · POVEmail: CTA LEARN_MORE → Book now (BOOK_TRAVEL). Descripción cambiada (decía "law firms and real estate teams" en todas las verticales) → "Vetted, bilingual professionals from Colombia, working your U.S. hours."
 - Mismos videos, copy, UTM y nombres. Script: scripts/awareness_booknow_nov19.py.
 - Video nuevo de Drive (1-WD2ZAWx3CO7gqfEL2mJUmWUEWOJ2m-3): sin acceso desde la cuenta conectada; pendiente.
+
+## 2026-11-19 · Video de Andrea y Josué ("video web 2")
+- Awareness: anuncio nuevo "V2 · Founders · {vertical} · Nov19" en los 5 conjuntos (16:9 feeds, 9:16 con bandas violeta en stories/reels), CTA Book now. Videos Meta 1664172378481741 (16:9) y 1495797685701551 (9:16). Script: scripts/awareness_video_nov19.py.
+- Landings largos: el espacio de video del hero tenía un ID de YouTube de relleno (video musical de My Chemical Romance). Diseños actualizados para reproducir el MP4; parche para GHL en build/landings/long_designs/video_patch.html; prompt build/prompts/chrome_video_landings_largos.md.
+- Ojo: el video dice "save 40–50%"; el anuncio Same work y el landing largo dicen "60% less".
