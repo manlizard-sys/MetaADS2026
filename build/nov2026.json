@@ -141,6 +141,22 @@
       "ent_old_paused": true,
       "audience": "advantage_off",
       "daily_budget_usd": 20
+    },
+    "content19": {
+      "images": {
+        "sw_4x5": "de3b97dfccf883182605de371be23dbe",
+        "sw_9x16": "c863c871a745a1b201079a188988f817"
+      },
+      "hc_bf_creative": "1145913228336276",
+      "hc_bf_swapped": true,
+      "hc_sw_creative": "1129005539755407",
+      "hc_sw_ad": "120257894647570196",
+      "ent_bf_creative": "1077031282050772",
+      "ent_bf_swapped": true,
+      "ent_sw_creative": "2401126050738359",
+      "ent_sw_ad": "120257894651480196",
+      "rt_creative": "1590415369522300",
+      "rt_swapped": true
     }
   },
   "budget_month_usd": 1300

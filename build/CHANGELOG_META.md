@@ -87,3 +87,11 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - Entrepreneurs LPV: quitados intereses Insurance, Business, Small business, Entrepreneurship → ~34–40 millones.
 - Script: scripts/fix_audience_nov19b.py.
 - Nuevos creativos de Debi 'Same work. 60% less.' (4x5, 9x16, 1x1) guardados en build/creatives/same_work/ — pendiente decidir uso.
+
+## 2026-11-19 · CTA "Book now", copy para Andromeda y anuncio "Same work. 60% less." (aprobado)
+- CTA "Book now" (API BOOK_TRAVEL; BOOK_NOW lo rechaza Meta en anuncios de leads con asset feed) en los 2 BF LPV, 2 SameWork y RT.
+- Copy nuevo en build/copy_nov19.json: audiencia nombrada en las primeras palabras, un ángulo por anuncio, oferta + fecha (Dec 1).
+- Anuncios SameWork nuevos: HC 120257894647570196, ENT 120257894651480196 (4x5 feeds, 9x16 stories/reels).
+- BF LPV y RT: creativo cambiado (mismo nombre de anuncio → mismo utm_content).
+- Sin cambio: awareness (LEARN_MORE) y seguidores IG (VIEW_INSTAGRAM_PROFILE).
+- Script: scripts/content_nov19c.py.
