@@ -95,3 +95,8 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - BF LPV y RT: creativo cambiado (mismo nombre de anuncio → mismo utm_content).
 - Sin cambio: awareness (LEARN_MORE) y seguidores IG (VIEW_INSTAGRAM_PROFILE).
 - Script: scripts/content_nov19c.py.
+
+## 2026-11-19 · Awareness con "Book now" (aprobado)
+- 5 anuncios V1 · POVEmail: CTA LEARN_MORE → Book now (BOOK_TRAVEL). Descripción cambiada (decía "law firms and real estate teams" en todas las verticales) → "Vetted, bilingual professionals from Colombia, working your U.S. hours."
+- Mismos videos, copy, UTM y nombres. Script: scripts/awareness_booknow_nov19.py.
+- Video nuevo de Drive (1-WD2ZAWx3CO7gqfEL2mJUmWUEWOJ2m-3): sin acceso desde la cuenta conectada; pendiente.
