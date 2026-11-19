@@ -61,3 +61,12 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - build/landings/long_designs/{healthcare,entrepreneurs}: fecha límite cambiada de Nov 27 a Dec 1, 2026 11:59 PM ET (contador, barra, términos, FAQ). Claims HIPAA sin cambios (confirmados por el cliente).
 - Script marcador lp_variant=long agregado al bloque 1. Versión liviana block1_widget_light.html + images/ como respaldo si GHL rechaza el tamaño.
 - build/prompts/chrome_ab_landings.md reescrito para usar estos diseños.
+
+## 2026-11-19 · Leads BF pasan a optimizar por visitas a la landing (aprobado por Manuel: "Hazlo")
+- Motivo: CPM de $161–229 optimizando por Lead sin historial (9 Lead en 30 días); CTR bueno (2.2–2.7%).
+- Nuevos conjuntos (ACTIVOS, $9/día c/u, fin Nov 30 23:59 ET, ubicaciones Advantage+, sin horario):
+  - Healthcare: adset 120257891824390196 · ad 120257891832480196 · creative 1130627023197364
+  - Entrepreneurs: adset 120257891833940196 · ad 120257891834940196 · creative 1693504285739531
+- Creativo: 4x5 en feeds, 9x16 en stories/reels; primera variante de copy; mismo UTM.
+- Pausados: 120257824793320196 (HC 6am-10pm) y 120257823105150196 (ENT 6am-10pm).
+- Script: scripts/lpv_switch_nov19.py. Estado: build/nov2026.json → build.lpv19.

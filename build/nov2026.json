@@ -129,6 +129,16 @@
       "rt_creative": "1976149583358294",
       "rt_ad": "120257827389620196"
     },
-    "aw_daily_from_nov16": 100
+    "aw_daily_from_nov16": 100,
+    "lpv19": {
+      "hc_creative": "1130627023197364",
+      "hc_adset": "120257891824390196",
+      "hc_ad": "120257891832480196",
+      "hc_old_paused": true,
+      "ent_creative": "1693504285739531",
+      "ent_adset": "120257891833940196",
+      "ent_ad": "120257891834940196",
+      "ent_old_paused": true
+    }
   }
 }
