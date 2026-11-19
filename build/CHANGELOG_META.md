@@ -77,3 +77,6 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
   - Healthcare: industria "Healthcare and Medical Services" Y (Small business owners O Business page admins O cargos de consultorio) → ~300–350 mil.
   - Entrepreneurs: Small business owners O Business page admins → ~10–12 millones.
 - Presupuesto diario: $9 → $20 por conjunto hasta Nov 30. Script: scripts/upd_audience_nov19.py.
+
+## 2026-11-19 · Landing corto al 100%
+- Manuel pide que los anuncios lleven solo al landing corto (el largo no es claro). Prueba A/B en GHL activa (verificado: practices-free-month y business-free-month sirven la larga ~50%). Prompt: build/prompts/chrome_quitar_landing_largo.md. Los anuncios no cambian (ya apuntan a esas URLs).
