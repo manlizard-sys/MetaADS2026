@@ -81,3 +81,9 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 ## 2026-11-19 · Landing corto al 100%
 - Manuel pide que los anuncios lleven solo al landing corto (el largo no es claro). Prueba A/B en GHL activa (verificado: practices-free-month y business-free-month sirven la larga ~50%). Prompt: build/prompts/chrome_quitar_landing_largo.md. Los anuncios no cambian (ya apuntan a esas URLs).
 - Actualización: Manuel decide mantener la prueba A/B 50/50 en GHL. El prompt chrome_quitar_landing_largo.md NO se usa.
+
+## 2026-11-19 · Limpieza de audiencias ampliadas por Manuel (aprobado)
+- Healthcare LPV: quitado Small business owners / Small and medium enterprises del grupo de salud → ~263–310 mil.
+- Entrepreneurs LPV: quitados intereses Insurance, Business, Small business, Entrepreneurship → ~34–40 millones.
+- Script: scripts/fix_audience_nov19b.py.
+- Nuevos creativos de Debi 'Same work. 60% less.' (4x5, 9x16, 1x1) guardados en build/creatives/same_work/ — pendiente decidir uso.
