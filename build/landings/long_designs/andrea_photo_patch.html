@@ -1,0 +1,8 @@
+<!-- Orchid · cambia la foto de Andrea (sección "Why Colombia. Why Orchid."). Pegar AL FINAL del Custom Code del bloque 1 de la variante "B · Larga".
+     Cambia __PHOTO_URL__ por la URL de la foto en la Media Library de GHL. -->
+<script>
+(function(){
+  var URL_IMG='__PHOTO_URL__';
+  document.querySelectorAll('img[alt="Andrea, Orchid Co-Founder"]').forEach(function(i){ i.removeAttribute('srcset'); i.src=URL_IMG; });
+})();
+</script>
