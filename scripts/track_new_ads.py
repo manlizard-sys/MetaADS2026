@@ -73,6 +73,18 @@ try:
 except Exception as e:  # Meta numbers still publish if GHL is unreachable
     ghl_note = f"GHL not read this run: {str(e)[:200]}"
     print("GHL:", ghl_note)
+# Followers snapshot (IG + FB page), one row per day: the API gives only the current total, so growth is
+# measured from these daily snapshots (build/reports/followers.json).
+try:
+    from meta import get
+    snap = {"date": dt.date.today().isoformat(),
+            "ig": get("17841430599113385", fields="followers_count")["followers_count"],
+            "fb": get("1132642053254708", fields="followers_count")["followers_count"]}
+    fp = BUILD / "reports" / "followers.json"
+    hist = [h for h in (json.loads(fp.read_text()) if fp.exists() else []) if h["date"] != snap["date"]]
+    fp.write_text(json.dumps(sorted(hist + [snap], key=lambda h: h["date"]), indent=1))
+except Exception as e:
+    print("followers:", str(e)[:200])
 rows.sort(key=lambda x: (x["date"], x["market"], x["ad"]))
 code = Path(__file__).read_text()
 out = BUILD / "reports" / "tracker_ads.json"
