@@ -64,3 +64,6 @@ No old form or trigger was deleted or changed.
 - Paused: new-AC pair (AC EN, AC ES): lowest CTR and no leads.
 - FL ES and SI EN were already paused (since 2026-11-16 18:33 ET, not by this project); they stay paused with the v5 creative until the user decides.
 - All 12 ads went to review. Learning resets for 3 to 5 days.
+
+## 2026-11-20 · FL ES and SI EN reactivated (approved by the user)
+- Ads 120254888161610640 (FL ES) and 120254888159470640 (SI EN) back to ACTIVE with their v5 creative. They had been paused since 2026-11-16 18:33 ET outside this project.
