@@ -57,3 +57,10 @@ No old form or trigger was deleted or changed.
 - Open: phone field and lead SMS not verified (Meta dummy phone is not saved as a number; SMS also blocked until LC Phone + A2P 10DLC). Confirm with the first real v5 lead. The 2 test leads remain in Meta's Testing Tool (1 per form); delete them before testing those forms again.
 - Meta page apps: OzziOS (1497784867870945) and Zapier (234230510040096) fail the leadgen webhook (installing admin is no longer a page admin). LeadConnector (390181264778064) works.
 - Next (needs the user's OK): stage 2, swap the ads to the v5 forms and images, CTA "Book now", pause the new-AC pair.
+
+## 2026-11-20 · Stage 2: ads moved to v5 (approved by the user)
+- 12 ads (same ad IDs) now use the v5 forms and the v5 images (Call 305-239-4987): TU, SI, FL, IAQ (services ad set) and EV, PN (electrical launch), EN + ES. Copy kept; message ends with "Call 305-239-4987 or tap Book now." / "Llama al 305-239-4987 o toca Reserva ya." Script: scripts/forms_v5.py --swap.
+- CTA: BOOK_TRAVEL (shown as "Book now"). BOOK_NOW is rejected by Meta with lead forms (error 1856030).
+- Paused: new-AC pair (AC EN, AC ES): lowest CTR and no leads.
+- FL ES and SI EN were already paused (since 2026-11-16 18:33 ET, not by this project); they stay paused with the v5 creative until the user decides.
+- All 12 ads went to review. Learning resets for 3 to 5 days.
