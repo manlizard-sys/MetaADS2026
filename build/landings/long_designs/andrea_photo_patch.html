@@ -1,8 +1,11 @@
-<!-- Orchid · cambia la foto de Andrea (sección "Why Colombia. Why Orchid."). Pegar AL FINAL del Custom Code del bloque 1 de la variante "B · Larga".
+<!-- Orchid · foto de Josué y Andrea en la sección "Why Colombia. Why Orchid.". Pegar AL FINAL del Custom Code del bloque 1 de la variante "B · Larga".
      Cambia __PHOTO_URL__ por la URL de la foto en la Media Library de GHL. -->
 <script>
 (function(){
   var URL_IMG='__PHOTO_URL__';
-  document.querySelectorAll('img[alt="Andrea, Orchid Co-Founder"]').forEach(function(i){ i.removeAttribute('srcset'); i.src=URL_IMG; });
+  document.querySelectorAll('figure.photo img[alt="Andrea, Orchid Co-Founder"]').forEach(function(i){
+    i.removeAttribute('srcset'); i.src=URL_IMG; i.alt='Josué and Andrea, Orchid Co-Founders'; i.width=800; i.height=1000;
+    var c=i.parentNode.querySelector('figcaption'); if(c) c.textContent='Josué & Andrea, Co-Founders';
+  });
 })();
 </script>
