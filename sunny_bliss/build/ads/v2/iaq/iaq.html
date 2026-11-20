@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sunny Bliss IAQ ads</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800;900&display=swap">
+<style>
+/* Official brand colors (KickCharge guide): 7722 #005151, 394 #EDE939, 165 #FF671F, 7711 #0097A9, 3265 #00C7B1 */
+:root{--teal:#005151;--yellow:#EDE939;--orange:#FF671F;--blue:#0097A9;--aqua:#00C7B1;--cream:#FFFDF2}
+body{margin:0;background:#ddd;display:flex;flex-wrap:wrap;gap:20px;padding:20px;font-family:'Nunito',Arial,sans-serif}
+.ad{width:540px;height:675px;position:relative;overflow:hidden;box-sizing:border-box;flex:none;display:flex;flex-direction:column;background:var(--teal)}
+.disp{font-family:'Lilita One','Arial Black',sans-serif;font-weight:400;margin:0}
+p{margin:0}
+.check{font:800 21px/1.25 'Nunito',Arial,sans-serif;color:#fff}
+</style>
+</head>
+<body>
+<div id="root" style="display:contents"></div>
+<script>
+const L = {
+  en: {badge:'Indoor air quality', h:'Breathe cleaner air at home', sub:'Miami humidity keeps dust and mold spores moving through your AC.',
+       checks:['Air test: humidity, dust and airflow','UV lights and HEPA or media filters','Whole-home dehumidifiers','Duct cleaning and sealing'], pill:'$49 service call · limited time', foot:'NATE-certified techs · Lic. CAC1823405'},
+  es: {badge:'Calidad del aire', h:'Respira aire más limpio en casa', sub:'La humedad de Miami mueve polvo y esporas de moho por tu aire acondicionado.',
+       checks:['Prueba de humedad, polvo y flujo de aire','Luces UV y filtros HEPA o de media','Deshumidificadores para toda la casa','Limpieza y sellado de ductos'], pill:'Visita de servicio $49 · por tiempo limitado', foot:'Técnicos certificados NATE · Lic. CAC1823405'}
+};
+const wave = `<svg width="120" height="120" viewBox="0 0 64 64" fill="none" stroke-width="4.5" stroke-linecap="round" aria-hidden="true">
+  <path d="M6 22c8-6 14 6 22 0s14-6 22 0" stroke="#EDE939"/><path d="M6 34c8-6 14 6 22 0s14-6 22 0" stroke="#00C7B1"/><path d="M6 46c8-6 14 6 22 0s14-6 22 0" stroke="#FFFFFF"/>
+  <circle cx="56" cy="22" r="3" fill="#EDE939" stroke="none"/><circle cx="56" cy="46" r="3" fill="#fff" stroke="none"/></svg>`;
+const T = t => `<div class="ad">
+  <div style="height:170px;flex:none;background:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:0 22px;box-sizing:border-box">
+    <img src="img/logo.png" alt="Sunny Bliss Plumbing &amp; Air" style="height:136px;width:auto">
+    <span style="background:var(--blue);color:#fff;font:900 14px/1.2 'Nunito';letter-spacing:1px;text-transform:uppercase;padding:9px 12px;border-radius:12px;text-align:center;max-width:140px">${t.badge}</span></div>
+  <div style="height:10px;flex:none;background:var(--orange)"></div><div style="height:10px;flex:none;background:var(--blue)"></div>
+  <div style="flex:1;padding:22px 32px 24px;display:flex;flex-direction:column;gap:12px">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
+      <p class="disp" style="font-size:${t.h.length>28?46:52}px;line-height:1;color:var(--yellow);max-width:360px">${t.h}</p>
+      <div style="flex:none;margin-top:-6px">${wave}</div></div>
+    <p style="font:700 19px/1.3 'Nunito';color:#CFEDEA">${t.sub}</p>
+    <div style="display:flex;flex-direction:column;gap:5px">${t.checks.map(c=>`<p class="check">✓ ${c}</p>`).join('')}</div>
+    <span style="align-self:flex-start;background:var(--orange);color:#fff;font:900 20px 'Nunito';padding:10px 16px;border-radius:12px">${t.pill}</span>
+    <p style="margin-top:auto;font:800 15px 'Nunito';color:#fff;opacity:.9">sunnybliss.com · ${t.foot}</p>
+  </div></div>`;
+const root = document.getElementById('root');
+for (const lang of ['en','es']) { const w=document.createElement('div'); w.innerHTML=T(L[lang]); const el=w.firstElementChild; el.id=`iaq_${lang}`; root.appendChild(el); }
+</script>
+</body>
+</html>

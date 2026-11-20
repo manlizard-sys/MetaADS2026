@@ -1,0 +1,93 @@
+
+== Ubicación
+facebook / feed                          $ 1435.31 imp  23995 CTR 0.81 CPM 59.82 clics 195 LPV 91 leads 18 CPL 79.74
+instagram / feed                         $  384.58 imp   5628 CTR 0.73 CPM 68.33 clics 41 LPV 34 leads 9 CPL 42.73
+facebook / facebook_reels                $  259.68 imp   5668 CTR 1.32 CPM 45.82 clics 75 LPV 22 leads 2 CPL 129.84
+instagram / instagram_reels              $  107.87 imp   1995 CTR 1.15 CPM 54.07 clics 23 LPV 10 leads 0 CPL None
+facebook / facebook_reels_overlay        $  104.54 imp   6373 CTR 1.08 CPM 16.4 clics 69 LPV 19 leads 1 CPL 104.54
+instagram / instagram_stories            $   86.34 imp    959 CTR 1.56 CPM 90.04 clics 15 LPV 7 leads 1 CPL 86.34
+facebook / facebook_stories              $   80.31 imp    732 CTR 4.78 CPM 109.72 clics 35 LPV 8 leads 0 CPL None
+audience_network / an_classic            $   72.08 imp   5849 CTR 2.15 CPM 12.32 clics 126 LPV 69 leads 0 CPL None
+facebook / marketplace                   $   58.06 imp   2808 CTR 0.89 CPM 20.68 clics 25 LPV 3 leads 1 CPL 58.06
+facebook / search                        $   45.70 imp   1668 CTR 0.9 CPM 27.4 clics 15 LPV 5 leads 2 CPL 22.85
+facebook / instream_video                $   29.43 imp    638 CTR 1.88 CPM 46.13 clics 12 LPV 0 leads 2 CPL 14.72
+facebook / facebook_notification         $   15.26 imp    106 CTR 6.6 CPM 143.97 clics 7 LPV 0 leads 0 CPL None
+unknown / unknown                        $    7.51 imp    119 CTR 0.84 CPM 63.11 clics 1 LPV 1 leads 0 CPL None
+facebook / facebook_profile_feed         $    4.17 imp     56 CTR 0.0 CPM 74.47 clics 0 LPV 0 leads 0 CPL None
+threads / threads_feed                   $    3.46 imp    115 CTR 0.87 CPM 30.09 clics 1 LPV 1 leads 0 CPL None
+facebook / right_hand_column             $    1.57 imp    478 CTR 0.21 CPM 3.28 clics 1 LPV 0 leads 0 CPL None
+whatsapp / status                        $    1.06 imp    195 CTR 0.0 CPM 5.44 clics 0 LPV 0 leads 0 CPL None
+instagram / instagram_explore_grid_home  $    0.05 imp      6 CTR 0.0 CPM 8.33 clics 0 LPV 0 leads 0 CPL None
+facebook / biz_disco_feed                $    0.00 imp      1 CTR 0.0 CPM 0.0 clics 0 LPV 0 leads 0 CPL None
+
+== Edad
+65+                                      $  997.07 imp  18967 CTR 1.35 CPM 52.57 clics 257 LPV 116 leads 18 CPL 55.39
+55-64                                    $  662.15 imp  14005 CTR 1.03 CPM 47.28 clics 144 LPV 54 leads 10 CPL 66.22
+45-54                                    $  535.95 imp  11712 CTR 0.94 CPM 45.76 clics 110 LPV 47 leads 4 CPL 133.99
+35-44                                    $  366.80 imp   9568 CTR 0.92 CPM 38.34 clics 88 LPV 33 leads 2 CPL 183.4
+25-34                                    $  135.03 imp   3137 CTR 1.34 CPM 43.04 clics 42 LPV 19 leads 2 CPL 67.51
+Unknown                                  $    0.00 imp      0 CTR None CPM None clics 0 LPV 1 leads 0 CPL None
+
+== Género
+male                                     $ 1647.86 imp  38816 CTR 1.05 CPM 42.45 clics 407 LPV 165 leads 28 CPL 58.85
+female                                   $ 1015.00 imp  18017 CTR 1.28 CPM 56.34 clics 230 LPV 102 leads 8 CPL 126.87
+unknown                                  $   34.13 imp    556 CTR 0.72 CPM 61.39 clics 4 LPV 3 leads 0 CPL None
+
+== Dispositivo
+iphone                                   $ 1573.11 imp  34022 CTR 0.91 CPM 46.24 clics 308 LPV 136 leads 17 CPL 92.54
+android_smartphone                       $  915.45 imp  19118 CTR 1.5 CPM 47.88 clics 287 LPV 114 leads 13 CPL 70.42
+desktop                                  $  118.94 imp   2345 CTR 0.51 CPM 50.72 clics 12 LPV 3 leads 4 CPL 29.73
+ipad                                     $   64.19 imp   1309 CTR 1.07 CPM 49.04 clics 14 LPV 10 leads 2 CPL 32.1
+android_tablet                           $   13.75 imp    375 CTR 3.73 CPM 36.67 clics 14 LPV 6 leads 0 CPL None
+other                                    $   11.55 imp    220 CTR 2.73 CPM 52.5 clics 6 LPV 1 leads 0 CPL None
+
+== Región
+Florida                                  $ 2696.99 imp  57389 CTR 1.11 CPM 46.99 clics 639 LPV 0 leads 19 CPL 141.95
+Unknown                                  $    0.00 imp      0 CTR None CPM None clics 2 LPV 0 leads 0 CPL None
+
+== Hora
+08:00:00 - 08:59:59                      $  180.30 imp   2888 CTR 0.83 CPM 62.43 clics 24 LPV 13 leads 3 CPL 60.1
+16:00:00 - 16:59:59                      $  170.87 imp   5521 CTR 0.96 CPM 30.95 clics 53 LPV 17 leads 0 CPL None
+09:00:00 - 09:59:59                      $  151.84 imp   2764 CTR 0.87 CPM 54.93 clics 24 LPV 10 leads 1 CPL 151.84
+11:00:00 - 11:59:59                      $  151.00 imp   2774 CTR 1.15 CPM 54.43 clics 32 LPV 18 leads 3 CPL 50.33
+12:00:00 - 12:59:59                      $  150.19 imp   3000 CTR 0.87 CPM 50.06 clics 26 LPV 9 leads 1 CPL 150.19
+10:00:00 - 10:59:59                      $  147.08 imp   2906 CTR 1.27 CPM 50.61 clics 37 LPV 13 leads 1 CPL 147.08
+13:00:00 - 13:59:59                      $  144.85 imp   2844 CTR 0.67 CPM 50.93 clics 19 LPV 8 leads 2 CPL 72.42
+15:00:00 - 15:59:59                      $  143.53 imp   3526 CTR 1.11 CPM 40.71 clics 39 LPV 11 leads 2 CPL 71.76
+21:00:00 - 21:59:59                      $  141.76 imp   2978 CTR 1.41 CPM 47.6 clics 42 LPV 20 leads 5 CPL 28.35
+20:00:00 - 20:59:59                      $  131.70 imp   2972 CTR 1.01 CPM 44.31 clics 30 LPV 13 leads 2 CPL 65.85
+07:00:00 - 07:59:59                      $  126.99 imp   2512 CTR 1.11 CPM 50.55 clics 28 LPV 11 leads 3 CPL 42.33
+17:00:00 - 17:59:59                      $  125.02 imp   3077 CTR 0.88 CPM 40.63 clics 27 LPV 11 leads 1 CPL 125.02
+14:00:00 - 14:59:59                      $  121.85 imp   2508 CTR 1.2 CPM 48.58 clics 30 LPV 19 leads 1 CPL 121.85
+18:00:00 - 18:59:59                      $  116.25 imp   2618 CTR 1.22 CPM 44.4 clics 32 LPV 15 leads 3 CPL 38.75
+19:00:00 - 19:59:59                      $  114.92 imp   3113 CTR 1.19 CPM 36.91 clics 37 LPV 20 leads 1 CPL 114.92
+22:00:00 - 22:59:59                      $  108.01 imp   2499 CTR 0.96 CPM 43.22 clics 24 LPV 8 leads 0 CPL None
+00:00:00 - 00:59:59                      $  100.47 imp   2028 CTR 2.51 CPM 49.54 clics 51 LPV 24 leads 0 CPL None
+06:00:00 - 06:59:59                      $   98.76 imp   1528 CTR 1.24 CPM 64.64 clics 19 LPV 9 leads 4 CPL 24.69
+23:00:00 - 23:59:59                      $   66.31 imp   1689 CTR 1.01 CPM 39.26 clics 17 LPV 5 leads 1 CPL 66.31
+05:00:00 - 05:59:59                      $   57.43 imp    910 CTR 0.88 CPM 63.11 clics 8 LPV 2 leads 0 CPL None
+01:00:00 - 01:59:59                      $   45.40 imp    839 CTR 1.19 CPM 54.11 clics 10 LPV 4 leads 0 CPL None
+04:00:00 - 04:59:59                      $   38.40 imp    707 CTR 1.56 CPM 54.32 clics 11 LPV 3 leads 1 CPL 38.4
+02:00:00 - 02:59:59                      $   35.19 imp    612 CTR 1.8 CPM 57.5 clics 11 LPV 2 leads 1 CPL 35.19
+03:00:00 - 03:59:59                      $   28.90 imp    576 CTR 1.74 CPM 50.18 clics 10 LPV 5 leads 0 CPL None
+
+== Últimos 7 días por campaña
+Sunny Bliss – Tech Hiring – HVAC & Plumbing – Aug 2026  $ 182.21 leads 27 CPL 6.75 CTR 1.33 CPM 16.76 freq 2.06
+SB – Plumbing Leads – Instant Form – Sep 24             $ 204.12 leads 2 CPL 102.06 CTR 0.92 CPM 36.13 freq 1.56
+HVAC Landing – 2026-10-08 – EN + ES – CBO               $ 166.71 leads 3 CPL 55.57 CTR 0.65 CPM 120.54 freq 1.56
+
+== Último día con gasto {
+"Sunny Bliss – Tech Hiring – HVAC & Plumbing – Aug 2026": "2026-10-29",
+"SB – AC Leads – Instant Form v2 – CBO – Sep 24": "2026-10-02",
+"SB – Plumbing Leads – Instant Form – Sep 24": "2026-10-29",
+"Sunny Bliss – Tech Hiring – Electrician – Sep 2026": "2026-10-01",
+"Sunny Bliss – Hiring – Retail Brand Ambassador – Oct 2026": "2026-10-10",
+"HVAC Landing - 2026-10-02 - English": "2026-10-05",
+"HVAC Landing - 2026-10-02 - Español": "2026-10-06",
+"Plumbing Landing - 2026-10-02 - English": "2026-10-06",
+"HVAC Landing – 2026-10-05 – English – CBO": "2026-10-08",
+"Plumbing Landing – 2026-10-06 – English – CBO": "2026-10-09",
+"HVAC Landing – 2026-10-06 – Español Hiperlocal – CBO": "2026-10-08",
+"HVAC Landing – 2026-10-08 – EN + ES – CBO": "2026-10-26",
+"Sunny Bliss – Hiring – Customer Service Colombia – Oct 2026": "2026-10-10"
+}
