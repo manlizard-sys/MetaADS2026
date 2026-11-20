@@ -2,7 +2,7 @@ Necesito que busques en la Biblioteca de anuncios de Meta (Ad Library) anuncios 
 
 DÓNDE BUSCAR
 Abre https://www.facebook.com/ads/library/ con: país United States, categoría "All ads", estado "Active ads". Busca uno por uno:
-1. Por anunciante: Belay, Wing Assistant, Virtual Latinos, Prialto, Time etc, MyOutDesk, Boldly, Hire Overseas, Stealth Agents, Virtual Staff Finder.
+1. Por anunciante: Pineapple (Pineapple Virtual Assistant Hub, trypineapple.com), Belay, Wing Assistant, Virtual Latinos, Prialto, Time etc, MyOutDesk, Boldly, Hire Overseas, Stealth Agents, Virtual Staff Finder.
 2. Por palabra clave: "virtual assistant vs", "hire a virtual assistant", "in-house vs", "instead of hiring", "save 70% on staffing", "bilingual virtual assistant".
 
 QUÉ CUENTA COMO ANUNCIO DE COMPARACIÓN
