@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:var(--h);font-family:Inter,sans-serif;background:#FFF8EC;color:#14213D;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 60px;position:relative}
+.blob{position:absolute;border-radius:50%;filter:blur(2px)}
+.b1{width:420px;height:420px;background:#FFD23F;right:-140px;top:-140px}
+.b2{width:300px;height:300px;background:#00B894;left:-120px;bottom:-110px;opacity:.85}
+.logo{position:absolute;top:44px;left:60px;font-weight:900;font-size:26px;letter-spacing:.12em;border:3px dashed #14213D;padding:10px 18px;border-radius:10px;opacity:.55}
+.kicker{font-weight:800;font-size:30px;color:#00A383;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px;z-index:1}
+h1{font-weight:900;font-size:92px;line-height:.98;text-align:center;letter-spacing:-.035em;z-index:1}
+h1 mark{background:#FFD23F;padding:0 14px;border-radius:14px;color:#14213D}
+.vs{display:flex;gap:26px;margin-top:48px;width:100%;z-index:1}
+.card{flex:1;border-radius:32px;padding:34px 30px;background:#fff;box-shadow:0 20px 50px rgba(20,33,61,.12)}
+.card.bad{background:#F1EDE4;box-shadow:none}
+.card h2{font-size:34px;font-weight:900;margin-bottom:6px}
+.card .price{font-size:66px;font-weight:900;letter-spacing:-.03em}
+.card .per{font-size:22px;font-weight:600;opacity:.6;margin-bottom:20px}
+.bad .price{color:#9AA0AA;text-decoration:line-through;text-decoration-color:#E63946;text-decoration-thickness:6px}
+.good{border:5px solid #00B894;position:relative}
+.good .price{color:#00A383}
+.pill{position:absolute;top:-24px;right:24px;background:#14213D;color:#FFD23F;font-weight:900;font-size:22px;padding:10px 18px;border-radius:30px}
+ul{list-style:none;font-size:25px;font-weight:600;line-height:1.5}
+li{display:flex;gap:12px;align-items:center}
+li b{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:20px;flex:none}
+.x b{background:#E63946}.v b{background:#00B894}
+.cta{margin-top:46px;background:#14213D;color:#fff;font-size:36px;font-weight:900;padding:24px 58px;border-radius:18px;z-index:1;box-shadow:0 10px 0 #FFD23F}
+.note{position:absolute;bottom:22px;font-size:18px;opacity:.5}
+</style></head><body>
+<div class="blob b1"></div><div class="blob b2"></div>
+<div class="logo">YOUR LOGO</div>
+<div class="kicker">For U.S. business owners</div>
+<h1>Same assistant.<br><mark>Half the cost.</mark></h1>
+<div class="vs">
+ <div class="card bad"><h2>Hiring locally</h2><div class="price">$78k</div><div class="per">per year, plus taxes & benefits</div>
+  <ul class="x"><li><b>✕</b>Weeks of recruiting</li><li><b>✕</b>Payroll & benefits</li><li><b>✕</b>Start over if it fails</li></ul></div>
+ <div class="card good"><span class="pill">BEST VALUE</span><h2>Remote assistant</h2><div class="price">$31k</div><div class="per">per year, all in</div>
+  <ul class="v"><li><b>✓</b>Vetted & bilingual</li><li><b>✓</b>Your U.S. hours</li><li><b>✓</b>Free replacement</li></ul></div>
+</div>
+<div class="cta">Book a free call</div>
+<div class="note">Reference mockup · generic brand · numbers to be confirmed</div>
+</body></html>
