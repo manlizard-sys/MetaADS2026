@@ -67,3 +67,10 @@ No old form or trigger was deleted or changed.
 
 ## 2026-11-20 · FL ES and SI EN reactivated (approved by the user)
 - Ads 120254888161610640 (FL ES) and 120254888159470640 (SI EN) back to ACTIVE with their v5 creative. They had been paused since 2026-11-16 18:33 ET outside this project.
+
+## 2026-11-20 · 8 new concept ads (approved by the user: "Publica así")
+- Script: scripts/c6_publish.py. Images: build/ads/c6 (4:5 in feeds, 9:16 in Stories/Reels via placement asset customization). v5 forms (305-239-4987), CTA BOOK_TRAVEL ("Book now"). All ACTIVE, in review.
+- Services ad set: IG · FL · Cold shower again? EN (120255131518390640) / ES (120255131520050640); TG · FL · Hosting Thanksgiving? EN (120255131529170640) / ES (120255131532160640); TG · TU · Full house for Thanksgiving? EN (120255131534800640) / ES (120255131539490640).
+- Electrical launch ad set: IG · EV · Charge it at home EN (120255131521860640) / ES (120255131524570640).
+- The 4 Thanksgiving (TG) ads get paused on Nov 26 at night (reminder scheduled).
+- Videos from the page left out: "No hot water" overflows the screen and the AC "I need help era" reel reads as off-message (user feedback).
