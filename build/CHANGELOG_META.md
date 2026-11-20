@@ -117,3 +117,9 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - Pausado el anterior 120257827382480196 (le quedaban $10.68). Meta no permite tope de frecuencia en campañas de Leads.
 - Script: scripts/rt_reach_nov19.py.
 - 2026-11-20: scripts/followers.py (historial diario de seguidores IG/FB con META_INSIGHTS_TOKEN, solo lectura); se llama desde track_new_ads.py si la variable existe.
+
+## 2026-11-20 · Ubicaciones y edad en conjuntos LPV (aprobado)
+- Motivo: 48 visitas, 0 leads; ~70% del gasto en Reels/Reels overlay y ~35–40% en 65+.
+- Ubicaciones: FB feed, FB stories, FB Reels, IG feed, IG stories, IG Reels. Fuera: Reels overlay, Marketplace, búsqueda, Audience Network.
+- Edad máxima 64 (mínima sigue en 35). Audiencia, anuncios y presupuesto sin cambios. Script: scripts/placements_nov20.py.
+- Plan: si en 2 días no hay leads, revisar landing y formulario.
