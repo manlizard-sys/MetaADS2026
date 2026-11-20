@@ -39,3 +39,7 @@ Las horas están en la zona horaria de la cuenta.
 - Awareness ad set (120254888158030640): $13 to $14/day.
 - Total services $66 to $70/day (80/20). Hiring unchanged. Increase under 20%, so no learning reset.
 - Weekly reminder created (Thursdays 8:41 ET) to propose +$4/day up to ~$99/day ($3,000/month).
+
+## 2026-11-20 · v5 forms created (stage 1)
+- 12 new forms "SB · {FL,EV,PN,TU,IAQ,SI} · {EN,ES} · Nov 2026 v5 · 239" (scripts/forms_v5.py): no intro screen, 4 fields (homeowner, ZIP, name, phone), call button 305-239-4987, same UTMs. Not attached to any ad yet, so no change to delivery or learning. Next: GHL maps them (Claude in Chrome), then stage 2 swaps the ads.
+- v5 images rendered in build/ads/v5 (Call 305-239-4987, Book now).
