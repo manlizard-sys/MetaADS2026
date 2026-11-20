@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,800;0,9..144,900;1,9..144,700&family=Figtree:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--v:#3F1D82;--vd:#2A0F62;--y:#FFC75A;--ok:#22C55E;--no:#FF4D5A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:var(--h);font-family:Figtree,sans-serif;color:#fff;overflow:hidden;position:relative;
+ background:radial-gradient(circle at 80% 15%,#6B3FD1 0,transparent 45%),radial-gradient(circle at 10% 95%,#5A2FB8 0,transparent 40%),var(--vd);
+ display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 54px}
+.burst{position:absolute;right:-60px;top:-60px;width:300px;height:300px;background:var(--y);opacity:.95;
+ clip-path:polygon(50% 0,58% 30%,85% 15%,72% 42%,100% 50%,72% 58%,85% 85%,58% 70%,50% 100%,42% 70%,15% 85%,28% 58%,0 50%,28% 42%,15% 15%,42% 30%);transform:rotate(12deg)}
+.tag{background:#fff;color:var(--v);font-weight:900;font-size:26px;letter-spacing:.08em;padding:10px 22px;border-radius:30px;transform:rotate(-2deg);margin-bottom:26px}
+h1{font-family:Fraunces,serif;font-weight:900;font-size:98px;line-height:.95;text-align:center;letter-spacing:-.02em}
+h1 em{font-style:italic;color:var(--y);font-weight:700}
+.grid{margin-top:44px;width:100%;display:grid;grid-template-columns:1.55fr 1.05fr .8fr .8fr;align-items:stretch;position:relative}
+.col{display:flex;flex-direction:column}
+.cell{height:86px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700}
+.lbl .cell{justify-content:flex-start;font-size:29px;padding-right:10px}
+.head{height:96px!important;font-size:27px;font-weight:900;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.04em;text-align:center;line-height:1.05}
+.orchid{background:var(--y);border-radius:34px;box-shadow:0 30px 60px rgba(0,0,0,.45),0 0 0 6px rgba(255,255,255,.9);transform:scale(1.06);z-index:2;color:var(--v)}
+.orchid .head{color:var(--v);font-family:Fraunces,serif;font-style:italic;text-transform:none;font-size:46px;letter-spacing:0}
+.dim{opacity:.92}
+.i{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:900}
+.ok{background:var(--ok);color:#fff}.orchid .ok{background:var(--v);color:var(--y)}
+.no{background:var(--no);color:#fff}.mid{background:rgba(255,255,255,.18);color:#fff}
+.rows .cell{border-top:2px dashed rgba(255,255,255,.14)}
+.orchid .rows .cell{border-top:2px dashed rgba(63,29,130,.18)}
+.cta{margin-top:56px;background:#FF4D5A;font-size:40px;font-weight:900;padding:24px 64px;border-radius:60px;box-shadow:0 0 0 6px #fff,0 18px 40px rgba(0,0,0,.4)}
+.url{margin-top:22px;font-size:26px;font-weight:700;opacity:.8}
+</style></head><body>
+<div class="burst"></div>
+<div class="tag">HIRING AN ASSISTANT?</div>
+<h1>Don't hire<br><em>the hard way.</em></h1>
+<div class="grid">
+ <div class="col lbl"><div class="cell head"></div><div class="rows">
+  <div class="cell">No payroll taxes</div><div class="cell">No recruiting fees</div><div class="cell">Free replacement</div>
+  <div class="cell">Your U.S. hours</div><div class="cell">Bilingual EN / ES</div><div class="cell">HR support included</div></div></div>
+ <div class="col orchid"><div class="cell head">Orchid</div><div class="rows">
+  <div class="cell"><span class="i ok">✓</span></div><div class="cell"><span class="i ok">✓</span></div><div class="cell"><span class="i ok">✓</span></div>
+  <div class="cell"><span class="i ok">✓</span></div><div class="cell"><span class="i ok">✓</span></div><div class="cell"><span class="i ok">✓</span></div></div></div>
+ <div class="col dim"><div class="cell head">Local<br>hire</div><div class="rows">
+  <div class="cell"><span class="i no">✗</span></div><div class="cell"><span class="i no">✗</span></div><div class="cell"><span class="i no">✗</span></div>
+  <div class="cell"><span class="i ok">✓</span></div><div class="cell"><span class="i mid">?</span></div><div class="cell"><span class="i no">✗</span></div></div></div>
+ <div class="col dim"><div class="cell head">Free-<br>lancer</div><div class="rows">
+  <div class="cell"><span class="i ok">✓</span></div><div class="cell"><span class="i mid">?</span></div><div class="cell"><span class="i no">✗</span></div>
+  <div class="cell"><span class="i mid">?</span></div><div class="cell"><span class="i mid">?</span></div><div class="cell"><span class="i no">✗</span></div></div></div>
+</div>
+<div class="cta">Book a call →</div>
+<div class="url">orchidpros.com</div>
+</body></html>
