@@ -116,3 +116,4 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - Nuevo conjunto 120257905094360196 "RT · Video engaged 60D · Reach · Nov19": optimización REACH, $11.50 total (mínimo de Meta) hasta Nov 30, sin horario, FB+IG feeds, solo la audiencia de video (6.7–7.8 mil; sin expansión de audiencia). Anuncio 120257905094730196 (mismo nombre/UTM, Book now).
 - Pausado el anterior 120257827382480196 (le quedaban $10.68). Meta no permite tope de frecuencia en campañas de Leads.
 - Script: scripts/rt_reach_nov19.py.
+- 2026-11-20: scripts/followers.py (historial diario de seguidores IG/FB con META_INSIGHTS_TOKEN, solo lectura); se llama desde track_new_ads.py si la variable existe.

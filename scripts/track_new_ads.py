@@ -1,7 +1,7 @@
 """Daily tracker of the 🟢 campaigns (Nov 16 launch): one row per ad per day from Meta (read-only).
 Writes build/reports/tracker_ads.json as {rows, meta} for the "Orchid Ads Tracker" dashboard.
 Usage: python3 track_new_ads.py [--since 2026-11-02]"""
-import datetime as dt, json, sys
+import datetime as dt, json, os, sys
 from pathlib import Path
 from meta import get_all, BUILD
 
@@ -85,6 +85,8 @@ try:
     fp.write_text(json.dumps(sorted(hist + [snap], key=lambda h: h["date"]), indent=1))
 except Exception as e:
     print("followers:", str(e)[:200])
+if os.environ.get("META_INSIGHTS_TOKEN"):  # daily follower history (read-only insights token)
+    subprocess.run([sys.executable, str(Path(__file__).with_name("followers.py"))], timeout=300)
 rows.sort(key=lambda x: (x["date"], x["market"], x["ad"]))
 code = Path(__file__).read_text()
 out = BUILD / "reports" / "tracker_ads.json"
