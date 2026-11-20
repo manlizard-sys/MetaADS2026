@@ -111,3 +111,8 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - 2026-11-19: Autoplay silenciado del video (hecho por Chrome en GHL) copiado de la página en vivo a build/landings/long_designs/video_autoplay_patch.html e integrado al final del bloque 1 de los 4 archivos (probado: arranca muted al 50% visible). El source ya no depende de parches de GHL. Nota: la variante A de emprendedores tiene slug /practices-free-month-page-678510.
 - 2026-11-20: Foto nueva de Andrea (recortada 4:5 desde foto con Josué) en el source de las landings largas; parche GHL andrea_photo_patch.html; prompt build/prompts/chrome_foto_andrea.md.
 - 2026-11-20: Cambio: foto de Josué y Andrea juntos (josue_andrea_4x5.jpg), etiqueta 'Josué & Andrea, Co-Founders'.
+
+## 2026-11-19 · Retargeting a alcance (aprobado)
+- Nuevo conjunto 120257905094360196 "RT · Video engaged 60D · Reach · Nov19": optimización REACH, $11.50 total (mínimo de Meta) hasta Nov 30, sin horario, FB+IG feeds, solo la audiencia de video (6.7–7.8 mil; sin expansión de audiencia). Anuncio 120257905094730196 (mismo nombre/UTM, Book now).
+- Pausado el anterior 120257827382480196 (le quedaban $10.68). Meta no permite tope de frecuencia en campañas de Leads.
+- Script: scripts/rt_reach_nov19.py.

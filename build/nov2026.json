@@ -173,6 +173,11 @@
       "ad_Entrepreneurs": "120257894836820196",
       "ad_Finance": "120257894844930196",
       "ad_Healthcare": "120257894849910196"
+    },
+    "rt_reach19": {
+      "adset": "120257905094360196",
+      "ad": "120257905094730196",
+      "old_paused": true
     }
   },
   "budget_month_usd": 1300
