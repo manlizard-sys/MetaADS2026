@@ -82,3 +82,14 @@ Fuentes: confect.io, segwise.ai, theoptimizer.io, adsuploader.com y jetfuel.agen
 - Eléctrico: el 25 nov los ads de EV y panel vuelven al ad set de servicios.
 - Videos y testimonios del Drive: Mehdi dio OK para usarlos en ads.
 - Seguimiento: nadie había llamado a los leads. Los avisos de lead nuevo salen por email (info@), Slack (#lead-follow-up-csr) y WhatsApp (CSR y, por ahora, Mehdi). Se entregó al CSR la lista de 27 leads desde el 1 oct (fuera del repo, tiene datos personales).
+
+## Form map v5 (2026-11-20, connected to GHL)
+| Offer | EN form | ES form |
+|---|---|---|
+| FL water heater flush | 2445185939351193 | 1080516755006380 |
+| EV charger | 3184945191710815 | 1492276092818225 |
+| PN panel | 1022930910057978 | 1133109259430024 |
+| TU AC tune-up | 2562333300913355 | 1690041532910981 |
+| IAQ | 1076057625453854 | 1869338094086809 |
+| SI Silver plan | 991211840240729 | 973619682136466 |
+Names: "SB · <OFFER> · <LANG> · Nov 2026 v5 · 239". GHL triggers "FB · <OFFER> · <LANG> · v5"; routing by trigger name (see CHANGELOG 2026-11-20).

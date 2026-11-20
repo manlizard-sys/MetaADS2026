@@ -43,3 +43,17 @@ Las horas están en la zona horaria de la cuenta.
 ## 2026-11-20 · v5 forms created (stage 1)
 - 12 new forms "SB · {FL,EV,PN,TU,IAQ,SI} · {EN,ES} · Nov 2026 v5 · 239" (scripts/forms_v5.py): no intro screen, 4 fields (homeowner, ZIP, name, phone), call button 305-239-4987, same UTMs. Not attached to any ad yet, so no change to delivery or learning. Next: GHL maps them (Claude in Chrome), then stage 2 swaps the ads.
 - v5 images rendered in build/ads/v5 (Call 305-239-4987, Book now).
+
+## 2026-11-20 · v5 forms connected to GHL (done by the user with Claude in Chrome)
+No old form or trigger was deleted or changed.
+- Field mapping (12 v5 forms): own → Meta Homeowner, zip_code → Postal Code, full_name → Full Name, phone_number → Phone, utm_campaign → Meta UTM Campaign, utm_content → Meta UTM Content. Meta Need not mapped (v5 forms have no "need" question).
+- Workflow "Meta Lead Form · Nov 2026 v2" (53192f4a-d3a8-422b-96e4-18de1f9984c1): 12 triggers "FB · {FL,EV,PN,TU,IAQ,SI} · {EN,ES} · v5" added. Saved and published.
+- Routing works by trigger name ("Workflow trigger is ..."), not by form name or UTM:
+  - "Idioma EN / ES": EN branch lists the EN triggers (6 EN v5 added as OR); ES is the default branch.
+  - "Servicio EN" / "Servicio ES": v5 triggers added as OR in the TU, SI, FL, EV and IAQ branches; PN goes to the default (None) branch; AC branches untouched (no AC v5 form).
+  - Rule for any new form: add its trigger as OR in "Idioma EN / ES" (EN only) and in "Servicio EN/ES" (except PN, which falls to default).
+- Lead flow: opportunity → internal SMS and email to the team → urgent SMS → TEMP Mehdi → language → renter check (Meta Homeowner) → lead SMS → service → tag meta-<offer>-<lang> → email info@ → Slack #lead-follow-up-csr.
+- Test (Lead Ads Testing Tool): FL EN v5 and EV ES v5 created the contact, the tag, the New Lead opportunity, the right route and UTMs (sb_leads_nov2026_v2, fl_en / ev_es). Email and Slack show "Executed" in GHL logs. Test contacts deleted.
+- Open: phone field and lead SMS not verified (Meta dummy phone is not saved as a number; SMS also blocked until LC Phone + A2P 10DLC). Confirm with the first real v5 lead. The 2 test leads remain in Meta's Testing Tool (1 per form); delete them before testing those forms again.
+- Meta page apps: OzziOS (1497784867870945) and Zapier (234230510040096) fail the leadgen webhook (installing admin is no longer a page admin). LeadConnector (390181264778064) works.
+- Next (needs the user's OK): stage 2, swap the ads to the v5 forms and images, CTA "Book now", pause the new-AC pair.
