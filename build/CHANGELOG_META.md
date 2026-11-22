@@ -123,3 +123,8 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - Ubicaciones: FB feed, FB stories, FB Reels, IG feed, IG stories, IG Reels. Fuera: Reels overlay, Marketplace, búsqueda, Audience Network.
 - Edad máxima 64 (mínima sigue en 35). Audiencia, anuncios y presupuesto sin cambios. Script: scripts/placements_nov20.py.
 - Plan: si en 2 días no hay leads, revisar landing y formulario.
+
+## 2026-11-22 · Revisión de 2 días
+- 176 visitas a la landing desde el 19, 0 envíos (GHL forms/submissions: el último real fue el falso del 17). Landings cargan (~7–8 s en emulación de celular), píxel PageView y Turnstile OK, sin errores JS.
+- Formulario: corta a 1.5–1.8 pantallas en celular; larga a 27–37 pantallas (los botones llevan ahí).
+- Prompt de prueba de punta a punta: build/prompts/chrome_prueba_formularios_test50.md (TEST 50 y 51).
