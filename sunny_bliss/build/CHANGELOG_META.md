@@ -74,3 +74,8 @@ No old form or trigger was deleted or changed.
 - Electrical launch ad set: IG · EV · Charge it at home EN (120255131521860640) / ES (120255131524570640).
 - The 4 Thanksgiving (TG) ads get paused on Nov 26 at night (reminder scheduled).
 - Videos from the page left out: "No hot water" overflows the screen and the AC "I need help era" reel reads as off-message (user feedback).
+
+## 2026-11-22 · Test leads cleanup
+- Deleted test lead 1134064429268241 (IAQ EN, "TEST Slack Alert", created by this project via API).
+- The other 5 test leads (SI EN v3, AC EN v4, AC ES v4, FL EN v5, EV ES v5) can only be deleted by the user who created them in the Lead Ads Testing Tool (Meta error #110).
+- Daily lead check routine (trig_01VdH8F1AwNPVSBqbpdaqL42) deleted on 2026-11-21 (GHL received every real lead for days; Slack alerts cover it now).
