@@ -93,3 +93,6 @@ Fuentes: confect.io, segwise.ai, theoptimizer.io, adsuploader.com y jetfuel.agen
 | IAQ | 1076057625453854 | 1869338094086809 |
 | SI Silver plan | 991211840240729 | 973619682136466 |
 Names: "SB · <OFFER> · <LANG> · Nov 2026 v5 · 239". GHL triggers "FB · <OFFER> · <LANG> · v5"; routing by trigger name (see CHANGELOG 2026-11-20).
+
+## Alcance (2026-11-23, instrucción del usuario)
+- Las campañas de hiring (Tech Hiring Plumber/Electrician, Retail Brand Ambassador) NO las manejamos nosotros. No se revisan, no se reportan, no se comparan y no se tocan. Los reportes y análisis cubren solo: SB · Leads, SB · Awareness y SB · Electrical Launch.
