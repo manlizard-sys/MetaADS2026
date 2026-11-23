@@ -1,0 +1,18 @@
+<!-- Orchid · arreglos de formulario para la variante "B · Larga" (pegar AL FINAL del Custom Code del bloque 1).
+     1) Oculta la barra roja fija "Get Started Free" (.mbar) mientras el formulario está en pantalla, para que no compita con el botón de enviar.
+     2) Botón de enviar legible: texto violeta sobre el amarillo. -->
+<style>
+button[type=submit]{color:#3F1D82!important;font-weight:800!important}
+.orx-mbar-hidden{opacity:0!important;pointer-events:none!important;transform:translateY(120%)!important;transition:opacity .2s,transform .2s}
+</style>
+<script>
+(function(){
+  var bar=document.querySelector('.mbar');
+  var form=document.querySelector('button[type=submit]');
+  form=form && (form.closest('form')||form.parentElement);
+  if(!bar||!form||!('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){ bar.classList.toggle('orx-mbar-hidden', e.isIntersecting); });
+  },{threshold:0.05}).observe(form);
+})();
+</script>

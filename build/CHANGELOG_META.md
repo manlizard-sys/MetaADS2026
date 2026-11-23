@@ -128,3 +128,10 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - 176 visitas a la landing desde el 19, 0 envíos (GHL forms/submissions: el último real fue el falso del 17). Landings cargan (~7–8 s en emulación de celular), píxel PageView y Turnstile OK, sin errores JS.
 - Formulario: corta a 1.5–1.8 pantallas en celular; larga a 27–37 pantallas (los botones llevan ahí).
 - Prompt de prueba de punta a punta: build/prompts/chrome_prueba_formularios_test50.md (TEST 50 y 51).
+
+## 2026-11-23 · Prueba E2E del formulario (Claude de Chrome) y limpieza
+- Formulario OK de punta a punta en ambas landings (TEST 50 salud/larga, TEST 51 emprendedores/corta). 0 envíos reales desde el 17 → problema de tráfico/oferta, no técnico.
+- Hallazgo: el Lead del píxel se pierde por la redirección a gracias (explica ~9 Lead en 30 días). Arreglo: Lead en páginas de gracias.
+- Hallazgo: "Meta CAPI · Lead calificado" corre con cualquier envío (también pruebas).
+- TEST 50/51: etiquetas test + lead-falso, sacados del workflow "01 - Lead nuevo", oportunidades en abandoned (vía API).
+- Prompt de arreglos: build/prompts/chrome_arreglos_formulario.md (Lead en gracias, quitar Lead del formulario, parche de la larga form_ux_patch.html, placeholder de nombre).
