@@ -1,18 +1,27 @@
-<!-- Orchid · arreglos de formulario para la variante "B · Larga" (pegar AL FINAL del Custom Code del bloque 1).
+<!-- v2 · Orchid · arreglos de formulario para la variante "B · Larga" (pegar AL FINAL del Custom Code del bloque 1).
      1) Oculta la barra roja fija "Get Started Free" (.mbar) mientras el formulario está en pantalla, para que no compita con el botón de enviar.
      2) Botón de enviar legible: texto violeta sobre el amarillo. -->
 <style>
-button[type=submit]{color:#3F1D82!important;font-weight:800!important}
+button[type=submit],button[type=submit] *{color:#3F1D82!important;font-weight:800!important}
 .orx-mbar-hidden{opacity:0!important;pointer-events:none!important;transform:translateY(120%)!important;transition:opacity .2s,transform .2s}
 </style>
 <script>
 (function(){
-  var bar=document.querySelector('.mbar');
-  var form=document.querySelector('button[type=submit]');
-  form=form && (form.closest('form')||form.parentElement);
-  if(!bar||!form||!('IntersectionObserver' in window)) return;
-  new IntersectionObserver(function(es){
-    es.forEach(function(e){ bar.classList.toggle('orx-mbar-hidden', e.isIntersecting); });
-  },{threshold:0.05}).observe(form);
+  /* Hide the fixed red bar while any part of the form (first field to submit button) is on screen.
+     Recomputed on scroll because GHL renders and re-renders the form after this block runs. */
+  var raf=0;
+  function upd(){
+    raf=0;
+    var bar=document.querySelector('.mbar'), btn=document.querySelector('button[type=submit]'),
+        first=document.querySelector('.multiselect, input[placeholder*="name"]');
+    if(!bar||!btn||!first) return;
+    var top=first.getBoundingClientRect().top, bottom=btn.getBoundingClientRect().bottom;
+    bar.classList.toggle('orx-mbar-hidden', top < window.innerHeight && bottom > 0);
+  }
+  function req(){ if(!raf) raf=requestAnimationFrame(upd); }
+  window.addEventListener('scroll',req,{passive:true});
+  window.addEventListener('resize',req);
+  window.addEventListener('hashchange',function(){ setTimeout(req,400); });
+  setTimeout(req,1500);
 })();
 </script>
