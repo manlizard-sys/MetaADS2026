@@ -79,3 +79,10 @@ No old form or trigger was deleted or changed.
 - Deleted test lead 1134064429268241 (IAQ EN, "TEST Slack Alert", created by this project via API).
 - The other 5 test leads (SI EN v3, AC EN v4, AC ES v4, FL EN v5, EV ES v5) can only be deleted by the user who created them in the Lead Ads Testing Tool (Meta error #110).
 - Daily lead check routine (trig_01VdH8F1AwNPVSBqbpdaqL42) deleted on 2026-11-21 (GHL received every real lead for days; Slack alerts cover it now).
+
+## 2026-11-25 · Nearby-ZIP test campaign (approved by Mehdi, relayed by the user)
+- New campaign "SB · ZIP Test · Nearby ZIPs · Nov 2026" (scripts/zip_test.py), ad set "ZIP Test · 8 nearby ZIPs · 25+ · EN+ES · $10/day", ends 2026-12-09 23:59.
+- ZIPs: 33154 Surfside/Bal Harbour, 33137 Upper East Side, 33129 The Roads/Brickell, 33165 Westchester, 33175 West Kendall, 33183 Kendall Lakes, 33177 South Miami Heights, 33161 North Miami. Mehdi's 21 ZIPs untouched.
+- Same setup as the main leads ad set (25+, Advantage+ audience, past leads excluded, same placements). 6 ads reusing current creatives and v5 forms: flush v5 EN/ES, iguana flush EN/ES, AC tune-up v5 EN/ES. GHL receives them through the existing v5 triggers.
+- Budget: services total goes from $70 to $80/day (~$2,430/month), under the $3,000 cap.
+- Success check on Dec 10: CPL and lead quality vs the 21 ZIPs.
