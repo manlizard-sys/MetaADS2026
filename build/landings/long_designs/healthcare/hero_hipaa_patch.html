@@ -1,0 +1,21 @@
+<!-- Orchid · titular con HIPAA al frente (variante "B · Larga" de salud). Pegar AL FINAL del Custom Code del bloque 1.
+     Reordena el inicio: primero el titular HIPAA y la franja HIPAA, después la oferta de Black Friday y la cuenta regresiva. -->
+<style>
+.orx .hero h1.orx-hipaa-h1{font-size:clamp(2rem,5.2vw,3.6rem);line-height:1.05;margin:10px auto 14px}
+.orx .hero .orx-hipaa-sub{font-size:1.15rem;opacity:.9;max-width:720px;margin:0 auto 18px}
+</style>
+<script>
+(function(){
+  var w=document.querySelector('.orx .hero .wrap'); if(!w||w.querySelector('.orx-hipaa-h1')) return;
+  var q=w.querySelector('.qual'), h=w.querySelector('h1'), strip=w.querySelector('.hstrip'),
+      lead=w.querySelector('.lead'), band=w.querySelector('.bfband'), gsf=w.querySelector('.gsf'), clock=w.querySelector('.bigclock');
+  if(!q||!h) return;
+  h.classList.add('orx-hipaa-h1');
+  h.innerHTML='Get a <span class="y">HIPAA-trained</span>, bilingual patient coordinator for your practice.';
+  var sub=document.createElement('p'); sub.className='orx-hipaa-sub';
+  sub.textContent='From Colombia, working your U.S. hours, selected for your practice by people, not AI. Get started for free.';
+  var br=q.nextElementSibling && q.nextElementSibling.tagName==='BR' ? q.nextElementSibling : null;
+  var after=br||q;
+  [h,sub,strip,lead,band,gsf,clock].forEach(function(el){ if(el){ after.insertAdjacentElement('afterend',el); after=el; } });
+})();
+</script>

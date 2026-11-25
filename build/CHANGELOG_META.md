@@ -136,3 +136,4 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - TEST 50/51: etiquetas test + lead-falso, sacados del workflow "01 - Lead nuevo", oportunidades en abandoned (vía API).
 - Prompt de arreglos: build/prompts/chrome_arreglos_formulario.md (Lead en gracias, quitar Lead del formulario, parche de la larga form_ux_patch.html, placeholder de nombre).
 - 2026-11-23: Chrome aplicó Lead en gracias (1 PageView + 1 Lead verificados), Lead del formulario en None, placeholder 'full name', parche v1 (la barra no se ocultaba). Parche v2 basado en scroll probado (se oculta del primer menú al botón; texto del botón violeta). Prompt: build/prompts/chrome_parche_mbar_v2.md.
+- 2026-11-25: HIPAA al frente en salud (reunión 24 nov): título de la corta actualizado en short/healthcare/block1.html; parche hero_hipaa_patch.html para la larga (probado en vivo). Prompt: build/prompts/chrome_hipaa_al_frente.md.
