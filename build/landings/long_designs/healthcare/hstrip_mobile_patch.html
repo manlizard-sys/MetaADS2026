@@ -1,0 +1,21 @@
+<!-- Orchid · franja HIPAA en celular (variante "B · Larga"). Va al final del Custom Code del bloque 1, después del parche del titular. -->
+<style>
+.orx .hero .hstrip .hs-head,.orx .hero .hstrip .hs-item{display:contents}
+@media (max-width:640px){
+  .orx .hero .hstrip.hs-ok{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;border-radius:20px;padding:12px 12px 14px;max-width:340px;margin-left:auto;margin-right:auto}
+  .orx .hero .hstrip.hs-ok > i{display:none}
+  .orx .hero .hstrip.hs-ok .hs-head{display:flex;flex-basis:100%;align-items:center;justify-content:center;gap:8px;margin-bottom:2px}
+  .orx .hero .hstrip.hs-ok .hs-item{display:inline-block;font-size:.8rem;line-height:1.2;padding:5px 10px;border-radius:999px;background:rgba(63,29,130,.08)}
+}
+</style>
+<script>
+(function(){
+  var s=document.querySelector('.orx .hero .hstrip'); if(!s||s.classList.contains('hs-ok')) return;
+  var svg=s.querySelector('svg'), st=s.querySelector('strong');
+  if(st){ var head=document.createElement('span'); head.className='hs-head'; s.insertBefore(head, svg||st); if(svg) head.appendChild(svg); head.appendChild(st); }
+  [].slice.call(s.childNodes).forEach(function(n){
+    if(n.nodeType===3 && n.textContent.trim()){ var sp=document.createElement('span'); sp.className='hs-item'; sp.textContent=n.textContent.trim(); s.replaceChild(sp,n); }
+  });
+  s.classList.add('hs-ok');
+})();
+</script>
