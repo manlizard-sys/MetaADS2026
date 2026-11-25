@@ -86,3 +86,9 @@ No old form or trigger was deleted or changed.
 - Same setup as the main leads ad set (25+, Advantage+ audience, past leads excluded, same placements). 6 ads reusing current creatives and v5 forms: flush v5 EN/ES, iguana flush EN/ES, AC tune-up v5 EN/ES. GHL receives them through the existing v5 triggers.
 - Budget: services total goes from $70 to $80/day (~$2,430/month), under the $3,000 cap.
 - Success check on Dec 10: CPL and lead quality vs the 21 ZIPs.
+
+## 2026-11-25 · EV ads moved into the services ad set (approved by the user)
+- Electrical launch campaign ends tonight (final: $493, 5 leads, CPL $99; 0 leads Nov 21-25).
+- Services ad set: EV EN (120254964371220640) and EV ES (120254964379790640), paused since Nov 11, now use the v5 creatives and are ACTIVE; new ads IG · EV · Charge it at home EN and IG · EV · Cárgalo en casa ES (iguana creatives). Script: scripts/ev_to_services.py.
+- Panel ads stay paused (no leads since Nov 11); back with the January "insurance-ready" promo.
+- Budget unchanged ($56/day leads).
