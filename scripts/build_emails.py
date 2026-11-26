@@ -92,7 +92,7 @@ WITH = "Andrea Bolanos, Orchid"
 CALL_DESC = "On the call, Andrea will learn about your workload and the tasks you want to delegate, and explain how Orchid matches you with a bilingual professional from Colombia."
 
 EMAILS = {
-    "01-email-descarte": dict(tag="Thanks for reaching out", headline="Thanks for your interest in Orchid, {{contact.first_name}}.", prepre="Our careers page is the right place for you.", rows=[
+    "01-email-descarte": dict(tag="Thanks for reaching out", headline="Thanks for your interest in Orchid, {{contact.first_name}}.", pre="Our careers page is the right place for you.", rows=[
         p("The form you filled out is for businesses looking to hire an Orchid professional."),
         callout("Looking to work with Orchid?", "We're always glad to meet bilingual professionals in Colombia. Apply through our careers page and our talent team will review your application."),
         button("Apply to work with Orchid", "TODO_URL_CAREERS"),

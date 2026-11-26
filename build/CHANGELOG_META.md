@@ -150,3 +150,4 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - 2026-11-26: Decisión de Manuel: quitado el Meta pixel ID (2271987886986577) del calendario original 'Orchid - Discovery Call' (739uffEjsGH7PH0Zaovn) vía API. Verificado: el widget ya no carga connect.facebook.net (0 peticiones). El Lead de los ads sigue saliendo desde las páginas de gracias.
 - 2026-11-26: Rediseño de correos automáticos: plantilla base con estilo Orchid (build/emails/cita_confirmada.html + preview). Prompt de inventario: build/prompts/chrome_inventario_emails.md.
 - 2026-11-26: Rediseño de 10 correos automáticos (brief de Claude de Chrome): build/emails/orchid/ generado con scripts/build_emails.py, guía ghl-cheatsheet.md, prompt build/prompts/chrome_pegar_emails.md.
+- 2026-11-26: Rediseño de 10 correos automáticos (brief de Claude de Chrome): build/emails/orchid/ generado con scripts/build_emails.py, guía ghl-cheatsheet.md, prompt build/prompts/chrome_pegar_emails.md.
