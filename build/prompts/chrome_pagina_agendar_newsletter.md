@@ -14,7 +14,7 @@ PARTE 2 · La página
 4. El código ya trae el calendario conectado; no cambies nada dentro.
 5. Settings del paso → Tracking Code: deja el Header y el Footer SIN el píxel de Meta. La página ya carga el píxel ella misma, después de borrar los datos personales de la barra de direcciones. Revisa también el Tracking Code del funnel: si ahí está el píxel, dime antes de quitarlo.
 6. SEO: título "Black Friday at Orchid | $0 Down + 50% Off Your First Month".
-7. En el calendario, la confirmación de la reserva debe llevar a la página de gracias de llamadas que ya existe. Si no hay una, dime y la creamos.
+7. NO cambies la confirmación del calendario (hoy muestra un mensaje de gracias): es el mismo calendario de las páginas de gracias de Black Friday.
 8. Publica.
 
 PARTE 3 · Comprobación (sin reservar)
