@@ -8,8 +8,9 @@ Dirección legal en el pie: siempre "P.O. Box 463, Rutherford, NJ 07070".
 
 ### A. Workflows 01, 02, 04 y 05: plantillas Code editor
 1. Marketing → Emails → Templates → abrir la plantilla "Orchid · NN …" → Code editor → borrar todo → pegar el archivo completo → guardar.
-2. Volver a la acción del workflow → "Select existing template" → elegir otra vez esa plantilla. La acción guarda una copia y NO se actualiza sola ("Sync Edits to Template" está desactivado).
-3. Revisar asunto y pre-header de la acción (el pre-header debe coincidir con el `div` oculto del HTML) → guardar y publicar el workflow.
+2. ANTES de tocar la acción, anotar su Subject y Pre-Header: el paso siguiente los borra.
+3. En la acción del workflow: menú (⋮) de la vista previa → "Remove" → "Select existing template" → elegir la plantilla (verificar el título; la lista se reordena por "Last updated"). La acción guarda una copia y NO se actualiza sola ("Sync Edits to Template" está desactivado).
+4. Volver a escribir Subject y Pre-Header (el pre-header debe coincidir con el `div` oculto del HTML) → "Save action" → confirmar el aviso "Changing template? ... discard all your previous edits" → guardar el workflow y dejarlo publicado.
 No usar "Quick compose" para estos correos: cambia la fuente a Verdana y borra el estilo de los botones.
 
 ### B. Calendarios 06 a 10: notificaciones
@@ -45,14 +46,15 @@ Copias internas (Additional emails) y Follow-Up: sin cambios.
 - Reservar llamada (08n): `https://api.leadconnectorhq.com/widget/booking/jgKkDzsDyVnOGqkIMxaT`
 - Black Friday (05 con oferta): `https://go.orchidpros.com/business-free-month`
 
-## Cambios de la v2 que hay que publicar
+## Cambios de la v2 (publicados el 26 nov, 11:30–12:30 Bogotá; ver `_publicado_v2/REPORTE.md`)
 1. Etiqueta amarilla del encabezado rehecha como tabla con `bgcolor`: así se ve también en 06 a 10 (antes el editor de calendario le quitaba el fondo). Republicar 06 a 10 en ambos calendarios.
 2. Botones envueltos en una celda con `bgcolor`: si un editor limpia el enlace, el fondo amarillo se mantiene.
 3. 08 en el calendario Newsletter: pegar `08-cal-cancelacion-newsletter.html`, que manda a reservar en ese mismo calendario.
 4. Las plantillas 01, 02, 04 y 05 se pueden actualizar también para que queden iguales al repo; cambian solo la etiqueta y los botones (01 y 04 ya tenían la URL de empleo).
 
 ## Pendientes
-- **2 de diciembre de 2026:** en la acción "Bienvenida Delegate Brief", elegir la plantilla "Orchid · 05 Delegate Brief (sin oferta, desde 2 dic)".
+- **2 de diciembre de 2026:** workflow "Newsletter · Bienvenida" (está en la raíz del listado, búscalo por nombre) → acción "Bienvenida Delegate Brief" → método A con la plantilla "Orchid · 05 Delegate Brief (sin oferta, desde 2 dic)". Reescribir Subject "Welcome to The Delegate Brief" y Pre-Header "One task worth delegating, every other week.".
+- **Modo oscuro de Gmail:** Gmail aclara el texto oscuro sobre el amarillo de la etiqueta y los botones. Es comportamiento del cliente y se acepta; en modo claro se ve como el diseño.
 - **Dominio:** remitente `growth@orchidpros.com` con dominio de envío `mail.orchidpros.com` ("Sender domain mismatch"). Se resuelve en la configuración de GHL, no en el HTML.
 
 ## Decisiones de Manuel (no tocar)
