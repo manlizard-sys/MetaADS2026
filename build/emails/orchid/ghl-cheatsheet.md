@@ -30,9 +30,9 @@ Los correos 06 a 10 se pegan en **los dos calendarios**: "Orchid - Discovery Cal
 - Black Friday (05 con oferta): `https://go.orchidpros.com/business-free-month`
 
 ## Pendientes
-1. **TODO_URL_CAREERS** en 01 y 04: falta la URL de la página de empleo de Orchid. Reemplazarla antes de publicar esos dos.
-2. **Dirección legal:** el pie usa "P.O. Box 463, Rutherford, NJ 07070"; el 07 actual tenía "120 Chubb Ave, Lyndhurst, NJ 07071". Confirmar cuál es la correcta.
+1. **TODO_URL_CAREERS** en 01 y 04: la URL de empleo está en orchidpros.com (Careers / Work with us). Reemplazarla al pegar esos dos.
+2. **Dirección legal:** confirmada, siempre "P.O. Box 463, Rutherford, NJ 07070" (Manuel, 26 nov). Reemplaza la de "120 Chubb Ave" donde aparezca.
 3. **Dominio:** el dominio de envío es `mail.orchidpros.com` y el remitente `growth@orchidpros.com` ("Sender domain mismatch" en GHL). Usar un remitente del mismo dominio o autenticar `orchidpros.com`.
-4. **Doble correo al descartar:** un buscador de empleo que agenda recibe 04 (workflow) y 08 (calendario). Opción: en el workflow, quitar 04 y dejar que el 08 avise, o desactivar la notificación 08 para citas canceladas por el workflow.
+4. **Doble correo al descartar:** un buscador de empleo que agenda recibe 04 (workflow) y 08 (calendario). Decisión de Manuel (26 nov): se dejan los dos.
 5. **Campos de la cita:** `{{appointment.reschedule_link}}`, `{{appointment.cancellation_link}}`, `{{appointment.meeting_location}}`, `{{appointment.start_time}}`, `{{appointment.timezone}}` están confirmados. El asesor se escribe fijo ("Andrea Bolanos").
 6. **05:** el 2 de diciembre cambiar al archivo sin oferta.

@@ -7,7 +7,7 @@ import html, pathlib, re
 
 OUT = pathlib.Path(__file__).resolve().parent.parent / "build" / "emails" / "orchid"
 LOGO = "https://orchidpros.com/wp-content/uploads/2026/01/cropped-cropped-LOGO_WHITE-scaled-1.png"
-# TODO: confirmar dirección legal (hoy conviven "120 Chubb Ave, Lyndhurst, NJ 07071" y "P.O Box 463, Rutherford, NJ 07070")
+# Dirección legal confirmada por Manuel (26 nov 2026): siempre el P.O. Box.
 BOOK_URL = "https://api.leadconnectorhq.com/widget/booking/739uffEjsGH7PH0Zaovn"  # public link of "Orchid - Discovery Call"
 ADDRESS = "N3XUS, LLC d/b/a ORCHID, P.O. Box 463, Rutherford, NJ 07070"
 

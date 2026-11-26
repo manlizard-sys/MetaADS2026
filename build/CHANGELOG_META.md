@@ -151,3 +151,4 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - 2026-11-26: Rediseño de correos automáticos: plantilla base con estilo Orchid (build/emails/cita_confirmada.html + preview). Prompt de inventario: build/prompts/chrome_inventario_emails.md.
 - 2026-11-26: Rediseño de 10 correos automáticos (brief de Claude de Chrome): build/emails/orchid/ generado con scripts/build_emails.py, guía ghl-cheatsheet.md, prompt build/prompts/chrome_pegar_emails.md.
 - 2026-11-26: Rediseño de 10 correos automáticos (brief de Claude de Chrome): build/emails/orchid/ generado con scripts/build_emails.py, guía ghl-cheatsheet.md, prompt build/prompts/chrome_pegar_emails.md.
+- 2026-11-26: Decisiones: dirección legal siempre P.O. Box 463, Rutherford, NJ 07070; se mantiene el doble correo al descartar (04 + 08); la URL de empleo se toma de orchidpros.com.
