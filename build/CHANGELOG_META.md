@@ -139,3 +139,10 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - 2026-11-25: HIPAA al frente en salud (reunión 24 nov): título de la corta actualizado en short/healthcare/block1.html; parche hero_hipaa_patch.html para la larga (probado en vivo). Prompt: build/prompts/chrome_hipaa_al_frente.md.
 - 2026-11-25: Chrome publicó HIPAA al frente en salud (corta: título; larga: hero_hipaa_patch + nuevo hstrip_mobile_patch). Ambos parches y form_ux_patch v2 integrados al final del bloque 1 en el source de la larga de salud. Nota: considerar <meta name="color-scheme" content="only light"> por modo oscuro forzado en Android.
 - 2026-11-26: Página de agendar para el newsletter (diseño del equipo) adaptada: calendario de GHL en lugar del formulario, prefill desde el enlace de Mailchimp, datos personales borrados de la URL antes de cargar el píxel. build/landings/newsletter_book/book_a_call.html; prompt build/prompts/chrome_pagina_agendar_newsletter.md.
+
+## 2026-11-26 · Página de agendar del newsletter publicada (Claude de Chrome)
+- https://go.orchidpros.com/book-a-call · funnel "Orchid · Agendar" (sin píxel en Tracking Code). Calendario "Orchid - Discovery Call" (739uffEjsGH7PH0Zaovn) con formulario nuevo "Orchid · Booking (Discovery Call)": Full Name (query key first_name), Phone, Email.
+- Copia sin píxel creada: "Orchid - Discovery Call (Newsletter)" jgKkDzsDyVnOGqkIMxaT (no conectada).
+- Hallazgo: el calendario original tiene el píxel de Meta y el iframe manda la URL con nombre/email/teléfono a Meta (también en gracias de Black Friday).
+- Prueba TEST 52: cita del 8 dic cancelada y contacto etiquetado test + lead-falso (vía API).
+- Enlace Mailchimp: https://go.orchidpros.com/book-a-call?utm_source=newsletter&utm_medium=email&utm_campaign=nl-black-friday-2026-11-27&first_name=*|URL:FNAME|*&email=*|URL:EMAIL|*&phone=*|URL:PHONE|*
