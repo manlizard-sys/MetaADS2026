@@ -1,5 +1,5 @@
 """Builds Orchid's GHL automation emails from one shared layout.
-Output: build/emails/orchid/{_layout.html, 01..10-*.html, 05-...-sin-oferta.html, index.html}
+Output: build/emails/orchid/{_layout.html, 01..10-*.html, 05-...-sin-oferta.html, 08-...-newsletter.html, index.html}
 Rules (BRIEF.md): fragment starting at <table>, inline styles only, tables, no <style>/<head>/classes, no em dashes,
 Georgia headlines + Arial body, 600px max, GHL merge fields from merge-fields.md only.
 Usage: python3 scripts/build_emails.py"""
@@ -8,7 +8,9 @@ import html, pathlib, re
 OUT = pathlib.Path(__file__).resolve().parent.parent / "build" / "emails" / "orchid"
 LOGO = "https://orchidpros.com/wp-content/uploads/2026/01/cropped-cropped-LOGO_WHITE-scaled-1.png"
 # Dirección legal confirmada por Manuel (26 nov 2026): siempre el P.O. Box.
-BOOK_URL = "https://api.leadconnectorhq.com/widget/booking/739uffEjsGH7PH0Zaovn"  # public link of "Orchid - Discovery Call"
+BOOK_URL = "https://api.leadconnectorhq.com/widget/booking/739uffEjsGH7PH0Zaovn"  # "Orchid - Discovery Call"
+BOOK_URL_NL = "https://api.leadconnectorhq.com/widget/booking/jgKkDzsDyVnOGqkIMxaT"  # "... (Newsletter)": uppercase I before MxaT (checked via API)
+CAREERS_URL = "https://orchidpros.com/work-with-us/"
 ADDRESS = "N3XUS, LLC d/b/a ORCHID, P.O. Box 463, Rutherford, NJ 07070"
 
 C = dict(bg="#F3F0FA", card="#FFFFFF", violet="#3F1D83", ink="#1C1233", body="#4A4460", muted="#6B6485",
@@ -29,20 +31,21 @@ def details(rows):
         cells.append(f'<tr><td style="padding:{"18px" if i == 0 else "0"} 20px 6px 20px;font-family:{F_BODY};font-size:13px;line-height:16px;color:{C["muted"]};">{label}</td></tr>')
         cells.append(f'<tr><td style="padding:0 20px {"18px" if last else "14px"} 20px;font-family:{F_BODY};font-size:16px;line-height:22px;color:{C["ink"]};font-weight:bold;">{value}</td></tr>')
     return (f'<tr><td style="padding:4px 36px 22px 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
-            f'style="background-color:{C["bg"]};border-left:4px solid {C["yellow"]};border-radius:8px;">{"".join(cells)}</table></td></tr>')
+            f'bgcolor="{C["bg"]}" style="background-color:{C["bg"]};border-left:4px solid {C["yellow"]};border-radius:8px;">{"".join(cells)}</table></td></tr>')
 
 
 def callout(title, text):
     return (f'<tr><td style="padding:4px 36px 22px 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
-            f'style="background-color:{C["lilac"]};border-radius:12px;"><tr><td style="padding:18px 20px;font-family:{F_BODY};font-size:15px;line-height:23px;color:{C["body"]};">'
+            f'bgcolor="{C["lilac"]}" style="background-color:{C["lilac"]};border-radius:12px;"><tr><td style="padding:18px 20px;font-family:{F_BODY};font-size:15px;line-height:23px;color:{C["body"]};">'
             f'<p style="margin:0 0 4px 0;font-family:{F_HEAD};font-size:18px;line-height:24px;color:{C["violet"]};font-weight:bold;">{title}</p>'
             f'<p style="margin:0;">{text}</p></td></tr></table></td></tr>')
 
 
 def button(label, href, pad="8px 36px 8px 36px"):
-    return (f'<tr><td align="left" style="padding:{pad};"><a href="{href}" target="_blank" '
+    return (f'<tr><td align="left" style="padding:{pad};"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>'
+            f'<td bgcolor="{C["yellow"]}" style="background-color:{C["yellow"]};border-radius:999px;"><a href="{href}" target="_blank" '
             f'style="display:inline-block;background-color:{C["yellow"]};color:{C["ink"]};font-family:{F_BODY};font-size:15px;'
-            f'font-weight:bold;line-height:20px;text-decoration:none;padding:13px 26px;border-radius:999px;">{label}</a></td></tr>')
+            f'font-weight:bold;line-height:20px;text-decoration:none;padding:13px 26px;border-radius:999px;">{label}</a></td></tr></table></td></tr>')
 
 
 def link_line(before, label, href):
@@ -74,7 +77,7 @@ def layout(tag, headline, body_rows, preheader=""):
             f'<tr><td align="left" bgcolor="{C["violet"]}" style="background-color:{C["violet"]};padding:28px 36px 0 36px;">'
             f'<img src="{LOGO}" width="120" alt="Orchid" style="display:block;width:120px;height:auto;border:0;"></td></tr>'
             f'<tr><td align="left" bgcolor="{C["violet"]}" style="background-color:{C["violet"]};padding:22px 36px 0 36px;">'
-            f'<span style="display:inline-block;background-color:{C["yellow"]};color:{C["violet"]};font-family:{F_HEAD};font-style:italic;font-weight:bold;font-size:14px;line-height:18px;padding:6px 14px;border-radius:14px;">{tag}</span></td></tr>'
+            f'<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="{C["yellow"]}" style="background-color:{C["yellow"]};border-radius:14px;padding:6px 14px;color:{C["violet"]};font-family:{F_HEAD};font-style:italic;font-weight:bold;font-size:14px;line-height:18px;">{tag}</td></tr></table></td></tr>'
             f'<tr><td align="left" bgcolor="{C["violet"]}" style="background-color:{C["violet"]};padding:14px 36px 32px 36px;font-family:{F_HEAD};font-size:28px;line-height:34px;color:#FFFFFF;font-weight:bold;">'
             f'<p style="margin:0;">{headline}</p></td></tr>'
             f'<tr><td style="padding:30px 0 0 0;font-size:0;line-height:0;">&nbsp;</td></tr>'
@@ -95,7 +98,7 @@ EMAILS = {
     "01-email-descarte": dict(tag="Thanks for reaching out", headline="Thanks for your interest in Orchid, {{contact.first_name}}.", pre="Our careers page is the right place for you.", rows=[
         p("The form you filled out is for businesses looking to hire an Orchid professional."),
         callout("Looking to work with Orchid?", "We're always glad to meet bilingual professionals in Colombia. Apply through our careers page and our talent team will review your application."),
-        button("Apply to work with Orchid", "TODO_URL_CAREERS"),
+        button("Apply to work with Orchid", CAREERS_URL),
         p("Thank you again for thinking of us.", pad="18px 36px 22px 36px"),
         signature("Best regards,", "The Orchid Team", "orchidpros.com")]),
     "02-email-bienvenida": dict(tag="Request received", headline="We got your request, {{contact.first_name}}.", pre="Here's how to book your discovery call with Orchid.", rows=[
@@ -107,7 +110,7 @@ EMAILS = {
     "04-email-cita-cancelada": dict(tag="About your call", headline="About your call request, {{contact.first_name}}.", pre="An update on the appointment you booked.", rows=[
         p("Thanks for booking time with us. Our discovery calls are for businesses in the United States looking to hire an Orchid professional, so we've canceled this appointment."),
         callout("Looking to work with Orchid?", "If you're a bilingual professional in Colombia, you can apply through our careers page and our talent team will review your application."),
-        button("Apply to work with Orchid", "TODO_URL_CAREERS"),
+        button("Apply to work with Orchid", CAREERS_URL),
         p("If you believe this was a mistake, just reply to this email and we'll take a look.", pad="18px 36px 22px 36px"),
         signature("Best regards,", "The Orchid Team", "orchidpros.com")]),
     "05-bienvenida-delegate-brief": dict(tag="The Delegate Brief", headline="Welcome to The Delegate Brief, {{contact.first_name}}.", pre="One task worth delegating, every other week.", rows=[
@@ -183,6 +186,8 @@ def main():
     no_offer = no_offer[:i] + no_offer[j + 1:]
     e5 = EMAILS["05-bienvenida-delegate-brief"]
     files["05-bienvenida-delegate-brief-sin-oferta"] = layout(e5["tag"], e5["headline"], no_offer, e5["pre"])
+    e8 = EMAILS["08-cal-cancelacion"]
+    files["08-cal-cancelacion-newsletter"] = layout(e8["tag"], e8["headline"], [r.replace(BOOK_URL, BOOK_URL_NL) for r in e8["rows"]], e8["pre"])
     files["03-aviso-interno-nuevo-lead"] = INTERNAL_03
     files["_layout"] = layout("TAG", "Headline, {{contact.first_name}}.", [p("Body paragraph."), button("Button", "#"), signature("Talk soon,", "Andrea Bolanos")], "Pre-header")
     for name, body in files.items():
