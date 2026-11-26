@@ -92,3 +92,6 @@ No old form or trigger was deleted or changed.
 - Services ad set: EV EN (120254964371220640) and EV ES (120254964379790640), paused since Nov 11, now use the v5 creatives and are ACTIVE; new ads IG · EV · Charge it at home EN and IG · EV · Cárgalo en casa ES (iguana creatives). Script: scripts/ev_to_services.py.
 - Panel ads stay paused (no leads since Nov 11); back with the January "insurance-ready" promo.
 - Budget unchanged ($56/day leads).
+
+## 2026-11-26 · Budget ramp, week 2 (approved by the user)
+- Leads ad set: $56 to $59/day. Awareness: $14 to $15/day. Services total $70 to $74/day (80/20). With the ZIP test ($10/day): $84/day, ~$2,550/month. Week Nov 19-25: services $436, 11 leads, CPL $40.
