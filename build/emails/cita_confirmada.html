@@ -1,0 +1,48 @@
+<!-- Orchid · email: cita confirmada (GHL workflow "02 - Cita agendada"). Merge fields de GHL entre {{ }}: verificar nombres en el selector de campos. -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light only"><title>You're booked</title></head>
+<body style="margin:0;padding:0;background:#F3F0FA;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F3F0FA;">
+<tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff;border-radius:18px;overflow:hidden;">
+  <tr><td style="background:#3F1D82;padding:26px 32px;" align="left">
+    <img src="https://assets.cdn.filesafe.space/r5demglXbNG9LoCszFIw/media/6adbab5e651cc02cde258343.png" width="110" alt="Orchid" style="display:block;border:0;">
+  </td></tr>
+  <tr><td style="background:#3F1D82;padding:0 32px 30px;" align="left">
+    <span style="display:inline-block;background:#FFC75A;color:#3F1D82;font:italic 600 14px Georgia,serif;padding:6px 14px;border-radius:14px;">Your call is booked</span>
+    <h1 style="margin:16px 0 0;color:#ffffff;font:700 30px/1.15 Georgia,'Times New Roman',serif;">See you soon, {{contact.first_name}}.</h1>
+  </td></tr>
+  <tr><td style="padding:28px 32px 8px;font:16px/1.6 Arial,Helvetica,sans-serif;color:#22163F;">
+    <p style="margin:0 0 18px;">Thanks for booking a free 30-minute call with Orchid. We'll look at your workload together and show you what a bilingual professional from Colombia could take off your plate.</p>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#EDEEFF;border-radius:14px;">
+      <tr><td style="padding:18px 20px;font:15px/1.6 Arial,Helvetica,sans-serif;color:#22163F;">
+        <b style="color:#3F1D82;">When:</b> {{appointment.start_time}} ({{appointment.timezone}})<br>
+        <b style="color:#3F1D82;">Where:</b> Google Meet · {{appointment.meeting_location}}<br>
+        <b style="color:#3F1D82;">With:</b> {{appointment.user.name}}
+      </td></tr>
+    </table>
+  </td></tr>
+  <tr><td align="center" style="padding:22px 32px 6px;">
+    <a href="{{appointment.meeting_location}}" style="display:inline-block;background:#FFC75A;color:#2A1259;font:700 16px Arial,Helvetica,sans-serif;text-decoration:none;padding:14px 30px;border-radius:999px;">Join the call</a>
+  </td></tr>
+  <tr><td align="center" style="padding:6px 32px 24px;font:14px Arial,Helvetica,sans-serif;color:#5B5475;">
+    Need another time? <a href="{{appointment.reschedule_link}}" style="color:#3F1D82;">Reschedule</a> · <a href="{{appointment.cancellation_link}}" style="color:#3F1D82;">Cancel</a>
+  </td></tr>
+  <tr><td style="padding:0 32px 28px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #DDDFF6;">
+      <tr><td style="padding:18px 0 0;font:15px/1.6 Arial,Helvetica,sans-serif;color:#22163F;">
+        <b style="color:#3F1D82;">Before the call</b><br>
+        <span style="color:#34B36A;font-weight:700;">&#10003;</span> Think of 3 tasks you'd hand off today.<br>
+        <span style="color:#34B36A;font-weight:700;">&#10003;</span> Note the hours you need covered (your U.S. time zone).<br>
+        <span style="color:#34B36A;font-weight:700;">&#10003;</span> Bring any questions: HIPAA, pricing, replacement.
+      </td></tr>
+    </table>
+  </td></tr>
+  <tr><td style="background:#2A1259;padding:22px 32px;font:12px/1.7 Arial,Helvetica,sans-serif;color:#C1C6FF;" align="center">
+    Operational excellence powered by human warmth.<br>
+    N3XUS, LLC d/b/a ORCHID · P.O. Box 463, Rutherford, NJ 07070<br>
+    <a href="https://orchidpros.com" style="color:#C1C6FF;">orchidpros.com</a> · <a href="https://orchidpros.com/privacy-policy-2/" style="color:#C1C6FF;">Privacy Policy</a>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>
