@@ -146,3 +146,4 @@ Las horas están en hora de Nueva York (zona horaria de la cuenta).
 - Hallazgo: el calendario original tiene el píxel de Meta y el iframe manda la URL con nombre/email/teléfono a Meta (también en gracias de Black Friday).
 - Prueba TEST 52: cita del 8 dic cancelada y contacto etiquetado test + lead-falso (vía API).
 - Enlace Mailchimp: https://go.orchidpros.com/book-a-call?utm_source=newsletter&utm_medium=email&utm_campaign=nl-black-friday-2026-11-27&first_name=*|URL:FNAME|*&email=*|URL:EMAIL|*&phone=*|URL:PHONE|*
+- 2026-11-26: Opción B elegida: la página del newsletter usará el calendario copia sin píxel (jgKkDzsDyVnOGqkIMxaT). Source actualizado; pendiente que Manuel agregue ese calendario al workflow '02 - Cita agendada' y luego Chrome pega el código (build/prompts/chrome_calendario_newsletter_swap.md). El calendario original sigue con píxel (riesgo de PII en gracias de BF).
