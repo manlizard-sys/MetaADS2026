@@ -6,6 +6,9 @@
 <title>Black Friday at Orchid | $0 Down + 50% Off Your First Month</title>
 <meta name="description" content="Book a free call before December 1st at 11:59 pm ET and get $0 down plus 50% off your first monthly installment with Orchid.">
 <meta property="og:type" content="website">
+<link rel="preconnect" href="https://api.leadconnectorhq.com">
+<link rel="preconnect" href="https://stcdn.leadconnectorhq.com">
+<link rel="preconnect" href="https://stcdn.leadconnectorhq.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
@@ -115,7 +118,7 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <img class="logo" src="https://assets.cdn.filesafe.space/r5demglXbNG9LoCszFIw/media/6adbab5e651cc02cde258343.png" alt="Orchid" width="113" height="34">
+      <img class="logo" fetchpriority="high" src="https://assets.cdn.filesafe.space/r5demglXbNG9LoCszFIw/media/6adbab5e651cc02cde258343.png" alt="Orchid" width="113" height="34">
       <span class="tag">Black Friday · for our subscribers</span>
       <h1>A bilingual professional on your team. <span class="y">$0 down.</span></h1>
       <div class="offer-pill">Plus 50% off your first month. Only until Dec 1.</div>
@@ -140,6 +143,26 @@
       <p class="cal-title">Pick a time for your free call</p>
       <p class="cal-sub">Your name, email and phone, then the time. One step.</p>
       <iframe id="orxCal" title="Book your free call" scrolling="no" style="width:100%;border:none;overflow:hidden;min-height:760px"></iframe>
+<script>
+/* ============ CONFIG ============ */
+const CONFIG = {
+  CALENDAR_URL: "https://api.leadconnectorhq.com/widget/booking/jgKkDzsDyVnOGqkIMxaT", // GHL calendar embed link
+  CAMPAIGN: "newsletter-black-friday-2026",
+  DEADLINE: "2026-12-02T04:59:00Z"   // Dec 1, 11:59 pm ET
+};
+/* ================================ */
+const qs = new URLSearchParams(location.search);
+// Pass tracking + prefill (from the Mailchimp link) through to the GHL calendar
+const cal = new URL(CONFIG.CALENDAR_URL);
+["utm_source","utm_medium","utm_campaign","utm_content","utm_term","first_name","last_name","name","email","phone"].forEach(k => { if (qs.get(k)) cal.searchParams.set(k, qs.get(k)); });
+if (!cal.searchParams.get("utm_campaign")) cal.searchParams.set("utm_campaign", CONFIG.CAMPAIGN);
+document.getElementById("orxCal").src = cal.toString();
+// Remove personal data from the address bar (keep utm_) so it never reaches the Meta pixel or analytics
+try { const u = new URL(location.href); ["first_name","last_name","name","email","phone"].forEach(k => u.searchParams.delete(k)); history.replaceState(null, "", u.toString()); } catch (_) {}
+// Meta pixel loads only AFTER the address bar is clean (this page must have no pixel in GHL's Tracking Code)
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2271987886986577'); fbq('track','PageView');
+</script>
       <p class="form-links"><a href="https://orchidpros.com/privacy-policy-2/" target="_blank">Privacy Policy</a> | <a href="https://orchidpros.com/sms-terms/" target="_blank">SMS Terms</a></p>
     </div>
   </div>
@@ -195,31 +218,13 @@
 </section>
 
 <footer>
-  <img src="https://assets.cdn.filesafe.space/r5demglXbNG9LoCszFIw/media/6adbab5e651cc02cde258343.png" alt="Orchid" width="113" height="34">
+  <img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/r5demglXbNG9LoCszFIw/media/6adbab5e651cc02cde258343.png" alt="Orchid" width="113" height="34">
   <div>Operational excellence powered by human warmth.</div>
   <div>N3XUS, LLC d/b/a ORCHID · P.O. Box 463, Rutherford, NJ 07070</div>
   <div><a href="https://orchidpros.com/privacy-policy-2/">Privacy Policy</a> · <a href="https://orchidpros.com/sms-terms/">SMS Terms</a> · © 2026 Orchid</div>
 </footer>
 
 <script>
-/* ============ CONFIG ============ */
-const CONFIG = {
-  CALENDAR_URL: "https://api.leadconnectorhq.com/widget/booking/jgKkDzsDyVnOGqkIMxaT", // GHL calendar embed link
-  CAMPAIGN: "newsletter-black-friday-2026",
-  DEADLINE: "2026-12-02T04:59:00Z"   // Dec 1, 11:59 pm ET
-};
-/* ================================ */
-const qs = new URLSearchParams(location.search);
-// Pass tracking + prefill (from the Mailchimp link) through to the GHL calendar
-const cal = new URL(CONFIG.CALENDAR_URL);
-["utm_source","utm_medium","utm_campaign","utm_content","utm_term","first_name","last_name","name","email","phone"].forEach(k => { if (qs.get(k)) cal.searchParams.set(k, qs.get(k)); });
-if (!cal.searchParams.get("utm_campaign")) cal.searchParams.set("utm_campaign", CONFIG.CAMPAIGN);
-document.getElementById("orxCal").src = cal.toString();
-// Remove personal data from the address bar (keep utm_) so it never reaches the Meta pixel or analytics
-try { const u = new URL(location.href); ["first_name","last_name","name","email","phone"].forEach(k => u.searchParams.delete(k)); history.replaceState(null, "", u.toString()); } catch (_) {}
-// Meta pixel loads only AFTER the address bar is clean (this page must have no pixel in GHL's Tracking Code)
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','2271987886986577'); fbq('track','PageView');
 // Countdown
 const end = new Date(CONFIG.DEADLINE).getTime();
 const pad = n => String(n).padStart(2, "0");
