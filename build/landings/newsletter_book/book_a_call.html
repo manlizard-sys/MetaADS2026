@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Friday at Orchid | $0 Down + 50% Off Your First Month</title>
+<meta name="description" content="Book a free call before December 1st at 11:59 pm ET and get $0 down plus 50% off your first monthly installment with Orchid.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --purple:#3f1d82;
+    --purple-deep:#2a1259;
+    --ink:#22163f;
+    --muted:#5b5475;
+    --yellow:#ffc75a;
+    --red:#e5383b;
+    --red-shadow:#9c1d20;
+    --lilac:#edeeff;
+    --lilac-2:#c1c6ff;
+    --cream:#fff2d6;
+    --green:#34b36a;
+    --line:#dddff6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .center{text-align:center}
+
+  .tag{display:inline-block;font-family:Fraunces,serif;font-style:italic;font-weight:600;font-size:16px;color:var(--purple);background:var(--yellow);padding:7px 18px 8px;border-radius:18px 24px 16px 22px;transform:rotate(-2deg)}
+  .tag.lilac{background:var(--lilac-2)}
+
+  /* HERO */
+  .hero{background:var(--purple);color:#fff;padding:36px 0 56px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 440px;gap:48px;align-items:start}
+  .logo{width:113px;height:auto;display:block;margin-bottom:22px}
+  .hero h1{font-size:clamp(36px,4.4vw,50px);font-weight:700;letter-spacing:-.012em;margin:22px 0 18px}
+  .hero h1 .y{color:var(--yellow)}
+  .offer-pill{display:inline-block;background:var(--yellow);color:var(--purple-deep);font-weight:800;font-size:16.8px;padding:8px 16px;border-radius:12px 16px 11px 15px;margin-bottom:22px}
+  .count-label{font-weight:700;font-size:15px;letter-spacing:.03em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:10px}
+  .units{display:flex;gap:10px;margin-bottom:24px}
+  .u{background:#fff;border-radius:12px 14px 11px 13px;padding:6px 8px 4px;min-width:58px;text-align:center}
+  .u b{display:block;color:var(--red);font-size:30px;font-weight:800;line-height:1.1}
+  .u small{display:block;color:var(--purple);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .checks{list-style:none;display:flex;flex-wrap:wrap;gap:10px 26px;margin-bottom:18px}
+  .checks li{font-weight:600;display:flex;align-items:center;gap:8px}
+  .checks li::before{content:"✓";display:inline-grid;place-items:center;width:23px;height:23px;background:var(--green);color:#fff;font-size:13px;font-weight:800;border-radius:9px 12px 8px 11px}
+  .terms{font-size:13px;color:rgba(255,255,255,.72);max-width:520px}
+
+  /* FORM */
+  .form-card{background:#fff;color:var(--ink);border-radius:6px;padding:26px;margin-top:6px}
+  .form-card label{display:block;font-size:15px;font-weight:600;margin:0 0 6px}
+  .form-card input{width:100%;font:inherit;font-size:15px;padding:11px 14px;border:1px solid #d0d3dc;border-radius:6px;margin-bottom:16px;color:var(--ink)}
+  .form-card input:focus{outline:none;border-color:var(--purple);box-shadow:0 0 0 3px var(--lilac)}
+  .btn-yellow{width:100%;border:0;border-radius:6px;background:var(--yellow);color:var(--purple-deep);font:700 16px Figtree,sans-serif;padding:13px;cursor:pointer;margin-top:4px}
+  .btn-yellow:hover{filter:brightness(.96)}
+  .btn-yellow[disabled]{opacity:.7;cursor:wait}
+  .form-links{text-align:center;font-size:12px;margin-top:16px;color:var(--muted)}
+  .err{display:none}
+  .cal-card{padding:20px 14px}
+  .cal-title{font-family:Fraunces,serif;font-weight:700;font-size:22px;color:var(--purple);text-align:center}
+  .cal-sub{text-align:center;color:var(--muted);font-size:14px;margin:4px 0 10px}
+
+  /* SECTIONS */
+  section.sec{padding:84px 0}
+  .sec h2{font-size:clamp(32px,4vw,46px);font-weight:700;color:var(--purple);margin:18px 0 12px}
+  .lead{color:var(--muted);font-size:18.4px;margin-bottom:40px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:936px;margin:0 auto;text-align:left}
+  .vert{background:var(--lilac);border-radius:28px 44px 26px 40px;padding:30px}
+  .vert:nth-child(2){background:var(--cream);border-radius:44px 26px 40px 28px}
+  .vert h3,.card h3{font-size:21px;font-weight:600;color:var(--purple);margin-bottom:12px}
+  .vert ul{list-style:none;color:var(--muted)}
+  .vert li{padding:9px 0;border-top:1px solid rgba(63,29,130,.13)}
+  .vert li:first-child{border-top:0;padding-top:0}
+
+  .how{background:var(--lilac);position:relative;overflow:hidden}
+  .how::before,.how::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.35);pointer-events:none}
+  .how::before{width:520px;height:520px;left:-180px;top:-120px}
+  .how::after{width:460px;height:460px;right:-160px;bottom:-200px}
+  .how .wrap{position:relative;z-index:1}
+  .card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px}
+  .card b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--purple);color:#fff;font-weight:700;margin-bottom:12px}
+  .card p{color:var(--muted);font-size:15.7px}
+
+  .faq{max-width:800px;margin:0 auto;text-align:left}
+  .faq details{border:1px solid var(--line);border-radius:18px;padding:0 24px;margin-bottom:12px;transition:background .2s}
+  .faq details[open]{background:var(--lilac);border-color:var(--lilac-2)}
+  .faq summary{list-style:none;cursor:pointer;color:var(--purple);font-weight:700;font-size:16.6px;padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";flex:0 0 24px;height:24px;border-radius:50%;background:var(--yellow);color:var(--purple-deep);display:grid;place-items:center;font-size:16px;font-weight:800;line-height:1}
+  .faq details[open] summary::after{content:"×"}
+  .faq p{color:var(--muted);padding:0 0 22px}
+
+  .btn-red{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:800;font-size:17px;padding:18px 36px;border-radius:999px;box-shadow:0 5px 0 var(--red-shadow);margin-top:30px;transition:transform .12s,box-shadow .12s}
+  .btn-red:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--red-shadow)}
+
+  footer{background:var(--purple-deep);color:var(--lilac-2);text-align:center;padding:40px 24px;font-size:14px;line-height:1.9}
+  footer img{width:113px;height:auto;margin-bottom:10px}
+
+  @media (max-width:880px){
+    .hero .wrap,.grid3{grid-template-columns:1fr}
+    .hero{padding-bottom:40px}
+    section.sec{padding:60px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <img class="logo" src="https://assets.cdn.filesafe.space/r5demglXbNG9LoCszFIw/media/6adbab5e651cc02cde258343.png" alt="Orchid" width="113" height="34">
+      <span class="tag">Black Friday · for our subscribers</span>
+      <h1>A bilingual professional on your team. <span class="y">$0 down.</span></h1>
+      <div class="offer-pill">Plus 50% off your first month. Only until Dec 1.</div>
+
+      <p class="count-label">Black Friday offer ends December 1st at 11:59 pm ET</p>
+      <div class="units">
+        <div class="u"><b id="cd-d">00</b><small>days</small></div>
+        <div class="u"><b id="cd-h">00</b><small>hours</small></div>
+        <div class="u"><b id="cd-m">00</b><small>min</small></div>
+        <div class="u"><b id="cd-s">00</b><small>sec</small></div>
+      </div>
+
+      <ul class="checks">
+        <li>Free 30-minute call</li>
+        <li>$0 down</li>
+        <li>50% off your first month</li>
+      </ul>
+      <p class="terms">No commitment. Book before the deadline to lock in the offer. We never share your details.</p>
+    </div>
+
+    <div class="form-card cal-card" id="book">
+      <p class="cal-title">Pick a time for your free call</p>
+      <p class="cal-sub">Your name, email and phone, then the time. One step.</p>
+      <iframe id="orxCal" title="Book your free call" scrolling="no" style="width:100%;border:none;overflow:hidden;min-height:760px"></iframe>
+      <p class="form-links"><a href="https://orchidpros.com/privacy-policy-2/" target="_blank">Privacy Policy</a> | <a href="https://orchidpros.com/sms-terms/" target="_blank">SMS Terms</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="sec center">
+  <div class="wrap">
+    <span class="tag lilac">What you get</span>
+    <h2>Help for your business, half off.</h2>
+    <p class="lead">For U.S. business owners, practices and firms that want their time back.</p>
+    <div class="grid3">
+      <div class="vert">
+        <h3>$0 down</h3>
+        <ul><li>Nothing to pay upfront</li><li>Start with the task you choose</li><li>No setup fees</li></ul>
+      </div>
+      <div class="vert">
+        <h3>50% off</h3>
+        <ul><li>Half off your first monthly installment</li><li>The same Orchid service, half the price</li><li>Only until December 1st</li></ul>
+      </div>
+      <div class="vert">
+        <h3>A free call</h3>
+        <ul><li>30 minutes over Google Meet</li><li>We look at your workload together</li><li>No pressure, no commitment</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec how center">
+  <div class="wrap">
+    <span class="tag">How it works</span>
+    <h2>Simple.</h2>
+    <div class="grid3" style="margin-top:32px">
+      <div class="card"><b>1</b><h3>Pick a time</h3><p>Choose the slot that works for you. Your details are already filled in.</p></div>
+      <div class="card"><b>2</b><h3>Talk with us</h3><p>A free 30-minute call over Google Meet about your workload.</p></div>
+      <div class="card"><b>3</b><h3>Start for $0 down</h3><p>If it's a fit, your first month is 50% off.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec center">
+  <div class="wrap">
+    <h2 style="margin-top:0;margin-bottom:36px">Frequently asked questions</h2>
+    <div class="faq">
+      <details open><summary>What's the Black Friday offer?</summary><p>$0 upfront payment and 50% off the first monthly installment of your Orchid service, when you book a call before December 1st at 11:59 pm ET.</p></details>
+      <details><summary>Is the call really free?</summary><p>Yes. It's 30 minutes, there's no commitment, and we'll tell you honestly if Orchid is a good fit.</p></details>
+      <details><summary>What if my call is after December 1st?</summary><p>You keep the offer as long as you book before the deadline.</p></details>
+    </div>
+    <a class="btn-red" href="#book">Book My Free Call</a>
+  </div>
+</section>
+
+<footer>
+  <img src="https://assets.cdn.filesafe.space/r5demglXbNG9LoCszFIw/media/6adbab5e651cc02cde258343.png" alt="Orchid" width="113" height="34">
+  <div>Operational excellence powered by human warmth.</div>
+  <div>N3XUS, LLC d/b/a ORCHID · P.O. Box 463, Rutherford, NJ 07070</div>
+  <div><a href="https://orchidpros.com/privacy-policy-2/">Privacy Policy</a> · <a href="https://orchidpros.com/sms-terms/">SMS Terms</a> · © 2026 Orchid</div>
+</footer>
+
+<script>
+/* ============ CONFIG ============ */
+const CONFIG = {
+  CALENDAR_URL: "https://api.leadconnectorhq.com/widget/booking/__CALENDAR_ID__", // GHL calendar embed link
+  CAMPAIGN: "newsletter-black-friday-2026",
+  DEADLINE: "2026-12-02T04:59:00Z"   // Dec 1, 11:59 pm ET
+};
+/* ================================ */
+const qs = new URLSearchParams(location.search);
+// Pass tracking + prefill (from the Mailchimp link) through to the GHL calendar
+const cal = new URL(CONFIG.CALENDAR_URL);
+["utm_source","utm_medium","utm_campaign","utm_content","utm_term","first_name","last_name","name","email","phone"].forEach(k => { if (qs.get(k)) cal.searchParams.set(k, qs.get(k)); });
+if (!cal.searchParams.get("utm_campaign")) cal.searchParams.set("utm_campaign", CONFIG.CAMPAIGN);
+document.getElementById("orxCal").src = cal.toString();
+// Remove personal data from the address bar (keep utm_) so it never reaches the Meta pixel or analytics
+try { const u = new URL(location.href); ["first_name","last_name","name","email","phone"].forEach(k => u.searchParams.delete(k)); history.replaceState(null, "", u.toString()); } catch (_) {}
+// Meta pixel loads only AFTER the address bar is clean (this page must have no pixel in GHL's Tracking Code)
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2271987886986577'); fbq('track','PageView');
+// Countdown
+const end = new Date(CONFIG.DEADLINE).getTime();
+const pad = n => String(n).padStart(2, "0");
+function tick(){
+  let d = Math.max(0, end - Date.now());
+  document.getElementById("cd-d").textContent = pad(Math.floor(d / 864e5)); d %= 864e5;
+  document.getElementById("cd-h").textContent = pad(Math.floor(d / 36e5));  d %= 36e5;
+  document.getElementById("cd-m").textContent = pad(Math.floor(d / 6e4));
+  document.getElementById("cd-s").textContent = pad(Math.floor((d % 6e4) / 1e3));
+}
+tick(); setInterval(tick, 1000);
+</script>
+<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+</body>
+</html>

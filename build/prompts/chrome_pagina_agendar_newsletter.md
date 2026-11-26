@@ -1,28 +1,32 @@
-Necesito crear en GHL (sub-cuenta Orchid, Location r5demglXbNG9LoCszFIw) una página simple para agendar llamadas desde el newsletter de Mailchimp. La persona llega desde el newsletter, ve el calendario con sus datos ya llenos, elige la hora y queda agendada. No toques las landings de Black Friday, ni Meta, ni los formularios existentes. No hagas reservas de prueba sin avisarme.
+Necesito montar en GHL (sub-cuenta Orchid, Location r5demglXbNG9LoCszFIw) la página a la que llega el newsletter de Mailchimp. El diseño ya está hecho; solo hay que pegarlo y conectarle el calendario. La persona llega con sus datos ya llenos, elige la hora y queda agendada. No toques las landings de Black Friday de los anuncios, ni Meta, ni los formularios existentes. No hagas reservas de prueba sin avisarme.
 
 PARTE 1 · El calendario
 1. Ve a Calendars y dime qué calendarios hay. Usa el que ya está en las páginas de gracias de Black Friday (practices-free-month-thanks), el que pone la etiqueta "agendo".
-2. En ese calendario → Form (formulario de la reserva): deja SOLO Nombre, Teléfono y Email, los tres obligatorios. No agregues más campos.
-3. Dime si el calendario acepta datos prellenados por la URL (parámetros como first_name, email, phone) y con qué nombres exactos. Prueba abriendo su enlace público con ?first_name=TEST%2052&email=hmlizarralde%2B52%40gmail.com&phone=3057124052 y dime si aparecen llenos. NO confirmes la reserva.
+2. En ese calendario → Form (formulario de la reserva): deja SOLO Nombre, Teléfono y Email, los tres obligatorios.
+3. Copia el ID del calendario: está en su enlace de reserva o en el código de inserción, en la parte que dice /widget/booking/<ID>.
+4. Abre su enlace público agregando ?first_name=TEST%2052&email=hmlizarralde%2B52%40gmail.com&phone=3057124052 y dime si nombre, email y teléfono aparecen llenos. Si no, dime con qué nombres de parámetro sí se llenan. NO confirmes la reserva.
 
 PARTE 2 · La página
 1. En el funnel del newsletter (el de go.orchidpros.com/brief), crea un paso nuevo llamado "Agendar" con path: book-a-call
-2. Contenido, de arriba hacia abajo, fondo violeta #3F1D82 y textos blancos como las otras landings:
-   - Título: "Pick a time. We'll call you."
-   - Una línea: "A free 30-minute call to see what a bilingual assistant from Colombia can take off your plate."
-   - El widget del calendario de la Parte 1, a todo el ancho de la columna.
-3. Settings → Tracking Code → Header: solo el código base del píxel de Meta 2271987886986577 con PageView, igual que en las otras páginas. Footer: pega esto, que borra los datos personales de la barra de direcciones después de que el calendario los lee, para no mandárselos a Meta:
-   <script>setTimeout(function(){try{var u=new URL(location.href);['first_name','last_name','name','email','phone'].forEach(function(k){u.searchParams.delete(k)});history.replaceState(null,'',u.toString());}catch(e){}},4000);</script>
-4. Después de reservar, que lleve a la página de gracias de llamadas que ya existe (la del calendario). Si no hay una, dime y la creamos.
-5. Publica.
+2. Una sola sección de ancho completo, padding y márgenes en 0, con un elemento Custom Code.
+3. Abre https://github.com/manlizard-sys/metaads2026/blob/claude/admiring-franklin-wrfknt/build/landings/newsletter_book/book_a_call.html → "Raw" → copia TODO y pégalo en ese Custom Code.
+4. En lo que pegaste, reemplaza __CALENDAR_ID__ por el ID del calendario de la Parte 1. Si en la Parte 1.4 los parámetros tenían otros nombres, avísame antes de publicar.
+5. Settings del paso → Tracking Code: deja el Header y el Footer SIN el píxel de Meta. La página ya carga el píxel ella misma, después de borrar los datos personales de la barra de direcciones. Revisa también el Tracking Code del funnel: si ahí está el píxel, dime antes de quitarlo.
+6. SEO: título "Black Friday at Orchid | $0 Down + 50% Off Your First Month".
+7. En el calendario, la confirmación de la reserva debe llevar a la página de gracias de llamadas que ya existe. Si no hay una, dime y la creamos.
+8. Publica.
 
 PARTE 3 · Comprobación (sin reservar)
 1. Abre en celular y en escritorio:
    https://go.orchidpros.com/book-a-call?utm_source=newsletter&utm_medium=email&utm_campaign=test52&first_name=TEST%2052&email=hmlizarralde%2B52%40gmail.com&phone=3057124052
-2. Confirma que el calendario carga con nombre, email y teléfono ya llenos y que solo falta elegir día y hora.
-3. Confirma que a los pocos segundos la barra de direcciones ya no muestra first_name, email ni phone, pero sí los utm_.
+2. Confirma que:
+   - el calendario aparece en el recuadro blanco, a la derecha en escritorio y debajo del texto en celular;
+   - nombre, email y teléfono ya vienen llenos y solo falta elegir día y hora;
+   - la barra de direcciones ya no muestra first_name, email ni phone, pero sí los utm_;
+   - en DevTools → Network, filtrando "facebook.com/tr", sale un PageView y su URL NO contiene el email ni el teléfono.
 
 AL TERMINAR, dime:
-- Qué calendario usaste y la URL pública de la página.
-- Los nombres exactos de los parámetros que prellenan el calendario (para armar el enlace de Mailchimp).
+- Qué calendario usaste, su ID y la URL pública de la página.
+- Los nombres exactos de los parámetros que prellenan el calendario.
+- Si el píxel estaba en el Tracking Code del funnel.
 - Si algo no se pudo hacer como se describe.
