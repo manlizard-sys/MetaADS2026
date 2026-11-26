@@ -1,6 +1,6 @@
 """Builds Orchid's GHL automation emails from one shared layout.
 Output: build/emails/orchid/{_layout.html, 01..10-*.html, 05-...-sin-oferta.html, 08-...-newsletter.html, index.html}
-Rules (BRIEF.md): fragment starting at <table>, inline styles only, tables, no <style>/<head>/classes, no em dashes,
+Rules (BRIEF.md; v3 26 nov: buttons violet/white and outlined yellow tag so Gmail dark mode keeps contrast): fragment starting at <table>, inline styles only, tables, no <style>/<head>/classes, no em dashes,
 Georgia headlines + Arial body, 600px max, GHL merge fields from merge-fields.md only.
 Usage: python3 scripts/build_emails.py"""
 import html, pathlib, re
@@ -43,8 +43,8 @@ def callout(title, text):
 
 def button(label, href, pad="8px 36px 8px 36px"):
     return (f'<tr><td align="left" style="padding:{pad};"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>'
-            f'<td bgcolor="{C["yellow"]}" style="background-color:{C["yellow"]};border-radius:999px;"><a href="{href}" target="_blank" '
-            f'style="display:inline-block;background-color:{C["yellow"]};color:{C["ink"]};font-family:{F_BODY};font-size:15px;'
+            f'<td bgcolor="{C["violet"]}" style="background-color:{C["violet"]};border-radius:999px;"><a href="{href}" target="_blank" '
+            f'style="display:inline-block;background-color:{C["violet"]};color:#FFFFFF;font-family:{F_BODY};font-size:15px;'
             f'font-weight:bold;line-height:20px;text-decoration:none;padding:13px 26px;border-radius:999px;">{label}</a></td></tr></table></td></tr>')
 
 
@@ -77,7 +77,7 @@ def layout(tag, headline, body_rows, preheader=""):
             f'<tr><td align="left" bgcolor="{C["violet"]}" style="background-color:{C["violet"]};padding:28px 36px 0 36px;">'
             f'<img src="{LOGO}" width="120" alt="Orchid" style="display:block;width:120px;height:auto;border:0;"></td></tr>'
             f'<tr><td align="left" bgcolor="{C["violet"]}" style="background-color:{C["violet"]};padding:22px 36px 0 36px;">'
-            f'<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="{C["yellow"]}" style="background-color:{C["yellow"]};border-radius:14px;padding:6px 14px;color:{C["violet"]};font-family:{F_HEAD};font-style:italic;font-weight:bold;font-size:14px;line-height:18px;">{tag}</td></tr></table></td></tr>'
+            f'<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="border:1.5px solid {C["yellow"]};border-radius:14px;padding:5px 13px;color:{C["yellow"]};font-family:{F_HEAD};font-style:italic;font-weight:bold;font-size:14px;line-height:18px;">{tag}</td></tr></table></td></tr>'
             f'<tr><td align="left" bgcolor="{C["violet"]}" style="background-color:{C["violet"]};padding:14px 36px 32px 36px;font-family:{F_HEAD};font-size:28px;line-height:34px;color:#FFFFFF;font-weight:bold;">'
             f'<p style="margin:0;">{headline}</p></td></tr>'
             f'<tr><td style="padding:30px 0 0 0;font-size:0;line-height:0;">&nbsp;</td></tr>'

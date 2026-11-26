@@ -1,4 +1,6 @@
-# Correos automáticos de Orchid · guía de GHL (v2, 26 nov 2026)
+# Correos automáticos de Orchid · guía de GHL (v3, 26 nov 2026)
+
+v3: botones violeta con texto blanco y etiqueta del encabezado con borde y texto amarillos, sin relleno, para que Gmail en modo oscuro no los vuelva ilegibles.
 
 HTML en `build/emails/orchid/`, generados con `python3 scripts/build_emails.py`. Vista previa: `index.html`.
 Estado publicado: todos los correos están en GHL desde el 26 nov (11:30 a. m. Bogotá). Remitente (correo): `growth@orchidpros.com`.
