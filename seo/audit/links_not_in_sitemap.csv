@@ -1,0 +1,6 @@
+﻿url,status,redirect_chain,noindex,linked_from
+https://orchidpros.com/healthcare/,200,301 https://orchidpros.com/healthcare/ -> 200 https://orchidpros.com/solutions/healthcare/,false,https://orchidpros.com/ https://orchidpros.com/elementor-hf/footer/
+https://orchidpros.com/marketing-creative/,200,301 https://orchidpros.com/marketing-creative/ -> 200 https://orchidpros.com/solutions/marketing-creative/,false,https://orchidpros.com/ https://orchidpros.com/elementor-hf/footer/
+https://orchidpros.com/operations-administration/,404,,true,https://orchidpros.com/ https://orchidpros.com/elementor-hf/footer/
+https://orchidpros.com/technology-data/,404,,true,https://orchidpros.com/ https://orchidpros.com/elementor-hf/footer/
+https://orchidpros.com/real-estate/orchidpros.com/contact/,404,,true,https://orchidpros.com/real-estate/
