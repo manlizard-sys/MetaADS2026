@@ -56,7 +56,7 @@ orchidpros.com/
 | Semana | Fechas | Qué | Quién | Por qué ahora |
 |---|---|---|---|---|
 | 1 | 7–13 dic | **Arreglos críticos de la auditoría:** C1 (títulos de salud y marketing), C2 (enlaces 404), C3 (salud en el menú), C4 (tagline del sitio), C6 (quitar el "setup fee" del FAQ). **Configurar** Search Console (propiedad de dominio + sitemap), Bing Webmaster (importar desde GSC) e IndexNow. **Noindex** en las landings de GHL (con tu aprobación); las de Black Friday ya vencieron. Medir PageSpeed con la llave. | Tú | Es lo que más rinde por hora: hoy Google muestra a la página de salud como si fuera de abogados. |
-| 1 | 7–13 dic | **Medición orgánica** (sección 4): script de fuente orgánica en los botones a GHL y canal de IA en GA4. | Desarrollo | Sin esto no se puede contar un solo lead orgánico. |
+| 1 | 7–13 dic | **Instalar GA4** en orchidpros.com y en go.orchidpros.com: hoy ninguno de los dos tiene etiqueta de Google (C7 en la auditoría). **Medición orgánica** (sección 4): script de fuente orgánica en los botones a GHL y canal de IA en GA4. | Tú (GA4) + Desarrollo (script) | Sin esto no se puede contar una sola visita ni un solo lead orgánico. |
 | 2 | 14–20 dic | **Publicar la página de salud nueva** (brief 1) con schema Service + FAQPage. Arreglos I2, I4, I6, I7 e I10. Pedir reseñas a clientes reales (ver sección 5). | Diseño + Tú | Mercado prioritario y el de la campaña de Meta. |
 | 3 | 21–27 dic | Texto de **/pricing/** (brief 2) y especificación de la calculadora. Unificar calculadoras de abogados (I8). Noindex o enlaces de huérfanas (I9). | Diseño + Desarrollo | Semana de fiestas: trabajo de escritorio. |
 | 4 | 28 dic – 3 ene | **Publicar /pricing/ y la calculadora.** Reescribir el FAQ con H1, respuestas cortas y FAQPage. | Desarrollo + Tú | Intención comercial alta; además sirve de destino para los anuncios. |
@@ -171,7 +171,7 @@ Yoast ya genera WebPage, Organization y BreadcrumbList. Las respuestas del FAQPa
 | Secundarias | how much does a virtual assistant cost, medical virtual assistant cost, cost of hiring an employee vs virtual assistant |
 
 **Secciones**
-1. **Starting rate:** `From $15/hour` en grande. Una frase sobre de qué depende el precio: rol, horas y experiencia **[CONFIRMAR los factores reales y si hay tarifas por rol que quieras publicar]**.
+1. **Starting rate:** `From $15/hour` en grande. Una frase sobre de qué depende el precio: **la experiencia del candidato** (confirmado el 27 nov 2026), y medio tiempo o tiempo completo. No se publican tarifas por rol: el precio exacto se da en la llamada.
 2. **What's included.** Lista tomada de la página actual de salud y del FAQ: recruiting and verification, background screening, onboarding, HR support and coaching, time and accountability tools, replacement protection, business email, phone number and Google Workspace.
 3. **`$0 to begin`.** No se cobra cuota de inicio: la búsqueda de candidatos, las entrevistas y la incorporación no tienen costo previo. Se dice igual en todo el sitio y nunca como oferta "por tiempo limitado", porque no lo es. Se pueden reutilizar las frases "No setup fee" y "Review and interview candidates before committing".
 4. **U.S. hire vs Orchid (calculadora).** Campos: rol (por defecto, administrative assistant), horas por semana y salario local (opcional). Resultado: costo anual estimado de una contratación local frente a Orchid, con el desglose (salario, beneficios e impuestos patronales, costo de contratación).
@@ -261,7 +261,13 @@ El formulario y la cita viven en go.orchidpros.com. Si alguien llega de Google a
    Guarda la fuente y la página de entrada en una cookie propia por 30 días. No guarda datos personales.
 2. A cada enlace hacia `go.orchidpros.com` le agrega `utm_source=<organic|ai|direct|referral>&utm_medium=<motor>&utm_campaign=seo&utm_content=<página de entrada>`.
 3. GHL ya guarda las UTM del formulario y de la cita (así se leen hoy `utm_content` y `lp_variant`). Hay que crear un Smart List "Leads orgánicos" con `utm_source = organic` y otra para `ai`, y agregar la etiqueta en el workflow "01 - Lead nuevo".
-4. En GA4: un evento `cta_book_call` al hacer clic en esos enlaces. Revisar que orchidpros.com y go.orchidpros.com estén en la misma propiedad con dominios cruzados (Admin → Flujos de datos → Configurar dominios). No pude verificar qué etiqueta de GA4 tiene GHL **[CONFIRMAR]**. Agregar un grupo de canales personalizado "AI" con la expresión regular de dominios de IA.
+4. **GA4 (hoy no está instalado en ninguno de los dos sitios; revisado el 27 nov 2026):**
+   - Crear una propiedad GA4 con un solo flujo web para `orchidpros.com`.
+   - **WordPress:** instalar el plugin gratuito **Site Kit by Google** y conectar esa propiedad, o pegar la etiqueta en el header con WPCode.
+   - **GoHighLevel:** en cada funnel o sitio, Settings → Tracking Code → Head, pegar la misma etiqueta de GA4 (el mismo ID `G-…`).
+   - En GA4: Admin → Flujos de datos → Configurar etiqueta → **Configurar dominios**: agregar `orchidpros.com` y `go.orchidpros.com`. Así una visita que pasa del sitio a la cita no se cuenta como dos personas.
+   - Marcar como **eventos clave**: `cta_book_call` (clic en los botones a GHL), el envío del formulario y la página de gracias de la cita.
+   - Agregar un grupo de canales personalizado "AI" con la expresión regular de dominios de IA.
 
 `scripts/ghl.py` puede sumar un conteo de leads con `utm_source=organic` o `ai` al informe de los lunes.
 
@@ -271,7 +277,10 @@ El formulario y la cita viven en go.orchidpros.com. Si alguien llega de Google a
 
 Copilot y la búsqueda de ChatGPT usan en buena parte el índice de Bing. Las AI Overviews usan el de Google. Todo empieza por estar bien indexado y por ser una entidad clara.
 
-1. **Bing primero:** Bing Webmaster + IndexNow en la semana 1. Revisar que nada bloquee a `bingbot`, `OAI-SearchBot`, `GPTBot`, `PerplexityBot` ni `Google-Extended`. Hoy `robots.txt` está abierto, pero hay que confirmar si el hosting o Cloudflare tienen bloqueo de bots **[CONFIRMAR]**.
+1. **Bing primero:** Bing Webmaster + IndexNow en la semana 1. Revisar que nada bloquee a `bingbot`, `OAI-SearchBot`, `GPTBot`, `PerplexityBot` ni `Google-Extended`. **Revisado el 27 nov 2026:** `robots.txt` está abierto, el sitio no pasa por Cloudflare (servidor LiteSpeed) y `scripts/seo/bot_access.mjs` confirma que Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User, GPTBot, PerplexityBot y ClaudeBot reciben la misma página que un navegador (32 pruebas, 0 diferencias). Ese script no detecta bloqueos por IP, así que hay que hacer dos verificaciones más:
+   - En Search Console y en Bing Webmaster, "Inspeccionar URL" → **probar la URL publicada** en la home y en salud. Si sale "URL disponible", el bot real entra.
+   - En el panel del hosting y en cualquier plugin de seguridad (Wordfence, LiteSpeed, el del hosting), buscar opciones como "block AI bots", "bot protection" o reglas por país, y confirmar que no estén activas para estos bots.
+   - Repetir `node scripts/seo/bot_access.mjs` cada mes, junto con la prueba de visibilidad en IA.
 2. **Entidad clara.** Un solo nombre y una sola descripción en todas partes: "Orchid (N3XUS, LLC d/b/a ORCHID), bilingual remote staffing from Colombia for U.S. businesses".
    - Organization schema con `founder`, `sameAs` corregido (Instagram, LinkedIn, Facebook, TikTok), `contactPoint` y `areaServed`.
    - Mismo texto en LinkedIn, Instagram, Clutch o G2 y en el perfil de Google, si se mantiene.
@@ -279,7 +288,7 @@ Copilot y la búsqueda de ChatGPT usan en buena parte el índice de Bing. Las AI
 4. **Respuesta directa arriba.** Cada página de servicio y cada guía empieza con un párrafo de 2–3 frases que responde la pregunta (qué es, para quién, cuánto cuesta, en qué se diferencia). La IA cita párrafos así.
 5. **Datos con fuente.** La calculadora y la tabla de costos con BLS, ECEC y SHRM citados y fechados. Los modelos citan más las páginas con números verificables.
 6. **FAQ visibles + FAQPage.** Preguntas reales, con respuestas de 40–60 palabras.
-7. **Personas reales (E-E-A-T).** /about/ y /how-we-select/ con los fundadores, su experiencia, el proceso de selección y el video. Person schema con `sameAs` a sus LinkedIn **[CONFIRMAR URLs]**.
+7. **Personas reales (E-E-A-T).** /about/ y /how-we-select/ con los fundadores, su experiencia, el proceso de selección y el video. Person schema con `sameAs` a sus perfiles públicos (LinkedIn, si los fundadores quieren). Es **opcional**: ayuda a que Google y los buscadores con IA conecten "Andrea Bolaños" y "Josué Barros" con Orchid y les den más confianza a las páginas. Sin los perfiles, el schema se hace igual, solo con nombre, cargo y foto.
 8. **Menciones de terceros.** Perfil en Clutch o G2 con reseñas pedidas a clientes reales. Directorios de la industria (asociaciones dentales o médicas estatales, cámaras de comercio). Podcasts o artículos donde hablen los fundadores. Nunca reseñas falsas ni incentivadas sin decirlo.
 9. **Comparativas honestas** (Colombia vs Philippines, Orchid vs X): la IA las usa para preguntas como "best bilingual medical VA company".
 10. **Prueba mensual.** 10 preguntas fijas en ChatGPT (con búsqueda), Copilot, Perplexity y Google (AI Overview). Por ejemplo:
@@ -338,7 +347,16 @@ Orchid empieza a atender Canadá (decidido el 27 nov 2026). Para no abrir un seg
 
 **Reglas para Canadá**
 - **"Bilingual" en Canadá se entiende como inglés-francés.** Decir siempre "English–Spanish".
-- **HIPAA no aplica en Canadá.** La privacidad de salud se rige por PIPEDA y por leyes provinciales como PHIPA en Ontario. La página de Canadá no usa "HIPAA-trained" ni promete cumplimiento canadiense hasta confirmar qué capacitación reciben los asistentes **[CONFIRMAR]**.
+- **HIPAA no aplica en Canadá.** La privacidad de salud se rige por PIPEDA y por leyes provinciales como PHIPA en Ontario. La página de Canadá no usa "HIPAA-trained" ni menciona privacidad canadiense mientras los asistentes no reciban esa capacitación. Para agregarla más adelante, ver "Capacitación en privacidad canadiense" abajo.
+
+**Capacitación en privacidad canadiense (opcional, para salud en Canadá)**
+No es difícil, pero tiene que existir antes de decirlo en el sitio:
+1. Usar como base las guías gratuitas para empresas de la Office of the Privacy Commissioner of Canada (priv.gc.ca) sobre PIPEDA. Si se van a atender consultorios de Ontario, agregar las guías de PHIPA de la Information and Privacy Commissioner of Ontario (ipc.on.ca).
+2. Armar un módulo interno corto, de 1–2 horas, que Orchid ya puede sumar a su capacitación actual en manejo de datos: consentimiento, uso mínimo de información, acceso, resguardo y qué hacer ante una filtración.
+3. Dejar constancia: quién lo completó y en qué fecha.
+4. Recién entonces, en la página: "Trained on Canadian privacy principles (PIPEDA)". Nunca "PIPEDA-compliant", por la misma regla que con HIPAA.
+
+Si se sirve solo a pymes, abogados y bienes raíces en Canadá, se puede arrancar sin esto.
 - **Horario:** Colombia (UTC−5) coincide con Toronto, Ottawa y Montreal en invierno, va una hora detrás en verano y tiene 3 horas de diferencia con Vancouver. Decirlo así, sin "same time zone" genérico.
 - **Precio:** se cobra en dólares de EE. UU. (confirmado el 27 nov 2026). En la página de Canadá siempre "from US$15/hour", con el "US$" explícito para que nadie lo lea como dólares canadienses. Medio tiempo y tiempo completo, igual que en EE. UU.
 - **Calculadora:** los datos de BLS son de EE. UU. Para Canadá haría falta Statistics Canada; hasta tenerlos, la página enlaza a la de precios sin la comparación de ahorro.
