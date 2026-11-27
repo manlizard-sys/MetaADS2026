@@ -1,12 +1,20 @@
 // PageSpeed Insights (mobile + desktop) for the key pages. Read only.
-// Key: env PAGESPEED_API_KEY (optional; never printed or saved). Without it the public quota is used and often fails with 429.
+// Key: env PAGESPEED_API_KEY or a PAGESPEED_API_KEY= line in .env (optional; never printed or saved). Without it the public quota is used and often fails with 429.
 // Usage: node scripts/seo/pagespeed.mjs [url ...]   Output: seo/audit/pagespeed.csv, seo/audit/pagespeed.json
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { csvRow, sleep } from './lib.mjs';
 
 const OUT = 'seo/audit';
 mkdirSync(OUT, { recursive: true });
-const KEY = process.env.PAGESPEED_API_KEY || '';
+// Key from the environment, or from the repo's .env file (ignored by git): PAGESPEED_API_KEY=...
+function keyFromDotenv() {
+  try {
+    const line = readFileSync('.env', 'utf8').split(/\r?\n/).find((l) => /^\s*PAGESPEED_API_KEY\s*=/.test(l));
+    return line ? line.split('=').slice(1).join('=').trim().replace(/^["']|["']$/g, '') : '';
+  } catch { return ''; }
+}
+const KEY = process.env.PAGESPEED_API_KEY || keyFromDotenv();
+console.log(KEY ? 'PageSpeed key: found' : 'PageSpeed key: not found (public quota)');
 const redact = (s) => (KEY ? String(s).split(KEY).join('[REDACTED]') : String(s));
 
 const DEFAULT = [

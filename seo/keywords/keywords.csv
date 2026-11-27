@@ -47,8 +47,8 @@ US,bienes-raices,comercial,re-va,real estate ISA,sin dato,—,sin dato,—,MyOut
 US,bienes-raices,comercial,re-va,bilingual real estate assistant,sin dato,—,sin dato,—,sin revisar,—,—,/real-estate/,existente,
 US,bienes-raices,comercial,re-va,transaction coordinator virtual assistant,sin dato,—,sin dato,—,sin revisar,—,—,/real-estate/,existente (sección),
 US,marca,navegacional,marca,orchid pros / orchid staffing,sin dato,—,—,—,—,—,—,/,existente,Revisar en Search Console
-CA,salud,comercial,ca-medical,virtual medical office assistant Canada,sin dato,—,sin dato,—,ninguno de la lista,WebSearch 2026-11-27,ofertas de empleo (Indeed / WELL Health),/ca/healthcare/ (solo si Orchid atiende Canadá),pendiente decisión,"SERP de empleo; HIPAA no aplica en Canadá (PHIPA / PIPEDA)"
-CA,pymes,comercial,ca-pymes,hire virtual assistant Canada,sin dato,—,sin dato,—,ninguno de la lista,WebSearch 2026-11-27,"Upwork CA, Indeed, Small Business BC, BDC",/ca/ (solo si Orchid atiende Canadá),pendiente decisión,
-CA,pymes,comercial,ca-pymes,bilingual virtual assistant Canada,sin dato,—,sin dato,—,sin revisar,—,—,pendiente,pendiente decisión,"En Canadá ""bilingual"" suele significar inglés-francés: Orchid es inglés-español"
-CA,abogados,comercial,ca-legal,virtual assistant for law firms Canada,sin dato,—,sin dato,—,sin revisar,—,—,pendiente,pendiente decisión,
-CA,bienes-raices,comercial,ca-re,real estate virtual assistant Canada,sin dato,—,sin dato,—,sin revisar,—,—,pendiente,pendiente decisión,
+CA,salud,comercial,ca-medical,virtual medical office assistant Canada,sin dato,—,sin dato,—,ninguno de la lista,WebSearch 2026-11-27,ofertas de empleo (Indeed / WELL Health),/ca/ (sección de salud; sin HIPAA),nueva,"SERP de empleo; HIPAA no aplica en Canadá (PHIPA / PIPEDA)"
+CA,pymes,comercial,ca-pymes,hire virtual assistant Canada,sin dato,—,sin dato,—,ninguno de la lista,WebSearch 2026-11-27,"Upwork CA, Indeed, Small Business BC, BDC",/ca/,nueva,
+CA,pymes,comercial,ca-pymes,bilingual virtual assistant Canada,sin dato,—,sin dato,—,sin revisar,—,—,/ca/,nueva,"En Canadá ""bilingual"" suele significar inglés-francés: Orchid es inglés-español"
+CA,abogados,comercial,ca-legal,virtual assistant for law firms Canada,sin dato,—,sin dato,—,sin revisar,—,—,/ca/,nueva,
+CA,bienes-raices,comercial,ca-re,real estate virtual assistant Canada,sin dato,—,sin dato,—,sin revisar,—,—,/ca/,nueva,

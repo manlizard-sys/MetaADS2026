@@ -76,7 +76,7 @@ Las 5 búsquedas de muestra están en el CSV con `pais = CA`.
 - **Pymes:** dominan Upwork, Indeed y guías públicas (Small Business BC, BDC). Ningún competidor de la lista aparece.
 - **"Bilingual" en Canadá suele significar inglés-francés.** Orchid es inglés-español: hay que decir "English-Spanish" siempre.
 - **Horario:** Colombia (UTC−5) coincide con Toronto y Montreal (UTC−5 en invierno), pero tiene 3 horas de diferencia con Vancouver.
-- **Recomendación:** no crear páginas para Canadá hasta confirmar que Orchid atiende clientes allá (contratos, facturación y moneda) y tener los volúmenes del planificador. Si se confirma, empezar con una sola página `/ca/` en inglés canadiense y con precios en CAD, si aplica.
+- **Decisión (27 nov 2026): Orchid arranca en Canadá ya.** Se empieza con una sola página `/ca/` (brief en la sección 8 de `seo/plan.md`) y se amplía según lo que diga Search Console. Falta definir si el precio va en CAD o en USD.
 
 ---
 

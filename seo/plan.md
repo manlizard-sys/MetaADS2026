@@ -23,6 +23,7 @@ orchidpros.com/
 │   └── /law-firm/immigration/          immigration law firm VA, Spanish-speaking legal intake
 ├── /real-estate/                       real estate VA, real estate ISA, transaction coordinator (existente, ampliar)
 ├── /bilingual-virtual-assistant/       bilingual VA, Spanish-speaking VA (página de la propuesta central)
+├── /ca/                                hire virtual assistant Canada, English-Spanish virtual assistant Canada (Canadá, en-CA)
 ├── /why-colombia/                      nearshore staffing Colombia, hire VA from Colombia, Colombian VA
 ├── /pricing/                           ★ virtual assistant pricing, medical VA cost
 ├── /tools/us-hire-vs-orchid-calculator/  cost of hiring an employee vs VA
@@ -54,12 +55,12 @@ orchidpros.com/
 
 | Semana | Fechas | Qué | Quién | Por qué ahora |
 |---|---|---|---|---|
-| 1 | 7–13 dic | **Arreglos críticos de la auditoría:** C1 (títulos de salud y marketing), C2 (enlaces 404), C3 (salud en el menú), C4 (tagline del sitio). **Configurar** Search Console (propiedad de dominio + sitemap), Bing Webmaster (importar desde GSC) e IndexNow. **Noindex** en las landings de GHL (con tu aprobación); las de Black Friday ya vencieron. Medir PageSpeed con la llave. | Tú | Es lo que más rinde por hora: hoy Google muestra a la página de salud como si fuera de abogados. |
+| 1 | 7–13 dic | **Arreglos críticos de la auditoría:** C1 (títulos de salud y marketing), C2 (enlaces 404), C3 (salud en el menú), C4 (tagline del sitio), C6 (quitar el "setup fee" del FAQ). **Configurar** Search Console (propiedad de dominio + sitemap), Bing Webmaster (importar desde GSC) e IndexNow. **Noindex** en las landings de GHL (con tu aprobación); las de Black Friday ya vencieron. Medir PageSpeed con la llave. | Tú | Es lo que más rinde por hora: hoy Google muestra a la página de salud como si fuera de abogados. |
 | 1 | 7–13 dic | **Medición orgánica** (sección 4): script de fuente orgánica en los botones a GHL y canal de IA en GA4. | Desarrollo | Sin esto no se puede contar un solo lead orgánico. |
 | 2 | 14–20 dic | **Publicar la página de salud nueva** (brief 1) con schema Service + FAQPage. Arreglos I2, I4, I6, I7 e I10. Pedir reseñas a clientes reales (ver sección 5). | Diseño + Tú | Mercado prioritario y el de la campaña de Meta. |
 | 3 | 21–27 dic | Texto de **/pricing/** (brief 2) y especificación de la calculadora. Unificar calculadoras de abogados (I8). Noindex o enlaces de huérfanas (I9). | Diseño + Desarrollo | Semana de fiestas: trabajo de escritorio. |
 | 4 | 28 dic – 3 ene | **Publicar /pricing/ y la calculadora.** Reescribir el FAQ con H1, respuestas cortas y FAQPage. | Desarrollo + Tú | Intención comercial alta; además sirve de destino para los anuncios. |
-| 5 | 4–10 ene | **Publicar /solutions/small-business/** (brief 3), con 301 desde /other-professionals/. Crear **/the-delegate-brief/** con el archivo. | Diseño + Tú | Segundo mercado de Meta (emprendedores). |
+| 5 | 4–10 ene | **Publicar /solutions/small-business/** (brief 3), con 301 desde /other-professionals/. Crear **/the-delegate-brief/** con el archivo. **Publicar /ca/** (sección 8). | Diseño + Tú | Segundo mercado de Meta (emprendedores). Canadá arranca ya. |
 | 6 | 11–17 ene | **/solutions/accounting/** (antes de la temporada de impuestos). **/about/** con fundadores, H1 y Person schema. **/how-we-select/**. | Diseño + Tú | Temporada de impuestos; E-E-A-T para todas las páginas. |
 | 7 | 18–24 ene | **/solutions/healthcare/dental/**. Primer **caso de cliente** con números, si un cliente lo autoriza. | Diseño + Tú | Subnicho de salud con anuncios activos. |
 | 8 | 25–31 ene | **/solutions/healthcare/chiropractic-physical-therapy/**. **/bilingual-virtual-assistant/**. | Diseño + Tú | |
@@ -67,7 +68,7 @@ orchidpros.com/
 | 10 | 8–14 feb | **/guides/hipaa-virtual-assistant/** y **/compare/medical-virtual-assistant-companies/** (honesta, con fuentes y fecha). | Diseño | Para las búsquedas informativas de salud. |
 | 11 | 15–21 feb | **/law-firm/immigration/**. Actualizar /law-firm/ con enlaces a la calculadora. | Diseño + Tú | Mercado en pausa en Meta; el orgánico sigue sumando. |
 | 12 | 22–28 feb | Ampliar **/real-estate/**. Primera **"Orchid vs [competidor]"**, empezando por uno de salud (Wing, HelloRache o MedVA), solo con datos públicos fechados. | Diseño + Tú | |
-| 13 | 1–7 mar | **/guides/virtual-assistant-cost/**. **Revisión de 90 días:** qué páginas traen leads, qué ajustar y la decisión sobre Canadá. Plan del siguiente trimestre. | Tú + Claude | |
+| 13 | 1–7 mar | **/guides/virtual-assistant-cost/**. **Revisión de 90 días:** qué páginas traen leads, qué ajustar y si Canadá necesita más páginas. Plan del siguiente trimestre. | Tú + Claude | |
 | Cada 2 semanas | — | **The Delegate Brief → artículo en el sitio** (sección 6). | Tú | Contenido fresco sin escribir de cero. |
 | Cada mes | 1.º de cada mes | Informe de KPIs (sección 4) y prueba de visibilidad en IA (sección 5). | Claude | |
 
@@ -101,9 +102,9 @@ Todo el texto para el sitio va en inglés de EE. UU. Los datos que hay que confi
    - HR support and coaching included.
    - Free replacement if it is not a fit.
    - People choose people (selección humana, no por IA).
-5. **What HIPAA-trained means at Orchid.** Recuadro honesto, con datos del FAQ actual: capacitación en PHI, acceso por roles, acuerdos de confidencialidad y trabajo dentro de los sistemas y políticas de la práctica. ¿Orchid firma BAA? **[CONFIRMAR]** No usar "HIPAA-compliant".
+5. **What HIPAA-trained means at Orchid.** Recuadro honesto, con datos del FAQ actual: capacitación en PHI, acceso por roles, acuerdos de confidencialidad y trabajo dentro de los sistemas y políticas de la práctica. **Orchid firma un Business Associate Agreement (BAA)** con la práctica (confirmado el 27 nov 2026). Se dice "HIPAA-trained" y "we sign a BAA"; nunca "HIPAA-compliant".
 6. **By specialty.** Tarjetas con enlace a Dental, Chiropractic & Physical Therapy y, más adelante, otras especialidades.
-7. **What it costs.** `From $15/hour.` Comparación: contratación local de tiempo completo ~$78k/año frente a ~$31k/año con Orchid. Fuente en pie de nota: BLS OEWS May 2025, SOC 43-6014 + BLS ECEC + SHRM cost-per-hire. Enlace a la calculadora. ¿Cuota de inicio? **[CONFIRMAR]**: la página actual dice "$0 to begin" y el FAQ habla de "one-time setup fee".
+7. **What it costs.** `From $15/hour.` Comparación: contratación local de tiempo completo ~$78k/año frente a ~$31k/año con Orchid. Fuente en pie de nota: BLS OEWS May 2025, SOC 43-6014 + BLS ECEC + SHRM cost-per-hire. Enlace a la calculadora. **`$0 to begin`**: no se cobra cuota de inicio. Hay que quitar del FAQ actual el "one-time setup fee" (ver C6 en la auditoría).
 8. **How it works.** Los 3 pasos actuales, más el plazo: candidatos en 20 días hábiles (dato del FAQ actual).
 9. **Meet the founders.** Andrea Bolaños (Co-Founder & COO) y Josué Barros, con foto, 2 líneas cada uno y enlace a `/about/`. Si hay video, incrustarlo.
 10. **What practices say.** Solo reseñas reales y verificables (las 4 de Google, con permiso). Si no hay permiso, omitir la sección.
@@ -118,10 +119,10 @@ Todo el texto para el sitio va en inglés de EE. UU. Los datos que hay que confi
 5. How much does a medical virtual assistant cost? (Desde $15/hora; enlace a /pricing/.)
 6. How fast can I start? (Candidatos en 20 días hábiles.)
 7. What if the assistant isn't a good fit? (Reemplazo sin costo.)
-8. Which EHR and practice software can they use? **[CONFIRMAR lista real]**
-9. Do you sign a Business Associate Agreement (BAA)? **[CONFIRMAR]**: solo si la respuesta es sí; si no, quitar la pregunta.
+8. Which EHR and practice software can they use? (Los que la práctica ya usa: el asistente trabaja dentro de sus sistemas, con el acceso que la práctica le da. No nombrar marcas de EHR.)
+9. Do you sign a Business Associate Agreement (BAA)? (Sí.)
 
-**Schema (JSON-LD, en un bloque HTML de Elementor o en el campo de schema de Yoast Premium)**
+**Schema (JSON-LD, en un widget HTML de Elementor al final de la página; no hace falta Yoast Premium)**
 ```json
 {
   "@context": "https://schema.org",
@@ -172,19 +173,19 @@ Yoast ya genera WebPage, Organization y BreadcrumbList. Las respuestas del FAQPa
 **Secciones**
 1. **Starting rate:** `From $15/hour` en grande. Una frase sobre de qué depende el precio: rol, horas y experiencia **[CONFIRMAR los factores reales y si hay tarifas por rol que quieras publicar]**.
 2. **What's included.** Lista tomada de la página actual de salud y del FAQ: recruiting and verification, background screening, onboarding, HR support and coaching, time and accountability tools, replacement protection, business email, phone number and Google Workspace.
-3. **One-time setup fee.** **[CONFIRMAR]**: monto, o "$0 to begin". Hoy el sitio se contradice; la página tiene que decir una sola cosa.
+3. **`$0 to begin`.** No se cobra cuota de inicio: la búsqueda de candidatos, las entrevistas y la incorporación no tienen costo previo. Se dice igual en todo el sitio y nunca como oferta "por tiempo limitado", porque no lo es. Se pueden reutilizar las frases "No setup fee" y "Review and interview candidates before committing".
 4. **U.S. hire vs Orchid (calculadora).** Campos: rol (por defecto, administrative assistant), horas por semana y salario local (opcional). Resultado: costo anual estimado de una contratación local frente a Orchid, con el desglose (salario, beneficios e impuestos patronales, costo de contratación).
    - **Fuentes visibles bajo la calculadora:** BLS OEWS May 2025, SOC 43-6014 (salario); BLS ECEC (beneficios como % de la remuneración); SHRM (costo por contratación). Cada una con su enlace y la fecha de consulta.
-   - Valores por defecto que dan ~$78k frente a ~$31k (~60% menos). **[CONFIRMAR qué cifra de ahorro usamos en todo el sitio: "~60%" con esta metodología, o "40–50%" como en el video de los fundadores]**.
+   - Valores por defecto que dan ~$78k frente a ~$31k: **~60% menos**. Es la única cifra de ahorro en todo el sitio (decidido el 27 nov 2026). El "40–50%" del video de los fundadores no se repite en texto.
    - **Desarrollo:** JavaScript en un bloque HTML, sin servicios externos. El número se calcula en el navegador. Botón `Book a free call` debajo del resultado.
 5. **How Orchid compares.** Tabla por modelo, no por marca: freelancer de marketplace, agencia offshore (Filipinas), Orchid (Colombia) y empleado local. Filas: horario, idioma, quién maneja RR. HH., reemplazo y rango de precio. Los rangos salen del PDF de competencia del 24 nov 2026, con esa fecha.
 6. **FAQ:**
-   - Is there a long-term contract? **[CONFIRMAR]**
-   - Is there a setup fee? **[CONFIRMAR]**
-   - Part-time or full-time? **[CONFIRMAR]**
+   - Is there a setup fee? (No: $0 to begin.)
    - What's included in the hourly rate?
-   - How do I pay? **[CONFIRMAR]**
-   - What if the hire doesn't work out?
+   - What if the hire doesn't work out? (Reemplazo sin costo.)
+   - Do you sign a BAA for healthcare practices? (Sí.)
+   - Part-time or full-time? **[CONFIRMAR]**: si no hay medio tiempo, quitar la pregunta.
+   - **No incluir "Is there a long-term contract?".** El mínimo de 6 meses se explica en la llamada. Ninguna página puede decir "no contract" ni "cancel anytime".
 7. **CTA:** `Book a free call to get your exact quote`.
 
 **Schema:** `Service` con `Offer` + `UnitPriceSpecification` (minPrice 15, USD, unitCode HUR) y `FAQPage`. La calculadora puede llevar `WebApplication`, que es opcional.
@@ -199,7 +200,7 @@ Yoast ya genera WebPage, Organization y BreadcrumbList. Las respuestas del FAQPa
 
 | Campo | Valor |
 |---|---|
-| URL / slug | `/solutions/small-business/` (nueva) con **301 desde `/other-professionals/`**: Yoast Premium → Redirects, o el plugin Redirection |
+| URL / slug | `/solutions/small-business/` (nueva) con **301 desde `/other-professionals/`**, hecho con el plugin gratuito Redirection |
 | SEO title | `Bilingual Virtual Assistants for Small Businesses \| Orchid` |
 | Meta description | `A dedicated assistant from Colombia who speaks English and Spanish and works your hours: admin, operations, customer service. From $15/hour.` |
 | H1 | `A Bilingual Virtual Assistant for Your Small Business` |
@@ -217,7 +218,7 @@ Yoast ya genera WebPage, Organization y BreadcrumbList. Las respuestas del FAQPa
 8. **Meet the founders** (corto) + enlace a /about/.
 9. **FAQ:**
    - How is Orchid different from hiring on Upwork?
-   - Can I hire part-time? **[CONFIRMAR]**
+   - Can I hire part-time? **[CONFIRMAR]**: si no hay medio tiempo, quitar la pregunta.
    - Will my assistant work only for me? (Sí, dedicado: dato de la página actual de salud.)
    - What hours?
    - What if it's not a fit?
@@ -317,6 +318,33 @@ Los temas se ajustan a lo que salga en cada edición real.
 
 ## 7. Fuera del sitio (en paralelo)
 
-- **Google Business Profile:** decidir entre las opciones de la auditoría (sección 5). Hasta entonces, no invertir en él.
-- **Reseñas reales:** desde la semana 2, pedir a los clientes activos una reseña con enlace directo (Google si se mantiene el perfil, y si no Clutch o G2). Sin incentivos ocultos y sin redactarlas por ellos.
-- **Bing Places:** solo si se mantiene el perfil de Google; importarlo desde ahí.
+- **Google Business Profile:** Orchid es 100% virtual y su única dirección es el P.O. Box, así que no cumple las reglas de perfiles locales (ver sección 5 de la auditoría). No invertir en él ni editar su dirección: un cambio de dirección dispara una nueva verificación que no se puede pasar con un P.O. Box. El SEO no depende de él.
+- **Reseñas reales:** desde la semana 2, pedir a los clientes activos una reseña en **Clutch** (y G2 si aplica), que aceptan negocios remotos. Sin incentivos ocultos y sin redactarlas por ellos. Las 4 reseñas de Google se pueden citar en el sitio solo con permiso de sus autores.
+- **Bing Places:** no crearlo, por la misma razón.
+
+---
+
+## 8. Canadá (arranca ya)
+
+Orchid empieza a atender Canadá (decidido el 27 nov 2026). Para no abrir un segundo sitio, se hace en **una sola página** al principio, `/ca/`, y se crece según lo que diga Search Console.
+
+| Campo | Valor |
+|---|---|
+| URL | `/ca/` |
+| SEO title | `English-Spanish Virtual Assistants for Canadian Businesses \| Orchid` (63: recortar si el diseño lo pide) |
+| H1 | `Bilingual (English–Spanish) Virtual Assistants for Canadian Businesses` |
+| Palabras clave | hire virtual assistant Canada, virtual assistant for small business Canada, Spanish speaking virtual assistant Canada |
+| Idioma | inglés de Canadá en el texto (por ejemplo, "organize" sigue igual; las cifras de moneda con CAD si aplica) |
+
+**Reglas para Canadá**
+- **"Bilingual" en Canadá se entiende como inglés-francés.** Decir siempre "English–Spanish".
+- **HIPAA no aplica en Canadá.** La privacidad de salud se rige por PIPEDA y por leyes provinciales como PHIPA en Ontario. La página de Canadá no usa "HIPAA-trained" ni promete cumplimiento canadiense hasta confirmar qué capacitación reciben los asistentes **[CONFIRMAR]**.
+- **Horario:** Colombia (UTC−5) coincide con Toronto, Ottawa y Montreal en invierno, va una hora detrás en verano y tiene 3 horas de diferencia con Vancouver. Decirlo así, sin "same time zone" genérico.
+- **Precio:** **[CONFIRMAR si se cobra en CAD o en USD]**. Si es en USD, decir "from US$15/hour".
+- **Calculadora:** los datos de BLS son de EE. UU. Para Canadá haría falta Statistics Canada; hasta tenerlos, la página enlaza a la de precios sin la comparación de ahorro.
+
+**Secciones:** hero con la propuesta, qué puede hacer el asistente, por qué Colombia (horario real), cómo funciona, precio, fundadores, FAQ y cita.
+
+**Medición:** en GoHighLevel se separan los leads de Canadá por el país del formulario y por `utm_content=/ca/` (sección 4). En Search Console, filtrar por país = Canadá.
+
+**Datos de palabras clave:** siguen "sin dato". En el Planificador de Google Ads, exporta las palabras del CSV con `pais = CA` eligiendo la ubicación "Canadá".
