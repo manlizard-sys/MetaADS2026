@@ -184,7 +184,7 @@ Yoast ya genera WebPage, Organization y BreadcrumbList. Las respuestas del FAQPa
    - What's included in the hourly rate?
    - What if the hire doesn't work out? (Reemplazo sin costo.)
    - Do you sign a BAA for healthcare practices? (Sí.)
-   - Part-time or full-time? **[CONFIRMAR]**: si no hay medio tiempo, quitar la pregunta.
+   - Part-time or full-time? (Ambos: Orchid ofrece medio tiempo y tiempo completo.)
    - **No incluir "Is there a long-term contract?".** El mínimo de 6 meses se explica en la llamada. Ninguna página puede decir "no contract" ni "cancel anytime".
 7. **CTA:** `Book a free call to get your exact quote`.
 
@@ -218,7 +218,7 @@ Yoast ya genera WebPage, Organization y BreadcrumbList. Las respuestas del FAQPa
 8. **Meet the founders** (corto) + enlace a /about/.
 9. **FAQ:**
    - How is Orchid different from hiring on Upwork?
-   - Can I hire part-time? **[CONFIRMAR]**: si no hay medio tiempo, quitar la pregunta.
+   - Can I hire part-time? (Sí: medio tiempo o tiempo completo.)
    - Will my assistant work only for me? (Sí, dedicado: dato de la página actual de salud.)
    - What hours?
    - What if it's not a fit?
@@ -334,13 +334,13 @@ Orchid empieza a atender Canadá (decidido el 27 nov 2026). Para no abrir un seg
 | SEO title | `English-Spanish Virtual Assistants for Canadian Businesses \| Orchid` (63: recortar si el diseño lo pide) |
 | H1 | `Bilingual (English–Spanish) Virtual Assistants for Canadian Businesses` |
 | Palabras clave | hire virtual assistant Canada, virtual assistant for small business Canada, Spanish speaking virtual assistant Canada |
-| Idioma | inglés de Canadá en el texto (por ejemplo, "organize" sigue igual; las cifras de moneda con CAD si aplica) |
+| Idioma | inglés en el texto; los precios siempre en US$ |
 
 **Reglas para Canadá**
 - **"Bilingual" en Canadá se entiende como inglés-francés.** Decir siempre "English–Spanish".
 - **HIPAA no aplica en Canadá.** La privacidad de salud se rige por PIPEDA y por leyes provinciales como PHIPA en Ontario. La página de Canadá no usa "HIPAA-trained" ni promete cumplimiento canadiense hasta confirmar qué capacitación reciben los asistentes **[CONFIRMAR]**.
 - **Horario:** Colombia (UTC−5) coincide con Toronto, Ottawa y Montreal en invierno, va una hora detrás en verano y tiene 3 horas de diferencia con Vancouver. Decirlo así, sin "same time zone" genérico.
-- **Precio:** **[CONFIRMAR si se cobra en CAD o en USD]**. Si es en USD, decir "from US$15/hour".
+- **Precio:** se cobra en dólares de EE. UU. (confirmado el 27 nov 2026). En la página de Canadá siempre "from US$15/hour", con el "US$" explícito para que nadie lo lea como dólares canadienses. Medio tiempo y tiempo completo, igual que en EE. UU.
 - **Calculadora:** los datos de BLS son de EE. UU. Para Canadá haría falta Statistics Canada; hasta tenerlos, la página enlaza a la de precios sin la comparación de ahorro.
 
 **Secciones:** hero con la propuesta, qué puede hacer el asistente, por qué Colombia (horario real), cómo funciona, precio, fundadores, FAQ y cita.
