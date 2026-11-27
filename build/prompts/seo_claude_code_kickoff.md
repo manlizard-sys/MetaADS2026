@@ -7,7 +7,7 @@ Arranquemos el SEO de Orchid (Google y Bing) desde este repo. Trabaja en la rama
 - Conexiones disponibles (usa las que existan en esta sesión; si falta alguna, dilo y sigue con lo demás):
   - Search Console, GA4 y Business Profile: por el conector de datos de marketing (Windsor.ai o similar) si está conectado.
   - Palabras clave y competencia: conector Semrush, Ahrefs u OpenSEO si está conectado. Si no hay ninguno, NO inventes volúmenes: marca "sin dato" y dime cómo obtenerlo.
-  - PageSpeed Insights: API de Google con la llave guardada como secreto de red para www.googleapis.com (no la imprimas nunca).
+  - PageSpeed Insights: llave de Google en la variable de entorno PAGESPEED_API_KEY (pásala como ?key=; no la imprimas nunca). Sin llave, la cuota pública suele estar agotada.
   - WordPress: solo lectura por la API pública. Para publicar hará falta una Application Password guardada como secreto de red para orchidpros.com; no publiques nada sin mi aprobación.
   - Bing: sin API por ahora. Dame los pasos para importar desde Search Console y activar IndexNow con Yoast.
 
