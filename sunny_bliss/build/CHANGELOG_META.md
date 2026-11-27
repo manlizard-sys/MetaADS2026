@@ -95,3 +95,7 @@ No old form or trigger was deleted or changed.
 
 ## 2026-11-26 · Budget ramp, week 2 (approved by the user)
 - Leads ad set: $56 to $59/day. Awareness: $14 to $15/day. Services total $70 to $74/day (80/20). With the ZIP test ($10/day): $84/day, ~$2,550/month. Week Nov 19-25: services $436, 11 leads, CPL $40.
+
+## 2026-11-26 · Thanksgiving ads paused (approved by the user on Nov 20)
+- TG · FL EN/ES and TG · TU EN/ES set to PAUSED at 9:30 pm ET.
+- Results (Nov 20-26): $116, 7 leads, CPL ~$17. Best: TG · FL ES ("¿Visita en Thanksgiving?") $97, 5 leads. Concept "full house / guests" to reuse for the Christmas promo.
