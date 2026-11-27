@@ -1,0 +1,54 @@
+pais,mercado,intencion,grupo,palabra_clave,volumen_mensual,fuente_volumen,dificultad,fuente_dificultad,competidores_de_la_lista_que_aparecen,fuente_serp,tipo_de_resultados,pagina_orchid,estado_pagina,notas
+US,salud,comercial,medical-va,medical virtual assistant,sin dato,—,sin dato,—,ninguno en los primeros resultados,WebSearch 2026-11-27,mezcla: software de IA (RingCentral) y guías,/solutions/healthcare/,existente (reescribir),"Término ambiguo (IA vs persona); apuntar con modificadores ""hire"", ""services"", ""bilingual"""
+US,salud,comercial,medical-va,hire a medical virtual assistant,sin dato,—,sin dato,—,Wishup (guías de blog),WebSearch 2026-11-27,Upwork + guías de agencias + AMA,/solutions/healthcare/,existente (reescribir),Intención clara de contratar persona
+US,salud,comercial,medical-va,medical virtual assistant services,sin dato,—,sin dato,—,sin revisar,—,—,/solutions/healthcare/,existente (reescribir),
+US,salud,comercial,medical-va,bilingual medical virtual assistant,sin dato,—,sin dato,—,Wing Assistant (/bilingual-healthcare-virtual-assistant/),PDF competencia 2026-11-24 + WebSearch,páginas de servicio,/solutions/healthcare/,existente (reescribir),Ángulo donde Orchid tiene ventaja real (bilingüe + mismo horario)
+US,salud,comercial,medical-va,spanish speaking medical receptionist remote,sin dato,—,sin dato,—,sin revisar,—,—,/solutions/healthcare/bilingual-medical-receptionist/,nueva,
+US,salud,comercial,hipaa,HIPAA trained virtual assistant,sin dato,—,sin dato,—,sin revisar,—,—,/solutions/healthcare/,existente (reescribir),"Usar ""HIPAA-trained"" (regla de marca), nunca ""HIPAA-compliant"""
+US,salud,informativa,hipaa,HIPAA compliant virtual assistant,sin dato,—,sin dato,—,ninguno de la lista,WebSearch 2026-11-27,blogs de cumplimiento (Accountable/Compliancy Group) y software IA,/guides/hipaa-virtual-assistant/,nueva,Guía honesta: qué significa HIPAA-trained y qué es un BAA; no prometer cumplimiento
+US,salud,comercial,dental,virtual receptionist for dental office,sin dato,—,sin dato,—,ninguno de la lista,WebSearch 2026-11-27,recepcionistas con IA (Weave / My AI Front Desk),/solutions/healthcare/dental/,nueva,SERP de IA: diferenciar con persona bilingüe dedicada
+US,salud,comercial,dental,dental virtual assistant,sin dato,—,sin dato,—,sin revisar,—,—,/solutions/healthcare/dental/,nueva,
+US,salud,comercial,quiro-pt,chiropractic virtual assistant,sin dato,—,sin dato,—,"Wing Assistant, Wishup, HelpSquad (blog)",WebSearch 2026-11-27,guías de agencias + IA,/solutions/healthcare/chiropractic-physical-therapy/,nueva,
+US,salud,comercial,quiro-pt,physical therapy virtual assistant,sin dato,—,sin dato,—,sin revisar,—,—,/solutions/healthcare/chiropractic-physical-therapy/,nueva,
+US,salud,comercial,roles-salud,remote medical billing specialist,sin dato,—,sin dato,—,sin revisar,—,—,/solutions/healthcare/ (sección),existente (reescribir),Rol listado en la página actual
+US,salud,comercial,roles-salud,insurance verification virtual assistant,sin dato,—,sin dato,—,sin revisar,—,—,/solutions/healthcare/ (sección),existente (reescribir),
+US,salud,comercial,roles-salud,remote patient scheduling coordinator,sin dato,—,sin dato,—,sin revisar,—,—,/solutions/healthcare/ (sección),existente (reescribir),
+US,salud,comparativa,salud-vs,medical virtual assistant companies,sin dato,—,sin dato,—,"HelpSquad, Wishup (listas)",PDF competencia (Wbcom) + WebSearch,listas de ""top companies"",/compare/medical-virtual-assistant-companies/,nueva,Comparativa honesta con fuentes y fecha
+US,salud,comparativa,salud-vs,medical virtual assistant cost,sin dato,—,sin dato,—,HelpSquad (/blog/virtual-medical-assistant-pricing-comparison/),PDF competencia 2026-11-24,guías de precios,/pricing/,nueva,
+US,pymes,comercial,pymes-va,virtual assistant for small business,sin dato,—,sin dato,—,"Time etc, Prialto",WebSearch 2026-11-27,US Chamber + páginas de industria de agencias,/other-professionals/ → /solutions/small-business/,existente (renombrar y ampliar),
+US,pymes,comercial,pymes-va,bilingual virtual assistant,sin dato,—,sin dato,—,Wing Assistant (/bilingual-virtual-assistant/),WebSearch 2026-11-27,mezcla IA + Fiverr + Wing,/solutions/small-business/ o /bilingual-virtual-assistant/,nueva,Término central de marca; candidato a página propia
+US,pymes,comercial,pymes-va,spanish speaking virtual assistant,sin dato,—,sin dato,—,Wing Assistant,WebSearch 2026-11-27 (misma página de Wing),—,/bilingual-virtual-assistant/,nueva,
+US,pymes,comercial,pymes-va,executive assistant for small business owner,sin dato,—,sin dato,—,"BELAY, Athena, Boldly (foco ejecutivo)",PDF competencia 2026-11-24,—,/solutions/small-business/,existente (ampliar),
+US,pymes,comercial,pymes-roles,remote bookkeeper,sin dato,—,sin dato,—,sin revisar,—,—,/solutions/accounting/,nueva,
+US,pymes,comercial,nearshore,nearshore staffing Colombia,sin dato,—,sin dato,—,Somewhere (blog),WebSearch 2026-11-27,agencias nearshore (Emapta / Connext / Cloudstaff),/why-colombia/,nueva,Ventaja real: mismo horario
+US,pymes,comercial,nearshore,hire virtual assistant from Colombia,sin dato,—,sin dato,—,VA Masters (estadísticas de costos),WebSearch 2026-11-27,Upwork + listas de agencias + Clutch,/why-colombia/,nueva,
+US,pymes,comercial,nearshore,colombian virtual assistant,sin dato,—,sin dato,—,sin revisar,—,—,/why-colombia/,nueva,
+US,pymes,informativa,precio,how much does a virtual assistant cost,sin dato,—,sin dato,—,Prialto (blog),WebSearch 2026-11-27,"Upwork, Fiverr, Airtasker, Time Doctor",/pricing/ + /guides/virtual-assistant-cost/,nueva,"Orchid: ""desde $15/hora"" + calculadora con fuentes BLS"
+US,pymes,comercial,precio,virtual assistant pricing,sin dato,—,sin dato,—,sin revisar,—,—,/pricing/,nueva,
+US,pymes,comercial,precio,cost of hiring an employee vs virtual assistant,sin dato,—,sin dato,—,sin revisar,—,—,/tools/us-hire-vs-orchid-calculator/,nueva,"Calculadora ""US hire vs Orchid"" (BLS OEWS SOC 43-6014 + ECEC + SHRM)"
+US,pymes,comparativa,pais-vs,Colombia vs Philippines virtual assistants,sin dato,—,sin dato,—,"Stealth Agents, VA Masters",WebSearch 2026-11-27,blogs de agencias,/compare/colombia-vs-philippines-virtual-assistants/,nueva,Los que rankean venden Filipinas; Orchid puede dar la versión con horario real
+US,pymes,comparativa,pais-vs,Latin America vs Philippines virtual assistants,sin dato,—,sin dato,—,VA Masters,WebSearch 2026-11-27,blogs de agencias,/compare/colombia-vs-philippines-virtual-assistants/,nueva,
+US,pymes,comparativa,alternativas,BELAY alternatives,sin dato,—,sin dato,—,"Wishup, VA Masters, Stealth Agents, South, Wing, Persona, Prialto",WebSearch 2026-11-27,páginas de alternativas de competidores,/compare/belay-alternatives/,nueva,Muy disputado; hacerlo después de las de salud
+US,pymes,comparativa,alternativas,Stealth Agents alternatives,sin dato,—,sin dato,—,sin revisar,—,—,/compare/stealth-agents-alternatives/,nueva,
+US,pymes,comparativa,alternativas,Virtual Latinos alternatives,sin dato,—,sin dato,—,Stealth Agents (/alternatives/virtual-latinos-alternatives),PDF competencia 2026-11-24,—,/compare/virtual-latinos-alternatives/,nueva,Competidor latino: comparación directa relevante
+US,pymes,comparativa,alternativas,Wing Assistant alternatives,sin dato,—,sin dato,—,sin revisar,—,—,/compare/wing-assistant-alternatives/,nueva,Wing compite en salud bilingüe
+US,pymes,comparativa,versus,Orchid vs [competidor],sin dato,—,sin dato,—,—,—,—,/compare/orchid-vs-…/,nueva,Solo con datos verificables y fecha
+US,abogados,comercial,legal-va,virtual assistant for law firms,sin dato,—,sin dato,—,sin revisar,—,—,/law-firm/,existente,
+US,abogados,comercial,legal-va,bilingual legal assistant,sin dato,—,sin dato,—,ninguno de la lista,WebSearch 2026-11-27,"Legal Soft, Answering Legal, ofertas de empleo",/law-firm/,existente,Mezcla con ofertas de empleo: riesgo de atraer candidatos
+US,abogados,comercial,legal-va,spanish speaking legal intake specialist,sin dato,—,sin dato,—,sin revisar,—,—,/law-firm/immigration/,nueva,Piloto de Meta mostró interés de inmigración
+US,abogados,comercial,legal-va,virtual paralegal,sin dato,—,sin dato,—,sin revisar,—,—,/law-firm/,existente,"Cuidado: ""paralegal"" en EE. UU. tiene requisitos; describir como apoyo administrativo"
+US,abogados,comercial,legal-va,immigration law firm virtual assistant,sin dato,—,sin dato,—,ninguno de la lista,WebSearch 2026-11-27 (Legal Soft),—,/law-firm/immigration/,nueva,
+US,abogados,informativa,legal-tools,attorney hourly rate calculator,sin dato,—,sin dato,—,sin revisar,—,—,/attorney-income-calculator/,existente (unificar),Hay 2 calculadoras duplicadas
+US,contadores,comercial,cpa-va,virtual assistant for accountants,sin dato,—,sin dato,—,"Time etc, Prialto, VA Masters",WebSearch 2026-11-27,páginas de industria de agencias + software (TaxDome),/solutions/accounting/,nueva,
+US,contadores,comercial,cpa-va,CPA firm virtual assistant,sin dato,—,sin dato,—,VA Masters (/tax-cpa-firm-virtual-assistant/),WebSearch 2026-11-27,—,/solutions/accounting/,nueva,
+US,contadores,comercial,cpa-va,tax season virtual assistant,sin dato,—,sin dato,—,sin revisar,—,—,/solutions/accounting/,nueva,Estacional: publicar antes de enero
+US,bienes-raices,comercial,re-va,real estate virtual assistant,sin dato,—,sin dato,—,sin revisar,—,—,/real-estate/,existente,
+US,bienes-raices,comercial,re-va,real estate ISA,sin dato,—,sin dato,—,MyOutDesk,WebSearch 2026-11-27,"Follow Up Boss, RISMedia, MyOutDesk",/real-estate/,existente,
+US,bienes-raices,comercial,re-va,bilingual real estate assistant,sin dato,—,sin dato,—,sin revisar,—,—,/real-estate/,existente,
+US,bienes-raices,comercial,re-va,transaction coordinator virtual assistant,sin dato,—,sin dato,—,sin revisar,—,—,/real-estate/,existente (sección),
+US,marca,navegacional,marca,orchid pros / orchid staffing,sin dato,—,—,—,—,—,—,/,existente,Revisar en Search Console
+CA,salud,comercial,ca-medical,virtual medical office assistant Canada,sin dato,—,sin dato,—,ninguno de la lista,WebSearch 2026-11-27,ofertas de empleo (Indeed / WELL Health),/ca/healthcare/ (solo si Orchid atiende Canadá),pendiente decisión,"SERP de empleo; HIPAA no aplica en Canadá (PHIPA / PIPEDA)"
+CA,pymes,comercial,ca-pymes,hire virtual assistant Canada,sin dato,—,sin dato,—,ninguno de la lista,WebSearch 2026-11-27,"Upwork CA, Indeed, Small Business BC, BDC",/ca/ (solo si Orchid atiende Canadá),pendiente decisión,
+CA,pymes,comercial,ca-pymes,bilingual virtual assistant Canada,sin dato,—,sin dato,—,sin revisar,—,—,pendiente,pendiente decisión,"En Canadá ""bilingual"" suele significar inglés-francés: Orchid es inglés-español"
+CA,abogados,comercial,ca-legal,virtual assistant for law firms Canada,sin dato,—,sin dato,—,sin revisar,—,—,pendiente,pendiente decisión,
+CA,bienes-raices,comercial,ca-re,real estate virtual assistant Canada,sin dato,—,sin dato,—,sin revisar,—,—,pendiente,pendiente decisión,

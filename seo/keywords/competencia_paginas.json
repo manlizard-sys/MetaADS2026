@@ -1,0 +1,2357 @@
+{
+  "fetched_at": "2026-11-27T16:12:22.083Z",
+  "note": "Conteos por patrón en la ruta de la URL; una URL puede caer en varias categorías. 0 URLs = sitemap no encontrado o bloqueado.",
+  "results": [
+    {
+      "competitor": "Wing Assistant",
+      "domain": "wingassistant.com",
+      "total_urls": 1018,
+      "sitemaps_found": 7,
+      "examples": {
+        "pricing": [
+          "/blog/how-much-hire-cpa/",
+          "/blog/wing-pricing-for-real-estate-assistant/",
+          "/blog/cost-of-hiring-a-u-s-employee/",
+          "/blog/how-much-does-a-va-cost/",
+          "/blog/belay-reviews-pricing-coupons-features/",
+          "/blog/how-much-us-virtual-assistant-charge/",
+          "/blog/social-media-manager-cost/",
+          "/blog/how-much-does-a-medical-scribe-make/"
+        ],
+        "alternatives": [
+          "/blog/scribe-america-alternatives/",
+          "/blog/bruntwork-vs-top-alternatives/",
+          "/blog/best-cyberbacker-alternatives/",
+          "/blog/best-double-alternative/",
+          "/blog/best-zirtual-alternative/"
+        ],
+        "versus": [
+          "/blog/technical-content-writer-vs-copywriter/",
+          "/blog/ai-vs-human-assistants/",
+          "/blog/hellorache-vs-wing-assistant/",
+          "/blog/medva-vs-wing-assistant/",
+          "/blog/myoutdesk-vs-wing-assistant/",
+          "/blog/fancy-hands-vs-wing-assistant/",
+          "/blog/woodbows-vs-wing-assistant/",
+          "/blog/prialto-vs-wing/"
+        ],
+        "calculator": [
+          "/blog/virtual-executive-assistant-roi/",
+          "/android-developer/",
+          "/mgma-calculator/",
+          "/roi-calculator/"
+        ],
+        "healthcare": [
+          "/blog/philippines-medical-virtual-assistant/",
+          "/blog/hipaa-compliant-virtual-assistant/",
+          "/blog/what-is-a-medical-scribe/",
+          "/blog/medical-billing-outsourcing/",
+          "/blog/healthcare-virtual-assistant-salary/",
+          "/blog/medical-va-services-for-clinics/",
+          "/blog/medical-virtual-assistant-services/",
+          "/blog/healthcare-bpo-services/"
+        ],
+        "legal": [
+          "/blog/virtual-legal-assistant/",
+          "/teams/hire-legal-support-team/",
+          "/use-cases/legal-admin-bottleneck/",
+          "/immigration-virtual-assistant/",
+          "/paralegal-virtual-assistant/",
+          "/legal-case-manager-virtual-assistant/",
+          "/legal-assistant/",
+          "/5-reasons-why-legal-assistant/"
+        ],
+        "accounting": [
+          "/blog/how-much-hire-cpa/",
+          "/blog/hiring-small-business-cpa/",
+          "/blog/small-business-accounting-tips-2024/",
+          "/blog/bookkeeping-virtual-assistant/",
+          "/blog/small-business-accountant/",
+          "/blog/small-business-accountant-for-hire/",
+          "/blog/accounting-outsourcing/",
+          "/blog/virtual-accounting-services/"
+        ],
+        "real_estate": [
+          "/blog/wing-assistant-real-estate-reviews/",
+          "/blog/wing-pricing-for-real-estate-assistant/",
+          "/blog/virtual-assistant-for-real-estate-wholesalers/",
+          "/blog/virtual-assistant-for-property-managers/",
+          "/blog/virtual-assistant-for-real-estate-brokers/",
+          "/blog/virtual-assistant-for-real-estate-teams/",
+          "/blog/virtual-assistant-for-realtors/",
+          "/blog/real-estate-transaction-coordinator/"
+        ],
+        "small_business": [
+          "/blog/best-virtual-assistant-services-for-small-business/",
+          "/blog/hiring-small-business-cpa/",
+          "/blog/what-is-an-entrepreneurial-mindset/",
+          "/blog/small-business-growth-strategy/",
+          "/blog/best-va-agency-for-entrepreneurs/",
+          "/blog/key-performance-indicators-for-startups/",
+          "/blog/hire-interim-cfo-for-startups/",
+          "/blog/best-virtual-assistant-provider-for-startups/"
+        ],
+        "country_region": [
+          "/blog/virtual-assistant-companies-in-the-philippines/",
+          "/blog/philippines-medical-virtual-assistant/",
+          "/blog/hire-the-best-virtual-assistants-india-what-to-know/",
+          "/blog/offshore-medical-virtual-assistant/",
+          "/blog/offshore-outsourcing-101/",
+          "/blog/va-hiring-south-africa/",
+          "/blog/hiring-a-virtual-assistant-in-the-philippines-what-to-know/",
+          "/blog/philippine-holidays/"
+        ],
+        "bilingual": [
+          "/blog/bilingual-virtual-assistant-for-healthcare/",
+          "/bilingual-virtual-assistant/",
+          "/bilingual-spanish-sales-callers/",
+          "/bilingual-healthcare-virtual-assistant/"
+        ],
+        "guide_blog": [
+          "/blog/timeboxing/",
+          "/blog/growth-mindset-business/",
+          "/blog/best-virtual-executive-assistant-services/",
+          "/blog/how-much-hire-cpa/",
+          "/blog/best-virtual-assistant-companies-2/",
+          "/blog/executive-assistant-agency-for-executives/",
+          "/blog/wing-assistant-real-estate-reviews/",
+          "/blog/virtual-assistant-companies-in-the-philippines/"
+        ]
+      },
+      "pricing": 16,
+      "alternatives": 5,
+      "versus": 95,
+      "calculator": 4,
+      "healthcare": 124,
+      "legal": 11,
+      "accounting": 29,
+      "real_estate": 32,
+      "small_business": 43,
+      "country_region": 17,
+      "bilingual": 4,
+      "guide_blog": 543
+    },
+    {
+      "competitor": "Wishup",
+      "domain": "www.wishup.co",
+      "total_urls": 638,
+      "sitemaps_found": 1,
+      "examples": {
+        "pricing": [
+          "/blog/gabbyville-pricing/",
+          "/blog/myoutdesk-pricing/",
+          "/blog/zirtual-pricing/",
+          "/blog/time-etc-pricing/",
+          "/blog/cost-of-poor-delegation/",
+          "/blog/wing-assistant-pricing/",
+          "/blog/belay-virtual-assistant-pricing/",
+          "/blog/virtual-receptionist-pricing/"
+        ],
+        "alternatives": [
+          "/blog/fancy-hands-alternatives/",
+          "/blog/myoutdesk-alternatives/",
+          "/blog/wing-assistant-alternative/",
+          "/blog/time-etc-alternatives/",
+          "/blog/belay-alternatives/",
+          "/blog/upwork-vs-fiverr-which-is-better-and-other-alternatives/",
+          "/blog/best-fiverr-alternatives-for-businesses-and-entrepreneurs/",
+          "/blog/top-upwork-alternatives-for-businesses/"
+        ],
+        "versus": [
+          "/blog/time-etc-vs-belay/",
+          "/blog/zapier-vs-make-vs-n8n/",
+          "/blog/wishup-vs-get-magic-virtual-assistants/",
+          "/blog/wishup-vs-freeup-comparing-two-different-models-for-hiring-virtual-assistants/",
+          "/blog/prialto-vs-belay/",
+          "/blog/coverdesk-vs-wishup/",
+          "/blog/wishup-vs-medva-healthcare-virtual-assistants/",
+          "/blog/wishup-vs-myoutdesk-virtual-assistant/"
+        ],
+        "calculator": [],
+        "healthcare": [
+          "/service/answering-service-for-healthcare",
+          "/service/accountant-for-dentists",
+          "/service/patient-management",
+          "/service/virtual-medical-scribe",
+          "/service/legal-billing-virtual-assistant",
+          "/service/virtual-assistant-medical-billing",
+          "/service/healthcare-bookkeeping",
+          "/service/medical-transcription-services"
+        ],
+        "legal": [
+          "/service/bookkeeping-for-law-firms",
+          "/service/legal-research-virtual-assistant",
+          "/service/law-firm-client-intake-va",
+          "/service/legal-document-preparation-va",
+          "/service/legal-billing-virtual-assistant",
+          "/blog/top-legal-outsourcing-companies/",
+          "/blog/legal-operations-management/",
+          "/blog/how-virtual-assistants-support-personal-injury-law-firms/"
+        ],
+        "accounting": [
+          "/service/accountant-for-ecommerce",
+          "/service/bookkeeping-for-law-firms",
+          "/service/accountant-for-dentists",
+          "/service/daycare-bookkeeping",
+          "/service/bookkeeping-automation-va",
+          "/service/real-estate-accounting",
+          "/service/financial-advisor-virtual-assistant",
+          "/service/accountant-for-amazon-sellers"
+        ],
+        "real_estate": [
+          "/service/real-estate-transaction-coordinator",
+          "/service/real-estate-accounting",
+          "/blog/hire-real-estate-workflow-automation-virtual-assistant/",
+          "/blog/what-does-a-real-estate-virtual-assistant-do/",
+          "/blog/tasks-you-can-outsource-to-your-real-estate-virtual-assistant/",
+          "/blog/real-estate-va-increased-sales-efficiency/",
+          "/blog/real-estate-virtual-assistant-streamlines-compliance-and-bookings/",
+          "/blog/real-estate-virtual-assistant-listing-management/"
+        ],
+        "small_business": [
+          "/service/accountant-for-ecommerce",
+          "/service/ecommerce-catalogue-management",
+          "/service/ecommerce-vendor-management",
+          "/service/ecommerce-inventory-management",
+          "/blog/ecommerce-virtual-assistant-handled-inventory-management/",
+          "/blog/bookkeeping-for-startups/",
+          "/blog/how-a-virtual-assistant-rebuilt-ecommerce-catalog-operations/",
+          "/blog/hire-a-bookkeeper-for-small-business/"
+        ],
+        "country_region": [
+          "/blog/offshore-shared-services-in-india/",
+          "/blog/hiring-offshore-virtual-assistants-guide/",
+          "/blog/offshore-executive-assistants-complete-guide/",
+          "/blog/offshore-shared-service-models/",
+          "/blog/india-vs-philippines-for-outsourcing/",
+          "/blog/us-based-virtual-assistants-vs-indian-virtual-assistants/"
+        ],
+        "bilingual": [],
+        "guide_blog": [
+          "/blog/outsource-industry-specific-business-operations/",
+          "/blog/virtual-assistant-for-hvac-company/",
+          "/blog/virtual-assistant-for-pediatricians/",
+          "/blog/virtual-assistant-for-healthcare-reputation-management/",
+          "/blog/executive-assistant-staffing-agency/",
+          "/blog/time-etc-vs-belay/",
+          "/blog/ecommerce-virtual-assistant-handled-inventory-management/",
+          "/blog/virtual-assistant-for-drywall-contractors/"
+        ]
+      },
+      "pricing": 13,
+      "alternatives": 8,
+      "versus": 39,
+      "calculator": 0,
+      "healthcare": 73,
+      "legal": 16,
+      "accounting": 76,
+      "real_estate": 22,
+      "small_business": 20,
+      "country_region": 6,
+      "bilingual": 0,
+      "guide_blog": 277
+    },
+    {
+      "competitor": "HelloRache",
+      "domain": "hellorache.com",
+      "total_urls": 246,
+      "sitemaps_found": 4,
+      "examples": {
+        "pricing": [
+          "/virtual-assistant-cost/",
+          "/virtual-receptionist-pricing/",
+          "/how-much-do-dental-assistants-make/",
+          "/how-much-does-a-virtual-medical-scribe-cost/",
+          "/outsourcing-dental-billing-complete-guide-to-reducing-costs-increasing-revenue-in-2026/",
+          "/pricing/"
+        ],
+        "alternatives": [],
+        "versus": [
+          "/chatbots-vs-human-virtual-assistants-why-the-real-thing-is-better/",
+          "/nurse-assistant-vs-medical-assistant/",
+          "/patient-care-technician-vs-medical-assistant/",
+          "/vet-tech-vs-vet-assistant/",
+          "/clinical-medical-assistant-vs-medical-assistant/",
+          "/in-house-vs-virtual-admin-support-which-saves-more-for-general-practices/",
+          "/medical-virtual-receptionist-vs-answering-service-which-is-better/",
+          "/10-best-medical-coding-companies-for-2026-comparing-top-agencies-and-virtual-solutions/"
+        ],
+        "calculator": [
+          "/medical-practice-calculators/"
+        ],
+        "healthcare": [
+          "/13-best-medical-practice-management-tips-2024/",
+          "/5-ways-medical-virtual-assistants-are-transforming-healthcare-administration/",
+          "/top-6-tips-for-efficient-medical-billing-a-guide-for-medical-billing-assistants/",
+          "/what-are-ob-gyny-medical-assistant-duties/",
+          "/5-signs-your-practice-needs-a-remote-medical-scribe-and-how-to-find-one/",
+          "/why-every-healthcare-practice-needs-a-virtual-marketing-assistant-in-2025/",
+          "/top-reasons-small-healthcare-practices-need-medical-billing-services/",
+          "/5-signs-your-healthcare-practice-needs-a-virtual-assistant-right-now/"
+        ],
+        "legal": [],
+        "accounting": [],
+        "real_estate": [],
+        "small_business": [],
+        "country_region": [],
+        "bilingual": [],
+        "guide_blog": [
+          "/blog/"
+        ]
+      },
+      "pricing": 6,
+      "alternatives": 0,
+      "versus": 11,
+      "calculator": 1,
+      "healthcare": 163,
+      "legal": 0,
+      "accounting": 0,
+      "real_estate": 0,
+      "small_business": 0,
+      "country_region": 0,
+      "bilingual": 0,
+      "guide_blog": 1
+    },
+    {
+      "competitor": "MedVA",
+      "domain": "www.medva.com",
+      "total_urls": 91,
+      "sitemaps_found": 7,
+      "examples": {
+        "pricing": [
+          "/resources/news/medical-virtual-assistant-provider-medva-celebrates-growth-milestonesrapid-expansion-propels-medva/",
+          "/resources/news/medva-expands-with-launch-of-bizva-brings-virtual-assistant-efficiency-and-cost-savings/",
+          "/resources/blogs/pricing/"
+        ],
+        "alternatives": [],
+        "versus": [],
+        "calculator": [
+          "/resources/news/medva-expands-with-launch-of-bizva-brings-virtual-assistant-efficiency-and-cost-savings/",
+          "/virtual-assistant-savings-calculator/",
+          "/resources/blogs/whats-the-potential-roi-of-hiring-a-medical-virtual-assistant/"
+        ],
+        "healthcare": [
+          "/resources/news/medva-2000-virtual-assistants-healthcare-efficiency/",
+          "/resources/news/michigan-dental-association-and-medva-partner-to-expand-remote-staffing-access-for-dental-practices/",
+          "/resources/news/medical-virtual-assistant-provider-medva-celebrates-growth-milestonesrapid-expansion-propels-medva/",
+          "/resources/news/medva-awarded-healthcare-virtual-assistant-company-of-2024/",
+          "/healthcare-systems/vas-for-healthcare-systems/",
+          "/virtual-assistant-specialties/psychiatry-mental-health/",
+          "/virtual-assistant-skillsets/remote-patient-monitoring/",
+          "/virtual-assistant-skillsets/virtual-medical-claims/"
+        ],
+        "legal": [],
+        "accounting": [],
+        "real_estate": [],
+        "small_business": [],
+        "country_region": [
+          "/resources/news/medva-secure-facility-enables-offshore-staff-access-epic-emr/"
+        ],
+        "bilingual": [],
+        "guide_blog": [
+          "/resources/",
+          "/resources/news/medva-bronze-stevie-award-2026/",
+          "/resources/news/medva-2000-virtual-assistants-healthcare-efficiency/",
+          "/resources/news/michigan-dental-association-and-medva-partner-to-expand-remote-staffing-access-for-dental-practices/",
+          "/resources/news/virtual-assistant-provider-bizva-transforms-how-businesses-staff-up/",
+          "/resources/news/medical-virtual-assistant-provider-medva-celebrates-growth-milestonesrapid-expansion-propels-medva/",
+          "/resources/news/medva-expands-with-launch-of-bizva-brings-virtual-assistant-efficiency-and-cost-savings/",
+          "/resources/news/medva-awarded-healthcare-virtual-assistant-company-of-2024/"
+        ]
+      },
+      "pricing": 3,
+      "alternatives": 0,
+      "versus": 0,
+      "calculator": 3,
+      "healthcare": 47,
+      "legal": 0,
+      "accounting": 0,
+      "real_estate": 0,
+      "small_business": 0,
+      "country_region": 1,
+      "bilingual": 0,
+      "guide_blog": 47
+    },
+    {
+      "competitor": "Portiva",
+      "domain": "portiva.com",
+      "total_urls": 26,
+      "sitemaps_found": 8,
+      "examples": {
+        "pricing": [
+          "/pricing/"
+        ],
+        "alternatives": [],
+        "versus": [],
+        "calculator": [],
+        "healthcare": [
+          "/insurance-verification-specialist/",
+          "/prior-authorization-specialist/",
+          "/medical-va-admin/",
+          "/medical-billing-support/",
+          "/medical-receptionist-phone-and-scheduling/",
+          "/executive-assistant-healthcare/",
+          "/category/executive-assistant-healthcare/",
+          "/category/insurance-verification-specialist/"
+        ],
+        "legal": [],
+        "accounting": [],
+        "real_estate": [],
+        "small_business": [],
+        "country_region": [],
+        "bilingual": [],
+        "guide_blog": [
+          "/blog/"
+        ]
+      },
+      "pricing": 1,
+      "alternatives": 0,
+      "versus": 0,
+      "calculator": 0,
+      "healthcare": 12,
+      "legal": 0,
+      "accounting": 0,
+      "real_estate": 0,
+      "small_business": 0,
+      "country_region": 0,
+      "bilingual": 0,
+      "guide_blog": 1
+    },
+    {
+      "competitor": "HelpSquad",
+      "domain": "helpsquad.com",
+      "total_urls": 570,
+      "sitemaps_found": 2,
+      "examples": {
+        "pricing": [
+          "/pricing/",
+          "/blog/after-hours-virtual-receptionist-how-it-works-what-it-covers-and-2026-cost/",
+          "/blog/dental-answering-service-costs-features-and-how-to-choose/",
+          "/blog/hidden-costs-of-poor-claims-processing/",
+          "/blog/how-does-ai-reduce-costs-in-healthcare/",
+          "/blog/lowering-call-abandonment-rate/",
+          "/blog/medical-answering-service-for-after-hours-calls-what-it-covers-and-what-it-costs/",
+          "/blog/outsourcing-cost-savings-formula/"
+        ],
+        "alternatives": [],
+        "versus": [
+          "/blog/10-best-emr-software-for-small-practices-in-2026-compared/",
+          "/blog/best-medical-answering-services-in-2026-ranked-and-compared/",
+          "/blog/chat-support-outsourcing-vs-ai-chatbots/",
+          "/blog/dermatology-billing-and-coding-medical-vs-cosmetic/",
+          "/blog/ehr-vs-practice-management-system/",
+          "/blog/helpsquad-vs-hellorache-healthcare-virtual-assistant/",
+          "/blog/in-house-vs-bpo-healthcare-operations/",
+          "/blog/insourcing-vs-outsourcing-strategy-guide/"
+        ],
+        "calculator": [
+          "/blog/healthcare-virtual-assistant-roi-hours-saved-by-specialty-in-2026/",
+          "/blog/how-to-calculate-the-true-roi-of-healthcare-outsourcing-a-5-step-framework/",
+          "/blog/outsourcing-cost-savings-formula/"
+        ],
+        "healthcare": [
+          "/healthcare/",
+          "/healthcare/ai-patient-support/",
+          "/healthcare/bpo/",
+          "/healthcare/call-center-teams/",
+          "/healthcare/chiropractors/",
+          "/healthcare/dental-service-organizations/",
+          "/healthcare/dentists/",
+          "/healthcare/dermatology/"
+        ],
+        "legal": [
+          "/industries/legal/",
+          "/blog/bpo-to-enhance-attorneys-client-interaction/"
+        ],
+        "accounting": [
+          "/industries/financial/",
+          "/blog/accounting-practice-live-chat-advantage/",
+          "/blog/call-answering-service-for-financial-advisors/",
+          "/blog/financial-services-call-center-outsourcing/",
+          "/blog/how-to-outsource-a-treatment-plan-financial-coordinator-for-your-dental-practice-in-2026/"
+        ],
+        "real_estate": [
+          "/blog/10-bad-practices-of-property-managers/"
+        ],
+        "small_business": [
+          "/industries/ecommerce/",
+          "/blog/6-out-of-the-box-ideas-for-small-business-reopening/",
+          "/blog/9-lead-generation-strategies-for-small-businesses/",
+          "/blog/best-practice-ecommerce-outsourcing-business/",
+          "/blog/ecommerce-call-center-outsourcing/",
+          "/blog/how-to-start-a-therapy-private-practice-the-2026-startup-guide/",
+          "/blog/live-chat-agents-ecommerce/",
+          "/blog/live-chat-outsourcing-benefits-for-small-businesses/"
+        ],
+        "country_region": [
+          "/blog/is-an-offshore-virtual-assistant-hipaa-compliant/",
+          "/blog/nearshore-outsourcing/",
+          "/blog/offshore-outsourcing/",
+          "/blog/will-your-patients-know-your-assistant-is-offshore/"
+        ],
+        "bilingual": [],
+        "guide_blog": [
+          "/blog/",
+          "/blog/category/call-center-outsourcing/",
+          "/blog/category/customer-service/",
+          "/blog/category/healthcare/",
+          "/blog/category/virtual-assistants/",
+          "/blog/category/virtual-medical-assistants/",
+          "/blog/10-bad-practices-of-property-managers/",
+          "/blog/10-best-emr-software-for-small-practices-in-2026-compared/"
+        ]
+      },
+      "pricing": 16,
+      "alternatives": 0,
+      "versus": 16,
+      "calculator": 3,
+      "healthcare": 241,
+      "legal": 2,
+      "accounting": 5,
+      "real_estate": 1,
+      "small_business": 13,
+      "country_region": 4,
+      "bilingual": 0,
+      "guide_blog": 495
+    },
+    {
+      "competitor": "Pineapple",
+      "domain": "trypineapple.com",
+      "total_urls": 166,
+      "sitemaps_found": 4,
+      "examples": {
+        "pricing": [
+          "/the-hidden-costs-of-not-hiring-an-e-commerce-va/",
+          "/how-much-does-hiring-a-virtual-assistant-cost-in-2024/",
+          "/how-much-can-virtual-assistants-make-in-the-philippines/",
+          "/virtual-sales-assistant-what-it-is-tasks-costs-how-to-hire/",
+          "/beyond-cost-cutting-the-strategic-advantages-of-outsourcing-staffing-for-business-growth/",
+          "/pricing/"
+        ],
+        "alternatives": [],
+        "versus": [
+          "/executive-assistant-vs-administrative-assistant-understanding-the-key-differences/",
+          "/legal-assistant-vs-legal-virtual-assistant/",
+          "/virtual-assistants-vs-ai-tools-which-support-solution-is-better/"
+        ],
+        "calculator": [
+          "/is-a-real-estate-va-an-expense-or-an-investment-breaking-down-the-roi-for-your-agency/",
+          "/savings-calculator/"
+        ],
+        "healthcare": [
+          "/the-fundamentals-of-being-a-virtual-assistant/",
+          "/types-of-virtual-assistants-health-and-wellness-biz/",
+          "/17-health-and-wellness-business-ideas/",
+          "/virtual-assistant-for-health-coaches/",
+          "/complete-guide-healthcare-virtual-assistant-skills/",
+          "/health-and-wellness-business-trends/"
+        ],
+        "legal": [
+          "/the-essential-role-of-a-virtual-legal-assistant-in-the-legal-services-industry/",
+          "/virtual-assistants-for-legal-research-your-ultimate-guide/",
+          "/10-different-types-of-legal-virtual-assistants/",
+          "/virtual-legal-assistant/",
+          "/what-is-a-virtual-paralegal-assistant-a-complete-guide-for-law-firms-and-solo-attorneys/",
+          "/benefits-of-a-paralegal-virtual-assistant/",
+          "/challenges-of-starting-a-law-firm-how-you-can-deal-with-them/",
+          "/virtual-paralegals-and-legal-secretaries-for-law-firms/"
+        ],
+        "accounting": [
+          "/finance-virtual-assistant/",
+          "/how-virtual-assistants-make-tax-filing-easy-for-small-business-owners/",
+          "/basic-finance-for-starting-virtual-assistants/",
+          "/best-bookkeeping-tools-for-virtual-assistants/",
+          "/a-complete-guide-to-bookkeeping-virtual-assistant-skills/",
+          "/how-a-virtual-assistant-can-help-business-owners-during-tax-season/"
+        ],
+        "real_estate": [
+          "/what-does-a-real-estate-virtual-assistant-do/",
+          "/why-every-real-estate-agent-needs-a-virtual-assistant-in-todays-market/",
+          "/property-management-virtual-assistant-services/",
+          "/real-estate-cold-calling-services/",
+          "/real-estate-virtual-assistant/",
+          "/essential-real-estate-tasks-for-virtual-assistants/",
+          "/how-to-make-passive-income-through-virtual-property-management/",
+          "/how-to-get-more-real-estate-clients/"
+        ],
+        "small_business": [
+          "/the-hidden-costs-of-not-hiring-an-e-commerce-va/",
+          "/productivity-tips-for-small-business-owners/",
+          "/how-virtual-assistants-make-tax-filing-easy-for-small-business-owners/",
+          "/is-a-virtual-assistant-right-for-your-small-business-the-benefits-revealed/",
+          "/how-to-find-the-perfect-virtual-assistant-for-your-startup/",
+          "/best-tasks-for-virtual-assistants-2026-guide-for-busy-founders/",
+          "/10-strategies-for-small-businesses-to-survive-and-thrive-during-a-recession/",
+          "/how-to-hire-an-e-commerce-virtual-assistant-for-a-website/"
+        ],
+        "country_region": [
+          "/how-to-register-in-bir-as-a-freelancer-in-the-philippines-2025/",
+          "/part-time-virtual-assistant-jobs-in-the-philippines/",
+          "/where-to-hire-virtual-assistants-in-the-philippines-pineapples-top-3-talent-pool/",
+          "/how-much-can-virtual-assistants-make-in-the-philippines/",
+          "/why-a-philippines-based-va-is-the-smartest-hire-for-your-customer-support/",
+          "/effective-strategies-for-parents-working-from-home-in-the-philippines/",
+          "/legal-virtual-assistant-philippines/"
+        ],
+        "bilingual": [],
+        "guide_blog": [
+          "/blog/"
+        ]
+      },
+      "pricing": 6,
+      "alternatives": 0,
+      "versus": 3,
+      "calculator": 2,
+      "healthcare": 6,
+      "legal": 14,
+      "accounting": 6,
+      "real_estate": 11,
+      "small_business": 9,
+      "country_region": 7,
+      "bilingual": 0,
+      "guide_blog": 1
+    },
+    {
+      "competitor": "Virtustant",
+      "domain": "www.virtustant.com",
+      "total_urls": 535,
+      "sitemaps_found": 1,
+      "examples": {
+        "pricing": [
+          "/pricing",
+          "/blog/2026-nearshore-rate-report",
+          "/blog/answering-service-cost",
+          "/blog/appointment-setter-cost-2026",
+          "/blog/belay-pricing",
+          "/blog/bilingual-virtual-assistant-rates-by-country",
+          "/blog/bookkeeper-pricing",
+          "/blog/cost-per-hire"
+        ],
+        "alternatives": [
+          "/blog/athena-alternatives",
+          "/blog/belay-alternatives",
+          "/blog/boldly-alternatives",
+          "/blog/fiverr-alternatives",
+          "/blog/hirelatam-alternatives",
+          "/blog/myoutdesk-alternatives",
+          "/blog/near-alternatives",
+          "/blog/prialto-alternatives"
+        ],
+        "versus": [
+          "/compare-agencies",
+          "/blog/appointment-setter-vs-sdr",
+          "/blog/belay-vs-boldly",
+          "/blog/bookkeeper-vs-accountant",
+          "/blog/customer-service-vs-support-success-sales",
+          "/blog/deel-vs-remote",
+          "/blog/executive-assistant-vs-administrative-assistant",
+          "/blog/executive-assistant-vs-virtual-assistant"
+        ],
+        "calculator": [
+          "/blog/cost-savings-latam-remote-staffing",
+          "/roles/android-developer"
+        ],
+        "healthcare": [
+          "/hipaa-virtual-assistant",
+          "/blog/dental-billing-companies",
+          "/blog/dental-virtual-assistant",
+          "/blog/insurance-verification-services",
+          "/blog/medical-biller-job-description",
+          "/blog/medical-billing-services-for-small-practices",
+          "/blog/medical-receptionist-job-description",
+          "/blog/medical-virtual-assistant-services"
+        ],
+        "legal": [
+          "/blog/interview-questions-for-a-legal-assistant",
+          "/blog/law-firm-answering-service",
+          "/blog/law-firm-virtual-assistant",
+          "/blog/legal-intake-services",
+          "/blog/legal-staffing-solutions",
+          "/blog/paralegal-job-description",
+          "/blog/paralegal-vs-legal-assistant",
+          "/blog/virtual-legal-assistant-cost"
+        ],
+        "accounting": [
+          "/blog/accounting-staffing-agencies",
+          "/blog/bookkeeper-interview-questions",
+          "/blog/bookkeeper-pricing",
+          "/blog/bookkeeper-virtual-assistant",
+          "/blog/bookkeeper-vs-accountant",
+          "/blog/bookkeeping-for-startups",
+          "/blog/bookkeeping-services-for-small-business",
+          "/blog/catch-up-bookkeeping-services"
+        ],
+        "real_estate": [
+          "/blog/hire-real-estate-virtual-assistant",
+          "/blog/property-management-virtual-assistant",
+          "/blog/real-estate-transaction-coordinator",
+          "/blog/real-estate-virtual-assistant",
+          "/roles/bookkeeper-real-estate-agents",
+          "/roles/property-management-virtual-assistant",
+          "/roles/real-estate-isa",
+          "/roles/real-estate-virtual-assistant"
+        ],
+        "small_business": [
+          "/blog/answering-service-for-small-business",
+          "/blog/bookkeeping-for-startups",
+          "/blog/bookkeeping-services-for-small-business",
+          "/blog/ecommerce-customer-service-outsourcing",
+          "/blog/ecommerce-outsourcing",
+          "/blog/ecommerce-virtual-assistant-services",
+          "/blog/virtual-assistant-for-small-business",
+          "/roles/ecommerce-customer-service-specialist"
+        ],
+        "country_region": [
+          "/nearshore-staffing",
+          "/blog/2026-nearshore-rate-report",
+          "/blog/benefits-hiring-remote-latam-talent",
+          "/blog/benefits-of-nearshore-outsourcing",
+          "/blog/best-latam-countries-hire-remote-workers",
+          "/blog/best-nearshore-staffing-companies",
+          "/blog/best-nearshore-virtual-assistant-companies",
+          "/blog/build-remote-global-marketing-team-latam"
+        ],
+        "bilingual": [
+          "/blog/best-bilingual-virtual-assistant-company",
+          "/blog/bilingual-answering-service",
+          "/blog/bilingual-virtual-assistant-rates-by-country",
+          "/blog/hire-bilingual-staff",
+          "/roles/bilingual-receptionist",
+          "/roles/bilingual-virtual-assistant"
+        ],
+        "guide_blog": [
+          "/blog/1099-employee",
+          "/blog/1st-dollar-coverage",
+          "/blog/2026-nearshore-rate-report",
+          "/blog/accounting-staffing-agencies",
+          "/blog/accounts-payable-outsourcing",
+          "/blog/accounts-receivable-service",
+          "/blog/administrative-assistant-job-description",
+          "/blog/ai-automation-services"
+        ]
+      },
+      "pricing": 40,
+      "alternatives": 15,
+      "versus": 41,
+      "calculator": 2,
+      "healthcare": 21,
+      "legal": 12,
+      "accounting": 29,
+      "real_estate": 14,
+      "small_business": 11,
+      "country_region": 50,
+      "bilingual": 6,
+      "guide_blog": 265
+    },
+    {
+      "competitor": "Virtual Latinos",
+      "domain": "www.virtuallatinos.com",
+      "total_urls": 622,
+      "sitemaps_found": 6,
+      "examples": {
+        "pricing": [
+          "/blog/virtual-assistant-services-rates/",
+          "/blog/virtual-legal-assistant-cost-modeling-law-firm-profit/",
+          "/blog/how-much-can-i-save-with-virtual-legal-assistants/",
+          "/blog/fully-loaded-cost-employee/",
+          "/blog/reduce-legal-assistant-costs/",
+          "/blog/how-to-reduce-recruitment-costs/",
+          "/blog/how-much-does-a-marketing-assistant-make/",
+          "/blog/how-much-does-it-cost-to-hire-a-remote-real-estate/"
+        ],
+        "alternatives": [
+          "/blog/fiverr-alternatives/",
+          "/blog/upwork-alternatives/",
+          "/blog/remote-work-the-career-alternative-for-location-independent-professionals/",
+          "/blog/zirtual-alternatives/"
+        ],
+        "versus": [
+          "/blog/legal-assistant-vs-legal-secretary/",
+          "/blog/bdr-vs-sdr/",
+          "/blog/translation-tools-vs-bilingual-legal-virtual-assistants/",
+          "/blog/legal-assistant-vs-paralegal/",
+          "/blog/freelance-social-media-vs-virtual-assistant/",
+          "/blog/appointment-setter-vs-sales-representative/",
+          "/blog/virtual-assistant-vs-call-center-agent/",
+          "/blog/executive-assistant-vs-virtual-assistant/"
+        ],
+        "calculator": [
+          "/blog/cost-savings-with-real-estate-assistants/"
+        ],
+        "healthcare": [
+          "/blog/hipaa-compliant-virtual-assistant/",
+          "/blog/outsource-medical-billing/",
+          "/blog/healthcare-practice-assistant/",
+          "/blog/virtual-medical-assistant-job-description/",
+          "/blog/healthcare-outsourcing-services/",
+          "/blog/healthcare-virtual-assistant-tools/",
+          "/blog/virtual-medical-scribe-job-description/",
+          "/blog/medical-virtual-assistant-hiring-doctors/"
+        ],
+        "legal": [
+          "/blog/law-firm-automation/",
+          "/blog/scale-law-firm-virtual-legal-assistants/",
+          "/blog/bilingual-legal-intake-bottlenecks/",
+          "/blog/legal-assistant-vs-legal-secretary/",
+          "/blog/best-virtual-legal-assistant-services/",
+          "/blog/virtual-legal-assistant-companies/",
+          "/blog/litigation-support-multi-attorney-firms/",
+          "/blog/governance-frameworks-outsourced-legal-teams/"
+        ],
+        "accounting": [
+          "/blog/accounting-outsourcing-guide/",
+          "/blog/interview-questions-for-accounting-roles/",
+          "/blog/accounting-assistant-salary/",
+          "/blog/accounting-virtual-assistant-job-description/",
+          "/blog/bookkeeping-virtual-assistant-job-description/",
+          "/blog/tax-season-2021-bookkeeping-virtual-assistant/",
+          "/blog/bookkeeping-industry-benefit-latin-american-values/",
+          "/blog/bookkeeping-interview-questions/"
+        ],
+        "real_estate": [
+          "/blog/best-apps-for-real-estate-agents/",
+          "/blog/improve-property-management-operations/",
+          "/blog/real-estate-outsourcing/",
+          "/blog/how-real-estate-professionals-use-vas-ai/",
+          "/blog/real-estate-virtual-assistant-tools/",
+          "/blog/property-management-virtual-assistant/",
+          "/blog/how-to-hire-real-estate-virtual-assistant/",
+          "/blog/rental-properties-outperforming-traditional-real-estate/"
+        ],
+        "small_business": [
+          "/blog/time-management-for-entrepreneurs/",
+          "/blog/customer-service-for-small-business/",
+          "/blog/answering-service-for-small-business/",
+          "/blog/ecommerce-virtual-assistant-job-description/",
+          "/blog/virtual-assistant-small-business/",
+          "/blog/virtual-latinos-at-march-mingle-san-diegos-largest-annual-startup-tech-networking-event/",
+          "/blog/small-business-tech-stack/",
+          "/blog/virtual-assistants-entrepreneurs-magic-wand-business-growth/"
+        ],
+        "country_region": [
+          "/blog/hire-remote-talent-latin-america/",
+          "/blog/hire-a-virtual-assistant-from-latam/",
+          "/blog/virtual-latinos-hosts-elevated-reuniting-remote-professionals-for-in-person-meet-ups-across-latin-america/",
+          "/blog/virtual-latinos-academy-opens-second-cohort-of-its-ai-bootcamp-after-graduating-professionals-from-19-countries-across-the-americas/",
+          "/blog/virtual-latinos-named-to-the-inc-5000-list-of-americas-fastest-growing-companies-for-the-fourth-consecutive-year/",
+          "/blog/building-resilient-businesses-offshore-outsourcing/",
+          "/blog/latam-time-zone/",
+          "/blog/how-latin-virtual-assistants-help-nonprofit-organizations/"
+        ],
+        "bilingual": [
+          "/blog/bilingual-legal-intake-bottlenecks/",
+          "/blog/bilingual-legal-virtual-assistant/",
+          "/blog/translation-tools-vs-bilingual-legal-virtual-assistants/",
+          "/blog/bilingual-virtual-assistant/"
+        ],
+        "guide_blog": [
+          "/blog/",
+          "/blog/fiverr-alternatives/",
+          "/blog/what-is-a-virtual-assistant/",
+          "/blog/month-end-closing-checklists/",
+          "/blog/law-firm-automation/",
+          "/blog/accounting-outsourcing-guide/",
+          "/blog/scale-law-firm-virtual-legal-assistants/",
+          "/blog/bilingual-legal-intake-bottlenecks/"
+        ]
+      },
+      "pricing": 22,
+      "alternatives": 4,
+      "versus": 20,
+      "calculator": 1,
+      "healthcare": 17,
+      "legal": 74,
+      "accounting": 11,
+      "real_estate": 26,
+      "small_business": 15,
+      "country_region": 53,
+      "bilingual": 4,
+      "guide_blog": 434
+    },
+    {
+      "competitor": "CallForce",
+      "domain": "callforce.global",
+      "total_urls": 337,
+      "sitemaps_found": 2,
+      "examples": {
+        "pricing": [
+          "/pricing/",
+          "/blog/call-center-outsourcing-cost/",
+          "/blog/ai-answering-service-cost-vs-human/",
+          "/blog/caribbean-fronter-cost-curve-2026/",
+          "/blog/cpql-cost-curve-2026/",
+          "/services/answering-service/hvac-cost/",
+          "/blog/in-house-csr-vs-answering-service-cost/",
+          "/blog/virtual-assistant-cost/"
+        ],
+        "alternatives": [
+          "/smith-ai-alternatives/",
+          "/ruby-receptionist-alternatives/",
+          "/answerconnect-alternatives/",
+          "/patlive-alternatives/",
+          "/answerforce-alternatives/"
+        ],
+        "versus": [
+          "/blog/in-house-vs-outsourced-call-center/",
+          "/blog/nearshore-vs-offshore-vs-onshore/",
+          "/blog/ai-answering-service-cost-vs-human/",
+          "/blog/caribbean-vs-philippines-bpo-tco-2026/",
+          "/blog/fronter-vs-licensed-agent-regulatory-line/",
+          "/blog/nearshore-vs-philippines-call-center/",
+          "/blog/in-house-csr-vs-answering-service-cost/",
+          "/blog/dedicated-vs-shared-call-center-agents/"
+        ],
+        "calculator": [
+          "/calculator/",
+          "/tools/medicare-aep-staffing-calculator/",
+          "/tools/cpqm-calculator/",
+          "/blog/sdr-outsourcing-roi-math-2026/",
+          "/calculator/medicare/",
+          "/calculator/solar/",
+          "/calculator/b2b-sdr/",
+          "/calculator/home-services/"
+        ],
+        "healthcare": [
+          "/blog/healthcare-call-center-outsourcing/",
+          "/services/jamaica/healthcare/",
+          "/services/dental-answering-service/",
+          "/services/veterinary-answering-service/",
+          "/services/answering-service/medical/",
+          "/services/colombia/healthcare/",
+          "/services/healthcare-bpo/",
+          "/services/healthcare/"
+        ],
+        "legal": [
+          "/services/legal-intake/",
+          "/services/answering-service/law-firms/"
+        ],
+        "accounting": [
+          "/tools/tcpa-compliance-checker/",
+          "/blog/tcpa-compliance-call-center-outsourcing/",
+          "/blog/outsourced-tcpa-training-voice-agents-2026/",
+          "/blog/tcpa-outbound-voice-2026/",
+          "/services/bookkeeping-virtual-assistant/",
+          "/blog/finance-and-accounting-bpo-services/"
+        ],
+        "real_estate": [
+          "/services/colombia/real-estate-virtual-assistant/",
+          "/services/answering-service/property-management/",
+          "/services/answering-service/real-estate/",
+          "/blog/real-estate-virtual-assistant-outsourcing/",
+          "/services/real-estate-virtual-assistant/",
+          "/services/live-transfer-leads/mortgage/",
+          "/services/real-estate-cold-calling/",
+          "/services/real-estate-call-center/"
+        ],
+        "small_business": [
+          "/services/answering-service/small-business/",
+          "/services/answering-service/ecommerce/",
+          "/blog/ai-voice-agents-for-small-business/",
+          "/blog/saas-startup-customer-support-outsourcing/",
+          "/services/small-business-virtual-assistant/",
+          "/services/ecommerce-customer-service/",
+          "/services/belize/ecommerce-customer-service/",
+          "/services/small-business-outsourcing/"
+        ],
+        "country_region": [
+          "/jobs/colombia/",
+          "/empleos/colombia/",
+          "/blog/remote-customer-service-jobs-latin-america/",
+          "/blog/what-is-nearshore-outsourcing/",
+          "/blog/canadian-smb-nearshore-outsourcing/",
+          "/services/colombia/",
+          "/blog/nearshore-vs-offshore-vs-onshore/",
+          "/blog/medicare-offshore-outsourcing-fcc-2026/"
+        ],
+        "bilingual": [
+          "/hire/bilingual-rep/",
+          "/blog/bilingual-customer-support-outsourcing/",
+          "/services/customer-support/miami-bilingual/",
+          "/services/bilingual-call-center/",
+          "/blog/spanish-call-center-outsourcing-cost/",
+          "/services/spanish-answering-service/",
+          "/services/bilingual-answering-service/"
+        ],
+        "guide_blog": [
+          "/blog/",
+          "/blog/call-center-outsourcing-cost/",
+          "/blog/remote-call-center-jobs-caribbean/",
+          "/blog/remote-customer-service-jobs-latin-america/",
+          "/blog/healthcare-call-center-outsourcing/",
+          "/blog/how-to-choose-bpo-partner/",
+          "/blog/what-is-nearshore-outsourcing/",
+          "/blog/canadian-smb-nearshore-outsourcing/"
+        ]
+      },
+      "pricing": 24,
+      "alternatives": 5,
+      "versus": 23,
+      "calculator": 13,
+      "healthcare": 16,
+      "legal": 2,
+      "accounting": 6,
+      "real_estate": 8,
+      "small_business": 8,
+      "country_region": 27,
+      "bilingual": 7,
+      "guide_blog": 124
+    },
+    {
+      "competitor": "Rose Talent",
+      "domain": "rosetalentsolutions.io",
+      "total_urls": 741,
+      "sitemaps_found": 1,
+      "examples": {
+        "pricing": [
+          "/blog/agency-va-cost",
+          "/blog/average-monthly-cost-for-remote-dental-virtual-assistant",
+          "/blog/average-virtual-assistant-hourly-rate-2025",
+          "/blog/bench-vs-pilot-vs-nearshore-bookkeeper-cost-and-quality",
+          "/blog/bilingual-virtual-assistant-cost-comparison",
+          "/blog/cost-of-bad-hire-roi-hiring-mistakes-employee-retention",
+          "/blog/cost-of-hiring-a-junior-bdr-2025",
+          "/blog/cost-of-hiring-sales-development-reps"
+        ],
+        "alternatives": [],
+        "versus": [
+          "/blog/bench-vs-pilot-accounting-comparison",
+          "/blog/bench-vs-pilot-bookkeeping-which-is-better",
+          "/blog/bench-vs-pilot-vs-nearshore-bookkeeper-cost-and-quality",
+          "/blog/bench-vs-pilot",
+          "/blog/bilingual-virtual-assistant-cost-comparison",
+          "/blog/cold-calling-va-services-compared",
+          "/blog/compare-platforms-for-hiring-remote-exec-assistants",
+          "/blog/cost-of-outsourced-dermatology-billing-vs-in-house"
+        ],
+        "calculator": [
+          "/blog/bilingual-virtual-assistant-roi",
+          "/blog/cost-of-bad-hire-roi-hiring-mistakes-employee-retention",
+          "/blog/cost-savings-benchmarks",
+          "/blog/hire-ai-developers-mexico-android-app-developers",
+          "/blog/hire-nearshore-react-developers-android-app-developers",
+          "/blog/hire-virtual-assistant-for-marketing-uk-adoption-rates-cost-savings-and-roi-data",
+          "/blog/how-to-measure-the-roi-of-an-outsourced-sdr-program",
+          "/blog/nearshore-mobile-developer-ios-and-android"
+        ],
+        "healthcare": [
+          "/blog/accounts-receivable-follow-up-medical-billing-outsourcing",
+          "/blog/athenahealth-virtual-billing-assistant-services",
+          "/blog/average-monthly-cost-for-remote-dental-virtual-assistant",
+          "/blog/best-medical-billing-virtual-assistant-services-2026",
+          "/blog/best-virtual-assistant-for-dental-practice",
+          "/blog/best-virtual-medical-scribe-services-2026",
+          "/blog/best-virtual-medical-scribes",
+          "/blog/can-a-virtual-medical-scribe-use-epic-or-cerner"
+        ],
+        "legal": [
+          "/blog/best-virtual-paralegal-services-for-solo-attorneys-2026",
+          "/blog/hire-a-virtual-legal-assistant-for-law-firm",
+          "/blog/how-does-a-virtual-paralegal-handle-client-intake",
+          "/blog/how-much-does-a-virtual-paralegal-cost",
+          "/blog/law-firm-virtual-assistant-vs-in-house-staff",
+          "/blog/law-firm-virtual-receptionist-services",
+          "/blog/legal-transcription-virtual-assistant",
+          "/blog/nearshore-legal-staffing"
+        ],
+        "accounting": [
+          "/blog/accountants-latin-america",
+          "/blog/accounting-firm-practice-management-and-operations-guide-for-staffing-solutions",
+          "/blog/accounting-firm-practice-strategy-and-outsourcing",
+          "/blog/accounting-firm-staff-management-best-practices",
+          "/blog/accounting-nearsourcing-firm",
+          "/blog/accounting-outsourcing-for-ecommerce-hiring",
+          "/blog/accounting-outsourcing-lima",
+          "/blog/accounting-practice-hr-management-hiring-staff-retention"
+        ],
+        "real_estate": [
+          "/blog/do-nearshore-vas-work-for-boutique-property-management-firms",
+          "/blog/hire-property-management-assistant",
+          "/blog/how-do-property-managers-use-virtual-assistants-for-maintenance-coordination",
+          "/blog/how-much-does-a-property-management-va-cost-per-month",
+          "/blog/how-to-onboard-a-property-management-va-in-your-software-stack",
+          "/blog/nearshore-accounting-staffing-property-management",
+          "/blog/nearshore-virtual-assistant-property-management",
+          "/blog/nearshore-vs-offshore-property-management-va-response-time-english-cost"
+        ],
+        "small_business": [
+          "/blog/accounting-outsourcing-for-ecommerce-hiring",
+          "/blog/affordable-tech-staffing-services-for-non-technical-founders",
+          "/blog/benefits-of-nearshore-staffing-for-startups",
+          "/blog/best-bookkeeping-outsourcing-options-for-ecommerce",
+          "/blog/best-nearshore-bookkeeping-services-for-us-startups",
+          "/blog/best-nearshore-sdr-services-for-b2b-startups",
+          "/blog/best-nearshore-staffing-agencies-for-startups",
+          "/blog/best-virtual-assistant-services-for-us-small-businesses"
+        ],
+        "country_region": [
+          "/blog/accountants-latin-america",
+          "/blog/accounting-service-provider-in-latam-reviews",
+          "/blog/accounting-service-provider-in-latam",
+          "/blog/accounts-payable-consulting-in-latin-america",
+          "/blog/argentina-developers",
+          "/blog/bench-vs-pilot-vs-nearshore-bookkeeper-cost-and-quality",
+          "/blog/benefits-of-nearshore-staffing-for-startups",
+          "/blog/best-all-in-one-solutions-for-nearshore-talent-acquisition"
+        ],
+        "bilingual": [
+          "/blog/best-bilingual-virtual-assistant-companies-in-colombia",
+          "/blog/best-nearshore-staffing-vendors-for-bilingual-customer-support",
+          "/blog/bilingual-virtual-assistant-cost-comparison",
+          "/blog/bilingual-virtual-assistant-roi",
+          "/blog/nearshore-bilingual-call-center",
+          "/blog/what-s-the-best-nearshore-staffing-vendor-for-bilingual-customer-support"
+        ],
+        "guide_blog": [
+          "/blog/accountants-latin-america",
+          "/blog/accounting-firm-practice-management-and-operations-guide-for-staffing-solutions",
+          "/blog/accounting-firm-practice-strategy-and-outsourcing",
+          "/blog/accounting-firm-staff-management-best-practices",
+          "/blog/accounting-nearsourcing-firm",
+          "/blog/accounting-outsourcing-for-ecommerce-hiring",
+          "/blog/accounting-outsourcing-lima",
+          "/blog/accounting-practice-hr-management-hiring-staff-retention"
+        ]
+      },
+      "pricing": 80,
+      "alternatives": 0,
+      "versus": 55,
+      "calculator": 11,
+      "healthcare": 55,
+      "legal": 19,
+      "accounting": 120,
+      "real_estate": 20,
+      "small_business": 39,
+      "country_region": 254,
+      "bilingual": 6,
+      "guide_blog": 692
+    },
+    {
+      "competitor": "VA Masters",
+      "domain": "vamasters.com",
+      "total_urls": 1667,
+      "sitemaps_found": 8,
+      "examples": {
+        "pricing": [
+          "/from-corporate-to-va-agency-founder-how-joyce-built-gtq-global-support/",
+          "/pricing-analyst-virtual-assistant/",
+          "/conversion-rate-optimization-specialist-virtual-assistants/",
+          "/ukraine-developer-rates-2026/",
+          "/software-development-outsourcing-rates-by-country/",
+          "/cost-to-build-mvp-eastern-europe/",
+          "/cost-to-hire-development-team-ukraine/",
+          "/bpo-industry-salary-rates-philippines-2026/"
+        ],
+        "alternatives": [
+          "/20four7va-alternatives/",
+          "/delegated-alternatives/",
+          "/equivity-alternatives/",
+          "/magic-alternatives/",
+          "/mytasker-alternatives/",
+          "/pineapple-va-alternatives/",
+          "/stealth-agents-alternatives/",
+          "/taskbullet-alternatives/"
+        ],
+        "versus": [
+          "/va-masters-vs-time-etc/",
+          "/dedicated-va-vs-shared-va-comparison/",
+          "/philippines-vs-vietnam-outsourcing/",
+          "/va-masters-vs-belay/",
+          "/philippines-vs-mexico-outsourcing-us-companies/",
+          "/philippines-vs-eastern-europe-outsourcing/",
+          "/philippines-vs-south-africa-outsourcing/",
+          "/philippines-vs-pakistan-outsourcing/"
+        ],
+        "calculator": [
+          "/10-tasks-to-delegate-to-a-virtual-assistant-with-roi-estimates-va-masters/",
+          "/hire-mobile-app-developer-ios-android-virtual-assistants/",
+          "/roi-hiring-virtual-assistant-real-numbers/",
+          "/ecommerce-virtual-assistant-statistics-adoption-roi/",
+          "/outsourcing-roi-statistics-real-company-numbers/",
+          "/time-savings-calculator-va-agency-vs-diy-hiring-va-masters/",
+          "/outsourcing-philippines-cost-savings/",
+          "/filipino-va-cost-savings-calculator-see-how-much-you-can-save-in-2025/"
+        ],
+        "healthcare": [
+          "/environmental-impact-remote-outsourcing/",
+          "/billing-collections-virtual-assistant/",
+          "/home-health-care-virtual-assistant/",
+          "/telehealth-virtual-assistant/",
+          "/veterinary-virtual-assistant/",
+          "/best-outsourcing-companies-healthcare/",
+          "/hipaa-compliant-virtual-assistant/",
+          "/best-medical-virtual-assistant-services/"
+        ],
+        "legal": [
+          "/outsource-legal-support-philippines/",
+          "/lawyers-using-virtual-assistants-bill-more-hours/",
+          "/how-to-pay-filipino-remote-workers-legally/",
+          "/legal-entity-philippines-do-you-need-one/",
+          "/paralegal-virtual-assistant/",
+          "/what-is-lpo-legal-process-outsourcing/",
+          "/law-firm-virtual-assistant/",
+          "/philippine-freelancer-vs-agency-va-legal-differences/"
+        ],
+        "accounting": [
+          "/new-va-3-departments-how-to-handle-finance-creatives-operations-from-day-one/",
+          "/outsource-accounting-bookkeeping-philippines/",
+          "/outsourcing-for-financial-advisors-wealth-managers/",
+          "/tax-preparation-virtual-assistant/",
+          "/financial-reporting-virtual-assistant/",
+          "/wave-accounting-specialist-virtual-assistants/",
+          "/financial-planning-wealth-management-virtual-assistants/",
+          "/tax-implications-outsourcing-philippines/"
+        ],
+        "real_estate": [
+          "/real-estate-admin-virtual-assistant-right-fit/",
+          "/perfect-admin-assistant-real-estate-client/",
+          "/how-to-outsource-real-estate-back-office/",
+          "/real-estate-teams-virtual-assistants-close-more-deals/",
+          "/outsource-real-estate-admin-philippines/",
+          "/outsourcing-for-property-managers-cut-admin/",
+          "/outsourcing-for-real-estate-businesses/",
+          "/real-estate-virtual-assistant-statistics-market-trends/"
+        ],
+        "small_business": [
+          "/from-corporate-to-va-agency-founder-how-joyce-built-gtq-global-support/",
+          "/outsource-ecommerce-operations-philippines/",
+          "/ecommerce-brands-use-vas-scale-7-figures/",
+          "/small-business-virtual-assistants-compete-guide/",
+          "/multi-channel-ecommerce-virtual-assistants/",
+          "/startups-save-100k-per-year-filipino-vas/",
+          "/small-business-outsourcing-statistics-trends/",
+          "/ecommerce-virtual-assistant-statistics-adoption-roi/"
+        ],
+        "country_region": [
+          "/outsource-digital-marketing-philippines/",
+          "/outsource-legal-support-philippines/",
+          "/outsource-project-management-philippines/",
+          "/outsource-executive-assistance-philippines/",
+          "/outsource-back-office-philippines/",
+          "/outsource-qa-testing-philippines/",
+          "/outsource-accounting-bookkeeping-philippines/",
+          "/philippines-vs-vietnam-outsourcing/"
+        ],
+        "bilingual": [
+          "/bilingual-spanish-english-virtual-assistants/",
+          "/careers/spanish-admin-va/"
+        ],
+        "guide_blog": [
+          "/blog/"
+        ]
+      },
+      "pricing": 65,
+      "alternatives": 31,
+      "versus": 96,
+      "calculator": 14,
+      "healthcare": 45,
+      "legal": 19,
+      "accounting": 47,
+      "real_estate": 56,
+      "small_business": 52,
+      "country_region": 87,
+      "bilingual": 2,
+      "guide_blog": 1
+    },
+    {
+      "competitor": "Hire Overseas",
+      "domain": "www.hireoverseas.com",
+      "total_urls": 525,
+      "sitemaps_found": 1,
+      "examples": {
+        "pricing": [
+          "/blogs/appointment-setter-cost-per-month-south-africa",
+          "/blogs/cost-of-hiring-a-social-media-manager",
+          "/blogs/cost-of-hiring-remote-employees",
+          "/blogs/cost-to-hire-open-claw-developer",
+          "/blogs/developer-hiring-cost-comparison-guide",
+          "/blogs/hiring-costs-compared",
+          "/blogs/reduce-operational-costs",
+          "/blogs/virtual-assistant-cost"
+        ],
+        "alternatives": [
+          "/alternatives/hire-overseas-vs-bairesdev",
+          "/alternatives/hire-overseas-vs-belkins",
+          "/alternatives/hire-overseas-vs-callbox",
+          "/alternatives/hire-overseas-vs-cience",
+          "/alternatives/hire-overseas-vs-hire-with-near",
+          "/alternatives/hire-overseas-vs-martal-group",
+          "/alternatives/hire-overseas-vs-remote",
+          "/alternatives/hire-overseas-vs-saleshive"
+        ],
+        "versus": [
+          "/alternatives/hire-overseas-vs-bairesdev",
+          "/alternatives/hire-overseas-vs-belkins",
+          "/alternatives/hire-overseas-vs-callbox",
+          "/alternatives/hire-overseas-vs-cience",
+          "/alternatives/hire-overseas-vs-hire-with-near",
+          "/alternatives/hire-overseas-vs-martal-group",
+          "/alternatives/hire-overseas-vs-remote",
+          "/alternatives/hire-overseas-vs-saleshive"
+        ],
+        "calculator": [],
+        "healthcare": [
+          "/blogs/healthcare-bpo-services",
+          "/blogs/healthcare-outsourcing",
+          "/blogs/how-to-create-ftc-fda-compliant-healthcare-content",
+          "/blogs/medical-scribe-services",
+          "/blogs/outsource-healthcare-software-development",
+          "/blogs/outsource-medical-billing",
+          "/blogs/telehealth-virtual-assistant",
+          "/blogs/top-healthcare-virtual-assistant-companies"
+        ],
+        "legal": [
+          "/blogs/benefits-of-hiring-openclaw-developer",
+          "/blogs/cost-to-hire-open-claw-developer",
+          "/blogs/hire-openclaw-developer",
+          "/blogs/hire-openclaw-developers",
+          "/blogs/how-to-hire-offshore-sales-reps-legally",
+          "/blogs/international-employment-law",
+          "/blogs/openclaw-developer",
+          "/blogs/openclaw-implementation"
+        ],
+        "accounting": [
+          "/blogs/accounting-staffing-agencies",
+          "/blogs/best-outsourced-accounting-service-providers",
+          "/blogs/bookkeeping-outsourcing",
+          "/blogs/bookkeeping-services-for-small-business",
+          "/blogs/filipino-bookkeeper-hiring-guide",
+          "/blogs/hire-a-bookkeeper",
+          "/blogs/hire-a-bookkeeper-colombia",
+          "/blogs/how-to-hire-a-bookkeeper"
+        ],
+        "real_estate": [
+          "/blogs/real-estate-virtual-assistant",
+          "/blogs/real-estate-virtual-assistant-services",
+          "/industries/real-estate"
+        ],
+        "small_business": [
+          "/blogs/ai-for-small-business",
+          "/blogs/best-offshore-staffing-agencies-for-us-startups-and-why",
+          "/blogs/best-outsourced-sdr-providers-for-startups",
+          "/blogs/best-virtual-assistant-companies-for-startups",
+          "/blogs/bookkeeping-services-for-small-business",
+          "/blogs/e-commerce-growth-hacks",
+          "/blogs/ecommerce-customer-service-outsourcing",
+          "/blogs/small-business-virtual-assistant"
+        ],
+        "country_region": [
+          "/blogs/ai-powered-operations-team-philippines",
+          "/blogs/ai-workflow-operators-philippines",
+          "/blogs/appointment-setter-cost-per-month-south-africa",
+          "/blogs/assess-the-english-skills-of-offshore-talent",
+          "/blogs/best-offshore-staffing-agencies-for-us-startups-and-why",
+          "/blogs/cold-call-script-for-offshore-reps",
+          "/blogs/hire-a-bookkeeper-colombia",
+          "/blogs/hire-a-chatgpt-expert-in-the-philippines"
+        ],
+        "bilingual": [],
+        "guide_blog": [
+          "/blogs/guide-to-hiring-your-first-remote-team"
+        ]
+      },
+      "pricing": 11,
+      "alternatives": 30,
+      "versus": 34,
+      "calculator": 0,
+      "healthcare": 23,
+      "legal": 19,
+      "accounting": 17,
+      "real_estate": 3,
+      "small_business": 15,
+      "country_region": 58,
+      "bilingual": 0,
+      "guide_blog": 1
+    },
+    {
+      "competitor": "Stealth Agents",
+      "domain": "stealthagents.com",
+      "total_urls": 38166,
+      "sitemaps_found": 18,
+      "examples": {
+        "pricing": [
+          "/package-pricing",
+          "/research/dental-assistant-staffing-cost-statistics-2026",
+          "/research/telework-rates-by-industry-2026",
+          "/research/interview-no-show-cost-statistics-2026",
+          "/research/bpo-employee-attrition-replacement-cost-statistics-2026",
+          "/research/sustainability-manager-hiring-cost-statistics-2026",
+          "/research/cost-per-hire-administrative-workload-statistics-2026",
+          "/research/cost-of-hiring-a-payroll-specialist-2026"
+        ],
+        "alternatives": [
+          "/alternatives",
+          "/remotasks-alternative",
+          "/persona-alternatives-virtual-assistant",
+          "/magic-virtual-assistant-alternatives",
+          "/virtual-assistant-service-alternatives",
+          "/20four7va-alternatives",
+          "/virtual-latinos-alternatives",
+          "/woodbows-alternatives"
+        ],
+        "versus": [
+          "/top-lists-and-comparisons",
+          "/virtual-assistant-vs-virtual-associate",
+          "/full-time-remote-assistant-vs-part-time-contractor",
+          "/special-assistant-vs-executive-assistant",
+          "/fiverr-vs-peopleperhour",
+          "/upwork-vs-guru",
+          "/docs/virtual-assistant-vs-employee",
+          "/docs/executive-assistant-vs-virtual-assistant"
+        ],
+        "calculator": [
+          "/roi-calculator",
+          "/docs/virtual-assistant-roi-calculator",
+          "/research/executive-delegation-roi-statistics-2026",
+          "/research/nearshore-bpo-cost-savings-statistics-2026",
+          "/research/executive-administrative-support-roi-statistics-2026",
+          "/research/hybrid-work-commute-time-savings-statistics-2026",
+          "/research/remote-work-commute-savings-statistics-2026",
+          "/research/smb-email-marketing-roi-statistics-2026"
+        ],
+        "healthcare": [
+          "/services/healthcare-va",
+          "/services/medical-virtual-assistant",
+          "/services/medical-billing-virtual-assistant",
+          "/services/hipaa-compliant-virtual-assistant",
+          "/services/remote-veterinary-receptionist",
+          "/research/dental-assistant-staffing-cost-statistics-2026",
+          "/research/medical-secretary-workload-statistics-2026",
+          "/research/medical-referral-coordination-workload-statistics-2026"
+        ],
+        "legal": [
+          "/research/law-firm-client-intake-follow-up-statistics-2026",
+          "/research/law-firm-matter-opening-workload-statistics-2026",
+          "/research/legal-client-intake-staffing-costs-2026",
+          "/research/legal-intake-staffing-cost-statistics-2026",
+          "/research/legal-technology-adoption-statistics-2026",
+          "/research/ai-in-law-adoption-statistics-2026",
+          "/research/law-firm-billing-admin-workload-statistics-2026",
+          "/research/legal-intake-response-time-statistics-2026"
+        ],
+        "accounting": [
+          "/news/bp-moves-3-000-finance-staff-to-wipro-in-outsourcing-deal",
+          "/news/wipro-to-take-over-bp-finance-operations-involving-3-000-employees",
+          "/services/finance-payroll",
+          "/services/financial-reporting-assistant",
+          "/services/bookkeeping-virtual-assistant-services",
+          "/services/virtual-accountant",
+          "/services/tax-preparation-assistant",
+          "/research/bookkeeping-clerk-staffing-statistics-2026"
+        ],
+        "real_estate": [
+          "/services/real-estate",
+          "/services/property-management-virtual-assistant",
+          "/services/real-estate-virtual-assistant",
+          "/services/mortgage-virtual-assistant",
+          "/research/property-management-lease-renewal-coordination-statistics-2026",
+          "/research/mortgage-document-collection-workload-statistics-2026",
+          "/research/real-estate-virtual-assistant-statistics-2026",
+          "/research/multifamily-property-management-staffing-costs-2026"
+        ],
+        "small_business": [
+          "/executive-support-for-founders",
+          "/docs/can-a-virtual-assistant-assist-with-inventory-management-for-e-commerce",
+          "/docs/virtual-assistant-for-small-business",
+          "/services/ecommerce-shopify",
+          "/services/small-business-outsourcing",
+          "/services/ecommerce-virtual-assistant",
+          "/services/customer-support-for-ecommerce",
+          "/services/ecommerce-operations-assistant"
+        ],
+        "country_region": [
+          "/news/transcom-adds-a-seventh-philippine-site-as-bpo-capacity-grows",
+          "/news/philippine-bpos-shift-to-fitted-offices-as-clients-demand-speed",
+          "/top-45-south-african-bpo-companies",
+          "/services/offshore-virtual-assistant-services",
+          "/services/outsourcing-services-philippines",
+          "/research/nearshore-outsourcing-wage-inflation-statistics-2026",
+          "/research/nearshore-bpo-growth-statistics-2026",
+          "/research/nearshore-bpo-cost-savings-statistics-2026"
+        ],
+        "bilingual": [
+          "/spanish-speaking-virtual-assistant",
+          "/bilingual-virtual-assistant"
+        ],
+        "guide_blog": []
+      },
+      "pricing": 621,
+      "alternatives": 1840,
+      "versus": 433,
+      "calculator": 324,
+      "healthcare": 2509,
+      "legal": 721,
+      "accounting": 1334,
+      "real_estate": 1509,
+      "small_business": 777,
+      "country_region": 492,
+      "bilingual": 2,
+      "guide_blog": 0
+    },
+    {
+      "competitor": "Athena",
+      "domain": "www.athena.com",
+      "total_urls": 298,
+      "sitemaps_found": 1,
+      "examples": {
+        "pricing": [
+          "/pricing",
+          "/blog/posts/how-to-calibrate-costs-for-better-price-validation"
+        ],
+        "alternatives": [],
+        "versus": [
+          "/blog/posts/athena-assistants-vs-traditional-vas-tailored-support-for-unprecedented-success",
+          "/blog/posts/chief-of-staff-vs-executive-assistant-the-real-difference",
+          "/blog/posts/executive-assistant-vs-operations-manager",
+          "/blog/posts/executive-assistant-vs-personal-assistant",
+          "/blog/posts/executive-assistant-vs-secretary",
+          "/blog/posts/executive-coordinator-vs-executive-assistant",
+          "/blog/posts/leadership-vs-management",
+          "/blog/posts/offshoring-vs-outsourcing"
+        ],
+        "calculator": [],
+        "healthcare": [
+          "/industries/medical",
+          "/blog/posts/40-fewer-meetings-healthcare-ceo-has-more-time-thanks-to-an-executive-assistant",
+          "/blog/posts/no-wait-healthcare-appointments-smart-delegation-for-medical-visits",
+          "/blog/posts/transform-your-new-years-health-goals-with-your-assistant"
+        ],
+        "legal": [
+          "/industries/legal",
+          "/blog/posts/parkinsons-law",
+          "/blog/posts/virtual-legal-assistant"
+        ],
+        "accounting": [
+          "/specialist/bookkeeping-assistant",
+          "/industries/finance",
+          "/blog/posts/bookkeeping-virtual-assistant",
+          "/blog/posts/year-end-tax-optimization"
+        ],
+        "real_estate": [
+          "/industries/real-estate"
+        ],
+        "small_business": [
+          "/industries/ecommerce",
+          "/industries/small-business"
+        ],
+        "country_region": [
+          "/executive-assistant/indianapolis"
+        ],
+        "bilingual": [],
+        "guide_blog": [
+          "/blog/all",
+          "/resources/case-studies",
+          "/resources/guides",
+          "/resources/articles",
+          "/blog/posts/2-minute-rule",
+          "/blog/posts/2-pillars-of-delegation-intuition-and-communication",
+          "/blog/posts/3-ways-an-executive-assistant-will-save-you-hundreds-of-hours-a-year",
+          "/blog/posts/4-ways-your-assistant-can-use-ai-to-get-you-better-delegation-results"
+        ]
+      },
+      "pricing": 2,
+      "alternatives": 0,
+      "versus": 10,
+      "calculator": 0,
+      "healthcare": 4,
+      "legal": 3,
+      "accounting": 4,
+      "real_estate": 1,
+      "small_business": 2,
+      "country_region": 1,
+      "bilingual": 0,
+      "guide_blog": 196
+    },
+    {
+      "competitor": "BELAY",
+      "domain": "belaysolutions.com",
+      "total_urls": 1892,
+      "sitemaps_found": 2,
+      "examples": {
+        "pricing": [
+          "/how-accelerate-business-growth",
+          "/how-much-does-a-social-media-strategist-cost",
+          "/four-ways-integrate-remote-employees-company-culture",
+          "/how-much-does-a-bookkeeper-cost",
+          "/how-to-hire-your-first-employee-costs",
+          "/true-office-cost-calculator-how-remote-work-can-save-your-workforce",
+          "/how-to-demonstrate-gratitude-celebrating-rewarding-your-team-remotely",
+          "/gratitude-generosity-stories-belays-corporate-team"
+        ],
+        "alternatives": [],
+        "versus": [
+          "/social-media-strategist-vs-virtual-assistant",
+          "/reasons-hire-remote-vs-house-administrative-assistant",
+          "/bookkeeping-expectations-vs-reality",
+          "/social-media-managers-expectations-vs-reality",
+          "/us-based-vs-offshore-contractors",
+          "/executive-assistant-vs-personal-assistant",
+          "/the-difference-between-using-belay-vs-hiring-locally",
+          "/best-executive-assistant-services-vs-hiring-in-house-in-2026"
+        ],
+        "calculator": [
+          "/true-office-cost-calculator-how-remote-work-can-save-your-workforce",
+          "/the-roi-of-ai-how-virtual-assistants-can-drive-organizational-success",
+          "/managing-your-marketing-roi",
+          "/why-not-hiring-a-bookkeeper-could-haunt-your-roi",
+          "/the-roi-of-outsourcing-to-a-fractional-accounting-professional",
+          "/the-roi-of-hiring-a-marketing-assistant-how-they-maximize-your-marketing-budget",
+          "/the-roi-of-hiring-a-belay-executive-assistant-during-budget-cuts",
+          "/from-inbox-to-impact-the-roi-of-a-belay-assistant-in-90-days"
+        ],
+        "healthcare": [
+          "/industries/health-wellness-fs",
+          "/industries/private-healthcare-fs",
+          "/hr/health-coverage-tax-documents",
+          "/the-top-3-metrics-businesses-need-to-measure-financial-health",
+          "/unlocking-church-health-insights",
+          "/former-bf-client-hifu-prostate-services-acquires-vituro-health",
+          "/case-study-kanning-dental",
+          "/how-a-health-coach-scaled-her-business-while-living-her-dream-lifestyle-across-continents"
+        ],
+        "legal": [
+          "/what-a-virtual-assistant-can-do-for-your-law-firm",
+          "/industries/legal-as"
+        ],
+        "accounting": [
+          "/services/financial",
+          "/services/financial/bookkeeping",
+          "/services/financial/tax-services",
+          "/services/financial/payroll",
+          "/services/financial/controller",
+          "/services/financial/accounting-clerk",
+          "/services/financial/cfo",
+          "/services/financial/inventory-consulting"
+        ],
+        "real_estate": [
+          "/industries/real-estate-as",
+          "/what-a-virtual-assistant-can-do-for-real-estate-professionals",
+          "/easy-way-to-manage-real-estate-portfolio",
+          "/why-good-accounting-is-the-foundation-of-real-estate-success",
+          "/how-to-delegate-and-scale-your-real-estate-portfolio-faster",
+          "/real-estate-virtual-assistant"
+        ],
+        "small_business": [
+          "/an-entrepreneurs-handbook-to-getting-more-done-every-day",
+          "/entrepreneurs-guide-building-bus-seats",
+          "/why-virtual-bookkeepers-are-great-for-small-businesses",
+          "/ecommerce-changing-need-for-bookkeeping",
+          "/how-staffing-agencies-can-help-small-business-find-qualified-candidates",
+          "/ecommerce-accounting-services",
+          "/startup-accounting-guide",
+          "/e-commerce-best-practices"
+        ],
+        "country_region": [
+          "/us-based-vs-offshore-contractors",
+          "/case-study-caitlyn-brazill",
+          "/how-is-belay-different-from-offshore-staffing-or-ai-tools",
+          "/virtual-assistant-costs-vs.-offshore-support-vs.-ai-tools",
+          "/why-offshore-virtual-assistants-often-break-at-the-500k-2m-stage",
+          "/how-founders-choose-the-right-assistant-model-va-vs.-ea-vs.-in-house-vs.-offshore",
+          "/belay-faq-whats-the-difference-between-us-based-and-offshore-virtual-assistants",
+          "/client-success-stories/case-study-caitlyn-brazill"
+        ],
+        "bilingual": [],
+        "guide_blog": [
+          "/resources/",
+          "/resources/belay/",
+          "/resources/s/",
+          "/resources/delegate-to-elevate",
+          "/resources/leadership-toolkit",
+          "/resources/40-hour-ceo",
+          "/resources/delegation-worksheet-guide",
+          "/resources/the-ultimate-guide-to-working-with-a-belay-accounting-professional"
+        ]
+      },
+      "pricing": 42,
+      "alternatives": 0,
+      "versus": 14,
+      "calculator": 14,
+      "healthcare": 13,
+      "legal": 2,
+      "accounting": 261,
+      "real_estate": 6,
+      "small_business": 65,
+      "country_region": 8,
+      "bilingual": 0,
+      "guide_blog": 110
+    },
+    {
+      "competitor": "Boldly",
+      "domain": "boldly.com",
+      "total_urls": 996,
+      "sitemaps_found": 6,
+      "examples": {
+        "pricing": [
+          "/blog/collaborate-smarter-at-meetings-with-these-apps/",
+          "/blog/2-tools-to-communicate-and-collaborate-better-with-your-virtual-assistant/",
+          "/blog/using-trello-to-collaborate-with-your-virtual-assistant/",
+          "/blog/here-is-what-not-having-an-executive-assistant-costs/",
+          "/blog/are-hiring-costs-driving-your-profits-down/",
+          "/blog/how-much-does-an-executive-assistant-cost/",
+          "/blog/how-much-experience-should-your-executive-assistant-have/",
+          "/pricing-plans/"
+        ],
+        "alternatives": [],
+        "versus": [
+          "/blog/a-comparison-of-remote-staffing-agencies-in-the-us/",
+          "/blog/virtual-assistants-vs-traditional-assistants/",
+          "/blog/hiring-in-house-vs-outsourcing-admin/",
+          "/blog/chief-of-staff-vs-executive-assistant-whos-your-next-hire/",
+          "/blog/virtual-assistant-vs-a-remote-executive-assistant/",
+          "/blog/dedicated-assistants-vs-pooled-solutions-which-is-the-best-choice-for-you/",
+          "/compare/compare-freelance/",
+          "/compare/compare-temp-agency/"
+        ],
+        "calculator": [],
+        "healthcare": [
+          "/blog/freshbooks-keep-your-virtual-team-billing-simple/",
+          "/blog/subscribe-to-a-better-way-of-hiring-with-remote-staffing/",
+          "/subscribe/",
+          "/blog/tag/emotional-health/"
+        ],
+        "legal": [
+          "/blog/hire-the-best-legal-assistant-by-looking-for-these-5-traits/",
+          "/blog/is-this-legal-a-complete-guide-to-remote-staffing-compliance/",
+          "/blog/understanding-your-legal-responsibility-and-potential-liability-as-a-client-of-a-virtual-assistant-company/",
+          "/attorneys/"
+        ],
+        "accounting": [
+          "/blog/5-reasons-to-choose-cloud-accounting-software/",
+          "/blog/how-your-va-can-help-manage-your-cloud-accounting/",
+          "/blog/tax-season-easy-with-virtual-assistant/",
+          "/blog/working-boldly-shanna-salazar-executive-assistant-and-bookkeeping-professional/",
+          "/finance-industry/",
+          "/blog/tag/tax/",
+          "/blog/tag/cloud-accountant/",
+          "/blog/tag/virtual-accounting-services/"
+        ],
+        "real_estate": [],
+        "small_business": [
+          "/blog/stepping-into-the-spotlight-cant-be-a-maybe-for-founders-anymore/",
+          "/blog/three-essential-lessons-from-athletic-training-you-can-apply-to-scaling-your-small-business/",
+          "/blog/3-kickass-founders-who-dared-to-be-different-and-experienced-massive-growth/",
+          "/blog/retargeting-to-grow-a-small-business-online/",
+          "/blog/reputation-management-for-the-small-business-owner/",
+          "/blog/cto-or-no-cto-advice-on-finding-the-best-technical-partner-for-growing-your-small-business/",
+          "/blog/nonprofit-founder-finds-her-perfect-compliment-at-boldly/",
+          "/blog/christmas-gift-ideas-for-entrepreneurs/"
+        ],
+        "country_region": [],
+        "bilingual": [
+          "/jobs/bilingual-executive-assistant/"
+        ],
+        "guide_blog": [
+          "/blog/",
+          "/blog/how-to-keep-your-team-engaged-and-motivated/",
+          "/blog/6-ways-to-mess-up-a-business-plan/",
+          "/blog/accept-payments-from-anywhere-in-the-world/",
+          "/blog/tips-for-using-your-businesss-cloud-storage-safely/",
+          "/blog/what-its-really-like-to-work-from-home-the-good-the-bad-and-the-ugly/",
+          "/blog/how-to-keep-to-a-routine-the-guide-to-a-happy-day-when-you-work-from-home/",
+          "/blog/communication-how-to-find-the-right-balance-for-remote-working/"
+        ]
+      },
+      "pricing": 11,
+      "alternatives": 0,
+      "versus": 11,
+      "calculator": 0,
+      "healthcare": 4,
+      "legal": 4,
+      "accounting": 15,
+      "real_estate": 0,
+      "small_business": 29,
+      "country_region": 0,
+      "bilingual": 1,
+      "guide_blog": 905
+    },
+    {
+      "competitor": "Prialto",
+      "domain": "www.prialto.com",
+      "total_urls": 818,
+      "sitemaps_found": 1,
+      "examples": {
+        "pricing": [
+          "/blog/cost-effective-executive-assistants",
+          "/blog/how-much-does-a-virtual-assistant-cost",
+          "/blog/how-to-celebrate-national-administrative-professionals-day-at-your-office",
+          "/blog/vas-reduce-costs-increase-productivity",
+          "/blog/how-and-why-to-celebrate-the-holidays-with-global-teams",
+          "/blog/luxury-corporate-gifts-your-clients-will-love",
+          "/blog/how-effective-onboarding-accelerates-business-performance",
+          "/blog/small-business-admin-costs"
+        ],
+        "alternatives": [
+          "/blog/7-alternative-sites-to-try-instead-of-linkedin",
+          "/blog/slack-alternatives-top-7-free-tools-for-team-communication",
+          "/blog/alternative-approach-lead-generation"
+        ],
+        "versus": [
+          "/blog/prospect-lists-buy-vs-build",
+          "/blog/dynamics-vs-salesforce",
+          "/blog/offshoring-vs-outsourcing",
+          "/blog/virtual-assistant-vs-employee",
+          "/blog/cloud-storage-comparison",
+          "/blog/10-ways-to-nurture-business-relationships-active-versus-passive",
+          "/blog/ai-vs-hiring-real-virtual-assistant",
+          "/blog/admin-ai-vs-human"
+        ],
+        "calculator": [
+          "/blog/outsourcing-roi-sales-team-support",
+          "/blog/how-to-get-an-roi-from-your-networking-activities",
+          "/blog/virtual-assistant-roi",
+          "/blog/how-to-maximize-the-roi-of-your-training-investment"
+        ],
+        "healthcare": [
+          "/case-studies/zus-health",
+          "/blog/refocus-email-best-practices-with-jocelyn-glei-of-unsubscribe",
+          "/blog/mental-golf-lessons-improve-business-productivity"
+        ],
+        "legal": [
+          "/blog/virtual-assistants-for-lawyers"
+        ],
+        "accounting": [
+          "/blog/virtual-assistant-bookkeeper-delegating",
+          "/blog/financial-advisor-virtual-assistant",
+          "/blog/5-financial-habits-of-americas-wealthiest-people",
+          "/blog/bookkeeping-virtual-assistant",
+          "/blog/accounting-virtual-assistants",
+          "/careers/jobs/staff-accountant-ke",
+          "/industries/accountant-virtual-assistants",
+          "/blog/5-non-financial-employee-incentives-that-will-boost-motivation"
+        ],
+        "real_estate": [
+          "/blog/doing-more-on-social-media-to-build-your-real-estate-business",
+          "/blog/real-estate-marketing-virtual-assistant",
+          "/blog/real-estate-give-more-than-you-get",
+          "/blog/virtual-assistants-for-property-managers",
+          "/blog/how-to-be-a-top-producer-with-a-real-estate-virtual-assistant",
+          "/blog/guide-to-working-with-a-real-estate-virtual-assistant",
+          "/blog/virtual-assistants-for-real-estate-investors",
+          "/blog/how-to-revitalize-your-real-estate-prospecting-efforts"
+        ],
+        "small_business": [
+          "/blog/small-business-annual-planning",
+          "/blog/recruiting-tips-for-startup-ceos-and-owners",
+          "/blog/small-business-tech-stack",
+          "/blog/how-to-use-crm-for-small-business-to-centralize-your-contacts",
+          "/industries/small-business-virtual-assistant",
+          "/blog/top-3-reasons-to-leverage-crm-for-small-business",
+          "/blog/gamification-for-startups-on-a-shoe-string",
+          "/blog/3-reasons-your-business-is-not-too-small-to-use-crm-for-small-business"
+        ],
+        "country_region": [
+          "/blog/prialto-leads-wave-philippines-bpo",
+          "/blog/virtual-assistant-services-philippines"
+        ],
+        "bilingual": [],
+        "guide_blog": [
+          "/blog/how-a-committed-virtual-assistant-will-amplify-your-success",
+          "/blog/what-admin-assistants-do",
+          "/blog/behaviorism-for-businesses-a-review-of-nir-eyals-hooked",
+          "/blog/how-to-turn-your-b2b-clients-into-company-evangelists",
+          "/blog/8-skills-of-a-successful-assistant",
+          "/blog/benefits-of-offshoring",
+          "/blog/cost-effective-executive-assistants",
+          "/blog/small-business-annual-planning"
+        ]
+      },
+      "pricing": 10,
+      "alternatives": 3,
+      "versus": 14,
+      "calculator": 4,
+      "healthcare": 3,
+      "legal": 1,
+      "accounting": 11,
+      "real_estate": 15,
+      "small_business": 19,
+      "country_region": 2,
+      "bilingual": 0,
+      "guide_blog": 692
+    },
+    {
+      "competitor": "MyOutDesk",
+      "domain": "www.myoutdesk.com",
+      "total_urls": 368,
+      "sitemaps_found": 2,
+      "examples": {
+        "pricing": [
+          "/blog/hidden-cost-of-a-bad-hire/",
+          "/blog/hr-virtual-assistant-cost/",
+          "/blog/virtual-assistant-cost/",
+          "/blog/virtual-receptionist-cost/",
+          "/blog/why-strategic-outsourcing-in-2025-is-key-to-cutting-costs-and-boosting-growth/",
+          "/pricing/"
+        ],
+        "alternatives": [
+          "/blog/fancy-hands-alternatives/",
+          "/blog/fiverr-alternatives/",
+          "/blog/upwork-alternatives/",
+          "/blog/zirtual-alternatives/"
+        ],
+        "versus": [
+          "/blog/ai-assistant-vs-virtual-assistant/",
+          "/blog/executive-vs-administrative-assistant/",
+          "/blog/fiverr-vs-upwork/",
+          "/blog/freelancer-vs-virtual-assistant/",
+          "/blog/insourcing-vs-outsourcing/",
+          "/blog/outsourcing-vs-offshoring/",
+          "/blog/outsourcing-workforce-to-the-philippines-vs-india-which-is-better/",
+          "/blog/virtual-assistant-vs-employee/"
+        ],
+        "calculator": [
+          "/webinars/john-israel-create-roi-with-gratitude/"
+        ],
+        "healthcare": [
+          "/blog/category/healthcare/",
+          "/blog/healthcare-roles-you-can-outsource/",
+          "/blog/healthcare-virtual-assistants/",
+          "/blog/strategic-outsourcing-in-healthcare/",
+          "/blog/virtual-assistants-for-medical-franchises/",
+          "/blog/virtual-assistants-healthcare-scheduling/",
+          "/blog/virtual-teams-solve-healthcare-talent-shortage/",
+          "/case-studies/a-community-hospitals-35-patient-satisfaction-surge/"
+        ],
+        "legal": [
+          "/industries/legal/"
+        ],
+        "accounting": [
+          "/blog/best-accounting-virtual-assistant-services/",
+          "/blog/bookkeeping-virtual-assistants/",
+          "/blog/category/financial-planning/",
+          "/blog/virtual-assistants-financial-advisors/",
+          "/blog/virtual-assistants-for-financial-firms/",
+          "/industries/financial-planning/",
+          "/services/bookkeeping/"
+        ],
+        "real_estate": [
+          "/blog/9-awesome-real-estate-apps/",
+          "/blog/12dsofrealestate/",
+          "/blog/best-real-estate-crm-software-2026/",
+          "/blog/best-real-estate-virtual-assistant-companies/",
+          "/blog/category/real-estate/",
+          "/blog/category/real-estate/2/",
+          "/blog/real-estate-business-with-virtual-teams/",
+          "/blog/real-estate-isa-guide/"
+        ],
+        "small_business": [
+          "/blog/founder-spotlight-erin-pedrami-on-building-systems-scaling-service-and-finding-the-right-support/",
+          "/blog/outsourcing-for-women-entrepreneurs/",
+          "/case-studies/belami-e-commerce/",
+          "/industries/ecommerce-virtual-assistants/",
+          "/webinars/chris-smith-mega-real-estate-influencer-curaytor-founder-webinar/",
+          "/webinars/grier-allen-co-founder-ceo-of-boomtown/",
+          "/webinars/maren-kate-saving-time-via-virtual-assistants-effective-project-management-with-zirtual-co-founder/",
+          "/webinars/maren-kate-virtual-assistants-leverage-your-talents-and-time-with-zirtual-co-founder/"
+        ],
+        "country_region": [
+          "/blog/latam-bilingual-talent-why-spanish-speaking-talent-drives-business-growth/",
+          "/blog/outsourcing-to-the-philippines/",
+          "/blog/outsourcing-workforce-to-the-philippines-vs-india-which-is-better/",
+          "/blog/virtual-assistants-philippines-vs-us-whats-the-difference/",
+          "/blog/why-top-u-s-businesses-are-hiring-spanish-speaking-talent-from-latin-america/",
+          "/regions/latam/"
+        ],
+        "bilingual": [
+          "/blog/latam-bilingual-talent-why-spanish-speaking-talent-drives-business-growth/",
+          "/blog/why-top-u-s-businesses-are-hiring-spanish-speaking-talent-from-latin-america/"
+        ],
+        "guide_blog": [
+          "/blog/",
+          "/blog/4-hour-workweek/",
+          "/blog/9-awesome-real-estate-apps/",
+          "/blog/9-best-ai-job-description-generators/",
+          "/blog/12dsofrealestate/",
+          "/blog/ai-adoption-in-2026-how-ceos-are-scaling-productivity-with-their-existing-workforce/",
+          "/blog/ai-assistant-vs-virtual-assistant/",
+          "/blog/ai-human-virtual-assistants-business-growth/"
+        ]
+      },
+      "pricing": 6,
+      "alternatives": 4,
+      "versus": 10,
+      "calculator": 1,
+      "healthcare": 14,
+      "legal": 1,
+      "accounting": 7,
+      "real_estate": 55,
+      "small_business": 12,
+      "country_region": 6,
+      "bilingual": 2,
+      "guide_blog": 148
+    },
+    {
+      "competitor": "Time etc",
+      "domain": "www.timeetc.com",
+      "total_urls": 0,
+      "sitemaps_found": 0,
+      "examples": {
+        "pricing": [],
+        "alternatives": [],
+        "versus": [],
+        "calculator": [],
+        "healthcare": [],
+        "legal": [],
+        "accounting": [],
+        "real_estate": [],
+        "small_business": [],
+        "country_region": [],
+        "bilingual": [],
+        "guide_blog": []
+      },
+      "pricing": 0,
+      "alternatives": 0,
+      "versus": 0,
+      "calculator": 0,
+      "healthcare": 0,
+      "legal": 0,
+      "accounting": 0,
+      "real_estate": 0,
+      "small_business": 0,
+      "country_region": 0,
+      "bilingual": 0,
+      "guide_blog": 0
+    },
+    {
+      "competitor": "Somewhere",
+      "domain": "somewhere.com",
+      "total_urls": 1610,
+      "sitemaps_found": 1,
+      "examples": {
+        "pricing": [
+          "/pricing",
+          "/post/cost-of-bad-hire",
+          "/post/hidden-costs-hiring-us-employees",
+          "/post/hire-offshore-bookkeepers-save--up-to-75-percent-payroll-costs",
+          "/post/hire-offshore-customer-support-representatives-save-costs",
+          "/post/hire-offshore-sales-representatives-save-costs",
+          "/post/hire-offshore-virtual-assistants-cost-savings-2026",
+          "/post/hire-real-estate-virtual-assistant-offshore-save-costs"
+        ],
+        "alternatives": [
+          "/post/hire-with-near-alternatives"
+        ],
+        "versus": [
+          "/post/cultural-fit-vs-time-zone-overlap",
+          "/post/eor-vs-managed-hiring-services",
+          "/post/headhunter-vs-staffing-agency-vs-bpo-remote-roles",
+          "/post/hiring-offshore-talent-contractor-vs-employee-misclassification",
+          "/post/in-house-vs-offshore-roles-2026",
+          "/post/latam-vs-philippines-hiring-services-2026",
+          "/post/nearshore-vs-offshore",
+          "/post/outsourcing-vs-us-hiring-costs-scaling-teams"
+        ],
+        "calculator": [
+          "/calculator",
+          "/post/ai-marketing-tech-offshore-revops-case-study-465k-savings",
+          "/post/commercial-landscaping-company-offshore-hiring-115k-payroll-savings",
+          "/post/construction-engineering-offshore-hiring-case-study-645k-savings",
+          "/post/food-beverage-brand-offshore-talent-payroll-savings",
+          "/post/global-talent-arbitrage-private-equity-payroll-savings",
+          "/post/hire-offshore-virtual-assistants-cost-savings-2026",
+          "/post/how-a-marketing-agency-scaled-41-global-hires-saved-1-2m-p-payroll-savings"
+        ],
+        "healthcare": [
+          "/post/dental-opperator-saves-481k-offshore-talent-hiring-somewhere",
+          "/post/healthcare-growth-consultancy-saved-offshore-hiring-success-story",
+          "/post/how-a-chiropractic-care-provider-hired-an-insurance-verifier-for-1-010-month",
+          "/post/how-a-class-action-law-firm-hired-a-billing-finance-assistant-for-1-200-month",
+          "/post/how-a-dental-ai-service-provider-hired-an-administrative-assistant-for-1-125-month",
+          "/post/how-a-dental-blog-site-hired-a-content-writer-for-1-000-month",
+          "/post/how-a-dental-device-manufacturer-hired-a-creative-designer-for-550-month",
+          "/post/how-a-health-and-wellness-retailer-hired-a-virtual-shopify-admin-assistant-for-900-month"
+        ],
+        "legal": [
+          "/lp/dream-team/law",
+          "/legal/privacy-policy",
+          "/legal/cookie-policy",
+          "/legal/terms-of-service",
+          "/legal/msa",
+          "/post/how-a-bpo-for-law-firms-hired-a-sales-representative-for-1-300-month",
+          "/post/how-a-business-law-firm-hired-a-virtual-executive-assistant-for-650-month",
+          "/post/how-a-class-action-law-firm-hired-a-billing-finance-assistant-for-1-200-month"
+        ],
+        "accounting": [
+          "/lp/dream-team/cpa",
+          "/post/accountant-save-company-money",
+          "/post/accounting-recruitment-agencies",
+          "/post/advantages-professional-bookkeepper",
+          "/post/cpa-hiring-crisis-reshaping-audit-firms",
+          "/post/finance-analyst-financial-clarity",
+          "/post/finance-recruitment-agencies",
+          "/post/head-of-finance-provides-financial-clarity"
+        ],
+        "real_estate": [
+          "/post/14-jobs-you-can-outsource-to-real-estate-virtual-assistants-in-the-philippines",
+          "/post/hire-real-estate-virtual-assistant-offshore-save-costs",
+          "/post/hiring-a-remote-property-manager",
+          "/post/hiring-appraisal-support-analysts-for-your-real-estate-business",
+          "/post/how-a-housing-developer-hired-a-property-support-agent-for-1-300-month",
+          "/post/how-a-marketing-agency-for-real-estate-developers-hired-a-sales-support-staff-for-1-050-month",
+          "/post/how-a-property-investment-development-company-hired-a-virtual-assistant-for-900-month",
+          "/post/how-a-property-management-company-hired-a-customer-support-representative-for-1-300-month"
+        ],
+        "small_business": [
+          "/industry/e-commerce-63o26",
+          "/industry/startups",
+          "/post/7-remote-e-commerce-roles-to-hire-first-in-2026",
+          "/post/first-remote-roles-ecommerce-brands-hire",
+          "/post/hire-remote-finance-staff-small-business",
+          "/post/hiring-tips-small-businesses",
+          "/post/how-a-carpets-rugs-brand-hired-an-e-commerce-coordinator-1-050-month",
+          "/post/how-a-custom-auto-solutions-company-hired-an-ecommerce-manager-for-1-000-month"
+        ],
+        "country_region": [
+          "/hire-in/latin-america",
+          "/hire-in/philippines",
+          "/hire-in/south-africa",
+          "/universities/universidad-nacional-autonoma-de-mexico",
+          "/remote-jobs/brazil",
+          "/remote-jobs/colombia",
+          "/remote-jobs/south-africa",
+          "/post/12-unique-roles-you-can-hire-through-a-headhunter-agency-philippines"
+        ],
+        "bilingual": [],
+        "guide_blog": [
+          "/guides/global-hiring-guide"
+        ]
+      },
+      "pricing": 18,
+      "alternatives": 1,
+      "versus": 17,
+      "calculator": 16,
+      "healthcare": 24,
+      "legal": 34,
+      "accounting": 76,
+      "real_estate": 72,
+      "small_business": 36,
+      "country_region": 109,
+      "bilingual": 0,
+      "guide_blog": 1
+    },
+    {
+      "competitor": "South",
+      "domain": "www.hireinsouth.com",
+      "total_urls": 2202,
+      "sitemaps_found": 1,
+      "examples": {
+        "pricing": [
+          "/pricing",
+          "/post/10-strategies-to-reduce-business-costs",
+          "/post/99designs-pricing",
+          "/post/a-team-pricing",
+          "/post/a-u-s-legal-firm-hired-an-operations-manager-at-72-lower-cost",
+          "/post/a-u-s-stem-education-company-hired-a-sales-outreach-coordinator-at-60-lower-cost",
+          "/post/adecco-pricing",
+          "/post/adp-pricing"
+        ],
+        "alternatives": [
+          "/post/andela-alternatives",
+          "/post/deel-alternatives",
+          "/post/fiverr-alternatives",
+          "/post/hire-with-near-alternatives",
+          "/post/mailchimp-alternatives",
+          "/post/multiplier-alternatives",
+          "/post/oyster-alternatives",
+          "/post/somewhere-alternatives"
+        ],
+        "versus": [
+          "/post/20-000-month-hiring-budget-latam-vs-us",
+          "/post/account-manager-vs-account-executive",
+          "/post/account-manager-vs-customer-success-manager",
+          "/post/accountant-vs-bookkeeper-key-differences-and-who-your-business-needs",
+          "/post/accountant-vs-staff-accountant",
+          "/post/ai-engineer-vs-data-scientist-which-to-hire",
+          "/post/andela-vs-south-for-ai-developers",
+          "/post/aws-vs-azure"
+        ],
+        "calculator": [
+          "/post/best-android-app-development-companies",
+          "/post/hire-android-app-developers",
+          "/post/hiring-an-android-developer-nearshore-benefits-skills-and-top-hiring-partners",
+          "/post/how-nearshore-hiring-improves-roi",
+          "/post/where-to-find-and-hire-the-best-remote-android-developers",
+          "/roles/android-developer",
+          "/skills/android"
+        ],
+        "healthcare": [
+          "/post/best-healthcare-marketing-agencies",
+          "/post/best-healthcare-software-development-companies",
+          "/post/best-virtual-medical-assistant-services",
+          "/post/dental-virtual-assistant",
+          "/post/how-a-consulting-firm-hired-a-billing-specialist-for-2-000-a-month",
+          "/post/how-a-dental-marketing-services-company-hired-a-sr-account-manager-for-3-500-a-month",
+          "/post/how-a-healthcare-company-hired-a-social-media-manager-for-1-700-a-month",
+          "/post/how-a-healthcare-company-hired-an-sdr-for-1-800-a-month"
+        ],
+        "legal": [
+          "/post/a-u-s-legal-firm-hired-an-operations-manager-at-72-lower-cost",
+          "/post/is-it-legal-to-fire-someone-over-the-phone-what-you-need-to-know",
+          "/post/paralegal-salary",
+          "/post/virtual-legal-assistant",
+          "/roles/legal-counsel",
+          "/roles/legal-operations-specialist",
+          "/roles/paralegal"
+        ],
+        "accounting": [
+          "/accounting-jobs",
+          "/finance-jobs",
+          "/post/a-client-replaced-one-controller-with-two-accounting-roles-for-7-700-mo",
+          "/post/accountant-job-description",
+          "/post/accountant-vs-bookkeeper-key-differences-and-who-your-business-needs",
+          "/post/accountant-vs-staff-accountant",
+          "/post/accounting-and-finance-recruiters",
+          "/post/accounting-outsourcing-firms"
+        ],
+        "real_estate": [
+          "/post/best-real-estate-software-development-companies",
+          "/post/best-real-estate-virtual-assistant-companies",
+          "/post/hire-a-property-manager-for-1-000-per-month-in-argentina",
+          "/post/how-a-property-management-agency-hired-a-concierge-for-less-than-1-000",
+          "/post/how-a-property-management-systems-company-hired-a-marketing-specialist-for-2-000-per-month",
+          "/post/how-a-real-estate-firm-hired-a-sales-rep-for-1-100-a-month",
+          "/post/how-a-real-estate-firm-hired-a-web-developer-for-1-500-a-month",
+          "/post/how-a-real-estate-firm-hired-an-accounting-assistant-for-1-000-a-month"
+        ],
+        "small_business": [
+          "/post/best-accounting-firms-for-small-business",
+          "/post/best-accounting-firms-for-startups",
+          "/post/best-bookkeeping-services-for-small-business",
+          "/post/best-ecommerce-agencies",
+          "/post/best-ecommerce-development-companies",
+          "/post/best-ecommerce-fulfillment-companies",
+          "/post/best-ecommerce-marketing-agencies",
+          "/post/best-ecommerce-seo-agencies"
+        ],
+        "country_region": [
+          "/post/10-back-office-functions-you-can-and-should-outsource-to-latin-america",
+          "/post/10-reasons-ctos-choose-latam-talent",
+          "/post/12-skills-u-s-companies-are-looking-for-in-remote-latin-american-candidates",
+          "/post/17-myths-about-hiring-remote-talent-from-latin-america",
+          "/post/20-000-month-hiring-budget-latam-vs-us",
+          "/post/5-proven-tips-to-hire-the-right-nearshore-executive-assistant",
+          "/post/8-engineering-roles-perfect-for-nearshoring-to-latin-america",
+          "/post/a-consulting-firm-hired-a-3-600-month-latam-product-manager"
+        ],
+        "bilingual": [
+          "/post/bilingual-virtual-assistant",
+          "/post/how-a-private-firm-hired-a-bilingual-bookkeeping-for-1-300-a-month",
+          "/roles/bilingual-customer-service-rep"
+        ],
+        "guide_blog": [
+          "/post/guide-to-hiring-business-development-consultants",
+          "/post/guide-to-hiring-google-ads-experts"
+        ]
+      },
+      "pricing": 126,
+      "alternatives": 10,
+      "versus": 97,
+      "calculator": 7,
+      "healthcare": 32,
+      "legal": 7,
+      "accounting": 125,
+      "real_estate": 17,
+      "small_business": 48,
+      "country_region": 282,
+      "bilingual": 3,
+      "guide_blog": 2
+    },
+    {
+      "competitor": "Persona Talent",
+      "domain": "www.personatalent.com",
+      "total_urls": 885,
+      "sitemaps_found": 12,
+      "examples": {
+        "pricing": [
+          "/business/hidden-cost-of-doing-it-yourself/",
+          "/administration/delegate-first-hr-tasks-costing-time-focus/",
+          "/hiring/corporate-social-responsibility-manager/",
+          "/hiring/corporate-communications-manager/",
+          "/business/how-much-does-it-cost-to-hire-an-assistant/",
+          "/pricing/",
+          "/glossary/indirect-labor-costs/",
+          "/glossary/corporate-staffing/"
+        ],
+        "alternatives": [],
+        "versus": [
+          "/business/belay-vs-boldly-vs-persona/",
+          "/business/zirtual-vs-time-etc-vs-persona/",
+          "/business/time-etc-vs-belay/",
+          "/business/zirtual-vs-belay-vs-persona/",
+          "/business/prialto-vs-belay-vs-persona/",
+          "/hiring/employer-of-record-vs-staffing-agency/",
+          "/business/executive-assistant-vs-virtual-assistant/",
+          "/business/chief-of-staff-vs-executive-assistant/"
+        ],
+        "calculator": [
+          "/success-stories/software-savings/"
+        ],
+        "healthcare": [
+          "/hiring/health-and-safety-coordinator/",
+          "/medical-leave-coverage/",
+          "/roles/medical-coder/",
+          "/glossary/health-care-staffing/",
+          "/executive-assistants/clinical-psychologists/",
+          "/executive-assistants/environmental-consultants/",
+          "/executive-assistants/telehealth-providers/",
+          "/executive-assistants/for-dentists/"
+        ],
+        "legal": [
+          "/roles/legal-assistant/",
+          "/glossary/labor-law/",
+          "/executive-assistants/paralegals/",
+          "/executive-assistants/patent-attorneys/",
+          "/executive-assistants/legal-consultants/",
+          "/executive-assistants/intellectual-property-attorneys/",
+          "/executive-assistants/for-lawyers/"
+        ],
+        "accounting": [
+          "/hiring/financial-analyst/",
+          "/hiring/senior-finance/",
+          "/hiring/senior-production-accountant/",
+          "/hiring/production-accountant/",
+          "/roles/bookkeeper/",
+          "/roles/financial-analyst/",
+          "/roles/accounting-professional/",
+          "/roles/tax-professional/"
+        ],
+        "real_estate": [
+          "/business/virtual-assistants-for-real-estate-investors/",
+          "/executive-assistants/for-real-estate-investors/",
+          "/executive-assistants/for-real-estate-developers/",
+          "/executive-assistants/real-estate-appraisers/",
+          "/executive-assistants/intellectual-property-consultants/",
+          "/executive-assistants/intellectual-property-attorneys/",
+          "/executive-assistants/for-real-estate-agents/",
+          "/executive-assistants/for-property-managers/"
+        ],
+        "small_business": [
+          "/business/startup-executive-assistant/",
+          "/business/virtual-assistants-for-startups/",
+          "/hiring/e-commerce-manager/",
+          "/business/virtual-assistants-for-entrepreneurs/",
+          "/business/startup-recruiter-why-top-startups-choose-persona/",
+          "/development/entrepreneurial-mindset/",
+          "/productivity/10-productivity-game-changers-entrepreneurs/",
+          "/business/should-startups-hire-generalists/"
+        ],
+        "country_region": [],
+        "bilingual": [],
+        "guide_blog": [
+          "/articles/"
+        ]
+      },
+      "pricing": 12,
+      "alternatives": 0,
+      "versus": 11,
+      "calculator": 1,
+      "healthcare": 17,
+      "legal": 7,
+      "accounting": 21,
+      "real_estate": 8,
+      "small_business": 17,
+      "country_region": 0,
+      "bilingual": 0,
+      "guide_blog": 1
+    }
+  ]
+}
